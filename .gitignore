@@ -9,7 +9,6 @@
 *.user
 *.userosscache
 *.sln.docstates
-ManageWineStore/ManageWineStore.csproj
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
