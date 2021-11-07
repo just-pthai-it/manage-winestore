@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace ManageWineStore.app.Models
 {
-    class JobModel
+    class RoleModel
     {
-        public JobModel(int id, string jobName, double salary)
+        public RoleModel(int id, string description)
         {
             Id = id;
-            JobName = jobName;
-            Salary = salary;
+            Description = description;
         }
 
         public int Id { get; set; }
-        public string JobName { get; set; }
-        public double Salary { get; set; }
+        public string Description { get; set; }
     }
 }

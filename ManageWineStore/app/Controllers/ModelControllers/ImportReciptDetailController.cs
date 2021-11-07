@@ -11,33 +11,33 @@ using System.Threading.Tasks;
 
 namespace ManageWineStore.app.Controllers.ModelControllers
 {
-    class JobController : AModelController<JobModel>
+    class ImportReciptDetailController : AModelController<ImportReciptDetailModel>
     {
-        public override void insert(JobModel jobModel)
+        public override void insert(ImportReciptDetailModel importReciptDetailModel)
         {
             databaseConnector.OpenConnect();
-            string commandText = "INSERT INTO job VALUES (@job_name, @salary);";
+            string commandText = "INSERT INTO importReciptDetail VALUES (@importReciptDetail_name, @salary);";
             SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
-            sqlCommand.Parameters.Add("@job_name", SqlDbType.NVarChar);
+            sqlCommand.Parameters.Add("@importReciptDetail_name", SqlDbType.NVarChar);
             sqlCommand.Parameters.Add("@salary", SqlDbType.Float);
-            //sqlCommand.Parameters["@job_name"].Value = jobModel.JobName;
-            //sqlCommand.Parameters["@salary"].Value = jobModel.Salary;
+            //sqlCommand.Parameters["@importReciptDetail_name"].Value = importReciptDetailModel.ImportReciptDetailName;
+            //sqlCommand.Parameters["@salary"].Value = importReciptDetailModel.Salary;
             sqlCommand.ExecuteNonQuery();
             databaseConnector.CloseConnect();
         }
 
-        public override void get(JobModel jobModel)
+        public override void get(ImportReciptDetailModel importReciptDetailModel)
         {
             throw new NotImplementedException();
         }
 
 
-        public override void update(JobModel jobModel)
+        public override void update(ImportReciptDetailModel importReciptDetailModel)
         {
             throw new NotImplementedException();
         }
 
-        public override void delete(JobModel jobModel)
+        public override void delete(ImportReciptDetailModel importReciptDetailModel)
         {
             throw new NotImplementedException();
         }

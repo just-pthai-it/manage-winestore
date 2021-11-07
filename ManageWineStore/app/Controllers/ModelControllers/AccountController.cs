@@ -11,33 +11,33 @@ using System.Threading.Tasks;
 
 namespace ManageWineStore.app.Controllers.ModelControllers
 {
-    class JobController : AModelController<JobModel>
+    class AccountController : AModelController<AccountModel>
     {
-        public override void insert(JobModel jobModel)
+        public override void insert(AccountModel accountModel)
         {
             databaseConnector.OpenConnect();
-            string commandText = "INSERT INTO job VALUES (@job_name, @salary);";
+            string commandText = "INSERT INTO Account VALUES (@Account_name, @salary);";
             SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
-            sqlCommand.Parameters.Add("@job_name", SqlDbType.NVarChar);
+            sqlCommand.Parameters.Add("@Account_name", SqlDbType.NVarChar);
             sqlCommand.Parameters.Add("@salary", SqlDbType.Float);
-            //sqlCommand.Parameters["@job_name"].Value = jobModel.JobName;
-            //sqlCommand.Parameters["@salary"].Value = jobModel.Salary;
+            //sqlCommand.Parameters["@Account_name"].Value = AccountModel.AccountName;
+            //sqlCommand.Parameters["@salary"].Value = AccountModel.Salary;
             sqlCommand.ExecuteNonQuery();
             databaseConnector.CloseConnect();
         }
 
-        public override void get(JobModel jobModel)
+        public override void get(AccountModel accountModel)
         {
             throw new NotImplementedException();
         }
 
 
-        public override void update(JobModel jobModel)
+        public override void update(AccountModel accountModel)
         {
             throw new NotImplementedException();
         }
 
-        public override void delete(JobModel jobModel)
+        public override void delete(AccountModel accountModel)
         {
             throw new NotImplementedException();
         }

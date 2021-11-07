@@ -11,33 +11,33 @@ using System.Threading.Tasks;
 
 namespace ManageWineStore.app.Controllers.ModelControllers
 {
-    class JobController : AModelController<JobModel>
+    class SaleReciptDetailController : AModelController<SaleReciptDetailModel>
     {
-        public override void insert(JobModel jobModel)
+        public override void insert(SaleReciptDetailModel saleReciptDetailModel)
         {
             databaseConnector.OpenConnect();
-            string commandText = "INSERT INTO job VALUES (@job_name, @salary);";
+            string commandText = "INSERT INTO saleReciptDetail VALUES (@saleReciptDetail_name, @salary);";
             SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
-            sqlCommand.Parameters.Add("@job_name", SqlDbType.NVarChar);
+            sqlCommand.Parameters.Add("@saleReciptDetail_name", SqlDbType.NVarChar);
             sqlCommand.Parameters.Add("@salary", SqlDbType.Float);
-            //sqlCommand.Parameters["@job_name"].Value = jobModel.JobName;
-            //sqlCommand.Parameters["@salary"].Value = jobModel.Salary;
+            //sqlCommand.Parameters["@saleReciptDetail_name"].Value = saleReciptDetailModel.SaleReciptDetailName;
+            //sqlCommand.Parameters["@salary"].Value = saleReciptDetailModel.Salary;
             sqlCommand.ExecuteNonQuery();
             databaseConnector.CloseConnect();
         }
 
-        public override void get(JobModel jobModel)
+        public override void get(SaleReciptDetailModel saleReciptDetailModel)
         {
             throw new NotImplementedException();
         }
 
 
-        public override void update(JobModel jobModel)
+        public override void update(SaleReciptDetailModel saleReciptDetailModel)
         {
             throw new NotImplementedException();
         }
 
-        public override void delete(JobModel jobModel)
+        public override void delete(SaleReciptDetailModel saleReciptDetailModel)
         {
             throw new NotImplementedException();
         }

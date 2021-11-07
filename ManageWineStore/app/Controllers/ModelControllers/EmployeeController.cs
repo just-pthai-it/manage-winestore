@@ -11,33 +11,33 @@ using System.Threading.Tasks;
 
 namespace ManageWineStore.app.Controllers.ModelControllers
 {
-    class JobController : AModelController<JobModel>
+    class EmployeeController : AModelController<EmployeeModel>
     {
-        public override void insert(JobModel jobModel)
+        public override void insert(EmployeeModel employeeModel)
         {
             databaseConnector.OpenConnect();
-            string commandText = "INSERT INTO job VALUES (@job_name, @salary);";
+            string commandText = "INSERT INTO employee VALUES (@employee_name, @salary);";
             SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
-            sqlCommand.Parameters.Add("@job_name", SqlDbType.NVarChar);
+            sqlCommand.Parameters.Add("@employee_name", SqlDbType.NVarChar);
             sqlCommand.Parameters.Add("@salary", SqlDbType.Float);
-            //sqlCommand.Parameters["@job_name"].Value = jobModel.JobName;
-            //sqlCommand.Parameters["@salary"].Value = jobModel.Salary;
+            //sqlCommand.Parameters["@employee_name"].Value = employeeModel.EmployeeName;
+            //sqlCommand.Parameters["@salary"].Value = employeeModel.Salary;
             sqlCommand.ExecuteNonQuery();
             databaseConnector.CloseConnect();
         }
 
-        public override void get(JobModel jobModel)
+        public override void get(EmployeeModel employeeModel)
         {
             throw new NotImplementedException();
         }
 
 
-        public override void update(JobModel jobModel)
+        public override void update(EmployeeModel employeeModel)
         {
             throw new NotImplementedException();
         }
 
-        public override void delete(JobModel jobModel)
+        public override void delete(EmployeeModel employeeModel)
         {
             throw new NotImplementedException();
         }

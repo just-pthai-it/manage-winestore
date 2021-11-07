@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace ManageWineStore.app.Models
 {
-    class JobModel
+    class AccountModel
     {
-        public JobModel(int id, string jobName, double salary)
+        public AccountModel(int id, string username, string password)
         {
             Id = id;
-            JobName = jobName;
-            Salary = salary;
+            Username = username;
+            Password = password;
         }
 
         public int Id { get; set; }
-        public string JobName { get; set; }
-        public double Salary { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }

@@ -46,8 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="app\Controllers\ModelControllers\Abastract\AModelController.cs" />
+    <Compile Include="app\Controllers\ModelControllers\AccountController.cs" />
+    <Compile Include="app\Controllers\ModelControllers\AccountRoleController.cs" />
+    <Compile Include="app\Controllers\ModelControllers\CustomerController.cs" />
+    <Compile Include="app\Controllers\ModelControllers\EmployeeController.cs" />
+    <Compile Include="app\Controllers\ModelControllers\ImportReciptConrtoller.cs" />
+    <Compile Include="app\Controllers\ModelControllers\ImportReciptDetailController.cs" />
     <Compile Include="app\Controllers\ModelControllers\JobController.cs" />
+    <Compile Include="app\Controllers\ModelControllers\MerchandiseController.cs" />
+    <Compile Include="app\Controllers\ModelControllers\RoleController.cs" />
+    <Compile Include="app\Controllers\ModelControllers\SaleReciptController.cs" />
+    <Compile Include="app\Controllers\ModelControllers\SaleReciptDetailController.cs" />
+    <Compile Include="app\Controllers\ModelControllers\SupplierController.cs" />
+    <Compile Include="app\Controllers\ModelControllers\WIneController.cs" />
+    <Compile Include="app\Models\Abastract\AModel.cs" />
+    <Compile Include="app\Models\AccountModel.cs" />
+    <Compile Include="app\Models\AccountRoleModel.cs" />
+    <Compile Include="app\Models\CustomerModel.cs" />
+    <Compile Include="app\Models\EmployeeModel.cs" />
+    <Compile Include="app\Models\ImportReciptModel.cs" />
+    <Compile Include="app\Models\ImportReciptDetailModel.cs" />
     <Compile Include="app\Models\JobModel.cs" />
+    <Compile Include="app\Models\MerchandiseModel.cs" />
+    <Compile Include="app\Models\RoleModel.cs" />
+    <Compile Include="app\Models\SaleReciptModel.cs" />
+    <Compile Include="app\Models\SaleReciptDetailModel.cs" />
+    <Compile Include="app\Models\SupplierModel.cs" />
+    <Compile Include="app\Models\WineModel.cs" />
     <Compile Include="BTLDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -99,8 +125,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\Controllers\ModelControllers\Abastract\" />
-    <Folder Include="app\Models\Abastract\" />
     <Folder Include="app\Views\" />
     <Folder Include="config\" />
   </ItemGroup>
