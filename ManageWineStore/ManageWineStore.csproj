@@ -46,9 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="app\BussinessClasses\MD5Helper.cs" />
+    <Compile Include="app\Controllers\CustomerManageController.cs" />
+    <Compile Include="app\Controllers\EmployeeManageController.cs" />
+    <Compile Include="app\Controllers\ImportWineController.cs" />
+    <Compile Include="app\Controllers\LoginController.cs" />
     <Compile Include="app\Controllers\ModelControllers\Abastract\AModelController.cs" />
     <Compile Include="app\Controllers\ModelControllers\AccountController.cs" />
     <Compile Include="app\Controllers\ModelControllers\AccountRoleController.cs" />
+    <Compile Include="app\Controllers\ModelControllers\AdminController.cs" />
     <Compile Include="app\Controllers\ModelControllers\CustomerController.cs" />
     <Compile Include="app\Controllers\ModelControllers\EmployeeController.cs" />
     <Compile Include="app\Controllers\ModelControllers\ImportReciptConrtoller.cs" />
@@ -60,9 +66,13 @@
     <Compile Include="app\Controllers\ModelControllers\SaleReciptDetailController.cs" />
     <Compile Include="app\Controllers\ModelControllers\SupplierController.cs" />
     <Compile Include="app\Controllers\ModelControllers\WIneController.cs" />
+    <Compile Include="app\Controllers\PersonalInfoController.cs" />
+    <Compile Include="app\Controllers\SellWineController.cs" />
+    <Compile Include="app\Controllers\WineManageController.cs" />
     <Compile Include="app\Models\Abastract\AModel.cs" />
     <Compile Include="app\Models\AccountModel.cs" />
     <Compile Include="app\Models\AccountRoleModel.cs" />
+    <Compile Include="app\Models\AdminModel.cs" />
     <Compile Include="app\Models\CustomerModel.cs" />
     <Compile Include="app\Models\EmployeeModel.cs" />
     <Compile Include="app\Models\ImportReciptModel.cs" />

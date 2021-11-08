@@ -26,7 +26,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             databaseConnector.CloseConnect();
         }
 
-        public override void get(AccountRoleModel accountRoleModel)
+        public override DataTable get(AccountRoleModel accountRoleModel)
         {
             throw new NotImplementedException();
         }

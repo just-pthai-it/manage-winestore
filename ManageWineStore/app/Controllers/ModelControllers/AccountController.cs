@@ -15,22 +15,22 @@ namespace ManageWineStore.app.Controllers.ModelControllers
     {
         public override void insert(AccountModel accountModel)
         {
-            databaseConnector.OpenConnect();
-            string commandText = "INSERT INTO Account VALUES (@Account_name, @salary);";
-            SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
-            sqlCommand.Parameters.Add("@Account_name", SqlDbType.NVarChar);
-            sqlCommand.Parameters.Add("@salary", SqlDbType.Float);
-            //sqlCommand.Parameters["@Account_name"].Value = AccountModel.AccountName;
-            //sqlCommand.Parameters["@salary"].Value = AccountModel.Salary;
-            sqlCommand.ExecuteNonQuery();
-            databaseConnector.CloseConnect();
+            string commandText = "INSERT INTO Account VALUES ( @username , @password , @user_id );";
+            this.executeNonQuery(commandText, new object[] {
+                accountModel.Username, accountModel.Password, accountModel.UserId
+            });
         }
 
-        public override void get(AccountModel accountModel)
+        public DataTable find(string username, string password)
+        {
+            string commandText = "SELECT * FROM Account WHERE username = @username AND " +
+                                "password = @password ;";
+            return this.executeQuery(commandText, new object[] { username, password });
+        }
+        public override DataTable get(AccountModel accountModel)
         {
             throw new NotImplementedException();
         }
-
 
         public override void update(AccountModel accountModel)
         {

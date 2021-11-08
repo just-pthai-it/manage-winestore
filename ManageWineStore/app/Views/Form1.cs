@@ -1,4 +1,6 @@
-﻿using ManageWineStore.app.Controllers.ModelControllers;
+﻿using ManageWineStore.app.BussinessClasses;
+using ManageWineStore.app.Controllers.ModelControllers;
+using ManageWineStore.app.Controllers;
 using ManageWineStore.app.Models;
 using System;
 using System.Collections.Generic;
@@ -21,9 +23,7 @@ namespace ManageWineStore
 
         private void button1_Click(object sender, EventArgs e)
         {
-            JobModel jobModel = new JobModel(1, "asfasd", 16);
-            JobController jobController = new JobController();
-            jobController.insert(jobModel);
+
         }
     }
 }

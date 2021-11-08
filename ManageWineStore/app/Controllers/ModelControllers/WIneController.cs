@@ -15,18 +15,13 @@ namespace ManageWineStore.app.Controllers.ModelControllers
     {
         public override void insert(WineModel wineModel)
         {
-            databaseConnector.OpenConnect();
-            string commandText = "INSERT INTO wine VALUES (@wine_name, @salary);";
-            SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
-            sqlCommand.Parameters.Add("@wine_name", SqlDbType.NVarChar);
-            sqlCommand.Parameters.Add("@salary", SqlDbType.Float);
-            //sqlCommand.Parameters["@wine_name"].Value = wineModel.WineName;
-            //sqlCommand.Parameters["@salary"].Value = wineModel.Salary;
-            sqlCommand.ExecuteNonQuery();
-            databaseConnector.CloseConnect();
+            string commandText = "INSERT INTO wine VALUES ( @wine_name , @alcohol_level , @price );";
+            this.executeNonQuery(commandText, new object[] {
+                wineModel.WineName, wineModel.AlcoholLevel, wineModel.Price
+            });
         }
 
-        public override void get(WineModel wineModel)
+        public override DataTable get(WineModel wineModel)
         {
             throw new NotImplementedException();
         }

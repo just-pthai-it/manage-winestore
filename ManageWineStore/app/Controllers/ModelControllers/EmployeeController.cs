@@ -26,11 +26,15 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             databaseConnector.CloseConnect();
         }
 
-        public override void get(EmployeeModel employeeModel)
+        public DataTable find(string account_id)
+        {
+            string commandText = "SELECT * FROM employee WHERE account_id = @account_id ;";
+            return this.executeQuery(commandText, new object[] { account_id });
+        }
+        public override DataTable get(EmployeeModel employeeModel)
         {
             throw new NotImplementedException();
         }
-
 
         public override void update(EmployeeModel employeeModel)
         {

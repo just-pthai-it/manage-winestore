@@ -11,33 +11,37 @@ using System.Threading.Tasks;
 
 namespace ManageWineStore.app.Controllers.ModelControllers
 {
-    class ImportReciptDetailController : AModelController<ImportReciptDetailModel>
+    class AdminController : AModelController<AdminModel>
     {
-        public override void insert(ImportReciptDetailModel importReciptDetailModel)
+        public override void insert(AdminModel adminModel)
         {
             databaseConnector.OpenConnect();
-            string commandText = "INSERT INTO importReciptDetail VALUES (@importReciptDetail_name, @salary);";
+            string commandText = "INSERT INTO admin VALUES (@admin_name, @salary);";
             SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
-            sqlCommand.Parameters.Add("@importReciptDetail_name", SqlDbType.NVarChar);
+            sqlCommand.Parameters.Add("@admin_name", SqlDbType.NVarChar);
             sqlCommand.Parameters.Add("@salary", SqlDbType.Float);
-            //sqlCommand.Parameters["@importReciptDetail_name"].Value = importReciptDetailModel.ImportReciptDetailName;
-            //sqlCommand.Parameters["@salary"].Value = importReciptDetailModel.Salary;
+            //sqlCommand.Parameters["@admin_name"].Value = adminModel.AdminName;
+            //sqlCommand.Parameters["@salary"].Value = adminModel.Salary;
             sqlCommand.ExecuteNonQuery();
             databaseConnector.CloseConnect();
         }
 
-        public override DataTable get(ImportReciptDetailModel importReciptDetailModel)
+        public DataTable find(string account_id)
+        {
+            string commandText = "SELECT * FROM admin WHERE account_id = @account_id ;";
+            return this.executeQuery(commandText, new object[] { account_id });
+        }
+        public override DataTable get(AdminModel adminModel)
         {
             throw new NotImplementedException();
         }
 
-
-        public override void update(ImportReciptDetailModel importReciptDetailModel)
+        public override void update(AdminModel adminModel)
         {
             throw new NotImplementedException();
         }
 
-        public override void delete(ImportReciptDetailModel importReciptDetailModel)
+        public override void delete(AdminModel adminModel)
         {
             throw new NotImplementedException();
         }

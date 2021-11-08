@@ -26,7 +26,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             databaseConnector.CloseConnect();
         }
 
-        public override void get(RoleModel roleModel)
+        public override DataTable get(RoleModel roleModel)
         {
             throw new NotImplementedException();
         }

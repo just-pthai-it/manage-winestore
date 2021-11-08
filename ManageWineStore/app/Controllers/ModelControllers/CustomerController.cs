@@ -26,7 +26,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             databaseConnector.CloseConnect();
         }
 
-        public override void get(CustomerModel customerModel)
+        public override DataTable get(CustomerModel customerModel)
         {
             throw new NotImplementedException();
         }

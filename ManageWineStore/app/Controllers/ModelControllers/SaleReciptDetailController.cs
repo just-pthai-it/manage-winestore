@@ -15,18 +15,15 @@ namespace ManageWineStore.app.Controllers.ModelControllers
     {
         public override void insert(SaleReciptDetailModel saleReciptDetailModel)
         {
-            databaseConnector.OpenConnect();
-            string commandText = "INSERT INTO saleReciptDetail VALUES (@saleReciptDetail_name, @salary);";
-            SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
-            sqlCommand.Parameters.Add("@saleReciptDetail_name", SqlDbType.NVarChar);
-            sqlCommand.Parameters.Add("@salary", SqlDbType.Float);
-            //sqlCommand.Parameters["@saleReciptDetail_name"].Value = saleReciptDetailModel.SaleReciptDetailName;
-            //sqlCommand.Parameters["@salary"].Value = saleReciptDetailModel.Salary;
-            sqlCommand.ExecuteNonQuery();
-            databaseConnector.CloseConnect();
+            string commandText = "INSERT INTO sale_recipt_detail VALUES ( @sale_recipt_id , @merchandise_id , " +
+                                "@quanity , @cost );";
+            this.executeNonQuery(commandText, new object[] {
+                saleReciptDetailModel.SaleReciptId, saleReciptDetailModel.MerchandiseId, 
+                saleReciptDetailModel.Quantity, saleReciptDetailModel.Cost
+            });
         }
 
-        public override void get(SaleReciptDetailModel saleReciptDetailModel)
+        public override DataTable get(SaleReciptDetailModel saleReciptDetailModel)
         {
             throw new NotImplementedException();
         }

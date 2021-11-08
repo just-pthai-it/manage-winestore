@@ -15,18 +15,15 @@ namespace ManageWineStore.app.Controllers.ModelControllers
     {
         public override void insert(JobModel jobModel)
         {
-            databaseConnector.OpenConnect();
-            string commandText = "INSERT INTO job VALUES (@job_name, @salary);";
-            SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
-            sqlCommand.Parameters.Add("@job_name", SqlDbType.NVarChar);
-            sqlCommand.Parameters.Add("@salary", SqlDbType.Float);
-            //sqlCommand.Parameters["@job_name"].Value = jobModel.JobName;
-            //sqlCommand.Parameters["@salary"].Value = jobModel.Salary;
-            sqlCommand.ExecuteNonQuery();
-            databaseConnector.CloseConnect();
+            string commandText = "INSERT INTO job VALUES ( @job_name , @salary );";
+            this.executeNonQuery(commandText, new object[]
+            {
+                jobModel.JobName,
+                jobModel.Salary
+            });
         }
 
-        public override void get(JobModel jobModel)
+        public override DataTable get (JobModel jobModel)
         {
             throw new NotImplementedException();
         }
@@ -39,7 +36,13 @@ namespace ManageWineStore.app.Controllers.ModelControllers
 
         public override void delete(JobModel jobModel)
         {
-            throw new NotImplementedException();
+            databaseConnector.OpenConnect();
+            string commandText = "DELETE FROM job WHERE id = @id;";
+            SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
+            sqlCommand.Parameters.Add("@id", SqlDbType.Int);
+            sqlCommand.Parameters["@id"].Value = jobModel.Id;
+            sqlCommand.ExecuteNonQuery();
+            databaseConnector.CloseConnect();
         }
     }
 }
