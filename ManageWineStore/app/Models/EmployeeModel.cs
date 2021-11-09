@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,19 @@ namespace ManageWineStore.app.Models
             Address = address;
             JobId = jobId;
             AccountId = accountId;
+        }
+
+        public EmployeeModel(DataRow row)
+        {
+            Id = (int)row["id"];
+            Name = row["name"].ToString();
+            Birth = DateTime.Parse(row["birth"].ToString());
+            Gender = (int)row["gender"];
+            Phone = row["phone"].ToString();
+            Mail = row["mail"].ToString();
+            Address = row["address"].ToString();
+            JobId = (int)row["job_id"];
+            AccountId = (int)row["account_id"];
         }
 
         public int Id { get; set; }

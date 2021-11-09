@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,18 @@ namespace ManageWineStore.app.Models
             Mail = mail;
             Address = address;
             AccountId = accountId;
+        }
+
+        public AdminModel(DataRow row)
+        {
+            Id = (int)row["id"];
+            Name = row["name"].ToString();
+            Birth = DateTime.Parse(row["birth"].ToString());
+            Gender = (int)row["gender"];
+            Phone = row["phone"].ToString();
+            Mail = row["mail"].ToString();
+            Address = row["address"].ToString();
+            AccountId = (int)row["account_id"];
         }
 
         public int Id { get; set; }

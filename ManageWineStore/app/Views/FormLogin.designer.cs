@@ -30,14 +30,14 @@ namespace Views
         private void InitializeComponent()
         {
             this.lbl_Welcome = new System.Windows.Forms.Label();
-            this.btn_Exit = new System.Windows.Forms.Button();
+            this.ExitBt = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_Password = new System.Windows.Forms.Label();
             this.lbl_Username = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btn_Login = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.confirmBt = new System.Windows.Forms.Button();
             this.lbl_Credit = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,14 +52,14 @@ namespace Views
             this.lbl_Welcome.TabIndex = 10;
             this.lbl_Welcome.Text = "Wine Store";
             // 
-            // btn_Exit
+            // ExitBt
             // 
-            this.btn_Exit.Location = new System.Drawing.Point(171, 232);
-            this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(87, 29);
-            this.btn_Exit.TabIndex = 8;
-            this.btn_Exit.Text = "Exit";
-            this.btn_Exit.UseVisualStyleBackColor = true;
+            this.ExitBt.Location = new System.Drawing.Point(171, 232);
+            this.ExitBt.Name = "ExitBt";
+            this.ExitBt.Size = new System.Drawing.Size(87, 29);
+            this.ExitBt.TabIndex = 8;
+            this.ExitBt.Text = "Exit";
+            this.ExitBt.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -67,8 +67,8 @@ namespace Views
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lbl_Password);
             this.panel1.Controls.Add(this.lbl_Username);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtPassword);
+            this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Location = new System.Drawing.Point(26, 83);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(259, 122);
@@ -102,28 +102,29 @@ namespace Views
             this.lbl_Username.TabIndex = 6;
             this.lbl_Username.Text = "Username:";
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(92, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtPassword.Location = new System.Drawing.Point(92, 61);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(139, 20);
+            this.txtPassword.TabIndex = 2;
             // 
-            // textBox1
+            // txtUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtUsername.Location = new System.Drawing.Point(92, 24);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(139, 20);
+            this.txtUsername.TabIndex = 1;
             // 
-            // btn_Login
+            // confirmBt
             // 
-            this.btn_Login.Location = new System.Drawing.Point(51, 232);
-            this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(87, 29);
-            this.btn_Login.TabIndex = 7;
-            this.btn_Login.Text = "Confirm";
-            this.btn_Login.UseVisualStyleBackColor = true;
+            this.confirmBt.Location = new System.Drawing.Point(51, 232);
+            this.confirmBt.Name = "confirmBt";
+            this.confirmBt.Size = new System.Drawing.Size(87, 29);
+            this.confirmBt.TabIndex = 7;
+            this.confirmBt.Text = "Confirm";
+            this.confirmBt.UseVisualStyleBackColor = true;
+            this.confirmBt.Click += new System.EventHandler(this.confirmBt_Click);
             // 
             // lbl_Credit
             // 
@@ -141,9 +142,9 @@ namespace Views
             this.ClientSize = new System.Drawing.Size(306, 307);
             this.Controls.Add(this.lbl_Credit);
             this.Controls.Add(this.lbl_Welcome);
-            this.Controls.Add(this.btn_Exit);
+            this.Controls.Add(this.ExitBt);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btn_Login);
+            this.Controls.Add(this.confirmBt);
             this.Name = "FormLogin";
             this.Text = "Login";
             this.panel1.ResumeLayout(false);
@@ -156,13 +157,13 @@ namespace Views
         #endregion
 
         private System.Windows.Forms.Label lbl_Welcome;
-        private System.Windows.Forms.Button btn_Exit;
+        private System.Windows.Forms.Button ExitBt;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_Password;
         private System.Windows.Forms.Label lbl_Username;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btn_Login;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Button confirmBt;
         private System.Windows.Forms.Label lbl_Credit;
         private System.Windows.Forms.Label label1;
     }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ManageWineStore.app.Controllers;
+using ManageWineStore.app.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,34 @@ namespace Views
 {
     public partial class FormLogin : Form
     {
+        private LoginController loginController;
         public FormLogin()
         {
             InitializeComponent();
+            loginController = new LoginController();
+        }
+
+        private void confirmBt_Click(object sender, EventArgs e)
+        {
+            Object user = null;
+
+            if (validate())
+            {
+                user = loginController.login(txtPassword.Text, txtPassword.Text);
+            }
+            
+            if (user != null)
+            {
+                FormHome fh = new FormHome(user);
+                this.Hide();
+                fh.ShowDialog();
+                this.Show();
+            }
+        }
+
+        private bool validate()
+        {
+            return true;
         }
     }
 }

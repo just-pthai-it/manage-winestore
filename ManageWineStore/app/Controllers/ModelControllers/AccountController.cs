@@ -17,7 +17,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
         {
             string commandText = "INSERT INTO Account VALUES ( @username , @password , @user_id );";
             this.executeNonQuery(commandText, new object[] {
-                accountModel.Username, accountModel.Password, accountModel.UserId
+                accountModel.Username, accountModel.Password, accountModel.UserTypeId
             });
         }
 
