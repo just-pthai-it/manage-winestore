@@ -102,6 +102,12 @@
     <Compile Include="app\Views\FormLogin.designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="app\Views\UC\SellerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="app\Views\UC\SellerUC.Designer.cs">
+      <DependentUpon>SellerUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="BTLDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="app\Views\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\Views\UC\SellerUC.resx">
+      <DependentUpon>SellerUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

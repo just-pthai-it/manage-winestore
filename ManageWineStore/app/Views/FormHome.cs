@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UC;
 
 namespace Views
 {
@@ -39,38 +40,51 @@ namespace Views
 
         private void createListButton()
         {
-            this.adminBts.Add(this.btn_Infomation);
-            this.adminBts.Add(this.btn_Data);
-            this.adminBts.Add(this.btn_Finance);
+            //this.adminBts.Add(this.btn_Infomation);
+            //this.adminBts.Add(this.btn_Data);
+            //this.adminBts.Add(this.btn_Finance);
 
-            this.employeeBts.Add(this.btn_Sell);
-            this.employeeBts.Add(this.btn_Infomation);
-            this.employeeBts.Add(this.btn_Data);
+            //this.employeeBts.Add(this.btn_Sell);
+            //this.employeeBts.Add(this.btn_Infomation);
+            //this.employeeBts.Add(this.btn_Data);
 
         }
         private void setUp(string name)
         {
-            int x = 12, y = 41;
-            this.label1.Text = this.label1.Text + " " + name;
-            if (this.adminModel == null)
-            {
-                foreach (Button bt in this.adminBts)
-                {
-                    bt.Location = new Point(x, y);
-                    this.panel1.Controls.Add(bt);
-                    y += 43;
-                }
-            }
-            else
-            {
-                MessageBox.Show("fsddaf");
-                foreach (Button bt in this.employeeBts)
-                {
-                    bt.Location = new Point(x, y);
-                    this.panel1.Controls.Add(bt);
-                    y += 43;
-                }
-            }
+            //int x = 12, y = 41;
+            //this.label1.Text = this.label1.Text + " " + name;
+            //if (this.adminModel == null)
+            //{
+            //    foreach (Button bt in this.adminBts)
+            //    {
+            //        bt.Location = new Point(x, y);
+            //        this.panel1.Controls.Add(bt);
+            //        y += 43;
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("fsddaf");
+            //    foreach (Button bt in this.employeeBts)
+            //    {
+            //        bt.Location = new Point(x, y);
+            //        this.panel1.Controls.Add(bt);
+            //        y += 43;
+            //    }
+            //}
         }
+        private void btn_Import_Click(object sender, EventArgs e)
+        {
+            pnl_Workplace.Controls.Clear();
+        }
+
+        private void btn_Sell_Click(object sender, EventArgs e)
+        {
+            pnl_Workplace.Controls.Clear();
+            SellerUC seller = new SellerUC();
+            seller.Dock = DockStyle.Fill;
+            pnl_Workplace.Controls.Add(seller);
+        }
+
     }
 }
