@@ -15,22 +15,21 @@ namespace ManageWineStore.app.Controllers.ModelControllers
     {
         public override void insert(EmployeeModel employeeModel)
         {
-            databaseConnector.OpenConnect();
-            string commandText = "INSERT INTO employee VALUES (@employee_name, @salary);";
-            SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
-            sqlCommand.Parameters.Add("@employee_name", SqlDbType.NVarChar);
-            sqlCommand.Parameters.Add("@salary", SqlDbType.Float);
-            //sqlCommand.Parameters["@employee_name"].Value = employeeModel.EmployeeName;
-            //sqlCommand.Parameters["@salary"].Value = employeeModel.Salary;
-            sqlCommand.ExecuteNonQuery();
-            databaseConnector.CloseConnect();
+
         }
 
         public DataTable find(string account_id)
         {
+            string commandText = "SELECT * FROM employee ;";
+            return this.executeQuery(commandText);
+        }
+
+        public DataTable findAll(string account_id)
+        {
             string commandText = "SELECT * FROM employee WHERE account_id = @account_id ;";
             return this.executeQuery(commandText, new object[] { account_id });
         }
+
         public override DataTable get(EmployeeModel employeeModel)
         {
             throw new NotImplementedException();
