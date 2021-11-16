@@ -9,12 +9,12 @@ namespace ManageWineStore.app.Models
 {
     class AccountModel
     {
-        public AccountModel(int id, string username, string password, int userId)
+        public AccountModel(int id, string username, string password, int roleId)
         {
             Id = id;
             Username = username;
             Password = password;
-            UserTypeId = userId;
+            RoleId = roleId;
         }
 
         public AccountModel(DataRow row)
@@ -22,13 +22,13 @@ namespace ManageWineStore.app.Models
             Id = (int)row["id"];
             Username = row["user_name"].ToString();
             Password = row["password"].ToString();
-            UserTypeId = (int)row["user_type_id"];
+            RoleId = (int)row["role_id"];
         }
 
         public int Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public int UserTypeId { get; set; }
+        public int RoleId { get; set; }
 
     }
 }

@@ -13,6 +13,16 @@ namespace ManageWineStore.app.Controllers.ModelControllers
 {
     class SaleReciptController : AModelController<SaleReciptModel>
     {
+        public int insertGetId (SaleReciptModel saleReciptModel)
+        {
+            string commandText = "INSERT INTO sale_recipt output INSERTED.id VALUES ( @create_at , @employee_id , " +
+                                "@customer_id , @total_money );";
+            return (int)this.ExecuteScalar(commandText, new object[] {
+                saleReciptModel.CreateAt, saleReciptModel.EmployeeId,
+                saleReciptModel.CustomerId, saleReciptModel.TotalMoney
+            });
+        }
+
         public override void insert(SaleReciptModel saleReciptModel)
         {
             string commandText = "INSERT INTO sale_recipt VALUES ( @create_at , @employee_id , " +

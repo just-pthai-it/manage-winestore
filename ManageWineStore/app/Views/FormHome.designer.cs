@@ -31,17 +31,17 @@ namespace Views
         {
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
-            this.gb_Task = new System.Windows.Forms.GroupBox();
-            this.btn_Import = new System.Windows.Forms.Button();
-            this.btn_Profile = new System.Windows.Forms.Button();
-            this.btn_Account = new System.Windows.Forms.Button();
-            this.btn_Storage = new System.Windows.Forms.Button();
-            this.btn_Sell = new System.Windows.Forms.Button();
-            this.btn_Wine = new System.Windows.Forms.Button();
-            this.btn_Employee = new System.Windows.Forms.Button();
-            this.btn_Revenue = new System.Windows.Forms.Button();
+            this.menuGrb = new System.Windows.Forms.GroupBox();
+            this.importBt = new System.Windows.Forms.Button();
+            this.profileBt = new System.Windows.Forms.Button();
+            this.accountMnBt = new System.Windows.Forms.Button();
+            this.storageMnBt = new System.Windows.Forms.Button();
+            this.sellBt = new System.Windows.Forms.Button();
+            this.wineMnBt = new System.Windows.Forms.Button();
+            this.employeeMnBt = new System.Windows.Forms.Button();
+            this.revenueBt = new System.Windows.Forms.Button();
             this.pnl_Workplace = new System.Windows.Forms.Panel();
-            this.gb_Task.SuspendLayout();
+            this.menuGrb.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitter1
@@ -66,95 +66,95 @@ namespace Views
             // 
             // gb_Task
             // 
-            this.gb_Task.Controls.Add(this.btn_Import);
-            this.gb_Task.Controls.Add(this.btn_Profile);
-            this.gb_Task.Controls.Add(this.btn_Account);
-            this.gb_Task.Controls.Add(this.btn_Storage);
-            this.gb_Task.Controls.Add(this.btn_Sell);
-            this.gb_Task.Controls.Add(this.btn_Wine);
-            this.gb_Task.Controls.Add(this.btn_Employee);
-            this.gb_Task.Controls.Add(this.btn_Revenue);
-            this.gb_Task.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gb_Task.Location = new System.Drawing.Point(0, 44);
-            this.gb_Task.Name = "gb_Task";
-            this.gb_Task.Size = new System.Drawing.Size(141, 517);
-            this.gb_Task.TabIndex = 10;
-            this.gb_Task.TabStop = false;
-            this.gb_Task.Text = "Tasks";
+            //this.menuGrb.Controls.Add(this.importBt);
+            //this.menuGrb.Controls.Add(this.profileBt);
+            //this.menuGrb.Controls.Add(this.accountMnBt);
+            //this.menuGrb.Controls.Add(this.storageMnBt);
+            //this.menuGrb.Controls.Add(this.sellBt);
+            //this.menuGrb.Controls.Add(this.wineMnBt);
+            //this.menuGrb.Controls.Add(this.employeeMnBt);
+            //this.menuGrb.Controls.Add(this.revenueBt);
+            this.menuGrb.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuGrb.Location = new System.Drawing.Point(0, 44);
+            this.menuGrb.Name = "gb_Task";
+            this.menuGrb.Size = new System.Drawing.Size(141, 517);
+            this.menuGrb.TabIndex = 10;
+            this.menuGrb.TabStop = false;
+            this.menuGrb.Text = "Tasks";
             // 
             // btn_Import
             // 
-            this.btn_Import.Location = new System.Drawing.Point(6, 31);
-            this.btn_Import.Name = "btn_Import";
-            this.btn_Import.Size = new System.Drawing.Size(129, 37);
-            this.btn_Import.TabIndex = 1;
-            this.btn_Import.Text = "Goods Receipt";
-            this.btn_Import.UseVisualStyleBackColor = true;
-            this.btn_Import.Click += new System.EventHandler(this.btn_Import_Click);
+            this.importBt.Location = new System.Drawing.Point(6, 31);
+            this.importBt.Name = "btn_Import";
+            this.importBt.Size = new System.Drawing.Size(129, 37);
+            this.importBt.TabIndex = 1;
+            this.importBt.Text = "Nhập hàng";
+            this.importBt.UseVisualStyleBackColor = true;
+            this.importBt.Click += new System.EventHandler(this.btn_Import_Click);
             // 
             // btn_Profile
             // 
-            this.btn_Profile.Location = new System.Drawing.Point(6, 332);
-            this.btn_Profile.Name = "btn_Profile";
-            this.btn_Profile.Size = new System.Drawing.Size(129, 37);
-            this.btn_Profile.TabIndex = 8;
-            this.btn_Profile.Text = "Profile";
-            this.btn_Profile.UseVisualStyleBackColor = true;
+            this.profileBt.Location = new System.Drawing.Point(6, 332);
+            this.profileBt.Name = "btn_Profile";
+            this.profileBt.Size = new System.Drawing.Size(129, 37);
+            this.profileBt.TabIndex = 8;
+            this.profileBt.Text = "Thông tin";
+            this.profileBt.UseVisualStyleBackColor = true;
             // 
             // btn_Account
             // 
-            this.btn_Account.Location = new System.Drawing.Point(6, 289);
-            this.btn_Account.Name = "btn_Account";
-            this.btn_Account.Size = new System.Drawing.Size(129, 37);
-            this.btn_Account.TabIndex = 7;
-            this.btn_Account.Text = "Accounts";
-            this.btn_Account.UseVisualStyleBackColor = true;
+            this.accountMnBt.Location = new System.Drawing.Point(6, 289);
+            this.accountMnBt.Name = "btn_Account";
+            this.accountMnBt.Size = new System.Drawing.Size(129, 37);
+            this.accountMnBt.TabIndex = 7;
+            this.accountMnBt.Text = "Quản lý tài khoản";
+            this.accountMnBt.UseVisualStyleBackColor = true;
             // 
             // btn_Storage
             // 
-            this.btn_Storage.Location = new System.Drawing.Point(6, 246);
-            this.btn_Storage.Name = "btn_Storage";
-            this.btn_Storage.Size = new System.Drawing.Size(129, 37);
-            this.btn_Storage.TabIndex = 6;
-            this.btn_Storage.Text = "Storage";
-            this.btn_Storage.UseVisualStyleBackColor = true;
+            this.storageMnBt.Location = new System.Drawing.Point(6, 246);
+            this.storageMnBt.Name = "btn_Storage";
+            this.storageMnBt.Size = new System.Drawing.Size(129, 37);
+            this.storageMnBt.TabIndex = 6;
+            this.storageMnBt.Text = "Quản lý kho";
+            this.storageMnBt.UseVisualStyleBackColor = true;
             // 
             // btn_Sell
             // 
-            this.btn_Sell.Location = new System.Drawing.Point(6, 74);
-            this.btn_Sell.Name = "btn_Sell";
-            this.btn_Sell.Size = new System.Drawing.Size(129, 37);
-            this.btn_Sell.TabIndex = 2;
-            this.btn_Sell.Text = "Sell";
-            this.btn_Sell.UseVisualStyleBackColor = true;
-            this.btn_Sell.Click += new System.EventHandler(this.btn_Sell_Click);
+            this.sellBt.Location = new System.Drawing.Point(6, 74);
+            this.sellBt.Name = "btn_Sell";
+            this.sellBt.Size = new System.Drawing.Size(129, 37);
+            this.sellBt.TabIndex = 2;
+            this.sellBt.Text = "Bán hàng";
+            this.sellBt.UseVisualStyleBackColor = true;
+            this.sellBt.Click += new System.EventHandler(this.btn_Sell_Click);
             // 
             // btn_Wine
             // 
-            this.btn_Wine.Location = new System.Drawing.Point(6, 203);
-            this.btn_Wine.Name = "btn_Wine";
-            this.btn_Wine.Size = new System.Drawing.Size(129, 37);
-            this.btn_Wine.TabIndex = 5;
-            this.btn_Wine.Text = "Wine";
-            this.btn_Wine.UseVisualStyleBackColor = true;
+            this.wineMnBt.Location = new System.Drawing.Point(6, 203);
+            this.wineMnBt.Name = "btn_Wine";
+            this.wineMnBt.Size = new System.Drawing.Size(129, 37);
+            this.wineMnBt.TabIndex = 5;
+            this.wineMnBt.Text = "Quản lý rượu";
+            this.wineMnBt.UseVisualStyleBackColor = true;
             // 
             // btn_Employee
             // 
-            this.btn_Employee.Location = new System.Drawing.Point(6, 160);
-            this.btn_Employee.Name = "btn_Employee";
-            this.btn_Employee.Size = new System.Drawing.Size(129, 37);
-            this.btn_Employee.TabIndex = 4;
-            this.btn_Employee.Text = "Employee";
-            this.btn_Employee.UseVisualStyleBackColor = true;
+            this.employeeMnBt.Location = new System.Drawing.Point(6, 160);
+            this.employeeMnBt.Name = "btn_Employee";
+            this.employeeMnBt.Size = new System.Drawing.Size(129, 37);
+            this.employeeMnBt.TabIndex = 4;
+            this.employeeMnBt.Text = "Quản lý nhân viên";
+            this.employeeMnBt.UseVisualStyleBackColor = true;
             // 
             // btn_Revenue
             // 
-            this.btn_Revenue.Location = new System.Drawing.Point(6, 117);
-            this.btn_Revenue.Name = "btn_Revenue";
-            this.btn_Revenue.Size = new System.Drawing.Size(129, 37);
-            this.btn_Revenue.TabIndex = 3;
-            this.btn_Revenue.Text = "Revenue";
-            this.btn_Revenue.UseVisualStyleBackColor = true;
+            this.revenueBt.Location = new System.Drawing.Point(6, 117);
+            this.revenueBt.Name = "btn_Revenue";
+            this.revenueBt.Size = new System.Drawing.Size(129, 37);
+            this.revenueBt.TabIndex = 3;
+            this.revenueBt.Text = "Quản lý doanh thu";
+            this.revenueBt.UseVisualStyleBackColor = true;
             // 
             // pnl_Workplace
             // 
@@ -170,12 +170,12 @@ namespace Views
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 561);
             this.Controls.Add(this.pnl_Workplace);
-            this.Controls.Add(this.gb_Task);
+            this.Controls.Add(this.menuGrb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.splitter1);
             this.Name = "FormHome";
             this.Text = "FormHome";
-            this.gb_Task.ResumeLayout(false);
+            this.menuGrb.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,15 +184,15 @@ namespace Views
         #endregion
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox gb_Task;
-        private System.Windows.Forms.Button btn_Import;
-        private System.Windows.Forms.Button btn_Profile;
-        private System.Windows.Forms.Button btn_Account;
-        private System.Windows.Forms.Button btn_Storage;
-        private System.Windows.Forms.Button btn_Sell;
-        private System.Windows.Forms.Button btn_Wine;
-        private System.Windows.Forms.Button btn_Employee;
-        private System.Windows.Forms.Button btn_Revenue;
+        private System.Windows.Forms.GroupBox menuGrb;
+        private System.Windows.Forms.Button importBt;
+        private System.Windows.Forms.Button profileBt;
+        private System.Windows.Forms.Button accountMnBt;
+        private System.Windows.Forms.Button storageMnBt;
+        private System.Windows.Forms.Button sellBt;
+        private System.Windows.Forms.Button wineMnBt;
+        private System.Windows.Forms.Button employeeMnBt;
+        private System.Windows.Forms.Button revenueBt;
         private System.Windows.Forms.Panel pnl_Workplace;
     }
 }

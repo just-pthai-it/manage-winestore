@@ -19,6 +19,7 @@ namespace Views
         {
             InitializeComponent();
             loginController = new LoginController();
+            this.ActiveControl = this.txtUsername;
         }
 
         private void confirmBt_Click(object sender, EventArgs e)
@@ -27,9 +28,10 @@ namespace Views
 
             if (validate())
             {
-                user = loginController.login(txtPassword.Text, txtPassword.Text);
+                user = loginController.login(txtUsername.Text, txtPassword.Text);
             }
-            
+
+
             if (user != null)
             {
                 FormHome fh = new FormHome(user);

@@ -13,6 +13,12 @@ namespace ManageWineStore.app.Controllers.ModelControllers
 {
     class WineController : AModelController<WineModel>
     {
+        public DataTable findAll()
+        {
+            string commandText = "SELECT * FROM wine_merchandise " +
+                " ORDER BY wine_name, year_of_manufacture, merchandise_id;";
+            return this.executeQuery(commandText);
+        }
         public override void insert(WineModel wineModel)
         {
             string commandText = "INSERT INTO wine VALUES ( @wine_name , @alcohol_level , @price );";
@@ -25,7 +31,6 @@ namespace ManageWineStore.app.Controllers.ModelControllers
         {
             throw new NotImplementedException();
         }
-
 
         public override void update(WineModel wineModel)
         {

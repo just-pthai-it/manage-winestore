@@ -40,51 +40,59 @@ namespace Views
 
         private void createListButton()
         {
-            //this.adminBts.Add(this.btn_Infomation);
-            //this.adminBts.Add(this.btn_Data);
-            //this.adminBts.Add(this.btn_Finance);
+            this.adminBts.Add(this.revenueBt);
+            this.adminBts.Add(this.wineMnBt);
+            this.adminBts.Add(this.employeeMnBt);
+            this.adminBts.Add(this.storageMnBt);
+            this.adminBts.Add(this.accountMnBt);
+            this.adminBts.Add(this.profileBt);
 
-            //this.employeeBts.Add(this.btn_Sell);
-            //this.employeeBts.Add(this.btn_Infomation);
-            //this.employeeBts.Add(this.btn_Data);
-
+            this.employeeBts.Add(this.importBt);
+            this.employeeBts.Add(this.sellBt);
+            this.employeeBts.Add(this.wineMnBt);
+            this.employeeBts.Add(this.storageMnBt);
+            this.employeeBts.Add(this.profileBt);
         }
         private void setUp(string name)
         {
-            //int x = 12, y = 41;
-            //this.label1.Text = this.label1.Text + " " + name;
-            //if (this.adminModel == null)
-            //{
-            //    foreach (Button bt in this.adminBts)
-            //    {
-            //        bt.Location = new Point(x, y);
-            //        this.panel1.Controls.Add(bt);
-            //        y += 43;
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("fsddaf");
-            //    foreach (Button bt in this.employeeBts)
-            //    {
-            //        bt.Location = new Point(x, y);
-            //        this.panel1.Controls.Add(bt);
-            //        y += 43;
-            //    }
-            //}
+            int x = 12, y = 41;
+            this.label1.Text = this.label1.Text + " " + name;
+            if (this.adminModel != null)
+            {
+                foreach (Button bt in this.adminBts)
+                {
+                    bt.Location = new Point(x, y);
+                    this.menuGrb.Controls.Add(bt);
+                    y += 43;
+                }
+            }
+            else
+            {
+                foreach (Button bt in this.employeeBts)
+                {
+                    bt.Location = new Point(x, y);
+                    this.menuGrb.Controls.Add(bt);
+                    y += 43;
+                }
+            }
         }
         private void btn_Import_Click(object sender, EventArgs e)
         {
-            pnl_Workplace.Controls.Clear();
+            this.pnl_Workplace.Controls.Clear();
         }
 
         private void btn_Sell_Click(object sender, EventArgs e)
         {
-            pnl_Workplace.Controls.Clear();
-            SellerUC seller = new SellerUC();
+            this.pnl_Workplace.Controls.Clear();
+            SellerUC seller = new SellerUC(this.employeeModel.Id);
             seller.Dock = DockStyle.Fill;
-            pnl_Workplace.Controls.Add(seller);
+            this.pnl_Workplace.Controls.Add(seller);
         }
 
+        private void FormHome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.adminModel = null;
+            this.employeeModel = null;
+        }
     }
 }

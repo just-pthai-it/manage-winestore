@@ -8,10 +8,9 @@ namespace ManageWineStore.app.Models
 {
     class SaleReciptModel
     {
-        public SaleReciptModel(int id, DateTime createAt, 
+        public SaleReciptModel(DateTime createAt, 
                             int employeeId, int customerId, double totalMoney)
         {
-            Id = id;
             CreateAt = createAt;
             EmployeeId = employeeId;
             CustomerId = customerId;

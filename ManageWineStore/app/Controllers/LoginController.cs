@@ -18,7 +18,6 @@ namespace ManageWineStore.app.Controllers
         private AdminController adminController = null;
         private EmployeeController employeeController = null;
 
-
         public LoginController()
         {
             this.accountController = new AccountController();
@@ -32,13 +31,12 @@ namespace ManageWineStore.app.Controllers
             DataTable dataTable = accountController.find(username, hashPassword);
             foreach (DataRow dataRow in dataTable.Rows)
             {
-                if (dataRow["user_type_id"].ToString() == "1")
+                if (dataRow["role_id"].ToString() == "2")
                 {
                     return new EmployeeModel(employeeController.find(dataRow["id"].ToString()).Rows[0]);
                 }
 
                 return new AdminModel(adminController.find(dataRow["id"].ToString()).Rows[0]);
-
             }
 
             return null;
