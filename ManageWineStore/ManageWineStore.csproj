@@ -102,6 +102,18 @@
     <Compile Include="app\Views\FormLogin.designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="app\Views\UC\EmployeeUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="app\Views\UC\EmployeeUC.designer.cs">
+      <DependentUpon>EmployeeUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\Views\UC\StorageUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="app\Views\UC\StorageUC.designer.cs">
+      <DependentUpon>StorageUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="app\Views\UC\SellerUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,17 +126,8 @@
       <DependentUpon>BTLDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="database\DatabaseConnector.cs" />
-    <Compile Include="app\Views\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="app\Views\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="app\Views\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="app\Views\FormChangePass.resx">
       <DependentUpon>FormChangePass.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +136,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="app\Views\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\Views\UC\EmployeeUC.resx">
+      <DependentUpon>EmployeeUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\Views\UC\StorageUC.resx">
+      <DependentUpon>StorageUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app\Views\UC\SellerUC.resx">
       <DependentUpon>SellerUC.cs</DependentUpon>

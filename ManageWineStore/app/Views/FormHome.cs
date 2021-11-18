@@ -1,4 +1,5 @@
 ﻿using ManageWineStore.app.Models;
+using ManageWineStore.app.Views.UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -78,15 +79,30 @@ namespace Views
         }
         private void btn_Import_Click(object sender, EventArgs e)
         {
-            this.pnl_Workplace.Controls.Clear();
+            this.workplacePnl.Controls.Clear();
+        }
+        private void sellBt_Click(object sender, EventArgs e)
+        {
+            this.workplacePnl.Controls.Clear();
+            SellerUC seller = new SellerUC(1);
+            seller.Dock = DockStyle.Fill;
+            this.workplacePnl.Controls.Add(seller);
         }
 
-        private void btn_Sell_Click(object sender, EventArgs e)
+        private void employeeMnBt_Click(object sender, EventArgs e)
         {
-            this.pnl_Workplace.Controls.Clear();
-            SellerUC seller = new SellerUC(this.employeeModel.Id);
-            seller.Dock = DockStyle.Fill;
-            this.pnl_Workplace.Controls.Add(seller);
+            this.workplacePnl.Controls.Clear();
+            EmployeeUC employee = new EmployeeUC();
+            employee.Dock = DockStyle.Fill;
+            this.workplacePnl.Controls.Add(employee);
+        }
+
+        private void storageMnBt_Click(object sender, EventArgs e)
+        {
+            this.workplacePnl.Controls.Clear();
+            StorageUC storage = new StorageUC();
+            storage.Dock = DockStyle.Fill;
+            this.workplacePnl.Controls.Add(storage);
         }
 
         private void FormHome_FormClosing(object sender, FormClosingEventArgs e)
@@ -94,5 +110,6 @@ namespace Views
             this.adminModel = null;
             this.employeeModel = null;
         }
+
     }
 }
