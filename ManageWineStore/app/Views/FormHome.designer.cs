@@ -80,7 +80,7 @@ namespace Views
             this.menuGrb.Size = new System.Drawing.Size(141, 542);
             this.menuGrb.TabIndex = 10;
             this.menuGrb.TabStop = false;
-            this.menuGrb.Text = "Tasks";
+            this.menuGrb.Text = "Menu";
             // 
             // importBt
             // 
@@ -177,7 +177,6 @@ namespace Views
             this.Controls.Add(this.splitter1);
             this.Name = "FormHome";
             this.Text = "FormHome";
-            this.menuGrb.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

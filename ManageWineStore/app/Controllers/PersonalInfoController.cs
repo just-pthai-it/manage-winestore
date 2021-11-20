@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManageWineStore.app.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace ManageWineStore.app.Controllers
 {
     class PersonalInfoController
     {
-
+        private AdminModel adminMode;
+        private EmployeeModel EmployeeModel;
     }
 }

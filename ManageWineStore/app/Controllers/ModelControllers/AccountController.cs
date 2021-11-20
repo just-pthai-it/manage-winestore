@@ -21,25 +21,36 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             });
         }
 
-        public DataTable find(string username, string password)
+        public DataTable findByUsernameAndPassword(string username, string password)
         {
             string commandText = "SELECT * FROM Account WHERE username = @username AND " +
                                 "password = @password ;";
             return this.executeQuery(commandText, new object[] { username, password });
         }
-        public override DataTable get(AccountModel accountModel)
+        public override DataTable find(string id)
         {
             throw new NotImplementedException();
+        }
+
+        public override DataTable findAll()
+        {
+            string commandText = "SELECT * FROM account_info ;";
+            return this.executeQuery(commandText);
         }
 
         public override void update(AccountModel accountModel)
         {
-            throw new NotImplementedException();
+            string commandText = "UPDATE account SET role_id = @role_id ;";
+            this.executeNonQuery(commandText, new object[]
+            {
+                accountModel.RoleId,
+            });
         }
 
-        public override void delete(AccountModel accountModel)
+        public override void delete(string id)
         {
-            throw new NotImplementedException();
+            string commandText = "DELETE FROM account WHERE id = @id ;";
+            this.executeNonQuery(commandText, new object[] { id });
         }
     }
 }

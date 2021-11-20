@@ -28,7 +28,7 @@ namespace ManageWineStore.app.Controllers
         public Object login(string username, string password)
         {
             string hashPassword = MD5Helper.GetHash(password);
-            DataTable dataTable = accountController.find(username, hashPassword);
+            DataTable dataTable = accountController.findByUsernameAndPassword(username, hashPassword);
             foreach (DataRow dataRow in dataTable.Rows)
             {
                 if (dataRow["role_id"].ToString() == "2")
@@ -36,7 +36,7 @@ namespace ManageWineStore.app.Controllers
                     return new EmployeeModel(employeeController.find(dataRow["id"].ToString()).Rows[0]);
                 }
 
-                return new AdminModel(adminController.find(dataRow["id"].ToString()).Rows[0]);
+                return new AdminModel(adminController.findByAccountId(dataRow["id"].ToString()).Rows[0]);
             }
 
             return null;

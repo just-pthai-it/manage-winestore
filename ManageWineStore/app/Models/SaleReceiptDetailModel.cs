@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace ManageWineStore.app.Models
 {
-    class SaleReciptDetailModel
+    class SaleReceiptDetailModel
     {
-        public SaleReciptDetailModel(int id, int saleReciptId, int merchandiseId, 
+        public SaleReceiptDetailModel(int id, int saleReciptId, int merchandiseId, 
                                     int quantity, double cost)
         {
             Id = id;
-            SaleReciptId = saleReciptId;
+            SaleReceiptId = saleReciptId;
             MerchandiseId = merchandiseId;
             Quantity = quantity;
             Cost = cost;
         }
 
-        public SaleReciptDetailModel(int merchandiseId, int quantity, double cost, string name)
+        public SaleReceiptDetailModel(int merchandiseId, int quantity, double cost, string name)
         {
             Id = -1;
-            SaleReciptId = -1;
+            SaleReceiptId = -1;
             MerchandiseId = merchandiseId;
             Quantity = quantity;
             Cost = cost;
@@ -29,7 +29,7 @@ namespace ManageWineStore.app.Models
         }
 
         public int Id { get; set; }
-        public int SaleReciptId { get; set; }
+        public int SaleReceiptId { get; set; }
         public int MerchandiseId { get; set; }
         public int Quantity { get; set; }
         public double Cost { get; set; }

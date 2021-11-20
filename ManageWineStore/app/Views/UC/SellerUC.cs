@@ -77,7 +77,7 @@ namespace UC
             }
 
             double cost = double.Parse(row.Cells[3].Value.ToString()) * (int)numericUpDown1.Value;
-            cart.Items.Add(new SaleReciptDetailModel(
+            cart.Items.Add(new SaleReceiptDetailModel(
                 Int32.Parse(row.Cells[6].Value.ToString()),
                 (int)numericUpDown1.Value,
                 cost,
@@ -100,7 +100,7 @@ namespace UC
         private bool checkIsBought(int merchandiseId, string wineName)
         {
             int i = 0;
-            foreach (SaleReciptDetailModel item in this.cart.Items)
+            foreach (SaleReceiptDetailModel item in this.cart.Items)
             {
                 if (item.MerchandiseId == merchandiseId &&
                     item.Name == wineName)
@@ -113,7 +113,7 @@ namespace UC
             return false;
         }
 
-        private void updateOldItem(SaleReciptDetailModel item, int index)
+        private void updateOldItem(SaleReceiptDetailModel item, int index)
         {
             this.updateTotalMoney(-item.Cost);
             item.Cost = (item.Cost / item.Quantity) * (item.Quantity + (int)this.numericUpDown1.Value);
@@ -131,7 +131,7 @@ namespace UC
         private void btn_Accept_Click(object sender, EventArgs e)
         {
             string dateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            sellWineController.pay(new SaleReciptModel(
+            sellWineController.pay(new SaleReceiptModel(
                                                 DateTime.Parse(dateTime),
                                                 employeeId,
                                                 Int32.Parse(this.txtCustomerId.Text),
@@ -144,7 +144,7 @@ namespace UC
 
         private void removeBt_Click(object sender, EventArgs e)
         {
-            SaleReciptDetailModel saleReciptDetailModel = (SaleReciptDetailModel)this.cart.SelectedItem;
+            SaleReceiptDetailModel saleReciptDetailModel = (SaleReceiptDetailModel)this.cart.SelectedItem;
             foreach (DataGridViewRow row in this.dgv.Rows)
             {
                 if (row.Cells[1].Value.ToString() == saleReciptDetailModel.Name &&

@@ -19,22 +19,22 @@ namespace ManageWineStore.app.Controllers.ModelControllers.Abastract
             this.databaseConnector = new DatabaseConnector();
         }
 
-        protected DataTable executeQuery(string query, object[] parameter = null)
+        protected DataTable executeQuery(string query, object[] parameters = null)
         {
             DataTable data = new DataTable();
             try
             {
                 databaseConnector.OpenConnect();
                 SqlCommand command = new SqlCommand(query, databaseConnector.SqlConnect);
-                if (parameter != null)
+                if (parameters != null)
                 {
-                    string[] listPara = query.Split(' ');
+                    string[] placeHolders = query.Split(' ');
                     int i = 0;
-                    foreach (string item in listPara)
+                    foreach (string item in placeHolders)
                     {
                         if (item.Contains('@'))
                         {
-                            command.Parameters.AddWithValue(item, parameter[i]);
+                            command.Parameters.AddWithValue(item, parameters[i] ?? DBNull.Value);
                             i++;
                         }
                     }
@@ -52,22 +52,22 @@ namespace ManageWineStore.app.Controllers.ModelControllers.Abastract
             return data;
         }
 
-        protected int executeNonQuery(string query, object[] parameter = null)
+        protected int executeNonQuery(string query, object[] parameters = null)
         {
             int data = 0;
             try
             {
                 databaseConnector.OpenConnect();
                 SqlCommand command = new SqlCommand(query, databaseConnector.SqlConnect);
-                if (parameter != null)
+                if (parameters != null)
                 {
-                    string[] listPara = query.Split(' ');
+                    string[] placeHolders = query.Split(' ');
                     int i = 0;
-                    foreach (string item in listPara)
+                    foreach (string item in placeHolders)
                     {
                         if (item.Contains('@'))
                         {
-                            command.Parameters.AddWithValue(item, parameter[i]);
+                            command.Parameters.AddWithValue(item, parameters[i] ?? DBNull.Value);
                             i++;
                         }
                     }
@@ -82,22 +82,22 @@ namespace ManageWineStore.app.Controllers.ModelControllers.Abastract
             return data;
         }
 
-        protected object ExecuteScalar(string query, object[] parameter = null)
+        protected object ExecuteScalar(string query, object[] parameters = null)
         {
             object data = 0;
             try
             {
                 databaseConnector.OpenConnect();
                 SqlCommand command = new SqlCommand(query, databaseConnector.SqlConnect);
-                if (parameter != null)
+                if (parameters != null)
                 {
-                    string[] listPara = query.Split(' ');
+                    string[] placeHolders = query.Split(' ');
                     int i = 0;
-                    foreach (string item in listPara)
+                    foreach (string item in placeHolders)
                     {
                         if (item.Contains('@'))
                         {
-                            command.Parameters.AddWithValue(item, parameter[i]);
+                            command.Parameters.AddWithValue(item, parameters[i] ?? DBNull.Value);
                             i++;
                         }
                     }
@@ -116,11 +116,13 @@ namespace ManageWineStore.app.Controllers.ModelControllers.Abastract
 
         public abstract void insert(T obj);
 
-        public abstract DataTable get(T obj);
+        public abstract DataTable find(string id);
+
+        public abstract DataTable findAll();
 
         public abstract void update(T obj);
 
-        public abstract void delete(T obj);
+        public abstract void delete(string id);
 
     }
 }

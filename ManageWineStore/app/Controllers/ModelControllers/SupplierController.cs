@@ -15,29 +15,25 @@ namespace ManageWineStore.app.Controllers.ModelControllers
     {
         public override void insert(SupplierModel supplierModel)
         {
-            databaseConnector.OpenConnect();
-            string commandText = "INSERT INTO supplier VALUES (@supplier_name, @salary);";
-            SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
-            sqlCommand.Parameters.Add("@supplier_name", SqlDbType.NVarChar);
-            sqlCommand.Parameters.Add("@salary", SqlDbType.Float);
-            //sqlCommand.Parameters["@supplier_name"].Value = supplierModel.SupplierName;
-            //sqlCommand.Parameters["@salary"].Value = supplierModel.Salary;
-            sqlCommand.ExecuteNonQuery();
-            databaseConnector.CloseConnect();
+
         }
 
-        public override DataTable get(SupplierModel supplierModel)
+        public override DataTable find(string id)
         {
             throw new NotImplementedException();
         }
 
+        public override DataTable findAll()
+        {
+            throw new NotImplementedException();
+        }
 
         public override void update(SupplierModel supplierModel)
         {
             throw new NotImplementedException();
         }
 
-        public override void delete(SupplierModel supplierModel)
+        public override void delete(string id)
         {
             throw new NotImplementedException();
         }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ManageWineStore.app.Models
 {
-    class SaleReciptModel
+    class SaleReceiptModel
     {
-        public SaleReciptModel(DateTime createAt, 
+        public SaleReceiptModel(DateTime createAt, 
                             int employeeId, int customerId, double totalMoney)
         {
             CreateAt = createAt;

@@ -26,12 +26,18 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             databaseConnector.CloseConnect();
         }
 
-        public DataTable find(string account_id)
+        public DataTable findByAccountId(string account_id)
         {
             string commandText = "SELECT * FROM admin WHERE account_id = @account_id ;";
             return this.executeQuery(commandText, new object[] { account_id });
         }
-        public override DataTable get(AdminModel adminModel)
+
+        public override DataTable find(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override DataTable findAll()
         {
             throw new NotImplementedException();
         }
@@ -41,7 +47,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             throw new NotImplementedException();
         }
 
-        public override void delete(AdminModel adminModel)
+        public override void delete(string id)
         {
             throw new NotImplementedException();
         }

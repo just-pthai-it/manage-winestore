@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,8 +63,8 @@
     <Compile Include="app\Controllers\ModelControllers\JobController.cs" />
     <Compile Include="app\Controllers\ModelControllers\MerchandiseController.cs" />
     <Compile Include="app\Controllers\ModelControllers\RoleController.cs" />
-    <Compile Include="app\Controllers\ModelControllers\SaleReciptController.cs" />
-    <Compile Include="app\Controllers\ModelControllers\SaleReciptDetailController.cs" />
+    <Compile Include="app\Controllers\ModelControllers\SaleReceiptController.cs" />
+    <Compile Include="app\Controllers\ModelControllers\SaleReceiptDetailController.cs" />
     <Compile Include="app\Controllers\ModelControllers\SupplierController.cs" />
     <Compile Include="app\Controllers\ModelControllers\WIneController.cs" />
     <Compile Include="app\Controllers\PersonalInfoController.cs" />
@@ -75,13 +76,13 @@
     <Compile Include="app\Models\AdminModel.cs" />
     <Compile Include="app\Models\CustomerModel.cs" />
     <Compile Include="app\Models\EmployeeModel.cs" />
-    <Compile Include="app\Models\ImportReciptModel.cs" />
-    <Compile Include="app\Models\ImportReciptDetailModel.cs" />
+    <Compile Include="app\Models\ImportReceiptModel.cs" />
+    <Compile Include="app\Models\ImportReceiptDetailModel.cs" />
     <Compile Include="app\Models\JobModel.cs" />
     <Compile Include="app\Models\MerchandiseModel.cs" />
     <Compile Include="app\Models\RoleModel.cs" />
-    <Compile Include="app\Models\SaleReciptModel.cs" />
-    <Compile Include="app\Models\SaleReciptDetailModel.cs" />
+    <Compile Include="app\Models\SaleReceiptModel.cs" />
+    <Compile Include="app\Models\SaleReceiptDetailModel.cs" />
     <Compile Include="app\Models\SupplierModel.cs" />
     <Compile Include="app\Models\WineModel.cs" />
     <Compile Include="app\Views\FormChangePass.cs">
