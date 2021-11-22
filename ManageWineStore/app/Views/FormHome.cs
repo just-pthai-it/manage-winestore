@@ -56,6 +56,7 @@ namespace Views
         }
         private void setUp(string name)
         {
+            this.menuGrb.Controls.Clear();
             int x = 12, y = 41;
             this.label1.Text = this.label1.Text + " " + name;
             if (this.adminModel != null)

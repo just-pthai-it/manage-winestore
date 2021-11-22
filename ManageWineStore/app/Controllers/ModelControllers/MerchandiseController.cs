@@ -15,29 +15,25 @@ namespace ManageWineStore.app.Controllers.ModelControllers
     {
         public override void insert(MerchandiseModel merchandiseModel)
         {
-            databaseConnector.OpenConnect();
-            string commandText = "INSERT INTO merchandise VALUES (@merchandise_name, @salary);";
-            SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
-            sqlCommand.Parameters.Add("@merchandise_name", SqlDbType.NVarChar);
-            sqlCommand.Parameters.Add("@salary", SqlDbType.Float);
-            //sqlCommand.Parameters["@merchandise_name"].Value = merchandiseModel.MerchandiseName;
-            //sqlCommand.Parameters["@salary"].Value = merchandiseModel.Salary;
-            sqlCommand.ExecuteNonQuery();
-            databaseConnector.CloseConnect();
+
         }
 
-        public override DataTable get(MerchandiseModel merchandiseModel)
+        public override DataTable find(string id)
         {
             throw new NotImplementedException();
         }
 
+        public override DataTable findAll()
+        {
+            throw new NotImplementedException();
+        }
 
         public override void update(MerchandiseModel merchandiseModel)
         {
             throw new NotImplementedException();
         }
 
-        public override void delete(MerchandiseModel merchandiseModel)
+        public override void delete(string id)
         {
             throw new NotImplementedException();
         }

@@ -15,31 +15,41 @@ namespace ManageWineStore.app.Controllers.ModelControllers
     {
         public override void insert(CustomerModel customerModel)
         {
-            databaseConnector.OpenConnect();
-            string commandText = "INSERT INTO Customer VALUES (@Customer_name, @salary);";
-            SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
-            sqlCommand.Parameters.Add("@Customer_name", SqlDbType.NVarChar);
-            sqlCommand.Parameters.Add("@salary", SqlDbType.Float);
-            //sqlCommand.Parameters["@Customer_name"].Value = CustomerModel.CustomerName;
-            //sqlCommand.Parameters["@salary"].Value = CustomerModel.Salary;
-            sqlCommand.ExecuteNonQuery();
-            databaseConnector.CloseConnect();
+
         }
 
-        public override DataTable get(CustomerModel customerModel)
+        public override DataTable find(string id)
         {
             throw new NotImplementedException();
         }
 
+        public override DataTable findAll()
+        {
+            string commandText = "SELECT * FROM customer ;";
+            return this.executeQuery(commandText);
+        }
 
         public override void update(CustomerModel customerModel)
         {
-            throw new NotImplementedException();
+            string commandText = "UPDATE customer SET name = @name , birth = @birth , " +
+                                "gender = @gender , phone = @phone , mail = @mail , " +
+                                "address = @address WHERE id = @id ;";
+            this.executeNonQuery(commandText, new object[]
+            {
+                customerModel.Name,
+                customerModel.Birth,
+                customerModel.Gender,
+                customerModel.Phone,
+                customerModel.Mail,
+                customerModel.Address,
+                customerModel.Id,
+            });
         }
 
-        public override void delete(CustomerModel customerModel)
+        public override void delete(string id)
         {
-            throw new NotImplementedException();
+            string commandText = "DELETE FROM customer WHERE id = @id ;";
+            this.executeNonQuery(commandText, new object[] { id });
         }
     }
 }

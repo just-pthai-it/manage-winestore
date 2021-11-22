@@ -30,37 +30,40 @@ namespace ManageWineStore.app.Views.UC
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.genderCbb = new System.Windows.Forms.ComboBox();
+            this.jobCbb = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
             this.picPb = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.accountTxt = new System.Windows.Forms.TextBox();
+            this.txtAccountId = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.birthDtp = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.mailTxt = new System.Windows.Forms.TextBox();
+            this.txtMail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.phoneTxt = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.addressTxt = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.genderTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.nameTxt = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.idTxt = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.searchBtn = new System.Windows.Forms.Button();
-            this.keywordTxt = new System.Windows.Forms.TextBox();
-            this.keyCbx = new System.Windows.Forms.ComboBox();
+            this.txtKeyword = new System.Windows.Forms.TextBox();
+            this.searchCbb = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.employeeDgv = new System.Windows.Forms.DataGridView();
-            this.delBtn = new System.Windows.Forms.Button();
-            this.updateBtn = new System.Windows.Forms.Button();
-            this.addBtn = new System.Windows.Forms.Button();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.deleteBt = new System.Windows.Forms.Button();
+            this.updateBt = new System.Windows.Forms.Button();
+            this.addBt = new System.Windows.Forms.Button();
+            this.refreshBt = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -71,30 +74,32 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeDgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.genderCbb);
+            this.groupBox1.Controls.Add(this.jobCbb);
+            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.cancelBtn);
             this.groupBox1.Controls.Add(this.saveBtn);
             this.groupBox1.Controls.Add(this.picPb);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.accountTxt);
+            this.groupBox1.Controls.Add(this.txtAccountId);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.birthDtp);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.mailTxt);
+            this.groupBox1.Controls.Add(this.txtMail);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.phoneTxt);
+            this.groupBox1.Controls.Add(this.txtPhone);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.addressTxt);
+            this.groupBox1.Controls.Add(this.txtAddress);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.genderTxt);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.nameTxt);
+            this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.idTxt);
+            this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox1.Location = new System.Drawing.Point(707, 0);
@@ -104,6 +109,31 @@ namespace ManageWineStore.app.Views.UC
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhân viên";
             // 
+            // genderCbb
+            // 
+            this.genderCbb.FormattingEnabled = true;
+            this.genderCbb.Location = new System.Drawing.Point(91, 122);
+            this.genderCbb.Name = "genderCbb";
+            this.genderCbb.Size = new System.Drawing.Size(87, 21);
+            this.genderCbb.TabIndex = 22;
+            // 
+            // jobCbb
+            // 
+            this.jobCbb.FormattingEnabled = true;
+            this.jobCbb.Location = new System.Drawing.Point(91, 89);
+            this.jobCbb.Name = "jobCbb";
+            this.jobCbb.Size = new System.Drawing.Size(150, 21);
+            this.jobCbb.TabIndex = 21;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(23, 89);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(55, 13);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Công việc";
+            // 
             // cancelBtn
             // 
             this.cancelBtn.Location = new System.Drawing.Point(267, 486);
@@ -112,6 +142,7 @@ namespace ManageWineStore.app.Views.UC
             this.cancelBtn.TabIndex = 19;
             this.cancelBtn.Text = "Hủy";
             this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // saveBtn
             // 
@@ -121,12 +152,13 @@ namespace ManageWineStore.app.Views.UC
             this.saveBtn.TabIndex = 18;
             this.saveBtn.Text = "Lưu";
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // picPb
             // 
-            this.picPb.Location = new System.Drawing.Point(89, 307);
+            this.picPb.Location = new System.Drawing.Point(91, 341);
             this.picPb.Name = "picPb";
-            this.picPb.Size = new System.Drawing.Size(128, 171);
+            this.picPb.Size = new System.Drawing.Size(98, 139);
             this.picPb.TabIndex = 17;
             this.picPb.TabStop = false;
             // 
@@ -135,30 +167,30 @@ namespace ManageWineStore.app.Views.UC
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(23, 351);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 13);
+            this.label9.Size = new System.Drawing.Size(26, 13);
             this.label9.TabIndex = 16;
-            this.label9.Text = "Ảnh:";
+            this.label9.Text = "Ảnh";
             // 
-            // accountTxt
+            // txtAccountId
             // 
-            this.accountTxt.Location = new System.Drawing.Point(89, 269);
-            this.accountTxt.Name = "accountTxt";
-            this.accountTxt.Size = new System.Drawing.Size(142, 20);
-            this.accountTxt.TabIndex = 15;
+            this.txtAccountId.Location = new System.Drawing.Point(89, 301);
+            this.txtAccountId.Name = "txtAccountId";
+            this.txtAccountId.Size = new System.Drawing.Size(142, 20);
+            this.txtAccountId.TabIndex = 15;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(23, 272);
+            this.label8.Location = new System.Drawing.Point(23, 304);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 13);
+            this.label8.Size = new System.Drawing.Size(39, 13);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Tài khoản:";
+            this.label8.Text = "Mã TK";
             // 
             // birthDtp
             // 
             this.birthDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.birthDtp.Location = new System.Drawing.Point(89, 125);
+            this.birthDtp.Location = new System.Drawing.Point(91, 160);
             this.birthDtp.Name = "birthDtp";
             this.birthDtp.Size = new System.Drawing.Size(100, 20);
             this.birthDtp.TabIndex = 13;
@@ -166,82 +198,75 @@ namespace ManageWineStore.app.Views.UC
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 128);
+            this.label7.Location = new System.Drawing.Point(23, 160);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 13);
             this.label7.TabIndex = 12;
             this.label7.Text = "Ngày sinh:";
             // 
-            // mailTxt
+            // txtMail
             // 
-            this.mailTxt.Location = new System.Drawing.Point(89, 197);
-            this.mailTxt.Name = "mailTxt";
-            this.mailTxt.Size = new System.Drawing.Size(257, 20);
-            this.mailTxt.TabIndex = 11;
+            this.txtMail.Location = new System.Drawing.Point(89, 229);
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(257, 20);
+            this.txtMail.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 200);
+            this.label6.Location = new System.Drawing.Point(23, 232);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 10;
             this.label6.Text = "Mail: ";
             // 
-            // phoneTxt
+            // txtPhone
             // 
-            this.phoneTxt.Location = new System.Drawing.Point(89, 161);
-            this.phoneTxt.Name = "phoneTxt";
-            this.phoneTxt.Size = new System.Drawing.Size(142, 20);
-            this.phoneTxt.TabIndex = 9;
+            this.txtPhone.Location = new System.Drawing.Point(89, 193);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(142, 20);
+            this.txtPhone.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 164);
+            this.label5.Location = new System.Drawing.Point(23, 196);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "SĐT:";
             // 
-            // addressTxt
+            // txtAddress
             // 
-            this.addressTxt.Location = new System.Drawing.Point(89, 232);
-            this.addressTxt.Name = "addressTxt";
-            this.addressTxt.Size = new System.Drawing.Size(257, 20);
-            this.addressTxt.TabIndex = 7;
+            this.txtAddress.Location = new System.Drawing.Point(89, 264);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(257, 20);
+            this.txtAddress.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 235);
+            this.label4.Location = new System.Drawing.Point(23, 267);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Địa chỉ:";
             // 
-            // genderTxt
-            // 
-            this.genderTxt.Location = new System.Drawing.Point(89, 90);
-            this.genderTxt.Name = "genderTxt";
-            this.genderTxt.Size = new System.Drawing.Size(100, 20);
-            this.genderTxt.TabIndex = 5;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 93);
+            this.label3.Location = new System.Drawing.Point(23, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Giới tính:";
             // 
-            // nameTxt
+            // txtName
             // 
-            this.nameTxt.Location = new System.Drawing.Point(89, 55);
-            this.nameTxt.Name = "nameTxt";
-            this.nameTxt.Size = new System.Drawing.Size(257, 20);
-            this.nameTxt.TabIndex = 3;
+            this.txtName.Location = new System.Drawing.Point(91, 55);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(257, 20);
+            this.txtName.TabIndex = 3;
             // 
             // label2
             // 
@@ -252,12 +277,13 @@ namespace ManageWineStore.app.Views.UC
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên:";
             // 
-            // idTxt
+            // txtId
             // 
-            this.idTxt.Location = new System.Drawing.Point(89, 19);
-            this.idTxt.Name = "idTxt";
-            this.idTxt.Size = new System.Drawing.Size(100, 20);
-            this.idTxt.TabIndex = 1;
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(91, 19);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 1;
             // 
             // label1
             // 
@@ -278,8 +304,8 @@ namespace ManageWineStore.app.Views.UC
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.searchBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.keywordTxt);
-            this.splitContainer1.Panel1.Controls.Add(this.keyCbx);
+            this.splitContainer1.Panel1.Controls.Add(this.txtKeyword);
+            this.splitContainer1.Panel1.Controls.Add(this.searchCbb);
             this.splitContainer1.Panel1.Controls.Add(this.label11);
             this.splitContainer1.Panel1.Controls.Add(this.label10);
             // 
@@ -298,21 +324,22 @@ namespace ManageWineStore.app.Views.UC
             this.searchBtn.TabIndex = 17;
             this.searchBtn.Text = "Tìm kiếm";
             this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
-            // keywordTxt
+            // txtKeyword
             // 
-            this.keywordTxt.Location = new System.Drawing.Point(286, 19);
-            this.keywordTxt.Name = "keywordTxt";
-            this.keywordTxt.Size = new System.Drawing.Size(238, 20);
-            this.keywordTxt.TabIndex = 16;
+            this.txtKeyword.Location = new System.Drawing.Point(286, 19);
+            this.txtKeyword.Name = "txtKeyword";
+            this.txtKeyword.Size = new System.Drawing.Size(238, 20);
+            this.txtKeyword.TabIndex = 16;
             // 
-            // keyCbx
+            // searchCbb
             // 
-            this.keyCbx.FormattingEnabled = true;
-            this.keyCbx.Location = new System.Drawing.Point(94, 19);
-            this.keyCbx.Name = "keyCbx";
-            this.keyCbx.Size = new System.Drawing.Size(100, 21);
-            this.keyCbx.TabIndex = 15;
+            this.searchCbb.FormattingEnabled = true;
+            this.searchCbb.Location = new System.Drawing.Point(94, 19);
+            this.searchCbb.Name = "searchCbb";
+            this.searchCbb.Size = new System.Drawing.Size(100, 21);
+            this.searchCbb.TabIndex = 15;
             // 
             // label11
             // 
@@ -341,52 +368,68 @@ namespace ManageWineStore.app.Views.UC
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.employeeDgv);
+            this.splitContainer2.Panel1.Controls.Add(this.dgv);
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.delBtn);
-            this.splitContainer2.Panel2.Controls.Add(this.updateBtn);
-            this.splitContainer2.Panel2.Controls.Add(this.addBtn);
+            this.splitContainer2.Panel2.Controls.Add(this.refreshBt);
+            this.splitContainer2.Panel2.Controls.Add(this.deleteBt);
+            this.splitContainer2.Panel2.Controls.Add(this.updateBt);
+            this.splitContainer2.Panel2.Controls.Add(this.addBt);
             this.splitContainer2.Size = new System.Drawing.Size(707, 479);
             this.splitContainer2.SplitterDistance = 398;
             this.splitContainer2.TabIndex = 0;
             // 
-            // employeeDgv
+            // dgv
             // 
-            this.employeeDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employeeDgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.employeeDgv.Location = new System.Drawing.Point(0, 0);
-            this.employeeDgv.Name = "employeeDgv";
-            this.employeeDgv.Size = new System.Drawing.Size(707, 398);
-            this.employeeDgv.TabIndex = 0;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv.Location = new System.Drawing.Point(0, 0);
+            this.dgv.Name = "dgv";
+            this.dgv.ReadOnly = true;
+            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv.Size = new System.Drawing.Size(707, 398);
+            this.dgv.TabIndex = 0;
             // 
-            // delBtn
+            // deleteBt
             // 
-            this.delBtn.Location = new System.Drawing.Point(424, 22);
-            this.delBtn.Name = "delBtn";
-            this.delBtn.Size = new System.Drawing.Size(100, 38);
-            this.delBtn.TabIndex = 26;
-            this.delBtn.Text = "Xóa";
-            this.delBtn.UseVisualStyleBackColor = true;
+            this.deleteBt.Location = new System.Drawing.Point(356, 22);
+            this.deleteBt.Name = "deleteBt";
+            this.deleteBt.Size = new System.Drawing.Size(100, 38);
+            this.deleteBt.TabIndex = 26;
+            this.deleteBt.Text = "Xóa";
+            this.deleteBt.UseVisualStyleBackColor = true;
+            this.deleteBt.Click += new System.EventHandler(this.deleteBt_Click);
             // 
-            // updateBtn
+            // updateBt
             // 
-            this.updateBtn.Location = new System.Drawing.Point(286, 22);
-            this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(100, 38);
-            this.updateBtn.TabIndex = 25;
-            this.updateBtn.Text = "Sửa";
-            this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBt.Location = new System.Drawing.Point(218, 22);
+            this.updateBt.Name = "updateBt";
+            this.updateBt.Size = new System.Drawing.Size(100, 38);
+            this.updateBt.TabIndex = 25;
+            this.updateBt.Text = "Sửa";
+            this.updateBt.UseVisualStyleBackColor = true;
+            this.updateBt.Click += new System.EventHandler(this.updateBt_Click);
             // 
-            // addBtn
+            // addBt
             // 
-            this.addBtn.Location = new System.Drawing.Point(148, 22);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(100, 38);
-            this.addBtn.TabIndex = 24;
-            this.addBtn.Text = "Thêm";
-            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBt.Location = new System.Drawing.Point(80, 22);
+            this.addBt.Name = "addBt";
+            this.addBt.Size = new System.Drawing.Size(100, 38);
+            this.addBt.TabIndex = 24;
+            this.addBt.Text = "Thêm";
+            this.addBt.UseVisualStyleBackColor = true;
+            this.addBt.Click += new System.EventHandler(this.addBt_Click);
+            // 
+            // refreshBt
+            // 
+            this.refreshBt.Location = new System.Drawing.Point(497, 22);
+            this.refreshBt.Name = "refreshBt";
+            this.refreshBt.Size = new System.Drawing.Size(100, 38);
+            this.refreshBt.TabIndex = 27;
+            this.refreshBt.Text = "Làm mới";
+            this.refreshBt.UseVisualStyleBackColor = true;
+            this.refreshBt.Click += new System.EventHandler(this.refreshBt_Click);
             // 
             // EmployeeUC
             // 
@@ -408,7 +451,7 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.employeeDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -416,21 +459,20 @@ namespace ManageWineStore.app.Views.UC
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox accountTxt;
+        private System.Windows.Forms.TextBox txtAccountId;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker birthDtp;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox mailTxt;
+        private System.Windows.Forms.TextBox txtMail;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox phoneTxt;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox addressTxt;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox genderTxt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox nameTxt;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox idTxt;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.Button saveBtn;
@@ -438,14 +480,18 @@ namespace ManageWineStore.app.Views.UC
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button searchBtn;
-        private System.Windows.Forms.TextBox keywordTxt;
-        private System.Windows.Forms.ComboBox keyCbx;
+        private System.Windows.Forms.TextBox txtKeyword;
+        private System.Windows.Forms.ComboBox searchCbb;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.DataGridView employeeDgv;
-        private System.Windows.Forms.Button delBtn;
-        private System.Windows.Forms.Button updateBtn;
-        private System.Windows.Forms.Button addBtn;
+        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.Button deleteBt;
+        private System.Windows.Forms.Button updateBt;
+        private System.Windows.Forms.Button addBt;
+        private System.Windows.Forms.ComboBox jobCbb;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox genderCbb;
+        private System.Windows.Forms.Button refreshBt;
     }
 }

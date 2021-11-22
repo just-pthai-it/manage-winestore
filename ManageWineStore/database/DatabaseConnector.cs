@@ -10,7 +10,7 @@ namespace ManageWineStore.database
 {
     class DatabaseConnector
     {
-        string strConnect = "Data Source=HMINH;Initial Catalog=BTL;Integrated Security=True";
+        string strConnect = "Data Source=WRBKOR23;Initial Catalog=BTL;Integrated Security=True";
         SqlConnection sqlConnect = null;
 
         public SqlConnection SqlConnect { get => sqlConnect; set => sqlConnect = value; }
@@ -23,7 +23,7 @@ namespace ManageWineStore.database
                 SqlConnect.Open();
             }
         }
-        //Phương thức đóng kết nối
+
         public void CloseConnect()
         {
             if (SqlConnect.State != ConnectionState.Closed)

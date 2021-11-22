@@ -23,26 +23,25 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             });
         }
 
-        public override DataTable get (JobModel jobModel)
+        public override DataTable find(string id)
         {
             throw new NotImplementedException();
         }
 
+        public override DataTable findAll()
+        {
+            string commandText = "SELECT id, job_name FROM job ;";
+            return this.executeQuery(commandText);
+        }
 
         public override void update(JobModel jobModel)
         {
             throw new NotImplementedException();
         }
 
-        public override void delete(JobModel jobModel)
+        public override void delete(string id)
         {
-            databaseConnector.OpenConnect();
-            string commandText = "DELETE FROM job WHERE id = @id;";
-            SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
-            sqlCommand.Parameters.Add("@id", SqlDbType.Int);
-            sqlCommand.Parameters["@id"].Value = jobModel.Id;
-            sqlCommand.ExecuteNonQuery();
-            databaseConnector.CloseConnect();
+
         }
     }
 }

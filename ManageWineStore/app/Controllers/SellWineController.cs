@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace ManageWineStore.app.Controllers
@@ -13,21 +14,25 @@ namespace ManageWineStore.app.Controllers
     class SellWineController
     {
         private WineController wineController = new WineController();
-        private SaleReciptController saleReciptController = new SaleReciptController();
-        private SaleReciptDetailController saleReciptDetailController = new SaleReciptDetailController();
+        private SaleReceiptController saleReciptController = new SaleReceiptController();
+        private SaleReceiptDetailController saleReciptDetailController = new SaleReceiptDetailController();
 
         public DataTable loadData()
         {
             return this.wineController.findAll();
         }
 
-        public void pay(SaleReciptModel saleReciptModel, ListBox.ObjectCollection items)
+        public void pay(SaleReceiptModel saleReciptModel, ListBox.ObjectCollection items)
         {
-            int id = saleReciptController.insertGetId(saleReciptModel);
-            foreach (SaleReciptDetailModel item in items)
+            using (TransactionScope scope = new TransactionScope())
             {
-                item.SaleReciptId = id;
-                saleReciptDetailController.insert(item);
+                int id = saleReciptController.insertGetId(saleReciptModel);
+                foreach (SaleReceiptDetailModel item in items)
+                {
+                    item.SaleReceiptId = id;
+                    saleReciptDetailController.insert(item);
+                }
+                scope.Complete();
             }
         }
     }

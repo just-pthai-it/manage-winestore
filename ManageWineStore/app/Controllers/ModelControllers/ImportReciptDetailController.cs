@@ -11,33 +11,35 @@ using System.Threading.Tasks;
 
 namespace ManageWineStore.app.Controllers.ModelControllers
 {
-    class ImportReciptDetailController : AModelController<ImportReciptDetailModel>
+    class ImportReciptDetailController : AModelController<ImportReceiptDetailModel>
     {
-        public override void insert(ImportReciptDetailModel importReciptDetailModel)
+        public override void insert(ImportReceiptDetailModel importReciptDetailModel)
         {
-            databaseConnector.OpenConnect();
-            string commandText = "INSERT INTO importReciptDetail VALUES (@importReciptDetail_name, @salary);";
-            SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
-            sqlCommand.Parameters.Add("@importReciptDetail_name", SqlDbType.NVarChar);
-            sqlCommand.Parameters.Add("@salary", SqlDbType.Float);
-            //sqlCommand.Parameters["@importReciptDetail_name"].Value = importReciptDetailModel.ImportReciptDetailName;
-            //sqlCommand.Parameters["@salary"].Value = importReciptDetailModel.Salary;
-            sqlCommand.ExecuteNonQuery();
-            databaseConnector.CloseConnect();
+            string commandText = "INSERT INTO sale_receipt_detail VALUES ( @simport_receipt_id , @merchandise_id , " +
+                    "@quanity , @cost );";
+            this.executeNonQuery(commandText, new object[] {
+                importReciptDetailModel.ImportReceiptId,
+                importReciptDetailModel.MerchandiseId,
+                importReciptDetailModel.Quantity,
+                importReciptDetailModel.Cost,
+            });
         }
 
-        public override DataTable get(ImportReciptDetailModel importReciptDetailModel)
+        public override DataTable find(string id)
+        {
+            throw new NotImplementedException();
+        }
+        public override DataTable findAll()
         {
             throw new NotImplementedException();
         }
 
-
-        public override void update(ImportReciptDetailModel importReciptDetailModel)
+        public override void update(ImportReceiptDetailModel importReciptDetailModel)
         {
             throw new NotImplementedException();
         }
 
-        public override void delete(ImportReciptDetailModel importReciptDetailModel)
+        public override void delete(string id)
         {
             throw new NotImplementedException();
         }

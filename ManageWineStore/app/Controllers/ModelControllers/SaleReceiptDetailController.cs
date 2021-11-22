@@ -11,13 +11,18 @@ using System.Threading.Tasks;
 
 namespace ManageWineStore.app.Controllers.ModelControllers
 {
-    class WineController : AModelController<WineModel>
+    class SaleReceiptDetailController : AModelController<SaleReceiptDetailModel>
     {
-        public override void insert(WineModel wineModel)
+        public override void insert(SaleReceiptDetailModel saleReciptDetailModel)
         {
-            string commandText = "INSERT INTO wine VALUES ( @wine_name , @alcohol_level , @price );";
-            this.executeNonQuery(commandText, new object[] {
-                wineModel.WineName, wineModel.AlcoholLevel, wineModel.Price
+            string commandText = "INSERT INTO sale_receipt_detail VALUES ( @sale_receipt_id , @merchandise_id , " +
+                                "@quanity , @cost );";
+            this.executeNonQuery(commandText, new object[] 
+            {
+                saleReciptDetailModel.SaleReceiptId, 
+                saleReciptDetailModel.MerchandiseId, 
+                saleReciptDetailModel.Quantity, 
+                saleReciptDetailModel.Cost
             });
         }
 
@@ -28,12 +33,10 @@ namespace ManageWineStore.app.Controllers.ModelControllers
 
         public override DataTable findAll()
         {
-            string commandText = "SELECT * FROM wine_merchandise " +
-                " ORDER BY wine_name, year_of_manufacture, merchandise_id;";
-            return this.executeQuery(commandText);
+            throw new NotImplementedException();
         }
 
-        public override void update(WineModel wineModel)
+        public override void update(SaleReceiptDetailModel saleReciptDetailModel)
         {
             throw new NotImplementedException();
         }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ManageWineStore.app.Models
 {
-    class ImportReciptModel
+    class ImportReceiptModel
     {
-        public ImportReciptModel(int id, DateTime createAt,
+        public ImportReceiptModel(int id, DateTime createAt,
                                 int employeeId, int supplierId, double totalMoney)
         {
             Id = id;
