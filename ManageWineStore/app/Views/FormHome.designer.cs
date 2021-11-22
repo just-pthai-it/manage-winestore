@@ -68,11 +68,8 @@ namespace Views
             // 
             // menuGrb
             // 
-<<<<<<< Updated upstream
             this.menuGrb.Controls.Add(this.supplierBt);
-=======
             this.menuGrb.Controls.Add(this.customerMnBt);
->>>>>>> Stashed changes
             this.menuGrb.Controls.Add(this.importBt);
             this.menuGrb.Controls.Add(this.profileBt);
             this.menuGrb.Controls.Add(this.accountMnBt);
@@ -164,11 +161,7 @@ namespace Views
             this.employeeMnBt.Name = "employeeMnBt";
             this.employeeMnBt.Size = new System.Drawing.Size(129, 37);
             this.employeeMnBt.TabIndex = 4;
-<<<<<<< Updated upstream
-            this.employeeMnBt.Text = "Nhân viên";
-=======
             this.employeeMnBt.Text = "Thông tin nhân viên";
->>>>>>> Stashed changes
             this.employeeMnBt.UseVisualStyleBackColor = true;
             this.employeeMnBt.Click += new System.EventHandler(this.employeeMnBt_Click);
             // 
@@ -228,10 +221,7 @@ namespace Views
         private System.Windows.Forms.Button employeeMnBt;
         private System.Windows.Forms.Button revenueBt;
         private System.Windows.Forms.Panel workplacePnl;
-<<<<<<< Updated upstream
         private System.Windows.Forms.Button supplierBt;
-=======
         private System.Windows.Forms.Button customerMnBt;
->>>>>>> Stashed changes
     }
 }
