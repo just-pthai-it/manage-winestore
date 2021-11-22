@@ -10,7 +10,7 @@ namespace ManageWineStore.app.Models
     class EmployeeModel
     {
         public EmployeeModel(int? id, string name, DateTime birth, int gender, 
-            string phone, string mail, string address, int jobId, int? accountId)
+            string phone, string mail, string address, int jobId, int? accountId, byte[] image)
         {
             Id = id;
             Name = name;
@@ -21,6 +21,7 @@ namespace ManageWineStore.app.Models
             Address = address;
             JobId = jobId;
             AccountId = accountId;
+            Image = image;
         }
 
         public EmployeeModel(DataRow row)
@@ -34,6 +35,10 @@ namespace ManageWineStore.app.Models
             Address = row["address"].ToString();
             JobId = (int)row["job_id"];
             AccountId = (int)row["account_id"];
+            if (row["image"].ToString() == "")
+                Image = null;
+            else
+                Image = (byte[])row["image"];
         }
 
         public Nullable<int> Id { get; set; }
@@ -45,5 +50,7 @@ namespace ManageWineStore.app.Models
         public string Address { get; set; }
         public int JobId { get; set; }
         public Nullable<int> AccountId { get; set; }
+        public byte[] Image { get; set; }
+
     }
 }

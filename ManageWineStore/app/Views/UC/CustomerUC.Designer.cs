@@ -29,38 +29,43 @@ namespace ManageWineStore.app.Views.UC
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cancelBtn = new System.Windows.Forms.Button();
-            this.saveBtn = new System.Windows.Forms.Button();
+            this.genderCbb = new System.Windows.Forms.ComboBox();
+            this.selectImgBt = new System.Windows.Forms.Button();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cancelBt = new System.Windows.Forms.Button();
+            this.saveBt = new System.Windows.Forms.Button();
             this.birthDtp = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.mailTxt = new System.Windows.Forms.TextBox();
+            this.txtMail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.phoneTxt = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.addressTxt = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.genderTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.nameTxt = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.idTxt = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.searchBtn = new System.Windows.Forms.Button();
-            this.keywordTxt = new System.Windows.Forms.TextBox();
-            this.keyCbx = new System.Windows.Forms.ComboBox();
+            this.searchBt = new System.Windows.Forms.Button();
+            this.txtKeyword = new System.Windows.Forms.TextBox();
+            this.keyCbb = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.customerDgv = new System.Windows.Forms.DataGridView();
-            this.delBtn = new System.Windows.Forms.Button();
-            this.updateBtn = new System.Windows.Forms.Button();
-            this.addBtn = new System.Windows.Forms.Button();
-            this.selectImgBtn = new System.Windows.Forms.Button();
-            this.picPb = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.refreshBt = new System.Windows.Forms.Button();
+            this.deleteBt = new System.Windows.Forms.Button();
+            this.updateBt = new System.Windows.Forms.Button();
+            this.addBt = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -69,30 +74,29 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.selectImgBtn);
-            this.groupBox1.Controls.Add(this.picPb);
+            this.groupBox1.Controls.Add(this.genderCbb);
+            this.groupBox1.Controls.Add(this.selectImgBt);
+            this.groupBox1.Controls.Add(this.pictureBox);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.cancelBtn);
-            this.groupBox1.Controls.Add(this.saveBtn);
+            this.groupBox1.Controls.Add(this.cancelBt);
+            this.groupBox1.Controls.Add(this.saveBt);
             this.groupBox1.Controls.Add(this.birthDtp);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.mailTxt);
+            this.groupBox1.Controls.Add(this.txtMail);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.phoneTxt);
+            this.groupBox1.Controls.Add(this.txtPhone);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.addressTxt);
+            this.groupBox1.Controls.Add(this.txtAddress);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.genderTxt);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.nameTxt);
+            this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.idTxt);
+            this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox1.Location = new System.Drawing.Point(707, 0);
@@ -102,26 +106,72 @@ namespace ManageWineStore.app.Views.UC
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khách hàng";
             // 
-            // cancelBtn
+            // genderCbb
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(267, 486);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(100, 38);
-            this.cancelBtn.TabIndex = 39;
-            this.cancelBtn.Text = "Hủy";
-            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.genderCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.genderCbb.Enabled = false;
+            this.genderCbb.FormattingEnabled = true;
+            this.genderCbb.Location = new System.Drawing.Point(89, 90);
+            this.genderCbb.Name = "genderCbb";
+            this.genderCbb.Size = new System.Drawing.Size(87, 21);
+            this.genderCbb.TabIndex = 44;
             // 
-            // saveBtn
+            // selectImgBt
             // 
-            this.saveBtn.Location = new System.Drawing.Point(60, 486);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(100, 38);
-            this.saveBtn.TabIndex = 38;
-            this.saveBtn.Text = "Lưu";
-            this.saveBtn.UseVisualStyleBackColor = true;
+            this.selectImgBt.Enabled = false;
+            this.selectImgBt.Location = new System.Drawing.Point(223, 267);
+            this.selectImgBt.Name = "selectImgBt";
+            this.selectImgBt.Size = new System.Drawing.Size(68, 23);
+            this.selectImgBt.TabIndex = 43;
+            this.selectImgBt.Text = "Chọn ảnh";
+            this.selectImgBt.UseVisualStyleBackColor = true;
+            this.selectImgBt.Click += new System.EventHandler(this.selectImgBt_Click);
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox.Enabled = false;
+            this.pictureBox.Location = new System.Drawing.Point(89, 267);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(128, 171);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 42;
+            this.pictureBox.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(23, 311);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(29, 13);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Ảnh:";
+            // 
+            // cancelBt
+            // 
+            this.cancelBt.Enabled = false;
+            this.cancelBt.Location = new System.Drawing.Point(267, 486);
+            this.cancelBt.Name = "cancelBt";
+            this.cancelBt.Size = new System.Drawing.Size(100, 38);
+            this.cancelBt.TabIndex = 39;
+            this.cancelBt.Text = "Hủy";
+            this.cancelBt.UseVisualStyleBackColor = true;
+            this.cancelBt.Click += new System.EventHandler(this.cancelBt_Click);
+            // 
+            // saveBt
+            // 
+            this.saveBt.Enabled = false;
+            this.saveBt.Location = new System.Drawing.Point(60, 486);
+            this.saveBt.Name = "saveBt";
+            this.saveBt.Size = new System.Drawing.Size(100, 38);
+            this.saveBt.TabIndex = 38;
+            this.saveBt.Text = "Lưu";
+            this.saveBt.UseVisualStyleBackColor = true;
+            this.saveBt.Click += new System.EventHandler(this.saveBt_Click);
             // 
             // birthDtp
             // 
+            this.birthDtp.Enabled = false;
             this.birthDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.birthDtp.Location = new System.Drawing.Point(89, 125);
             this.birthDtp.Name = "birthDtp";
@@ -137,12 +187,13 @@ namespace ManageWineStore.app.Views.UC
             this.label7.TabIndex = 32;
             this.label7.Text = "Ngày sinh:";
             // 
-            // mailTxt
+            // txtMail
             // 
-            this.mailTxt.Location = new System.Drawing.Point(89, 197);
-            this.mailTxt.Name = "mailTxt";
-            this.mailTxt.Size = new System.Drawing.Size(257, 20);
-            this.mailTxt.TabIndex = 31;
+            this.txtMail.Enabled = false;
+            this.txtMail.Location = new System.Drawing.Point(89, 197);
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(257, 20);
+            this.txtMail.TabIndex = 31;
             // 
             // label6
             // 
@@ -153,12 +204,13 @@ namespace ManageWineStore.app.Views.UC
             this.label6.TabIndex = 30;
             this.label6.Text = "Mail: ";
             // 
-            // phoneTxt
+            // txtPhone
             // 
-            this.phoneTxt.Location = new System.Drawing.Point(89, 161);
-            this.phoneTxt.Name = "phoneTxt";
-            this.phoneTxt.Size = new System.Drawing.Size(142, 20);
-            this.phoneTxt.TabIndex = 29;
+            this.txtPhone.Enabled = false;
+            this.txtPhone.Location = new System.Drawing.Point(89, 161);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(142, 20);
+            this.txtPhone.TabIndex = 29;
             // 
             // label5
             // 
@@ -169,12 +221,13 @@ namespace ManageWineStore.app.Views.UC
             this.label5.TabIndex = 28;
             this.label5.Text = "SĐT:";
             // 
-            // addressTxt
+            // txtAddress
             // 
-            this.addressTxt.Location = new System.Drawing.Point(89, 232);
-            this.addressTxt.Name = "addressTxt";
-            this.addressTxt.Size = new System.Drawing.Size(257, 20);
-            this.addressTxt.TabIndex = 27;
+            this.txtAddress.Enabled = false;
+            this.txtAddress.Location = new System.Drawing.Point(89, 232);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(257, 20);
+            this.txtAddress.TabIndex = 27;
             // 
             // label4
             // 
@@ -185,13 +238,6 @@ namespace ManageWineStore.app.Views.UC
             this.label4.TabIndex = 26;
             this.label4.Text = "Địa chỉ:";
             // 
-            // genderTxt
-            // 
-            this.genderTxt.Location = new System.Drawing.Point(89, 90);
-            this.genderTxt.Name = "genderTxt";
-            this.genderTxt.Size = new System.Drawing.Size(100, 20);
-            this.genderTxt.TabIndex = 25;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -201,12 +247,13 @@ namespace ManageWineStore.app.Views.UC
             this.label3.TabIndex = 24;
             this.label3.Text = "Giới tính:";
             // 
-            // nameTxt
+            // txtName
             // 
-            this.nameTxt.Location = new System.Drawing.Point(89, 55);
-            this.nameTxt.Name = "nameTxt";
-            this.nameTxt.Size = new System.Drawing.Size(257, 20);
-            this.nameTxt.TabIndex = 23;
+            this.txtName.Enabled = false;
+            this.txtName.Location = new System.Drawing.Point(89, 55);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(257, 20);
+            this.txtName.TabIndex = 23;
             // 
             // label2
             // 
@@ -217,21 +264,23 @@ namespace ManageWineStore.app.Views.UC
             this.label2.TabIndex = 22;
             this.label2.Text = "Tên:";
             // 
-            // idTxt
+            // txtId
             // 
-            this.idTxt.Location = new System.Drawing.Point(89, 19);
-            this.idTxt.Name = "idTxt";
-            this.idTxt.Size = new System.Drawing.Size(100, 20);
-            this.idTxt.TabIndex = 21;
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(89, 19);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(23, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 20;
-            this.label1.Text = "MÃ KH:";
+            this.label1.Text = "Mã KH:";
             // 
             // splitContainer1
             // 
@@ -242,9 +291,9 @@ namespace ManageWineStore.app.Views.UC
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.searchBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.keywordTxt);
-            this.splitContainer1.Panel1.Controls.Add(this.keyCbx);
+            this.splitContainer1.Panel1.Controls.Add(this.searchBt);
+            this.splitContainer1.Panel1.Controls.Add(this.txtKeyword);
+            this.splitContainer1.Panel1.Controls.Add(this.keyCbb);
             this.splitContainer1.Panel1.Controls.Add(this.label11);
             this.splitContainer1.Panel1.Controls.Add(this.label10);
             // 
@@ -255,29 +304,30 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer1.SplitterDistance = 58;
             this.splitContainer1.TabIndex = 1;
             // 
-            // searchBtn
+            // searchBt
             // 
-            this.searchBtn.Location = new System.Drawing.Point(575, 18);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(70, 21);
-            this.searchBtn.TabIndex = 22;
-            this.searchBtn.Text = "Tìm kiếm";
-            this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBt.Location = new System.Drawing.Point(575, 18);
+            this.searchBt.Name = "searchBt";
+            this.searchBt.Size = new System.Drawing.Size(70, 21);
+            this.searchBt.TabIndex = 22;
+            this.searchBt.Text = "Tìm kiếm";
+            this.searchBt.UseVisualStyleBackColor = true;
+            this.searchBt.Click += new System.EventHandler(this.searchBt_Click);
             // 
-            // keywordTxt
+            // txtKeyword
             // 
-            this.keywordTxt.Location = new System.Drawing.Point(287, 19);
-            this.keywordTxt.Name = "keywordTxt";
-            this.keywordTxt.Size = new System.Drawing.Size(238, 20);
-            this.keywordTxt.TabIndex = 21;
+            this.txtKeyword.Location = new System.Drawing.Point(287, 19);
+            this.txtKeyword.Name = "txtKeyword";
+            this.txtKeyword.Size = new System.Drawing.Size(238, 20);
+            this.txtKeyword.TabIndex = 21;
             // 
-            // keyCbx
+            // keyCbb
             // 
-            this.keyCbx.FormattingEnabled = true;
-            this.keyCbx.Location = new System.Drawing.Point(95, 19);
-            this.keyCbx.Name = "keyCbx";
-            this.keyCbx.Size = new System.Drawing.Size(100, 21);
-            this.keyCbx.TabIndex = 20;
+            this.keyCbb.FormattingEnabled = true;
+            this.keyCbb.Location = new System.Drawing.Point(95, 19);
+            this.keyCbb.Name = "keyCbb";
+            this.keyCbb.Size = new System.Drawing.Size(100, 21);
+            this.keyCbb.TabIndex = 20;
             // 
             // label11
             // 
@@ -306,78 +356,89 @@ namespace ManageWineStore.app.Views.UC
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.customerDgv);
+            this.splitContainer2.Panel1.Controls.Add(this.dgv);
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.delBtn);
-            this.splitContainer2.Panel2.Controls.Add(this.updateBtn);
-            this.splitContainer2.Panel2.Controls.Add(this.addBtn);
+            this.splitContainer2.Panel2.Controls.Add(this.refreshBt);
+            this.splitContainer2.Panel2.Controls.Add(this.deleteBt);
+            this.splitContainer2.Panel2.Controls.Add(this.updateBt);
+            this.splitContainer2.Panel2.Controls.Add(this.addBt);
             this.splitContainer2.Size = new System.Drawing.Size(707, 479);
             this.splitContainer2.SplitterDistance = 398;
             this.splitContainer2.TabIndex = 0;
             // 
-            // customerDgv
+            // dgv
             // 
-            this.customerDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customerDgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customerDgv.Location = new System.Drawing.Point(0, 0);
-            this.customerDgv.Name = "customerDgv";
-            this.customerDgv.Size = new System.Drawing.Size(707, 398);
-            this.customerDgv.TabIndex = 0;
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv.Location = new System.Drawing.Point(0, 0);
+            this.dgv.Name = "dgv";
+            this.dgv.ReadOnly = true;
+            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv.Size = new System.Drawing.Size(707, 398);
+            this.dgv.TabIndex = 0;
             // 
-            // delBtn
+            // refreshBt
             // 
-            this.delBtn.Location = new System.Drawing.Point(424, 22);
-            this.delBtn.Name = "delBtn";
-            this.delBtn.Size = new System.Drawing.Size(100, 38);
-            this.delBtn.TabIndex = 29;
-            this.delBtn.Text = "Xóa";
-            this.delBtn.UseVisualStyleBackColor = true;
+            this.refreshBt.Location = new System.Drawing.Point(501, 22);
+            this.refreshBt.Name = "refreshBt";
+            this.refreshBt.Size = new System.Drawing.Size(100, 38);
+            this.refreshBt.TabIndex = 30;
+            this.refreshBt.Text = "Làm mới";
+            this.refreshBt.UseVisualStyleBackColor = true;
+            this.refreshBt.Click += new System.EventHandler(this.refreshBt_Click);
             // 
-            // updateBtn
+            // deleteBt
             // 
-            this.updateBtn.Location = new System.Drawing.Point(286, 22);
-            this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(100, 38);
-            this.updateBtn.TabIndex = 28;
-            this.updateBtn.Text = "Sửa";
-            this.updateBtn.UseVisualStyleBackColor = true;
+            this.deleteBt.Location = new System.Drawing.Point(371, 22);
+            this.deleteBt.Name = "deleteBt";
+            this.deleteBt.Size = new System.Drawing.Size(100, 38);
+            this.deleteBt.TabIndex = 29;
+            this.deleteBt.Text = "Xóa";
+            this.deleteBt.UseVisualStyleBackColor = true;
+            this.deleteBt.Click += new System.EventHandler(this.deleteBt_Click);
             // 
-            // addBtn
+            // updateBt
             // 
-            this.addBtn.Location = new System.Drawing.Point(148, 22);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(100, 38);
-            this.addBtn.TabIndex = 27;
-            this.addBtn.Text = "Thêm";
-            this.addBtn.UseVisualStyleBackColor = true;
+            this.updateBt.Location = new System.Drawing.Point(233, 22);
+            this.updateBt.Name = "updateBt";
+            this.updateBt.Size = new System.Drawing.Size(100, 38);
+            this.updateBt.TabIndex = 28;
+            this.updateBt.Text = "Sửa";
+            this.updateBt.UseVisualStyleBackColor = true;
+            this.updateBt.Click += new System.EventHandler(this.updateBt_Click);
             // 
-            // selectImgBtn
+            // addBt
             // 
-            this.selectImgBtn.Location = new System.Drawing.Point(223, 415);
-            this.selectImgBtn.Name = "selectImgBtn";
-            this.selectImgBtn.Size = new System.Drawing.Size(68, 23);
-            this.selectImgBtn.TabIndex = 43;
-            this.selectImgBtn.Text = "Chọn ảnh";
-            this.selectImgBtn.UseVisualStyleBackColor = true;
+            this.addBt.Location = new System.Drawing.Point(95, 22);
+            this.addBt.Name = "addBt";
+            this.addBt.Size = new System.Drawing.Size(100, 38);
+            this.addBt.TabIndex = 27;
+            this.addBt.Text = "Thêm";
+            this.addBt.UseVisualStyleBackColor = true;
+            this.addBt.Click += new System.EventHandler(this.addBt_Click);
             // 
-            // picPb
+            // openFileDialog1
             // 
-            this.picPb.Location = new System.Drawing.Point(89, 267);
-            this.picPb.Name = "picPb";
-            this.picPb.Size = new System.Drawing.Size(128, 171);
-            this.picPb.TabIndex = 42;
-            this.picPb.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(23, 311);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 13);
-            this.label9.TabIndex = 41;
-            this.label9.Text = "Ảnh:";
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // CustomerUC
             // 
@@ -389,6 +450,7 @@ namespace ManageWineStore.app.Views.UC
             this.Size = new System.Drawing.Size(1132, 541);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -398,8 +460,7 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.customerDgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -409,33 +470,35 @@ namespace ManageWineStore.app.Views.UC
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Button searchBtn;
-        private System.Windows.Forms.TextBox keywordTxt;
-        private System.Windows.Forms.ComboBox keyCbx;
+        private System.Windows.Forms.Button searchBt;
+        private System.Windows.Forms.TextBox txtKeyword;
+        private System.Windows.Forms.ComboBox keyCbb;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView customerDgv;
-        private System.Windows.Forms.Button delBtn;
-        private System.Windows.Forms.Button updateBtn;
-        private System.Windows.Forms.Button addBtn;
-        private System.Windows.Forms.Button cancelBtn;
-        private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.Button deleteBt;
+        private System.Windows.Forms.Button updateBt;
+        private System.Windows.Forms.Button addBt;
+        private System.Windows.Forms.Button cancelBt;
+        private System.Windows.Forms.Button saveBt;
         private System.Windows.Forms.DateTimePicker birthDtp;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox mailTxt;
+        private System.Windows.Forms.TextBox txtMail;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox phoneTxt;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox addressTxt;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox genderTxt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox nameTxt;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox idTxt;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button selectImgBtn;
-        private System.Windows.Forms.PictureBox picPb;
+        private System.Windows.Forms.Button selectImgBt;
+        private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox genderCbb;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button refreshBt;
     }
 }

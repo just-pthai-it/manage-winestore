@@ -1,4 +1,5 @@
-﻿using ManageWineStore.app.Controllers;
+﻿using ManageWineStore.app.BussinessClasses;
+using ManageWineStore.app.Controllers;
 using ManageWineStore.app.Models;
 using System;
 using System.Collections.Generic;
@@ -24,10 +25,10 @@ namespace ManageWineStore.app.Views.UC
         private void setUp()
         {
             this.loadData();
+            this.setDGVHeaders();
             this.loadJobCbbData();
             this.loadGenderCbbData();
-            this.loadSearchCbbData();
-            this.setDGVHeaders();
+            this.loadKeyCbbData();
         }
 
         private void loadJobCbbData()
@@ -55,10 +56,9 @@ namespace ManageWineStore.app.Views.UC
             this.genderCbb.DisplayMember = "name";
             this.genderCbb.ValueMember = "id";
             this.genderCbb.DataSource = dataTable;
-
         }
 
-        private void loadSearchCbbData()
+        private void loadKeyCbbData()
         {
             DataTable dataTable = new DataTable();
             dataTable.Columns.Add("column");
@@ -76,21 +76,26 @@ namespace ManageWineStore.app.Views.UC
             DataRow row4 = dataTable.NewRow();
             row4["column"] = "gender";
             row4["text"] = "Giới tính";
+            DataRow row5 = dataTable.NewRow();
+            row5["column"] = "address";
+            row5["text"] = "Địa chỉ";
 
             dataTable.Rows.Add(row);
             dataTable.Rows.Add(row2);
             dataTable.Rows.Add(row3);
             dataTable.Rows.Add(row4);
+            dataTable.Rows.Add(row5);
 
-            this.searchCbb.DisplayMember = "text";
-            this.searchCbb.ValueMember = "column";
-            this.searchCbb.DataSource = dataTable;
+            this.keyCbb.DisplayMember = "text";
+            this.keyCbb.ValueMember = "column";
+            this.keyCbb.DataSource = dataTable;
         }
 
         private void loadData()
         {
-            this.dgv.DataSource = this.employeeManageController.loadData();
+            this.dgv.DataSource = this.employeeManageController.getEmployees();
         }
+
         private void setDGVHeaders()
         {
             this.dgv.Columns["id"].HeaderText = "Mã NV";
@@ -102,13 +107,15 @@ namespace ManageWineStore.app.Views.UC
             this.dgv.Columns["mail"].HeaderText = "Mail";
             this.dgv.Columns["address"].HeaderText = "Địa chỉ";
             this.dgv.Columns["account_id"].HeaderText = "Mã TK";
+            this.dgv.Columns["image"].Visible = false;
         }
 
         private void addBt_Click(object sender, EventArgs e)
         {
             this.updateBt.Enabled = false;
             this.deleteBt.Enabled = false;
-            this.reset();
+            this.isEditable(true);
+            this.clear();
         }
 
         private void updateBt_Click(object sender, EventArgs e)
@@ -121,6 +128,7 @@ namespace ManageWineStore.app.Views.UC
 
             this.addBt.Enabled = false;
             this.deleteBt.Enabled = false;
+            this.isEditable(true);
 
             this.txtId.Text = row.Cells[0].Value.ToString();
             this.txtName.Text = row.Cells[1].Value.ToString();
@@ -132,6 +140,7 @@ namespace ManageWineStore.app.Views.UC
             this.birthDtp.Value = DateTime.Parse(row.Cells[3].Value.ToString());
             this.genderCbb.Text = row.Cells[4].Value.ToString();
             this.jobCbb.Text = row.Cells[2].Value.ToString();
+            this.pictureBox.Image = ImageHandler.bytesToImage((byte[])row.Cells[9].Value);
         }
 
         private void deleteBt_Click(object sender, EventArgs e)
@@ -154,7 +163,10 @@ namespace ManageWineStore.app.Views.UC
                 return;
             }
 
-            EmployeeModel employeeModel = new EmployeeModel(
+            EmployeeModel employeeModel = null;
+            try
+            {
+                employeeModel = new EmployeeModel(
                 this.txtId.Text == "" ? null : (int?)int.Parse(this.txtId.Text),
                 this.txtName.Text,
                 this.birthDtp.Value,
@@ -163,8 +175,14 @@ namespace ManageWineStore.app.Views.UC
                 this.txtMail.Text,
                 this.txtAddress.Text,
                 int.Parse(this.jobCbb.SelectedValue.ToString()),
-                this.txtAccountId.Text == "" ? null : (int?)int.Parse(this.txtAccountId.Text)
-                );
+                this.txtAccountId.Text == "" ? null : (int?)int.Parse(this.txtAccountId.Text),
+                ImageHandler.imageToBytes(this.pictureBox.Image));
+            }
+            catch
+            {
+                MessageBox.Show("Vui lòng nhập đúng thông tin");
+                return;
+            }
 
             if (this.addBt.Enabled == true)
             {
@@ -177,28 +195,38 @@ namespace ManageWineStore.app.Views.UC
 
             this.loadData();
             this.reset();
+            this.isEditable(false);
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             this.reset();
+            this.isEditable(false);
         }
 
         private bool validate()
         {
-            if (this.txtId.Text == "" ||
-                this.txtName.Text == "" ||
+            if (this.txtName.Text == "" ||
                 this.txtPhone.Text == "" ||
                 this.txtMail.Text == "" ||
                 this.txtAddress.Text == "" ||
-                this.txtAccountId.Text == "")
+                this.pictureBox.Image == null)
             {
                 return false;
             }
 
             return true;
         }
+
         private void reset()
+        {
+            this.clear();
+            this.updateBt.Enabled = true;
+            this.addBt.Enabled = true;
+            this.deleteBt.Enabled = true;
+        }
+        
+        private void clear()
         {
             this.txtId.Text = "";
             this.txtName.Text = "";
@@ -207,20 +235,16 @@ namespace ManageWineStore.app.Views.UC
             this.txtAddress.Text = "";
             this.txtAccountId.Text = "";
             this.txtKeyword.Text = "";
-
-            this.updateBt.Enabled = true;
-            this.addBt.Enabled = true;
-            this.deleteBt.Enabled = true;
+            this.pictureBox.Image = null;
         }
-
-        private void searchBtn_Click(object sender, EventArgs e)
+        private void searchBt_Click(object sender, EventArgs e)
         {
             if (this.txtKeyword.Text == "")
             {
                 return;
             }
 
-            this.dgv.DataSource = this.employeeManageController.search(this.searchCbb.SelectedValue.ToString(),
+            this.dgv.DataSource = this.employeeManageController.search(this.keyCbb.SelectedValue.ToString(),
                                                                     this.txtKeyword.Text);
         }
 
@@ -228,6 +252,44 @@ namespace ManageWineStore.app.Views.UC
         {
             this.loadData();
             this.reset();
+            this.isEditable(false);
+        }
+
+        private void selectImgBt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string filePathImage = null;
+                this.openFileDialog1.Filter = "Pictures files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png)|*.jpg; *.jpeg; *.jpe; *.jfif; *.png|All files (*.*)|*.*";
+                this.openFileDialog1.FilterIndex = 1;
+                this.openFileDialog1.RestoreDirectory = true;
+                if (this.openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    filePathImage = this.openFileDialog1.FileName;
+                    this.pictureBox.Image = Image.FromFile(filePathImage.ToString());
+                }
+            }
+            catch (Exception)
+            {
+                return;
+            }
+        }
+
+        private void isEditable(bool status)
+        {
+            this.txtName.Enabled = status;
+            this.birthDtp.Enabled = status;
+            this.genderCbb.Enabled = status;
+            this.jobCbb.Enabled = status;
+            this.txtPhone.Enabled = status;
+            this.txtMail.Enabled = status;
+            this.txtAddress.Enabled = status;
+            this.txtAccountId.Enabled = status;
+            this.pictureBox.Enabled = status;
+
+            this.saveBt.Enabled = status;
+            this.cancelBt.Enabled = status;
+            this.selectImgBt.Enabled = status;
         }
     }
 }

@@ -13,13 +13,13 @@ namespace ManageWineStore.app.Controllers
 {
     class SellWineController
     {
-        private WineController wineController = new WineController();
+        private MerchandiseController merchandiseController = new MerchandiseController();
         private SaleReceiptController saleReciptController = new SaleReceiptController();
         private SaleReceiptDetailController saleReciptDetailController = new SaleReceiptDetailController();
 
         public DataTable loadData()
         {
-            return this.wineController.findAll();
+            return this.merchandiseController.findAll2();
         }
 
         public void pay(SaleReceiptModel saleReciptModel, ListBox.ObjectCollection items)

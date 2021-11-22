@@ -9,7 +9,7 @@ namespace ManageWineStore.app.Models
 {
     class AccountModel
     {
-        public AccountModel(int id, string username, string password, int roleId)
+        public AccountModel(int? id, string username, string password, int roleId)
         {
             Id = id;
             Username = username;
@@ -25,7 +25,7 @@ namespace ManageWineStore.app.Models
             RoleId = (int)row["role_id"];
         }
 
-        public int Id { get; set; }
+        public Nullable<int> Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public int RoleId { get; set; }

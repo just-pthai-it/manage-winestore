@@ -15,12 +15,29 @@ namespace ManageWineStore.app.Controllers.ModelControllers
     {
         public override void insert(CustomerModel customerModel)
         {
-
+            string commandText = "INSERT INTO customer VALUES ( @name , @birth , " +
+                    "@gender , @phone , @mail , @address , @image );";
+            this.executeNonQuery(commandText, new object[]
+            {
+                customerModel.Name,
+                customerModel.Birth,
+                customerModel.Gender,
+                customerModel.Phone,
+                customerModel.Mail,
+                customerModel.Address,
+                customerModel.Image,
+            });
         }
 
         public override DataTable find(string id)
         {
             throw new NotImplementedException();
+        }
+
+        public DataTable findByConditional(string column, Object value)
+        {
+            string commandText = "SELECT * FROM customer WHERE " + column + " LIKE @" + column + " ;";
+            return this.executeQuery(commandText, new object[] { "%" + value + "%" });
         }
 
         public override DataTable findAll()
@@ -33,7 +50,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
         {
             string commandText = "UPDATE customer SET name = @name , birth = @birth , " +
                                 "gender = @gender , phone = @phone , mail = @mail , " +
-                                "address = @address WHERE id = @id ;";
+                                "address = @address , image = @image WHERE id = @id ;";
             this.executeNonQuery(commandText, new object[]
             {
                 customerModel.Name,
@@ -42,6 +59,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
                 customerModel.Phone,
                 customerModel.Mail,
                 customerModel.Address,
+                customerModel.Image,
                 customerModel.Id,
             });
         }

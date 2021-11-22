@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="app\BussinessClasses\ImageHandler.cs" />
     <Compile Include="app\BussinessClasses\MD5Helper.cs" />
+    <Compile Include="app\Controllers\AccountManageController.cs" />
     <Compile Include="app\Controllers\CustomerManageController.cs" />
     <Compile Include="app\Controllers\EmployeeManageController.cs" />
     <Compile Include="app\Controllers\ImportWineController.cs" />
@@ -69,6 +71,7 @@
     <Compile Include="app\Controllers\ModelControllers\WIneController.cs" />
     <Compile Include="app\Controllers\PersonalInfoController.cs" />
     <Compile Include="app\Controllers\SellWineController.cs" />
+    <Compile Include="app\Controllers\StorageController.cs" />
     <Compile Include="app\Controllers\WineManageController.cs" />
     <Compile Include="app\Models\Abastract\AModel.cs" />
     <Compile Include="app\Models\AccountModel.cs" />

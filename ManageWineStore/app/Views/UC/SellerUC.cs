@@ -1,4 +1,5 @@
-﻿using ManageWineStore.app.Controllers;
+﻿using ManageWineStore.app.BussinessClasses;
+using ManageWineStore.app.Controllers;
 using ManageWineStore.app.Controllers.ModelControllers;
 using ManageWineStore.app.Models;
 using System;
@@ -30,6 +31,7 @@ namespace UC
             this.setDGVHeaders();
             DataGridViewRow row = this.dgv.Rows[0];
             numericUpDown1.Maximum = Int32.Parse(row.Cells[5].Value.ToString());
+            this.pictureBox.Image = ImageHandler.bytesToImage((byte[])row.Cells[7].Value);
         }
         private void loadData()
         {
@@ -45,6 +47,7 @@ namespace UC
             this.dgv.Columns["year_of_manufacture"].HeaderText = "Năm sản xuất";
             this.dgv.Columns["current_quantity"].HeaderText = "Số lượng";
             this.dgv.Columns["merchandise_id"].HeaderText = "Mã lô hàng";
+            this.dgv.Columns["image"].Visible = false;
         }
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -52,6 +55,7 @@ namespace UC
             DataGridViewRow row = this.dgv.SelectedRows[0];
             if (row.Cells[0].Value.ToString() != "")
             {
+                this.pictureBox.Image = ImageHandler.bytesToImage((byte[])row.Cells[7].Value);
                 this.numericUpDown1.Maximum = Int32.Parse(row.Cells[5].Value.ToString());
             }
             this.numericUpDown1.Value = 0;
@@ -78,10 +82,11 @@ namespace UC
 
             double cost = double.Parse(row.Cells[3].Value.ToString()) * (int)numericUpDown1.Value;
             cart.Items.Add(new SaleReceiptDetailModel(
-                Int32.Parse(row.Cells[6].Value.ToString()),
-                (int)numericUpDown1.Value,
-                cost,
-                row.Cells[1].Value.ToString()));
+                                    Int32.Parse(row.Cells[6].Value.ToString()),
+                                    (int)numericUpDown1.Value,
+                                    cost,
+                                    row.Cells[1].Value.ToString(),
+                                    row.Cells[4].Value.ToString()));
 
             this.updateNumericUpDown(Int32.Parse(row.Cells[5].Value.ToString()));
             this.updateTotalMoney(cost);

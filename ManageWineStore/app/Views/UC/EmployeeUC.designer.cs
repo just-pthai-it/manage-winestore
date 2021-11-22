@@ -29,13 +29,15 @@ namespace ManageWineStore.app.Views.UC
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.selectImgBt = new System.Windows.Forms.Button();
             this.genderCbb = new System.Windows.Forms.ComboBox();
             this.jobCbb = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.cancelBtn = new System.Windows.Forms.Button();
-            this.saveBtn = new System.Windows.Forms.Button();
-            this.picPb = new System.Windows.Forms.PictureBox();
+            this.cancelBt = new System.Windows.Forms.Button();
+            this.saveBt = new System.Windows.Forms.Button();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtAccountId = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,17 +57,18 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.searchBtn = new System.Windows.Forms.Button();
             this.txtKeyword = new System.Windows.Forms.TextBox();
-            this.searchCbb = new System.Windows.Forms.ComboBox();
+            this.keyCbb = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.refreshBt = new System.Windows.Forms.Button();
             this.deleteBt = new System.Windows.Forms.Button();
             this.updateBt = new System.Windows.Forms.Button();
             this.addBt = new System.Windows.Forms.Button();
-            this.refreshBt = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -79,12 +82,13 @@ namespace ManageWineStore.app.Views.UC
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.selectImgBt);
             this.groupBox1.Controls.Add(this.genderCbb);
             this.groupBox1.Controls.Add(this.jobCbb);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.cancelBtn);
-            this.groupBox1.Controls.Add(this.saveBtn);
-            this.groupBox1.Controls.Add(this.picPb);
+            this.groupBox1.Controls.Add(this.cancelBt);
+            this.groupBox1.Controls.Add(this.saveBt);
+            this.groupBox1.Controls.Add(this.pictureBox);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtAccountId);
             this.groupBox1.Controls.Add(this.label8);
@@ -109,8 +113,21 @@ namespace ManageWineStore.app.Views.UC
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhân viên";
             // 
+            // selectImgBt
+            // 
+            this.selectImgBt.Enabled = false;
+            this.selectImgBt.Location = new System.Drawing.Point(195, 341);
+            this.selectImgBt.Name = "selectImgBt";
+            this.selectImgBt.Size = new System.Drawing.Size(68, 23);
+            this.selectImgBt.TabIndex = 41;
+            this.selectImgBt.Text = "Chọn ảnh";
+            this.selectImgBt.UseVisualStyleBackColor = true;
+            this.selectImgBt.Click += new System.EventHandler(this.selectImgBt_Click);
+            // 
             // genderCbb
             // 
+            this.genderCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.genderCbb.Enabled = false;
             this.genderCbb.FormattingEnabled = true;
             this.genderCbb.Location = new System.Drawing.Point(91, 122);
             this.genderCbb.Name = "genderCbb";
@@ -119,6 +136,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // jobCbb
             // 
+            this.jobCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.jobCbb.Enabled = false;
             this.jobCbb.FormattingEnabled = true;
             this.jobCbb.Location = new System.Drawing.Point(91, 89);
             this.jobCbb.Name = "jobCbb";
@@ -134,33 +153,38 @@ namespace ManageWineStore.app.Views.UC
             this.label12.TabIndex = 20;
             this.label12.Text = "Công việc";
             // 
-            // cancelBtn
+            // cancelBt
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(267, 486);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(100, 38);
-            this.cancelBtn.TabIndex = 19;
-            this.cancelBtn.Text = "Hủy";
-            this.cancelBtn.UseVisualStyleBackColor = true;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            this.cancelBt.Enabled = false;
+            this.cancelBt.Location = new System.Drawing.Point(267, 486);
+            this.cancelBt.Name = "cancelBt";
+            this.cancelBt.Size = new System.Drawing.Size(100, 38);
+            this.cancelBt.TabIndex = 19;
+            this.cancelBt.Text = "Hủy";
+            this.cancelBt.UseVisualStyleBackColor = true;
+            this.cancelBt.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
-            // saveBtn
+            // saveBt
             // 
-            this.saveBtn.Location = new System.Drawing.Point(60, 486);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(100, 38);
-            this.saveBtn.TabIndex = 18;
-            this.saveBtn.Text = "Lưu";
-            this.saveBtn.UseVisualStyleBackColor = true;
-            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            this.saveBt.Enabled = false;
+            this.saveBt.Location = new System.Drawing.Point(60, 486);
+            this.saveBt.Name = "saveBt";
+            this.saveBt.Size = new System.Drawing.Size(100, 38);
+            this.saveBt.TabIndex = 18;
+            this.saveBt.Text = "Lưu";
+            this.saveBt.UseVisualStyleBackColor = true;
+            this.saveBt.Click += new System.EventHandler(this.saveBtn_Click);
             // 
-            // picPb
+            // pictureBox
             // 
-            this.picPb.Location = new System.Drawing.Point(91, 341);
-            this.picPb.Name = "picPb";
-            this.picPb.Size = new System.Drawing.Size(98, 139);
-            this.picPb.TabIndex = 17;
-            this.picPb.TabStop = false;
+            this.pictureBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox.Enabled = false;
+            this.pictureBox.Location = new System.Drawing.Point(91, 341);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(98, 139);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 17;
+            this.pictureBox.TabStop = false;
             // 
             // label9
             // 
@@ -173,6 +197,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtAccountId
             // 
+            this.txtAccountId.Enabled = false;
             this.txtAccountId.Location = new System.Drawing.Point(89, 301);
             this.txtAccountId.Name = "txtAccountId";
             this.txtAccountId.Size = new System.Drawing.Size(142, 20);
@@ -189,11 +214,13 @@ namespace ManageWineStore.app.Views.UC
             // 
             // birthDtp
             // 
+            this.birthDtp.Enabled = false;
             this.birthDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.birthDtp.Location = new System.Drawing.Point(91, 160);
             this.birthDtp.Name = "birthDtp";
-            this.birthDtp.Size = new System.Drawing.Size(100, 20);
+            this.birthDtp.Size = new System.Drawing.Size(98, 20);
             this.birthDtp.TabIndex = 13;
+            this.birthDtp.Value = new System.DateTime(2021, 11, 21, 23, 54, 50, 0);
             // 
             // label7
             // 
@@ -206,6 +233,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtMail
             // 
+            this.txtMail.Enabled = false;
             this.txtMail.Location = new System.Drawing.Point(89, 229);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(257, 20);
@@ -222,6 +250,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtPhone
             // 
+            this.txtPhone.Enabled = false;
             this.txtPhone.Location = new System.Drawing.Point(89, 193);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(142, 20);
@@ -238,6 +267,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtAddress
             // 
+            this.txtAddress.Enabled = false;
             this.txtAddress.Location = new System.Drawing.Point(89, 264);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(257, 20);
@@ -263,6 +293,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtName
             // 
+            this.txtName.Enabled = false;
             this.txtName.Location = new System.Drawing.Point(91, 55);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(257, 20);
@@ -305,7 +336,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             this.splitContainer1.Panel1.Controls.Add(this.searchBtn);
             this.splitContainer1.Panel1.Controls.Add(this.txtKeyword);
-            this.splitContainer1.Panel1.Controls.Add(this.searchCbb);
+            this.splitContainer1.Panel1.Controls.Add(this.keyCbb);
             this.splitContainer1.Panel1.Controls.Add(this.label11);
             this.splitContainer1.Panel1.Controls.Add(this.label10);
             // 
@@ -324,7 +355,7 @@ namespace ManageWineStore.app.Views.UC
             this.searchBtn.TabIndex = 17;
             this.searchBtn.Text = "Tìm kiếm";
             this.searchBtn.UseVisualStyleBackColor = true;
-            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
+            this.searchBtn.Click += new System.EventHandler(this.searchBt_Click);
             // 
             // txtKeyword
             // 
@@ -333,13 +364,14 @@ namespace ManageWineStore.app.Views.UC
             this.txtKeyword.Size = new System.Drawing.Size(238, 20);
             this.txtKeyword.TabIndex = 16;
             // 
-            // searchCbb
+            // keyCbb
             // 
-            this.searchCbb.FormattingEnabled = true;
-            this.searchCbb.Location = new System.Drawing.Point(94, 19);
-            this.searchCbb.Name = "searchCbb";
-            this.searchCbb.Size = new System.Drawing.Size(100, 21);
-            this.searchCbb.TabIndex = 15;
+            this.keyCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.keyCbb.FormattingEnabled = true;
+            this.keyCbb.Location = new System.Drawing.Point(94, 19);
+            this.keyCbb.Name = "keyCbb";
+            this.keyCbb.Size = new System.Drawing.Size(100, 21);
+            this.keyCbb.TabIndex = 15;
             // 
             // label11
             // 
@@ -377,19 +409,38 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer2.Panel2.Controls.Add(this.updateBt);
             this.splitContainer2.Panel2.Controls.Add(this.addBt);
             this.splitContainer2.Size = new System.Drawing.Size(707, 479);
-            this.splitContainer2.SplitterDistance = 398;
+            this.splitContainer2.SplitterDistance = 395;
             this.splitContainer2.TabIndex = 0;
             // 
             // dgv
             // 
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(0, 0);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(707, 398);
+            this.dgv.Size = new System.Drawing.Size(707, 395);
             this.dgv.TabIndex = 0;
+            // 
+            // refreshBt
+            // 
+            this.refreshBt.Location = new System.Drawing.Point(497, 22);
+            this.refreshBt.Name = "refreshBt";
+            this.refreshBt.Size = new System.Drawing.Size(100, 38);
+            this.refreshBt.TabIndex = 27;
+            this.refreshBt.Text = "Làm mới";
+            this.refreshBt.UseVisualStyleBackColor = true;
+            this.refreshBt.Click += new System.EventHandler(this.refreshBt_Click);
             // 
             // deleteBt
             // 
@@ -421,15 +472,9 @@ namespace ManageWineStore.app.Views.UC
             this.addBt.UseVisualStyleBackColor = true;
             this.addBt.Click += new System.EventHandler(this.addBt_Click);
             // 
-            // refreshBt
+            // openFileDialog1
             // 
-            this.refreshBt.Location = new System.Drawing.Point(497, 22);
-            this.refreshBt.Name = "refreshBt";
-            this.refreshBt.Size = new System.Drawing.Size(100, 38);
-            this.refreshBt.TabIndex = 27;
-            this.refreshBt.Text = "Làm mới";
-            this.refreshBt.UseVisualStyleBackColor = true;
-            this.refreshBt.Click += new System.EventHandler(this.refreshBt_Click);
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // EmployeeUC
             // 
@@ -441,7 +486,7 @@ namespace ManageWineStore.app.Views.UC
             this.Size = new System.Drawing.Size(1132, 541);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -474,14 +519,14 @@ namespace ManageWineStore.app.Views.UC
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button cancelBtn;
-        private System.Windows.Forms.Button saveBtn;
-        private System.Windows.Forms.PictureBox picPb;
+        private System.Windows.Forms.Button cancelBt;
+        private System.Windows.Forms.Button saveBt;
+        private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.TextBox txtKeyword;
-        private System.Windows.Forms.ComboBox searchCbb;
+        private System.Windows.Forms.ComboBox keyCbb;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.SplitContainer splitContainer2;
@@ -493,5 +538,7 @@ namespace ManageWineStore.app.Views.UC
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox genderCbb;
         private System.Windows.Forms.Button refreshBt;
+        private System.Windows.Forms.Button selectImgBt;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

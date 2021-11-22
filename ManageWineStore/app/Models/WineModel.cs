@@ -8,17 +8,17 @@ namespace ManageWineStore.app.Models
 {
     class WineModel
     {
-        public WineModel(int id, string wineName, int alcoholLevel, double price)
+        public WineModel(int? id, string wineName, int alcoholLevel, byte[] image)
         {
             Id = id;
             WineName = wineName;
             AlcoholLevel = alcoholLevel;
-            Price = price;
+            Image = image;
         }
 
-        public int Id { get; set; }
+        public Nullable<int> Id { get; set; }
         public string WineName { get; set; }
         public int AlcoholLevel { get; set; }
-        public double Price { get; set; }
+        public byte[] Image { get; set; }
     }
 }

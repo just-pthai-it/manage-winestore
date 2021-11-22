@@ -32,6 +32,7 @@ namespace Views
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
             this.menuGrb = new System.Windows.Forms.GroupBox();
+            this.customerMnBt = new System.Windows.Forms.Button();
             this.importBt = new System.Windows.Forms.Button();
             this.profileBt = new System.Windows.Forms.Button();
             this.accountMnBt = new System.Windows.Forms.Button();
@@ -67,7 +68,11 @@ namespace Views
             // 
             // menuGrb
             // 
+<<<<<<< Updated upstream
             this.menuGrb.Controls.Add(this.supplierBt);
+=======
+            this.menuGrb.Controls.Add(this.customerMnBt);
+>>>>>>> Stashed changes
             this.menuGrb.Controls.Add(this.importBt);
             this.menuGrb.Controls.Add(this.profileBt);
             this.menuGrb.Controls.Add(this.accountMnBt);
@@ -83,6 +88,16 @@ namespace Views
             this.menuGrb.TabIndex = 10;
             this.menuGrb.TabStop = false;
             this.menuGrb.Text = "Menu";
+            // 
+            // customerMnBt
+            // 
+            this.customerMnBt.Location = new System.Drawing.Point(6, 375);
+            this.customerMnBt.Name = "customerMnBt";
+            this.customerMnBt.Size = new System.Drawing.Size(129, 37);
+            this.customerMnBt.TabIndex = 9;
+            this.customerMnBt.Text = "Thông tin khách hàng";
+            this.customerMnBt.UseVisualStyleBackColor = true;
+            this.customerMnBt.Click += new System.EventHandler(this.customerMnBt_Click);
             // 
             // importBt
             // 
@@ -100,7 +115,7 @@ namespace Views
             this.profileBt.Name = "profileBt";
             this.profileBt.Size = new System.Drawing.Size(129, 37);
             this.profileBt.TabIndex = 8;
-            this.profileBt.Text = "Thông tin";
+            this.profileBt.Text = "Thông tin cá nhân";
             this.profileBt.UseVisualStyleBackColor = true;
             // 
             // accountMnBt
@@ -111,6 +126,7 @@ namespace Views
             this.accountMnBt.TabIndex = 7;
             this.accountMnBt.Text = "Quản lý tài khoản";
             this.accountMnBt.UseVisualStyleBackColor = true;
+            this.accountMnBt.Click += new System.EventHandler(this.accountMnBt_Click);
             // 
             // storageMnBt
             // 
@@ -140,6 +156,7 @@ namespace Views
             this.wineMnBt.TabIndex = 5;
             this.wineMnBt.Text = "Quản lý rượu";
             this.wineMnBt.UseVisualStyleBackColor = true;
+            this.wineMnBt.Click += new System.EventHandler(this.wineMnBt_Click);
             // 
             // employeeMnBt
             // 
@@ -147,7 +164,11 @@ namespace Views
             this.employeeMnBt.Name = "employeeMnBt";
             this.employeeMnBt.Size = new System.Drawing.Size(129, 37);
             this.employeeMnBt.TabIndex = 4;
+<<<<<<< Updated upstream
             this.employeeMnBt.Text = "Nhân viên";
+=======
+            this.employeeMnBt.Text = "Thông tin nhân viên";
+>>>>>>> Stashed changes
             this.employeeMnBt.UseVisualStyleBackColor = true;
             this.employeeMnBt.Click += new System.EventHandler(this.employeeMnBt_Click);
             // 
@@ -207,6 +228,10 @@ namespace Views
         private System.Windows.Forms.Button employeeMnBt;
         private System.Windows.Forms.Button revenueBt;
         private System.Windows.Forms.Panel workplacePnl;
+<<<<<<< Updated upstream
         private System.Windows.Forms.Button supplierBt;
+=======
+        private System.Windows.Forms.Button customerMnBt;
+>>>>>>> Stashed changes
     }
 }

@@ -14,34 +14,34 @@ namespace ManageWineStore.app.Controllers
         private EmployeeController employeeController = new EmployeeController();
         private JobController jobController = new JobController();
 
-        public DataTable loadData()
+        public DataTable getEmployees()
         {
             return this.employeeController.findAll();
         }
 
         public DataTable getJobs()
         {
-            return jobController.findAll();
+            return this.jobController.findAll();
         }
 
         public DataTable search(string column, string value)
         {
-            return employeeController.findByConditional(column, value);
+            return this.employeeController.findByConditional(column, value);
         }
 
         public void createEmployee(EmployeeModel employeeModel)
         {
-            employeeController.insert(employeeModel);
+            this.employeeController.insert(employeeModel);
         }
 
         public void updateEmployee(EmployeeModel employeeModel)
         {
-            employeeController.update(employeeModel);
+            this.employeeController.update(employeeModel);
         }
 
         public void removeEmployee(string id)
         {
-            employeeController.delete(id);
+            this.employeeController.delete(id);
         }
     }
 }

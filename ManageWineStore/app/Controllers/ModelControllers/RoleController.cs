@@ -25,7 +25,8 @@ namespace ManageWineStore.app.Controllers.ModelControllers
 
         public override DataTable findAll()
         {
-            throw new NotImplementedException();
+            string commandText = "SELECT * FROM role ;";
+            return this.executeQuery(commandText);
         }
 
         public override void update(RoleModel roleModel)

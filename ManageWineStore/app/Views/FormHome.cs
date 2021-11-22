@@ -106,6 +106,30 @@ namespace Views
             this.workplacePnl.Controls.Add(storage);
         }
 
+        private void wineMnBt_Click(object sender, EventArgs e)
+        {
+            this.workplacePnl.Controls.Clear();
+            WineUC wineUC = new WineUC();
+            wineUC.Dock = DockStyle.Fill;
+            this.workplacePnl.Controls.Add(wineUC);
+        }
+
+        private void customerMnBt_Click(object sender, EventArgs e)
+        {
+            this.workplacePnl.Controls.Clear();
+            CustomerUC customerUC = new CustomerUC();
+            customerUC.Dock = DockStyle.Fill;
+            this.workplacePnl.Controls.Add(customerUC);
+        }
+
+        private void accountMnBt_Click(object sender, EventArgs e)
+        {
+            this.workplacePnl.Controls.Clear();
+            AccountUC accountUC = new AccountUC();
+            accountUC.Dock = DockStyle.Fill;
+            this.workplacePnl.Controls.Add(accountUC);
+        }
+
         private void FormHome_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.adminModel = null;

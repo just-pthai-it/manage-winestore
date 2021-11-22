@@ -29,24 +29,33 @@ namespace ManageWineStore.app.Views.UC
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.searchBtn = new System.Windows.Forms.Button();
-            this.keywordTxt = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.accountDgv = new System.Windows.Forms.DataGridView();
-            this.delBtn = new System.Windows.Forms.Button();
-            this.updateBtn = new System.Windows.Forms.Button();
-            this.addBtn = new System.Windows.Forms.Button();
-            this.cancelBtn = new System.Windows.Forms.Button();
-            this.saveBtn = new System.Windows.Forms.Button();
-            this.roleTxt = new System.Windows.Forms.TextBox();
+            this.txtRepeatPassword = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.roleCbb = new System.Windows.Forms.ComboBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cancelBt = new System.Windows.Forms.Button();
+            this.saveBt = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.usernameTxt = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.idTxt = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtKeyword = new System.Windows.Forms.TextBox();
+            this.keyCbb = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.searchBt = new System.Windows.Forms.Button();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.refreshBt = new System.Windows.Forms.Button();
+            this.deleteBt = new System.Windows.Forms.Button();
+            this.updateBt = new System.Windows.Forms.Button();
+            this.addBt = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -56,18 +65,22 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.accountDgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cancelBtn);
-            this.groupBox1.Controls.Add(this.saveBtn);
-            this.groupBox1.Controls.Add(this.roleTxt);
+            this.groupBox1.Controls.Add(this.txtRepeatPassword);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.roleCbb);
+            this.groupBox1.Controls.Add(this.txtPassword);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.cancelBt);
+            this.groupBox1.Controls.Add(this.saveBt);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.usernameTxt);
+            this.groupBox1.Controls.Add(this.txtUsername);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.idTxt);
+            this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox1.Location = new System.Drawing.Point(707, 0);
@@ -77,147 +90,89 @@ namespace ManageWineStore.app.Views.UC
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tài khoản";
             // 
-            // splitContainer1
+            // txtRepeatPassword
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.txtRepeatPassword.Enabled = false;
+            this.txtRepeatPassword.Location = new System.Drawing.Point(126, 170);
+            this.txtRepeatPassword.Name = "txtRepeatPassword";
+            this.txtRepeatPassword.PasswordChar = '*';
+            this.txtRepeatPassword.Size = new System.Drawing.Size(163, 20);
+            this.txtRepeatPassword.TabIndex = 46;
             // 
-            // splitContainer1.Panel1
+            // label5
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.searchBtn);
-            this.splitContainer1.Panel1.Controls.Add(this.keywordTxt);
-            this.splitContainer1.Panel1.Controls.Add(this.label11);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(24, 172);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 13);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "Nhập lại mật khẩu:";
             // 
-            // splitContainer1.Panel2
+            // roleCbb
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(707, 541);
-            this.splitContainer1.SplitterDistance = 58;
-            this.splitContainer1.TabIndex = 1;
+            this.roleCbb.Enabled = false;
+            this.roleCbb.FormattingEnabled = true;
+            this.roleCbb.Location = new System.Drawing.Point(126, 207);
+            this.roleCbb.Name = "roleCbb";
+            this.roleCbb.Size = new System.Drawing.Size(121, 21);
+            this.roleCbb.TabIndex = 44;
             // 
-            // splitContainer2
+            // txtPassword
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.txtPassword.Enabled = false;
+            this.txtPassword.Location = new System.Drawing.Point(126, 134);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(163, 20);
+            this.txtPassword.TabIndex = 41;
             // 
-            // splitContainer2.Panel1
+            // label4
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.accountDgv);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(24, 136);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Mật khẩu:";
             // 
-            // splitContainer2.Panel2
+            // cancelBt
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.delBtn);
-            this.splitContainer2.Panel2.Controls.Add(this.updateBtn);
-            this.splitContainer2.Panel2.Controls.Add(this.addBtn);
-            this.splitContainer2.Size = new System.Drawing.Size(707, 479);
-            this.splitContainer2.SplitterDistance = 389;
-            this.splitContainer2.TabIndex = 0;
+            this.cancelBt.Enabled = false;
+            this.cancelBt.Location = new System.Drawing.Point(267, 486);
+            this.cancelBt.Name = "cancelBt";
+            this.cancelBt.Size = new System.Drawing.Size(100, 38);
+            this.cancelBt.TabIndex = 39;
+            this.cancelBt.Text = "Hủy";
+            this.cancelBt.UseVisualStyleBackColor = true;
+            this.cancelBt.Click += new System.EventHandler(this.cancelBt_Click);
             // 
-            // searchBtn
+            // saveBt
             // 
-            this.searchBtn.Location = new System.Drawing.Point(574, 18);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(70, 21);
-            this.searchBtn.TabIndex = 22;
-            this.searchBtn.Text = "Tìm kiếm";
-            this.searchBtn.UseVisualStyleBackColor = true;
-            // 
-            // keywordTxt
-            // 
-            this.keywordTxt.Location = new System.Drawing.Point(102, 19);
-            this.keywordTxt.Name = "keywordTxt";
-            this.keywordTxt.Size = new System.Drawing.Size(238, 20);
-            this.keywordTxt.TabIndex = 21;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(20, 22);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 13);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Tên tài khoản:";
-            // 
-            // accountDgv
-            // 
-            this.accountDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.accountDgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.accountDgv.Location = new System.Drawing.Point(0, 0);
-            this.accountDgv.Name = "accountDgv";
-            this.accountDgv.Size = new System.Drawing.Size(707, 389);
-            this.accountDgv.TabIndex = 0;
-            // 
-            // delBtn
-            // 
-            this.delBtn.Location = new System.Drawing.Point(424, 31);
-            this.delBtn.Name = "delBtn";
-            this.delBtn.Size = new System.Drawing.Size(100, 38);
-            this.delBtn.TabIndex = 29;
-            this.delBtn.Text = "Xóa";
-            this.delBtn.UseVisualStyleBackColor = true;
-            // 
-            // updateBtn
-            // 
-            this.updateBtn.Location = new System.Drawing.Point(286, 31);
-            this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(100, 38);
-            this.updateBtn.TabIndex = 28;
-            this.updateBtn.Text = "Sửa";
-            this.updateBtn.UseVisualStyleBackColor = true;
-            // 
-            // addBtn
-            // 
-            this.addBtn.Location = new System.Drawing.Point(148, 31);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(100, 38);
-            this.addBtn.TabIndex = 27;
-            this.addBtn.Text = "Thêm";
-            this.addBtn.UseVisualStyleBackColor = true;
-            // 
-            // cancelBtn
-            // 
-            this.cancelBtn.Location = new System.Drawing.Point(267, 486);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(100, 38);
-            this.cancelBtn.TabIndex = 39;
-            this.cancelBtn.Text = "Hủy";
-            this.cancelBtn.UseVisualStyleBackColor = true;
-            // 
-            // saveBtn
-            // 
-            this.saveBtn.Location = new System.Drawing.Point(60, 486);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(100, 38);
-            this.saveBtn.TabIndex = 38;
-            this.saveBtn.Text = "Lưu";
-            this.saveBtn.UseVisualStyleBackColor = true;
-            // 
-            // roleTxt
-            // 
-            this.roleTxt.Location = new System.Drawing.Point(90, 129);
-            this.roleTxt.Name = "roleTxt";
-            this.roleTxt.Size = new System.Drawing.Size(100, 20);
-            this.roleTxt.TabIndex = 25;
+            this.saveBt.Enabled = false;
+            this.saveBt.Location = new System.Drawing.Point(60, 486);
+            this.saveBt.Name = "saveBt";
+            this.saveBt.Size = new System.Drawing.Size(100, 38);
+            this.saveBt.TabIndex = 38;
+            this.saveBt.Text = "Lưu";
+            this.saveBt.UseVisualStyleBackColor = true;
+            this.saveBt.Click += new System.EventHandler(this.saveBt_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 132);
+            this.label3.Location = new System.Drawing.Point(24, 209);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 24;
             this.label3.Text = "Vai trò:";
             // 
-            // usernameTxt
+            // txtUsername
             // 
-            this.usernameTxt.Location = new System.Drawing.Point(90, 94);
-            this.usernameTxt.Name = "usernameTxt";
-            this.usernameTxt.Size = new System.Drawing.Size(163, 20);
-            this.usernameTxt.TabIndex = 23;
+            this.txtUsername.Enabled = false;
+            this.txtUsername.Location = new System.Drawing.Point(126, 95);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(163, 20);
+            this.txtUsername.TabIndex = 23;
             // 
             // label2
             // 
@@ -228,12 +183,14 @@ namespace ManageWineStore.app.Views.UC
             this.label2.TabIndex = 22;
             this.label2.Text = "Tên TK:";
             // 
-            // idTxt
+            // txtId
             // 
-            this.idTxt.Location = new System.Drawing.Point(90, 58);
-            this.idTxt.Name = "idTxt";
-            this.idTxt.Size = new System.Drawing.Size(100, 20);
-            this.idTxt.TabIndex = 21;
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(126, 59);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 21;
             // 
             // label1
             // 
@@ -243,6 +200,160 @@ namespace ManageWineStore.app.Views.UC
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 20;
             this.label1.Text = "Mã TK:";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.txtKeyword);
+            this.splitContainer1.Panel1.Controls.Add(this.keyCbb);
+            this.splitContainer1.Panel1.Controls.Add(this.label11);
+            this.splitContainer1.Panel1.Controls.Add(this.label10);
+            this.splitContainer1.Panel1.Controls.Add(this.searchBt);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Size = new System.Drawing.Size(707, 541);
+            this.splitContainer1.SplitterDistance = 58;
+            this.splitContainer1.TabIndex = 1;
+            // 
+            // txtKeyword
+            // 
+            this.txtKeyword.Location = new System.Drawing.Point(285, 19);
+            this.txtKeyword.Name = "txtKeyword";
+            this.txtKeyword.Size = new System.Drawing.Size(238, 20);
+            this.txtKeyword.TabIndex = 26;
+            // 
+            // keyCbb
+            // 
+            this.keyCbb.FormattingEnabled = true;
+            this.keyCbb.Location = new System.Drawing.Point(93, 19);
+            this.keyCbb.Name = "keyCbb";
+            this.keyCbb.Size = new System.Drawing.Size(100, 21);
+            this.keyCbb.TabIndex = 25;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(232, 22);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 13);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Từ khóa";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(14, 22);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 13);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Tìm kiếm theo";
+            // 
+            // searchBt
+            // 
+            this.searchBt.Location = new System.Drawing.Point(592, 19);
+            this.searchBt.Name = "searchBt";
+            this.searchBt.Size = new System.Drawing.Size(70, 21);
+            this.searchBt.TabIndex = 22;
+            this.searchBt.Text = "Tìm kiếm";
+            this.searchBt.UseVisualStyleBackColor = true;
+            this.searchBt.Click += new System.EventHandler(this.searchBt_Click);
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.dgv);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.refreshBt);
+            this.splitContainer2.Panel2.Controls.Add(this.deleteBt);
+            this.splitContainer2.Panel2.Controls.Add(this.updateBt);
+            this.splitContainer2.Panel2.Controls.Add(this.addBt);
+            this.splitContainer2.Size = new System.Drawing.Size(707, 479);
+            this.splitContainer2.SplitterDistance = 389;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // dgv
+            // 
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv.Location = new System.Drawing.Point(0, 0);
+            this.dgv.Name = "dgv";
+            this.dgv.ReadOnly = true;
+            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv.Size = new System.Drawing.Size(707, 389);
+            this.dgv.TabIndex = 0;
+            // 
+            // refreshBt
+            // 
+            this.refreshBt.Location = new System.Drawing.Point(501, 31);
+            this.refreshBt.Name = "refreshBt";
+            this.refreshBt.Size = new System.Drawing.Size(100, 38);
+            this.refreshBt.TabIndex = 31;
+            this.refreshBt.Text = "Làm mới";
+            this.refreshBt.UseVisualStyleBackColor = true;
+            this.refreshBt.Click += new System.EventHandler(this.refreshBt_Click);
+            // 
+            // deleteBt
+            // 
+            this.deleteBt.Location = new System.Drawing.Point(360, 31);
+            this.deleteBt.Name = "deleteBt";
+            this.deleteBt.Size = new System.Drawing.Size(100, 38);
+            this.deleteBt.TabIndex = 29;
+            this.deleteBt.Text = "Xóa";
+            this.deleteBt.UseVisualStyleBackColor = true;
+            this.deleteBt.Click += new System.EventHandler(this.deleteBt_Click);
+            // 
+            // updateBt
+            // 
+            this.updateBt.Location = new System.Drawing.Point(222, 31);
+            this.updateBt.Name = "updateBt";
+            this.updateBt.Size = new System.Drawing.Size(100, 38);
+            this.updateBt.TabIndex = 28;
+            this.updateBt.Text = "Sửa";
+            this.updateBt.UseVisualStyleBackColor = true;
+            this.updateBt.Click += new System.EventHandler(this.updateBt_Click);
+            // 
+            // addBt
+            // 
+            this.addBt.Location = new System.Drawing.Point(84, 31);
+            this.addBt.Name = "addBt";
+            this.addBt.Size = new System.Drawing.Size(100, 38);
+            this.addBt.TabIndex = 27;
+            this.addBt.Text = "Thêm";
+            this.addBt.UseVisualStyleBackColor = true;
+            this.addBt.Click += new System.EventHandler(this.addBt_Click);
             // 
             // AccountUC
             // 
@@ -263,7 +374,7 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.accountDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,20 +384,27 @@ namespace ManageWineStore.app.Views.UC
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Button searchBtn;
-        private System.Windows.Forms.TextBox keywordTxt;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView accountDgv;
-        private System.Windows.Forms.Button delBtn;
-        private System.Windows.Forms.Button updateBtn;
-        private System.Windows.Forms.Button addBtn;
-        private System.Windows.Forms.Button cancelBtn;
-        private System.Windows.Forms.Button saveBtn;
-        private System.Windows.Forms.TextBox roleTxt;
+        private System.Windows.Forms.Button searchBt;
+        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.Button deleteBt;
+        private System.Windows.Forms.Button addBt;
+        private System.Windows.Forms.Button cancelBt;
+        private System.Windows.Forms.Button saveBt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox usernameTxt;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox idTxt;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button refreshBt;
+        private System.Windows.Forms.TextBox txtKeyword;
+        private System.Windows.Forms.ComboBox keyCbb;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox roleCbb;
+        private System.Windows.Forms.Button updateBt;
+        private System.Windows.Forms.TextBox txtRepeatPassword;
+        private System.Windows.Forms.Label label5;
     }
 }

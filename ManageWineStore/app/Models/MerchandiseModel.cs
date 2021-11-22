@@ -8,20 +8,20 @@ namespace ManageWineStore.app.Models
 {
     class MerchandiseModel
     {
-        public MerchandiseModel(int id, int wineId, 
-                            DateTime expiry, int originalQuantity, int currentQuantity)
+        public MerchandiseModel(int? id, int wineId, string yearOfManufacture, 
+                                int currentQuantity, float pricePerProduct)
         {
             Id = id;
             WineId = wineId;
-            Expiry = expiry;
-            OriginalQuantity = originalQuantity;
+            YearOfManufacture = yearOfManufacture;
             CurrentQuantity = currentQuantity;
+            PricePerProduct = pricePerProduct;
         }
 
-        public int Id { get; set; }
+        public Nullable<int> Id { get; set; }
         public int WineId { get; set; }
-        public System.DateTime Expiry { get; set; }
-        public int OriginalQuantity { get; set; }
+        public string YearOfManufacture { get; set; }
         public int CurrentQuantity { get; set; }
+        public float PricePerProduct { get; set; }
     }
 }

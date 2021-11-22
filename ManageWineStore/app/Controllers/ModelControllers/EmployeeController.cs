@@ -17,7 +17,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
         public override void insert(EmployeeModel employeeModel)
         {
             string commandText = "INSERT INTO employee VALUES ( @name , @birth , " +
-                                "@gender , @phone , @mail , @address , @job_id , @account_id );";
+                                "@gender , @phone , @mail , @address , @job_id , @account_id , @image );";
             this.executeNonQuery(commandText, new object[]
             {
                 employeeModel.Name,
@@ -28,6 +28,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
                 employeeModel.Address,
                 employeeModel.JobId,
                 employeeModel.AccountId,
+                employeeModel.Image,
             });
         }
         public DataTable findByConditional(string column, Object value)
@@ -52,7 +53,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             string commandText = "UPDATE employee SET name = @name , birth = @birth , " +
                                 "gender = @gender , phone = @phone , mail = @mail , " +
                                 "address = @address , job_id = @job_id , account_id = @account_id " +
-                                "WHERE id = @id ;";
+                                ", image = @image WHERE id = @id ;";
             this.executeNonQuery(commandText, new object[]
             {
                 employeeModel.Name,
@@ -63,6 +64,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
                 employeeModel.Address,
                 employeeModel.JobId,
                 employeeModel.AccountId,
+                employeeModel.Image,
                 employeeModel.Id,
             });
         }
