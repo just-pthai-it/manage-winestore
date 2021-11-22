@@ -109,6 +109,12 @@
     <Compile Include="app\Views\UC\AccountUC.Designer.cs">
       <DependentUpon>AccountUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="app\Views\UC\ReceiptUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="app\Views\UC\ReceiptUC.Designer.cs">
+      <DependentUpon>ReceiptUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="app\Views\UC\CustomerUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -145,6 +151,12 @@
     <Compile Include="app\Views\UC\SellerUC.Designer.cs">
       <DependentUpon>SellerUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="app\Views\UC\SupplierUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="app\Views\UC\SupplierUC.Designer.cs">
+      <DependentUpon>SupplierUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="app\Views\UC\WineUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -171,6 +183,9 @@
     <EmbeddedResource Include="app\Views\UC\AccountUC.resx">
       <DependentUpon>AccountUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="app\Views\UC\ReceiptUC.resx">
+      <DependentUpon>ReceiptUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="app\Views\UC\CustomerUC.resx">
       <DependentUpon>CustomerUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="app\Views\UC\SellerUC.resx">
       <DependentUpon>SellerUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\Views\UC\SupplierUC.resx">
+      <DependentUpon>SupplierUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app\Views\UC\WineUC.resx">
       <DependentUpon>WineUC.cs</DependentUpon>

@@ -41,6 +41,7 @@ namespace Views
             this.employeeMnBt = new System.Windows.Forms.Button();
             this.revenueBt = new System.Windows.Forms.Button();
             this.workplacePnl = new System.Windows.Forms.Panel();
+            this.supplierBt = new System.Windows.Forms.Button();
             this.menuGrb.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +67,7 @@ namespace Views
             // 
             // menuGrb
             // 
+            this.menuGrb.Controls.Add(this.supplierBt);
             this.menuGrb.Controls.Add(this.importBt);
             this.menuGrb.Controls.Add(this.profileBt);
             this.menuGrb.Controls.Add(this.accountMnBt);
@@ -94,7 +96,7 @@ namespace Views
             // 
             // profileBt
             // 
-            this.profileBt.Location = new System.Drawing.Point(6, 332);
+            this.profileBt.Location = new System.Drawing.Point(6, 375);
             this.profileBt.Name = "profileBt";
             this.profileBt.Size = new System.Drawing.Size(129, 37);
             this.profileBt.TabIndex = 8;
@@ -103,7 +105,7 @@ namespace Views
             // 
             // accountMnBt
             // 
-            this.accountMnBt.Location = new System.Drawing.Point(6, 289);
+            this.accountMnBt.Location = new System.Drawing.Point(6, 332);
             this.accountMnBt.Name = "accountMnBt";
             this.accountMnBt.Size = new System.Drawing.Size(129, 37);
             this.accountMnBt.TabIndex = 7;
@@ -112,7 +114,7 @@ namespace Views
             // 
             // storageMnBt
             // 
-            this.storageMnBt.Location = new System.Drawing.Point(6, 246);
+            this.storageMnBt.Location = new System.Drawing.Point(6, 203);
             this.storageMnBt.Name = "storageMnBt";
             this.storageMnBt.Size = new System.Drawing.Size(129, 37);
             this.storageMnBt.TabIndex = 6;
@@ -132,7 +134,7 @@ namespace Views
             // 
             // wineMnBt
             // 
-            this.wineMnBt.Location = new System.Drawing.Point(6, 203);
+            this.wineMnBt.Location = new System.Drawing.Point(6, 160);
             this.wineMnBt.Name = "wineMnBt";
             this.wineMnBt.Size = new System.Drawing.Size(129, 37);
             this.wineMnBt.TabIndex = 5;
@@ -141,11 +143,11 @@ namespace Views
             // 
             // employeeMnBt
             // 
-            this.employeeMnBt.Location = new System.Drawing.Point(6, 160);
+            this.employeeMnBt.Location = new System.Drawing.Point(6, 289);
             this.employeeMnBt.Name = "employeeMnBt";
             this.employeeMnBt.Size = new System.Drawing.Size(129, 37);
             this.employeeMnBt.TabIndex = 4;
-            this.employeeMnBt.Text = "Quản lý nhân viên";
+            this.employeeMnBt.Text = "Nhân viên";
             this.employeeMnBt.UseVisualStyleBackColor = true;
             this.employeeMnBt.Click += new System.EventHandler(this.employeeMnBt_Click);
             // 
@@ -166,6 +168,15 @@ namespace Views
             this.workplacePnl.Size = new System.Drawing.Size(1132, 542);
             this.workplacePnl.TabIndex = 11;
             // 
+            // supplierBt
+            // 
+            this.supplierBt.Location = new System.Drawing.Point(6, 246);
+            this.supplierBt.Name = "supplierBt";
+            this.supplierBt.Size = new System.Drawing.Size(129, 37);
+            this.supplierBt.TabIndex = 9;
+            this.supplierBt.Text = "Nhà cung cấp";
+            this.supplierBt.UseVisualStyleBackColor = true;
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,6 +188,7 @@ namespace Views
             this.Controls.Add(this.splitter1);
             this.Name = "FormHome";
             this.Text = "FormHome";
+            this.menuGrb.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +207,6 @@ namespace Views
         private System.Windows.Forms.Button employeeMnBt;
         private System.Windows.Forms.Button revenueBt;
         private System.Windows.Forms.Panel workplacePnl;
+        private System.Windows.Forms.Button supplierBt;
     }
 }
