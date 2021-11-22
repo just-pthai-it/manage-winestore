@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ManageWineStore.app.Views.UC
 {
-    public partial class ImportReceiptUC : UserControl
+    public partial class ImportUC : UserControl
     {
-        public ImportReceiptUC()
+        public ImportUC()
         {
             InitializeComponent();
         }
