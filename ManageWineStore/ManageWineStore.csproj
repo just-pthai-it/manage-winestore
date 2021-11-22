@@ -120,6 +120,18 @@
     <Compile Include="app\Views\UC\EmployeeUC.designer.cs">
       <DependentUpon>EmployeeUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="app\Views\UC\ImportReceiptUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="app\Views\UC\ImportReceiptUC.Designer.cs">
+      <DependentUpon>ImportReceiptUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="app\Views\UC\Information.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="app\Views\UC\Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
     <Compile Include="app\Views\UC\StorageUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -163,6 +175,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="app\Views\UC\EmployeeUC.resx">
       <DependentUpon>EmployeeUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\Views\UC\ImportReceiptUC.resx">
+      <DependentUpon>ImportReceiptUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="app\Views\UC\Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app\Views\UC\StorageUC.resx">
       <DependentUpon>StorageUC.cs</DependentUpon>
