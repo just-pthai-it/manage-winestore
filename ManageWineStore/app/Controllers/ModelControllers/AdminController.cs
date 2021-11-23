@@ -15,26 +15,13 @@ namespace ManageWineStore.app.Controllers.ModelControllers
     {
         public override void insert(AdminModel adminModel)
         {
-            databaseConnector.OpenConnect();
-            string commandText = "INSERT INTO admin VALUES (@admin_name, @salary);";
-            SqlCommand sqlCommand = new SqlCommand(commandText, databaseConnector.SqlConnect);
-            sqlCommand.Parameters.Add("@admin_name", SqlDbType.NVarChar);
-            sqlCommand.Parameters.Add("@salary", SqlDbType.Float);
-            //sqlCommand.Parameters["@admin_name"].Value = adminModel.AdminName;
-            //sqlCommand.Parameters["@salary"].Value = adminModel.Salary;
-            sqlCommand.ExecuteNonQuery();
-            databaseConnector.CloseConnect();
-        }
 
-        public DataTable findByAccountId(string account_id)
-        {
-            string commandText = "SELECT * FROM admin WHERE account_id = @account_id ;";
-            return this.executeQuery(commandText, new object[] { account_id });
         }
 
         public override DataTable find(string column, object value)
         {
-            throw new NotImplementedException();
+            string commandText = "SELECT * FROM admin WHERE " + column + " = @" + column + " ;";
+            return this.executeQuery(commandText, new object[] { value });
         }
 
         public override DataTable findAll()
@@ -44,7 +31,22 @@ namespace ManageWineStore.app.Controllers.ModelControllers
 
         public override void update(AdminModel adminModel)
         {
-            throw new NotImplementedException();
+            string commandText = "UPDATE admin SET name = @name , birth = @birth , " +
+                                "gender = @gender , phone = @phone , mail = @mail , " +
+                                "address = @address , account_id = @account_id " +
+                                ", image = @image WHERE id = @id ;";
+            this.executeNonQuery(commandText, new object[]
+            {
+                adminModel.Name,
+                adminModel.Birth,
+                adminModel.Gender,
+                adminModel.Phone,
+                adminModel.Mail,
+                adminModel.Address,
+                adminModel.AccountId,
+                adminModel.Image,
+                adminModel.Id,
+            });
         }
 
         public override void delete(string id)

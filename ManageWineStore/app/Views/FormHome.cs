@@ -17,6 +17,7 @@ namespace Views
     {
         private AdminModel adminModel = null;
         private EmployeeModel employeeModel = null;
+        private AccountModel accountModel = null;
         private List<Button> adminBts = new List<Button>();
         private List<Button> employeeBts = new List<Button>();
 
@@ -24,9 +25,11 @@ namespace Views
         {
             InitializeComponent();
         }
-        public FormHome(Object user)
+
+        public FormHome(AccountModel accountModel, Object user)
         {
             InitializeComponent();
+            this.accountModel = accountModel;
             if (user.GetType() == typeof(AdminModel))
             {
                 this.adminModel = (AdminModel)user;
@@ -35,8 +38,8 @@ namespace Views
             {
                 this.employeeModel = (EmployeeModel)user;
             }
-            this.createListButton();
-            this.setUp(this.adminModel == null ? this.employeeModel.Name : this.adminModel.Name);
+            //this.createListButton();
+            //this.setUp(this.adminModel == null ? this.employeeModel.Name : this.adminModel.Name);
         }
 
         private void createListButton()
@@ -54,6 +57,7 @@ namespace Views
             this.employeeBts.Add(this.storageMnBt);
             this.employeeBts.Add(this.profileBt);
         }
+
         private void setUp(string name)
         {
             this.menuGrb.Controls.Clear();
@@ -78,10 +82,15 @@ namespace Views
                 }
             }
         }
+
         private void btn_Import_Click(object sender, EventArgs e)
         {
             this.workplacePnl.Controls.Clear();
+            ImportUC importUC = new ImportUC();
+            importUC.Dock = DockStyle.Fill;
+            this.workplacePnl.Controls.Add(importUC);
         }
+
         private void sellBt_Click(object sender, EventArgs e)
         {
             this.workplacePnl.Controls.Clear();
@@ -146,11 +155,28 @@ namespace Views
             this.workplacePnl.Controls.Add(receiptUC);
         }
 
+        private void personalInforBt_Click(object sender, EventArgs e)
+        {
+            this.workplacePnl.Controls.Clear();
+            InformationUC informationUC = null;
+            if (this.adminModel == null)
+            {
+                informationUC = new InformationUC(this.accountModel, this.employeeModel);
+            }
+            else
+            {
+                informationUC = new InformationUC(this.accountModel, this.adminModel);
+            }
+
+            informationUC.Dock = DockStyle.Fill;
+            this.workplacePnl.Controls.Add(informationUC);
+        }
+
         private void FormHome_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.adminModel = null;
             this.employeeModel = null;
+            this.accountModel = null;
         }
-
     }
 }

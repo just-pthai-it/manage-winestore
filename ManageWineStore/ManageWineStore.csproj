@@ -73,6 +73,7 @@
     <Compile Include="app\Controllers\ModelControllers\WIneController.cs" />
     <Compile Include="app\Controllers\NationController.cs" />
     <Compile Include="app\Controllers\PersonalInfoController.cs" />
+    <Compile Include="app\Controllers\PersonalInforController.cs" />
     <Compile Include="app\Controllers\ReceiptManageController.cs" />
     <Compile Include="app\Controllers\SellWineController.cs" />
     <Compile Include="app\Controllers\StorageController.cs" />
@@ -142,11 +143,11 @@
     <Compile Include="app\Views\UC\ImportUC.Designer.cs">
       <DependentUpon>ImportUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="app\Views\UC\Information.cs">
+    <Compile Include="app\Views\UC\InformationUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="app\Views\UC\Information.Designer.cs">
-      <DependentUpon>Information.cs</DependentUpon>
+    <Compile Include="app\Views\UC\InformationUC.Designer.cs">
+      <DependentUpon>InformationUC.cs</DependentUpon>
     </Compile>
     <Compile Include="app\Views\UC\RevenueUC.cs">
       <SubType>UserControl</SubType>
@@ -210,8 +211,8 @@
     <EmbeddedResource Include="app\Views\UC\ImportUC.resx">
       <DependentUpon>ImportUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="app\Views\UC\Information.resx">
-      <DependentUpon>Information.cs</DependentUpon>
+    <EmbeddedResource Include="app\Views\UC\InformationUC.resx">
+      <DependentUpon>InformationUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="app\Views\UC\RevenueUC.resx">
       <DependentUpon>RevenueUC.cs</DependentUpon>

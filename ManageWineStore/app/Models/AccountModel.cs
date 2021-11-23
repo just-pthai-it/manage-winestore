@@ -7,8 +7,13 @@ using System.Threading.Tasks;
 
 namespace ManageWineStore.app.Models
 {
-    class AccountModel
+    public class AccountModel
     {
+        public AccountModel()
+        {
+
+        }
+
         public AccountModel(int? id, string username, string password, int roleId)
         {
             Id = id;
@@ -20,7 +25,7 @@ namespace ManageWineStore.app.Models
         public AccountModel(DataRow row)
         {
             Id = (int)row["id"];
-            Username = row["user_name"].ToString();
+            Username = row["username"].ToString();
             Password = row["password"].ToString();
             RoleId = (int)row["role_id"];
         }
