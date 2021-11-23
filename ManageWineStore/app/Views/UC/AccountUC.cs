@@ -104,6 +104,12 @@ namespace ManageWineStore.app.Views.UC
 
         private void deleteBt_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa dữ liệu?",
+                "Xóa dữ liệu", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+
             DataGridViewRow row = this.dgv.SelectedRows[0];
             if (row.Cells[0] == null)
             {

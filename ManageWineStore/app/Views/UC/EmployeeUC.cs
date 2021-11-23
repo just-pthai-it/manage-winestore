@@ -47,10 +47,11 @@ namespace ManageWineStore.app.Views.UC
             DataRow row = dataTable.NewRow();
             row["id"] = "0";
             row["name"] = "Nữ";
-            dataTable.Rows.Add(row);
             DataRow row1 = dataTable.NewRow();
             row1["id"] = "1";
             row1["name"] = "Nam";
+
+            dataTable.Rows.Add(row);
             dataTable.Rows.Add(row1);
 
             this.genderCbb.DisplayMember = "name";
@@ -145,6 +146,12 @@ namespace ManageWineStore.app.Views.UC
 
         private void deleteBt_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa dữ liệu?",
+                            "Xóa dữ liệu", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+
             DataGridViewRow row = this.dgv.SelectedRows[0];
             if (row.Cells[0] == null)
             {

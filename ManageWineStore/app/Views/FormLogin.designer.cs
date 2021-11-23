@@ -65,6 +65,7 @@ namespace Views
             this.ExitBt.TabIndex = 8;
             this.ExitBt.Text = "Thoát";
             this.ExitBt.UseVisualStyleBackColor = false;
+            this.ExitBt.Click += new System.EventHandler(this.ExitBt_Click);
             // 
             // panel1
             // 
@@ -88,6 +89,7 @@ namespace Views
             this.label1.Size = new System.Drawing.Size(219, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Tên đăng nhập hoặc mật khẩu không đúng!";
+            this.label1.Visible = false;
             // 
             // lbl_Password
             // 
@@ -114,6 +116,7 @@ namespace Views
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(139, 20);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtUsername
             // 
@@ -121,6 +124,7 @@ namespace Views
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(139, 20);
             this.txtUsername.TabIndex = 1;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // confirmBt
             // 

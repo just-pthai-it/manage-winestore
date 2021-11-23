@@ -59,7 +59,7 @@
     <Compile Include="app\Controllers\AccountManageController.cs" />
     <Compile Include="app\Controllers\CustomerManageController.cs" />
     <Compile Include="app\Controllers\EmployeeManageController.cs" />
-    <Compile Include="app\Controllers\ImportWineController.cs" />
+    <Compile Include="app\Controllers\ImportController.cs" />
     <Compile Include="app\Controllers\LoginController.cs" />
     <Compile Include="app\Controllers\ModelControllers\Abastract\AModelController.cs" />
     <Compile Include="app\Controllers\ModelControllers\AccountController.cs" />
@@ -76,11 +76,10 @@
     <Compile Include="app\Controllers\ModelControllers\SaleReceiptDetailController.cs" />
     <Compile Include="app\Controllers\ModelControllers\SupplierController.cs" />
     <Compile Include="app\Controllers\ModelControllers\WIneController.cs" />
-    <Compile Include="app\Controllers\NationController.cs" />
-    <Compile Include="app\Controllers\PersonalInfoController.cs" />
+    <Compile Include="app\Controllers\ModelControllers\NationController.cs" />
     <Compile Include="app\Controllers\PersonalInforController.cs" />
     <Compile Include="app\Controllers\ReceiptManageController.cs" />
-    <Compile Include="app\Controllers\SellWineController.cs" />
+    <Compile Include="app\Controllers\SellController.cs" />
     <Compile Include="app\Controllers\StorageController.cs" />
     <Compile Include="app\Controllers\SupplierManageController.cs" />
     <Compile Include="app\Controllers\WineManageController.cs" />

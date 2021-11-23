@@ -32,7 +32,8 @@ namespace Views
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
             this.menuGrb = new System.Windows.Forms.GroupBox();
-            this.ReceiptMnBt = new System.Windows.Forms.Button();
+            this.personalInforBt = new System.Windows.Forms.Button();
+            this.receiptMnBt = new System.Windows.Forms.Button();
             this.supplierBt = new System.Windows.Forms.Button();
             this.customerMnBt = new System.Windows.Forms.Button();
             this.importBt = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@ namespace Views
             this.employeeMnBt = new System.Windows.Forms.Button();
             this.revenueBt = new System.Windows.Forms.Button();
             this.workplacePnl = new System.Windows.Forms.Panel();
-            this.personalInforBt = new System.Windows.Forms.Button();
             this.menuGrb.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,17 +61,17 @@ namespace Views
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(448, 9);
+            this.label1.Location = new System.Drawing.Point(531, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 25);
+            this.label1.Size = new System.Drawing.Size(173, 25);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Welcome!";
+            this.label1.Text = "MBH Wine Store";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // menuGrb
             // 
             this.menuGrb.Controls.Add(this.personalInforBt);
-            this.menuGrb.Controls.Add(this.ReceiptMnBt);
+            this.menuGrb.Controls.Add(this.receiptMnBt);
             this.menuGrb.Controls.Add(this.supplierBt);
             this.menuGrb.Controls.Add(this.customerMnBt);
             this.menuGrb.Controls.Add(this.importBt);
@@ -90,15 +90,25 @@ namespace Views
             this.menuGrb.TabStop = false;
             this.menuGrb.Text = "Menu";
             // 
+            // personalInforBt
+            // 
+            this.personalInforBt.Location = new System.Drawing.Point(6, 461);
+            this.personalInforBt.Name = "personalInforBt";
+            this.personalInforBt.Size = new System.Drawing.Size(129, 37);
+            this.personalInforBt.TabIndex = 11;
+            this.personalInforBt.Text = "Thông tin cá nhân";
+            this.personalInforBt.UseVisualStyleBackColor = true;
+            this.personalInforBt.Click += new System.EventHandler(this.personalInforBt_Click);
+            // 
             // ReceiptMnBt
             // 
-            this.ReceiptMnBt.Location = new System.Drawing.Point(6, 418);
-            this.ReceiptMnBt.Name = "ReceiptMnBt";
-            this.ReceiptMnBt.Size = new System.Drawing.Size(129, 37);
-            this.ReceiptMnBt.TabIndex = 10;
-            this.ReceiptMnBt.Text = "Quản lý hóa đơn";
-            this.ReceiptMnBt.UseVisualStyleBackColor = true;
-            this.ReceiptMnBt.Click += new System.EventHandler(this.ReceiptMnBt_Click);
+            this.receiptMnBt.Location = new System.Drawing.Point(6, 418);
+            this.receiptMnBt.Name = "ReceiptMnBt";
+            this.receiptMnBt.Size = new System.Drawing.Size(129, 37);
+            this.receiptMnBt.TabIndex = 10;
+            this.receiptMnBt.Text = "Quản lý hóa đơn";
+            this.receiptMnBt.UseVisualStyleBackColor = true;
+            this.receiptMnBt.Click += new System.EventHandler(this.ReceiptMnBt_Click);
             // 
             // supplierBt
             // 
@@ -206,16 +216,6 @@ namespace Views
             this.workplacePnl.Size = new System.Drawing.Size(1132, 542);
             this.workplacePnl.TabIndex = 11;
             // 
-            // personalInforBt
-            // 
-            this.personalInforBt.Location = new System.Drawing.Point(6, 461);
-            this.personalInforBt.Name = "personalInforBt";
-            this.personalInforBt.Size = new System.Drawing.Size(129, 37);
-            this.personalInforBt.TabIndex = 11;
-            this.personalInforBt.Text = "Thông tin cá nhân";
-            this.personalInforBt.UseVisualStyleBackColor = true;
-            this.personalInforBt.Click += new System.EventHandler(this.personalInforBt_Click);
-            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,7 +248,7 @@ namespace Views
         private System.Windows.Forms.Panel workplacePnl;
         private System.Windows.Forms.Button supplierBt;
         private System.Windows.Forms.Button customerMnBt;
-        private System.Windows.Forms.Button ReceiptMnBt;
+        private System.Windows.Forms.Button receiptMnBt;
         private System.Windows.Forms.Button personalInforBt;
     }
 }

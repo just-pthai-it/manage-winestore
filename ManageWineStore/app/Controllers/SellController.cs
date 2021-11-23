@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ManageWineStore.app.Controllers
 {
-    class SellWineController
+    class SellController
     {
         private MerchandiseController merchandiseController = new MerchandiseController();
         private SaleReceiptController saleReciptController = new SaleReceiptController();
@@ -24,15 +24,22 @@ namespace ManageWineStore.app.Controllers
 
         public void pay(SaleReceiptModel saleReciptModel, ListBox.ObjectCollection items)
         {
-            using (TransactionScope scope = new TransactionScope())
+            try
             {
-                int id = saleReciptController.insertGetId(saleReciptModel);
-                foreach (SaleReceiptDetailModel item in items)
+                using (TransactionScope scope = new TransactionScope())
                 {
-                    item.SaleReceiptId = id;
-                    saleReciptDetailController.insert(item);
+                    int id = saleReciptController.insertGetId(saleReciptModel);
+                    foreach (SaleReceiptDetailModel item in items)
+                    {
+                        item.SaleReceiptId = id;
+                        saleReciptDetailController.insert(item);
+                    }
+                    scope.Complete();
                 }
-                scope.Complete();
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi hệ thống!\n Không thể thực hiện được thao tác");
             }
         }
     }

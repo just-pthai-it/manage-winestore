@@ -9,7 +9,7 @@ namespace ManageWineStore.app.Models
     class MerchandiseModel
     {
         public MerchandiseModel(int? id, int wineId, string yearOfManufacture, 
-                                int currentQuantity, float pricePerProduct)
+                                int currentQuantity, double pricePerProduct)
         {
             Id = id;
             WineId = wineId;
@@ -22,6 +22,6 @@ namespace ManageWineStore.app.Models
         public int WineId { get; set; }
         public string YearOfManufacture { get; set; }
         public int CurrentQuantity { get; set; }
-        public float PricePerProduct { get; set; }
+        public double PricePerProduct { get; set; }
     }
 }

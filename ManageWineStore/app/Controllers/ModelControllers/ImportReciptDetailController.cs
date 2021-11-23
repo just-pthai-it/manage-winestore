@@ -15,7 +15,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
     {
         public override void insert(ImportReceiptDetailModel importReciptDetailModel)
         {
-            string commandText = "INSERT INTO sale_receipt_detail VALUES ( @simport_receipt_id , @merchandise_id , " +
+            string commandText = "INSERT INTO import_receipt_detail VALUES ( @import_receipt_id , @merchandise_id , " +
                     "@quanity , @cost );";
             this.executeNonQuery(commandText, new object[] {
                 importReciptDetailModel.ImportReceiptId,

@@ -8,8 +8,7 @@ namespace ManageWineStore.app.Models
 {
     class ImportReceiptModel
     {
-        public ImportReceiptModel(int id, DateTime createAt,
-                                int employeeId, int supplierId, double totalMoney)
+        public ImportReceiptModel(int? id, DateTime createAt, int employeeId, int supplierId, double totalMoney)
         {
             Id = id;
             CreateAt = createAt;
@@ -18,7 +17,7 @@ namespace ManageWineStore.app.Models
             TotalMoney = totalMoney;
         }
 
-        public int Id { get; set; }
+        public Nullable<int> Id { get; set; }
         public System.DateTime CreateAt { get; set; }
         public int EmployeeId { get; set; }
         public int SupplierId { get; set; }

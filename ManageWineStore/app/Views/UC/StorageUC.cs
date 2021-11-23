@@ -86,7 +86,7 @@ namespace ManageWineStore.app.Views.UC
         private void addBt_Click(object sender, EventArgs e)
         {
             this.updateBt.Enabled = false;
-            this.deleteBt.Enabled = false;
+            //this.deleteBt.Enabled = false;
             this.isEditable(true);
             this.clear();
         }
@@ -99,7 +99,7 @@ namespace ManageWineStore.app.Views.UC
                 return;
             }
 
-            this.deleteBt.Enabled = false;
+            //this.deleteBt.Enabled = false;
             this.isEditable(true);
 
             this.txtId.Text = row.Cells[0].Value.ToString();
@@ -111,17 +111,23 @@ namespace ManageWineStore.app.Views.UC
             this.pictureBox.Image = ImageHandler.bytesToImage((byte[])row.Cells[6].Value);
         }
 
-        private void deleteBt_Click(object sender, EventArgs e)
-        {
-            DataGridViewRow row = this.dgv.SelectedRows[0];
-            if (row.Cells[0] == null)
-            {
-                return;
-            }
+        //private void deleteBt_Click(object sender, EventArgs e)
+        //{
+        //    if (MessageBox.Show("Bạn có chắc chắn muốn xóa dữ liệu?",
+        //                    "Xóa dữ liệu", MessageBoxButtons.YesNo) == DialogResult.No)
+        //    {
+        //        return;
+        //    }
 
-            this.storageController.removeMerchandise(row.Cells[0].Value.ToString());
-            this.loadData();
-        }
+        //    DataGridViewRow row = this.dgv.SelectedRows[0];
+        //    if (row.Cells[0] == null)
+        //    {
+        //        return;
+        //    }
+
+        //    this.storageController.removeMerchandise(row.Cells[0].Value.ToString());
+        //    this.loadData();
+        //}
 
         private void refreshBt_Click(object sender, EventArgs e)
         {
@@ -195,7 +201,7 @@ namespace ManageWineStore.app.Views.UC
         {
             this.clear();
             this.updateBt.Enabled = true;
-            this.deleteBt.Enabled = true;
+            //this.deleteBt.Enabled = true;
         }
 
         private void clear()

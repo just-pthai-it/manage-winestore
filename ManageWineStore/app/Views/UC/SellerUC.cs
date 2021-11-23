@@ -16,7 +16,7 @@ namespace UC
 {
     public partial class SellerUC : UserControl
     {
-        private SellWineController sellWineController = new SellWineController();
+        private SellController sellWineController = new SellController();
         private int employeeId;
         public SellerUC(int employeeId)
         {
@@ -150,6 +150,11 @@ namespace UC
         private void removeBt_Click(object sender, EventArgs e)
         {
             SaleReceiptDetailModel saleReciptDetailModel = (SaleReceiptDetailModel)this.cart.SelectedItem;
+            if (saleReciptDetailModel == null)
+            {
+                return;
+            }
+
             foreach (DataGridViewRow row in this.dgv.Rows)
             {
                 if (row.Cells[1].Value.ToString() == saleReciptDetailModel.Name &&
@@ -166,7 +171,6 @@ namespace UC
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(this.cart.Items.ToString());
             this.reset();
         }
 

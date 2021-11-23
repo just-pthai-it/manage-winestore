@@ -19,7 +19,8 @@ namespace Views
         private EmployeeModel employeeModel = null;
         private AccountModel accountModel = null;
         private List<Button> adminBts = new List<Button>();
-        private List<Button> employeeBts = new List<Button>();
+        private List<Button> employeeSellerBts = new List<Button>();
+        private List<Button> employeeImporterBts = new List<Button>();
 
         public FormHome()
         {
@@ -38,8 +39,8 @@ namespace Views
             {
                 this.employeeModel = (EmployeeModel)user;
             }
-            //this.createListButton();
-            //this.setUp(this.adminModel == null ? this.employeeModel.Name : this.adminModel.Name);
+            this.createListButton();
+            this.setUp();
         }
 
         private void createListButton()
@@ -47,22 +48,30 @@ namespace Views
             this.adminBts.Add(this.revenueBt);
             this.adminBts.Add(this.wineMnBt);
             this.adminBts.Add(this.employeeMnBt);
+            this.adminBts.Add(this.supplierBt);
+            this.adminBts.Add(this.customerMnBt);
             this.adminBts.Add(this.storageMnBt);
             this.adminBts.Add(this.accountMnBt);
+            this.adminBts.Add(this.receiptMnBt);
             this.adminBts.Add(this.profileBt);
 
-            this.employeeBts.Add(this.importBt);
-            this.employeeBts.Add(this.sellBt);
-            this.employeeBts.Add(this.wineMnBt);
-            this.employeeBts.Add(this.storageMnBt);
-            this.employeeBts.Add(this.profileBt);
+            this.employeeSellerBts.Add(this.sellBt);
+            this.employeeSellerBts.Add(this.wineMnBt);
+            this.employeeSellerBts.Add(this.storageMnBt);
+            this.employeeSellerBts.Add(this.customerMnBt);
+            this.employeeSellerBts.Add(this.profileBt);
+
+            this.employeeImporterBts.Add(this.importBt);
+            this.employeeImporterBts.Add(this.wineMnBt);
+            this.employeeImporterBts.Add(this.storageMnBt);
+            this.employeeImporterBts.Add(this.supplierBt);
+            this.employeeImporterBts.Add(this.profileBt);
         }
 
-        private void setUp(string name)
+        private void setUp()
         {
             this.menuGrb.Controls.Clear();
             int x = 12, y = 41;
-            this.label1.Text = this.label1.Text + " " + name;
             if (this.adminModel != null)
             {
                 foreach (Button bt in this.adminBts)
@@ -74,11 +83,23 @@ namespace Views
             }
             else
             {
-                foreach (Button bt in this.employeeBts)
+                if (employeeModel.JobId == 1)
                 {
-                    bt.Location = new Point(x, y);
-                    this.menuGrb.Controls.Add(bt);
-                    y += 43;
+                    foreach (Button bt in this.employeeSellerBts)
+                    {
+                        bt.Location = new Point(x, y);
+                        this.menuGrb.Controls.Add(bt);
+                        y += 43;
+                    }
+                }
+                else
+                {
+                    foreach (Button bt in this.employeeImporterBts)
+                    {
+                        bt.Location = new Point(x, y);
+                        this.menuGrb.Controls.Add(bt);
+                        y += 43;
+                    }
                 }
             }
         }
@@ -86,7 +107,7 @@ namespace Views
         private void btn_Import_Click(object sender, EventArgs e)
         {
             this.workplacePnl.Controls.Clear();
-            ImportUC importUC = new ImportUC();
+            ImportUC importUC = new ImportUC(employeeModel.Id ?? -1);
             importUC.Dock = DockStyle.Fill;
             this.workplacePnl.Controls.Add(importUC);
         }

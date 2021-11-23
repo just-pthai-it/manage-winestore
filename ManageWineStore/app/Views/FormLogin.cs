@@ -39,11 +39,36 @@ namespace Views
                 form.ShowDialog();
                 this.Show();
             }
+            else
+            {
+                this.label1.Visible = true;
+            }
         }
 
         private bool validate()
         {
             return true;
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+            this.label1.Visible = false;
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            this.label1.Visible = false;
+        }
+
+        private void ExitBt_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("Bạn có chắc chắn muốn thoát chương trình?", 
+                            "Thoát", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

@@ -13,6 +13,19 @@ namespace ManageWineStore.app.Controllers.ModelControllers
 {
     class MerchandiseController : AModelController<MerchandiseModel>
     {
+        public int insertGetId(MerchandiseModel merchandiseModel)
+        {
+            string commandText = "INSERT INTO merchandise output INSERTED.id VALUES ( @winde_id , @year_of_manufacture , " +
+                                "@current_quantity , @price_per_product );";
+            return (int)this.executeNonQuery(commandText, new object[]
+            {
+                merchandiseModel.WineId,
+                merchandiseModel.YearOfManufacture,
+                merchandiseModel.CurrentQuantity,
+                merchandiseModel.PricePerProduct
+            });
+        }
+
         public override void insert(MerchandiseModel merchandiseModel)
         {
             string commandText = "INSERT INTO merchandise VALUES ( @winde_id , @year_of_manufacture , " +
