@@ -14,33 +14,41 @@ namespace ManageWineStore.app.Controllers
     class SellController
     {
         private MerchandiseController merchandiseController = new MerchandiseController();
-        private SaleReceiptController saleReciptController = new SaleReceiptController();
-        private SaleReceiptDetailController saleReciptDetailController = new SaleReceiptDetailController();
+        private SaleReceiptController saleReceiptController = new SaleReceiptController();
+        private SaleReceiptDetailController saleReceiptDetailController = new SaleReceiptDetailController();
 
         public DataTable loadData()
         {
             return this.merchandiseController.findAll2();
         }
 
-        public void pay(SaleReceiptModel saleReciptModel, ListBox.ObjectCollection items)
+        public int pay(SaleReceiptModel saleReciptModel, ListBox.ObjectCollection items)
         {
             try
             {
                 using (TransactionScope scope = new TransactionScope())
                 {
-                    int id = saleReciptController.insertGetId(saleReciptModel);
+                    int id = saleReceiptController.insertGetId(saleReciptModel);
                     foreach (SaleReceiptDetailModel item in items)
                     {
                         item.SaleReceiptId = id;
-                        saleReciptDetailController.insert(item);
+                        saleReceiptDetailController.insert(item);
                     }
                     scope.Complete();
+                    MessageBox.Show("Thanh toán thành công");
+                    return id;
                 }
             }
             catch
             {
                 MessageBox.Show("Lỗi hệ thống!\n Không thể thực hiện được thao tác");
+                return -1;
             }
+        }
+
+        public DataTable getExportSData(string id)
+        {
+            return saleReceiptController.findProc(id);
         }
     }
 }

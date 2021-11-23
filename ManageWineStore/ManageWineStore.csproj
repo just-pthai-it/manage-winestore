@@ -192,7 +192,7 @@
       <DependentUpon>BTLDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="database\DatabaseConnector.cs" />
-    <Compile Include="export\SaleReceiptExport.cs" />
+    <Compile Include="export\ReceiptExport.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="app\Views\FormChangePass.resx">

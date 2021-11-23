@@ -30,6 +30,12 @@ namespace ManageWineStore.app.Controllers.ModelControllers
 
         }
 
+        public DataTable findProc(string id)
+        {
+            string commandText = "EXEC import_receipt_export @id ;";
+            return this.executeQuery(commandText, new object[] { id });
+        }
+
         public override DataTable find(string column, object value)
         {
             throw new NotImplementedException();

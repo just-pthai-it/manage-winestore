@@ -2,6 +2,7 @@
 using ManageWineStore.app.Controllers;
 using ManageWineStore.app.Controllers.ModelControllers;
 using ManageWineStore.app.Models;
+using ManageWineStore.export;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -136,13 +137,21 @@ namespace UC
         private void btn_Accept_Click(object sender, EventArgs e)
         {
             string dateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            sellWineController.pay(new SaleReceiptModel(
+            int id = sellWineController.pay(new SaleReceiptModel(
                                                 DateTime.Parse(dateTime),
                                                 employeeId,
                                                 Int32.Parse(this.txtCustomerId.Text),
                                                 double.Parse(this.txtTotal.Text)),
                                     this.cart.Items);
 
+            if (id != -1)
+            {
+                ReceiptExport.Export(sellWineController.getExportSData(
+                                                        id.ToString()),
+                                                        "sheet",
+                                                        "Hóa đơn bán",
+                                                        "Họ tên khách hàng:");
+            }
 
             this.reset();
         }

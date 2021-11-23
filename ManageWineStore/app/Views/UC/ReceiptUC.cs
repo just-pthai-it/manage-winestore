@@ -1,5 +1,6 @@
 ﻿using ManageWineStore.app.BussinessClasses;
 using ManageWineStore.app.Controllers;
+using ManageWineStore.export;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -154,12 +155,12 @@ namespace ManageWineStore.app.Views.UC
 
         private void setIDDGVHeaders()
         {
-            this.saleReceiptDetailDgv.Columns["id"].HeaderText = "Mã CTHĐN";
-            this.saleReceiptDetailDgv.Columns["wine_name"].HeaderText = "Tên rượu";
-            this.saleReceiptDetailDgv.Columns["price_per_product"].HeaderText = "Giá niêm yết";
-            this.saleReceiptDetailDgv.Columns["year_of_manufacture"].HeaderText = "Năm sản xuất";
-            this.saleReceiptDetailDgv.Columns["quantity"].HeaderText = "Số lượng";
-            this.saleReceiptDetailDgv.Columns["cost"].HeaderText = "Thành tiền";
+            this.importReceiptDetailDgv.Columns["id"].HeaderText = "Mã CTHĐN";
+            this.importReceiptDetailDgv.Columns["wine_name"].HeaderText = "Tên rượu";
+            this.importReceiptDetailDgv.Columns["price_per_product"].HeaderText = "Giá niêm yết";
+            this.importReceiptDetailDgv.Columns["year_of_manufacture"].HeaderText = "Năm sản xuất";
+            this.importReceiptDetailDgv.Columns["quantity"].HeaderText = "Số lượng";
+            this.importReceiptDetailDgv.Columns["cost"].HeaderText = "Thành tiền";
         }
 
         private void bt2_Click(object sender, EventArgs e)
@@ -218,5 +219,17 @@ namespace ManageWineStore.app.Views.UC
             this.loadImportReceiptsData();
         }
 
+        private void exportIFileBt_Click(object sender, EventArgs e)
+        {
+            ReceiptExport.Export(receiptManageController.getExportIData(
+                    this.importReceiptDgv.SelectedRows[0].Cells[0].Value.ToString()), "sheet", "Hóa đơn nhập", "Tên NCC:");
+        }
+
+        private void exportSFileBt_Click(object sender, EventArgs e)
+        {
+
+            ReceiptExport.Export(receiptManageController.getExportSData(
+                    this.saleReceiptDgv.SelectedRows[0].Cells[0].Value.ToString()), "sheet", "Hóa đơn bán", "Họ tên khách hàng:");
+        }
     }
 }

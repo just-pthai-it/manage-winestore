@@ -1,5 +1,6 @@
 ﻿using ManageWineStore.app.Controllers;
 using ManageWineStore.app.Models;
+using ManageWineStore.export;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,7 +55,7 @@ namespace ManageWineStore.app.Views.UC
         private void comfirmBt_Click(object sender, EventArgs e)
         {
             string dateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            this.importController.comfirm(new ImportReceiptModel(
+            int id = this.importController.comfirm(new ImportReceiptModel(
                                                 null,
                                                 DateTime.Parse(dateTime),
                                                 this.employeeId,
@@ -62,6 +63,15 @@ namespace ManageWineStore.app.Views.UC
                                                 double.Parse(this.txtTotal.Text)),
                                         this.cart.Items,
                                         merchandises);
+
+            if (id != -1)
+            {
+                ReceiptExport.Export(importController.getExportIData(
+                                                id.ToString()),
+                                                "sheet",
+                                                "Hóa đơn nhập",
+                                                "Tên NCC:");
+            }
 
             this.reset();
             this.cart.Items.Clear();

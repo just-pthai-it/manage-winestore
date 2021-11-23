@@ -23,7 +23,7 @@ namespace ManageWineStore.app.Controllers
             return wineController.findAll();
         }
 
-        public void comfirm(ImportReceiptModel importReceiptModel,
+        public int comfirm(ImportReceiptModel importReceiptModel,
                             ListBox.ObjectCollection items,
                             List<MerchandiseModel> merchandises)
         {
@@ -44,12 +44,20 @@ namespace ManageWineStore.app.Controllers
                         i++;
                     }
                     scope.Complete();
+                    MessageBox.Show("Nhập hàng thành công");
+                    return irc_id;
                 }
             }
             catch
             {
                 MessageBox.Show("Lỗi hệ thống!\n Không thể thực hiện được thao tác");
+                return -1;
             }
+        }
+
+        public DataTable getExportIData(string id)
+        {
+            return importReceiptController.findProc(id);
         }
     }
 }

@@ -46,5 +46,15 @@ namespace ManageWineStore.app.Controllers
             return this.importReceiptController.findByConditional(column, value,
                 query, start, end);
         }
+
+        internal DataTable getExportSData(string id)
+        {
+            return this.saleReceiptController.findProc(id);
+        }
+
+        internal DataTable getExportIData(string id)
+        {
+            return this.importReceiptController.findProc(id);
+        }
     }
 }

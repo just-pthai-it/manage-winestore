@@ -41,6 +41,7 @@ namespace ManageWineStore.app.Views.UC
             this.saleReceiptTP = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.refreshSBt = new System.Windows.Forms.Button();
             this.bt1 = new System.Windows.Forms.Button();
             this.searchSBt = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,12 +52,12 @@ namespace ManageWineStore.app.Views.UC
             this.label2 = new System.Windows.Forms.Label();
             this.keySCbb = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.refreshSBt = new System.Windows.Forms.Button();
             this.saleReceiptDgv = new System.Windows.Forms.DataGridView();
             this.saleReceiptDetailDgv = new System.Windows.Forms.DataGridView();
             this.importReceiptTP = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.refreshIBt = new System.Windows.Forms.Button();
             this.bt2 = new System.Windows.Forms.Button();
             this.searchIBt = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -69,8 +70,9 @@ namespace ManageWineStore.app.Views.UC
             this.label8 = new System.Windows.Forms.Label();
             this.importReceiptDgv = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.refreshIBt = new System.Windows.Forms.Button();
             this.importReceiptDetailDgv = new System.Windows.Forms.DataGridView();
+            this.exportSFileBt = new System.Windows.Forms.Button();
+            this.exportIFileBt = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.saleReceiptTP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -145,6 +147,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.exportSFileBt);
             this.splitContainer2.Panel1.Controls.Add(this.refreshSBt);
             this.splitContainer2.Panel1.Controls.Add(this.bt1);
             this.splitContainer2.Panel1.Controls.Add(this.searchSBt);
@@ -163,6 +166,16 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer2.Size = new System.Drawing.Size(690, 509);
             this.splitContainer2.SplitterDistance = 88;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // refreshSBt
+            // 
+            this.refreshSBt.Location = new System.Drawing.Point(488, 50);
+            this.refreshSBt.Name = "refreshSBt";
+            this.refreshSBt.Size = new System.Drawing.Size(92, 34);
+            this.refreshSBt.TabIndex = 1;
+            this.refreshSBt.Text = "Làm mới";
+            this.refreshSBt.UseVisualStyleBackColor = true;
+            this.refreshSBt.Click += new System.EventHandler(this.refreshSBt_Click);
             // 
             // bt1
             // 
@@ -254,16 +267,6 @@ namespace ManageWineStore.app.Views.UC
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tìm kiếm theo";
-            // 
-            // refreshSBt
-            // 
-            this.refreshSBt.Location = new System.Drawing.Point(595, 52);
-            this.refreshSBt.Name = "refreshSBt";
-            this.refreshSBt.Size = new System.Drawing.Size(92, 34);
-            this.refreshSBt.TabIndex = 1;
-            this.refreshSBt.Text = "Làm mới";
-            this.refreshSBt.UseVisualStyleBackColor = true;
-            this.refreshSBt.Click += new System.EventHandler(this.refreshSBt_Click);
             // 
             // saleReceiptDgv
             // 
@@ -359,6 +362,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // splitContainer4.Panel1
             // 
+            this.splitContainer4.Panel1.Controls.Add(this.exportIFileBt);
             this.splitContainer4.Panel1.Controls.Add(this.refreshIBt);
             this.splitContainer4.Panel1.Controls.Add(this.bt2);
             this.splitContainer4.Panel1.Controls.Add(this.searchIBt);
@@ -378,6 +382,16 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer4.Size = new System.Drawing.Size(690, 509);
             this.splitContainer4.SplitterDistance = 88;
             this.splitContainer4.TabIndex = 0;
+            // 
+            // refreshIBt
+            // 
+            this.refreshIBt.Location = new System.Drawing.Point(495, 52);
+            this.refreshIBt.Name = "refreshIBt";
+            this.refreshIBt.Size = new System.Drawing.Size(92, 34);
+            this.refreshIBt.TabIndex = 3;
+            this.refreshIBt.Text = "Làm mới";
+            this.refreshIBt.UseVisualStyleBackColor = true;
+            this.refreshIBt.Click += new System.EventHandler(this.refreshIBt_Click);
             // 
             // bt2
             // 
@@ -506,16 +520,6 @@ namespace ManageWineStore.app.Views.UC
             this.panel2.Size = new System.Drawing.Size(690, 69);
             this.panel2.TabIndex = 0;
             // 
-            // refreshIBt
-            // 
-            this.refreshIBt.Location = new System.Drawing.Point(595, 55);
-            this.refreshIBt.Name = "refreshIBt";
-            this.refreshIBt.Size = new System.Drawing.Size(92, 34);
-            this.refreshIBt.TabIndex = 3;
-            this.refreshIBt.Text = "Làm mới";
-            this.refreshIBt.UseVisualStyleBackColor = true;
-            this.refreshIBt.Click += new System.EventHandler(this.refreshIBt_Click);
-            // 
             // importReceiptDetailDgv
             // 
             this.importReceiptDetailDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -543,6 +547,26 @@ namespace ManageWineStore.app.Views.UC
             this.importReceiptDetailDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.importReceiptDetailDgv.Size = new System.Drawing.Size(424, 509);
             this.importReceiptDetailDgv.TabIndex = 0;
+            // 
+            // exportSFileBt
+            // 
+            this.exportSFileBt.Location = new System.Drawing.Point(586, 51);
+            this.exportSFileBt.Name = "exportSFileBt";
+            this.exportSFileBt.Size = new System.Drawing.Size(92, 34);
+            this.exportSFileBt.TabIndex = 20;
+            this.exportSFileBt.Text = "Xuất file";
+            this.exportSFileBt.UseVisualStyleBackColor = true;
+            this.exportSFileBt.Click += new System.EventHandler(this.exportSFileBt_Click);
+            // 
+            // exportIFileBt
+            // 
+            this.exportIFileBt.Location = new System.Drawing.Point(593, 51);
+            this.exportIFileBt.Name = "exportIFileBt";
+            this.exportIFileBt.Size = new System.Drawing.Size(92, 34);
+            this.exportIFileBt.TabIndex = 21;
+            this.exportIFileBt.Text = "Xuất file";
+            this.exportIFileBt.UseVisualStyleBackColor = true;
+            this.exportIFileBt.Click += new System.EventHandler(this.exportIFileBt_Click);
             // 
             // ReceiptUC
             // 
@@ -616,5 +640,7 @@ namespace ManageWineStore.app.Views.UC
         private System.Windows.Forms.DataGridView importReceiptDetailDgv;
         private System.Windows.Forms.Button bt2;
         private System.Windows.Forms.Button bt1;
+        private System.Windows.Forms.Button exportSFileBt;
+        private System.Windows.Forms.Button exportIFileBt;
     }
 }

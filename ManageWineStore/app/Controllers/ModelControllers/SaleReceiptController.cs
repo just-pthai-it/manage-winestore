@@ -39,6 +39,12 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             });
         }
 
+        public DataTable findProc(string id)
+        {
+            string commandText = "EXEC sale_receipt_export @id ;";
+            return this.executeQuery(commandText, new object[] { id });
+        }
+
         public override DataTable find(string column, object value)
         {
             throw new NotImplementedException();
@@ -54,8 +60,8 @@ namespace ManageWineStore.app.Controllers.ModelControllers
                                             string start, string end)
         {
             string commandText = "SELECT * FROM sale_receipt_custom WHERE " + column + " LIKE @" + column + query;
-            return this.executeQuery(commandText, new object[] 
-            { 
+            return this.executeQuery(commandText, new object[]
+            {
                 "%" + value + "%" ,
                 start,
                 end,

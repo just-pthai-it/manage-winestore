@@ -37,6 +37,8 @@ namespace Views
                 FormHome form = new FormHome(loginController.AccountModel, user);
                 this.Hide();
                 form.ShowDialog();
+                this.txtUsername.Text = "";
+                this.txtPassword.Text = "";
                 this.Show();
             }
             else
