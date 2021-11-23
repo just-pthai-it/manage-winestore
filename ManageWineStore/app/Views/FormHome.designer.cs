@@ -326,6 +326,7 @@ namespace Views
             this.Controls.Add(this.label1);
             this.Controls.Add(this.splitter1);
             this.Name = "FormHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormHome";
             this.menuGrb.ResumeLayout(false);
             this.ResumeLayout(false);

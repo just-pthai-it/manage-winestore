@@ -170,6 +170,7 @@ namespace Views
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.confirmBt);
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

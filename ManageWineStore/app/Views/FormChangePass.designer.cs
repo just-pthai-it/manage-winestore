@@ -171,6 +171,7 @@ namespace Views
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCurrentPassword);
             this.Name = "FormChangePass";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Change Password";
             this.ResumeLayout(false);
             this.PerformLayout();
