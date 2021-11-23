@@ -8,19 +8,20 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ManageWineStore.app.Controllers.ModelControllers
 {
     class SaleReceiptController : AModelController<SaleReceiptModel>
     {
-        public int insertGetId (SaleReceiptModel saleReciptModel)
+        public int insertGetId(SaleReceiptModel saleReciptModel)
         {
             string commandText = "INSERT INTO sale_receipt output INSERTED.id VALUES ( @create_at , @employee_id , " +
                                 "@customer_id , @total_money );";
             return (int)this.ExecuteScalar(commandText, new object[] {
-                saleReciptModel.CreateAt, 
+                saleReciptModel.CreateAt,
                 saleReciptModel.EmployeeId,
-                saleReciptModel.CustomerId, 
+                saleReciptModel.CustomerId,
                 saleReciptModel.TotalMoney
             });
         }
@@ -30,22 +31,35 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             string commandText = "INSERT INTO sale_receipt VALUES ( @create_at , @employee_id , " +
                                 "@customer_id , @total_money );";
             this.executeNonQuery(commandText, new object[] {
-                saleReciptModel.CreateAt, 
-                saleReciptModel.EmployeeId, 
+                saleReciptModel.CreateAt,
+                saleReciptModel.EmployeeId,
                 saleReciptModel.CustomerId,
-                saleReciptModel.CustomerId, 
+                saleReciptModel.CustomerId,
                 saleReciptModel.TotalMoney
             });
         }
 
-        public override DataTable find(string id)
+        public override DataTable find(string column, object value)
         {
             throw new NotImplementedException();
         }
 
         public override DataTable findAll()
         {
-            throw new NotImplementedException();
+            string commandText = "SELECT * FROM sale_receipt_custom ;";
+            return this.executeQuery(commandText);
+        }
+
+        public DataTable findByConditional(string column, object value, string query,
+                                            string start, string end)
+        {
+            string commandText = "SELECT * FROM sale_receipt_custom WHERE " + column + " LIKE @" + column + query;
+            return this.executeQuery(commandText, new object[] 
+            { 
+                "%" + value + "%" ,
+                start,
+                end,
+            });
         }
 
         public override void update(SaleReceiptModel saleReciptModel)
@@ -55,7 +69,8 @@ namespace ManageWineStore.app.Controllers.ModelControllers
 
         public override void delete(string id)
         {
-            throw new NotImplementedException();
+            string commandText = "DELETE FROM sale_receipt WHERE id = @id ;";
+            this.executeQuery(commandText, new object[] { id });
         }
     }
 }

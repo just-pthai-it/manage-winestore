@@ -33,7 +33,7 @@ namespace ManageWineStore.app.Controllers
             {
                 if (dataRow["role_id"].ToString() == "2")
                 {
-                    return new EmployeeModel(employeeController.find(dataRow["id"].ToString()).Rows[0]);
+                    return new EmployeeModel(employeeController.find("account_id", dataRow["id"].ToString()).Rows[0]);
                 }
 
                 return new AdminModel(adminController.findByAccountId(dataRow["id"].ToString()).Rows[0]);

@@ -36,10 +36,10 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             string commandText = "SELECT * FROM employee_info WHERE " + column + " LIKE @" + column + " ;";
             return this.executeQuery(commandText, new object[] { "%" + value + "%" });
         }
-        public override DataTable find(string id)
+        public override DataTable find(string column, object value)
         {
-            string commandText = "SELECT * FROM employee WHERE id = @id ;";
-            return this.executeQuery(commandText, new object[] { id });
+            string commandText = "SELECT * FROM employee WHERE " + column + " = @"+ column +" ;";
+            return this.executeQuery(commandText, new object[] { value });
         }
 
         public override DataTable findAll()

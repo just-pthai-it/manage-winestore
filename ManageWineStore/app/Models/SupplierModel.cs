@@ -8,22 +8,22 @@ namespace ManageWineStore.app.Models
 {
     class SupplierModel
     {
-        public SupplierModel(int id, string name, string phone, string mail, 
-                            string address, string nantionality)
+        public SupplierModel(int? id, string name, string phone, string mail, 
+                            string address, int nationId)
         {
             Id = id;
             Name = name;
             Phone = phone;
             Mail = mail;
             Address = address;
-            Nantionality = nantionality;
+            NationID = nationId;
         }
 
-        public int Id { get; set; }
+        public Nullable<int> Id { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Mail { get; set; }
         public string Address { get; set; }
-        public string Nantionality { get; set; }
+        public int NationID { get; set; }
     }
 }

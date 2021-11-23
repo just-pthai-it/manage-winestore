@@ -221,9 +221,9 @@ namespace ManageWineStore.app.Views.UC
 
         private void isEditable(bool status)
         {
-            this.txtUsername.Enabled = status;
             if (this.addBt.Enabled)
             {
+                this.txtUsername.Enabled = status;
                 this.txtPassword.Enabled = status;
                 this.txtRepeatPassword.Enabled = status;
             }

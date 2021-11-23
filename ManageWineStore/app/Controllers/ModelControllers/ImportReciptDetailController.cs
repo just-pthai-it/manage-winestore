@@ -25,9 +25,12 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             });
         }
 
-        public override DataTable find(string id)
+        public override DataTable find(string column, object value)
         {
-            throw new NotImplementedException();
+            string commandText = "SELECT id, wine_name, price_per_product, year_of_manufacture, " +
+                                "quantity, cost FROM import_receipt_detail_custom " +
+                                "WHERE " + column + " = @" + column + " ;";
+            return this.executeQuery(commandText, new object[] { value });
         }
         public override DataTable findAll()
         {
@@ -42,6 +45,12 @@ namespace ManageWineStore.app.Controllers.ModelControllers
         public override void delete(string id)
         {
             throw new NotImplementedException();
+        }
+
+        public void deleteBySingleConditional(string column, Object value)
+        {
+            string commandText = "DELETE FROM import_receipt_detail WHERE " + column + " = @" + column + " ;";
+            this.executeNonQuery(commandText, new object[] { value });
         }
     }
 }

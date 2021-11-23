@@ -119,7 +119,7 @@ namespace Views
             // lbl_CheckPass
             // 
             this.lbl_CheckPass.AutoSize = true;
-            this.lbl_CheckPass.Location = new System.Drawing.Point(151, 78);
+            this.lbl_CheckPass.Location = new System.Drawing.Point(151, 88);
             this.lbl_CheckPass.Name = "lbl_CheckPass";
             this.lbl_CheckPass.Size = new System.Drawing.Size(35, 13);
             this.lbl_CheckPass.TabIndex = 9;

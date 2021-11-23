@@ -32,7 +32,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             return this.executeQuery(commandText, new object[] { account_id });
         }
 
-        public override DataTable find(string id)
+        public override DataTable find(string column, object value)
         {
             throw new NotImplementedException();
         }

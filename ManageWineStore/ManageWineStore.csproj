@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="app\BussinessClasses\Helper.cs" />
     <Compile Include="app\BussinessClasses\ImageHandler.cs" />
     <Compile Include="app\BussinessClasses\MD5Helper.cs" />
     <Compile Include="app\Controllers\AccountManageController.cs" />
@@ -69,9 +70,12 @@
     <Compile Include="app\Controllers\ModelControllers\SaleReceiptDetailController.cs" />
     <Compile Include="app\Controllers\ModelControllers\SupplierController.cs" />
     <Compile Include="app\Controllers\ModelControllers\WIneController.cs" />
+    <Compile Include="app\Controllers\NationController.cs" />
     <Compile Include="app\Controllers\PersonalInfoController.cs" />
+    <Compile Include="app\Controllers\ReceiptManageController.cs" />
     <Compile Include="app\Controllers\SellWineController.cs" />
     <Compile Include="app\Controllers\StorageController.cs" />
+    <Compile Include="app\Controllers\SupplierManageController.cs" />
     <Compile Include="app\Controllers\WineManageController.cs" />
     <Compile Include="app\Models\Abastract\AModel.cs" />
     <Compile Include="app\Models\AccountModel.cs" />
@@ -83,6 +87,7 @@
     <Compile Include="app\Models\ImportReceiptDetailModel.cs" />
     <Compile Include="app\Models\JobModel.cs" />
     <Compile Include="app\Models\MerchandiseModel.cs" />
+    <Compile Include="app\Models\NationModel.cs" />
     <Compile Include="app\Models\RoleModel.cs" />
     <Compile Include="app\Models\SaleReceiptModel.cs" />
     <Compile Include="app\Models\SaleReceiptDetailModel.cs" />
