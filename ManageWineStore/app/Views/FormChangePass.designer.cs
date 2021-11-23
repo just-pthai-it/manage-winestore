@@ -110,23 +110,25 @@ namespace Views
             // 
             // comfirmBt
             // 
+            this.comfirmBt.BackColor = System.Drawing.Color.Beige;
             this.comfirmBt.Enabled = false;
             this.comfirmBt.Location = new System.Drawing.Point(154, 217);
             this.comfirmBt.Name = "comfirmBt";
             this.comfirmBt.Size = new System.Drawing.Size(68, 27);
             this.comfirmBt.TabIndex = 7;
             this.comfirmBt.Text = "Confirm";
-            this.comfirmBt.UseVisualStyleBackColor = true;
+            this.comfirmBt.UseVisualStyleBackColor = false;
             this.comfirmBt.Click += new System.EventHandler(this.comfirmBt_Click);
             // 
             // backBt
             // 
+            this.backBt.BackColor = System.Drawing.Color.Beige;
             this.backBt.Location = new System.Drawing.Point(256, 217);
             this.backBt.Name = "backBt";
             this.backBt.Size = new System.Drawing.Size(68, 27);
             this.backBt.TabIndex = 8;
             this.backBt.Text = "Back";
-            this.backBt.UseVisualStyleBackColor = true;
+            this.backBt.UseVisualStyleBackColor = false;
             this.backBt.Click += new System.EventHandler(this.backBt_Click);
             // 
             // wrongPasswordLb
@@ -155,6 +157,7 @@ namespace Views
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(460, 275);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.wrongPasswordLb);

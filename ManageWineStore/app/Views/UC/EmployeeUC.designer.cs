@@ -116,7 +116,7 @@ namespace ManageWineStore.app.Views.UC
             // selectImgBt
             // 
             this.selectImgBt.Enabled = false;
-            this.selectImgBt.Location = new System.Drawing.Point(195, 341);
+            this.selectImgBt.Location = new System.Drawing.Point(195, 339);
             this.selectImgBt.Name = "selectImgBt";
             this.selectImgBt.Size = new System.Drawing.Size(68, 23);
             this.selectImgBt.TabIndex = 41;
@@ -156,7 +156,7 @@ namespace ManageWineStore.app.Views.UC
             // cancelBt
             // 
             this.cancelBt.Enabled = false;
-            this.cancelBt.Location = new System.Drawing.Point(267, 486);
+            this.cancelBt.Location = new System.Drawing.Point(268, 483);
             this.cancelBt.Name = "cancelBt";
             this.cancelBt.Size = new System.Drawing.Size(100, 38);
             this.cancelBt.TabIndex = 19;
@@ -167,7 +167,7 @@ namespace ManageWineStore.app.Views.UC
             // saveBt
             // 
             this.saveBt.Enabled = false;
-            this.saveBt.Location = new System.Drawing.Point(60, 486);
+            this.saveBt.Location = new System.Drawing.Point(61, 483);
             this.saveBt.Name = "saveBt";
             this.saveBt.Size = new System.Drawing.Size(100, 38);
             this.saveBt.TabIndex = 18;
@@ -179,7 +179,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             this.pictureBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pictureBox.Enabled = false;
-            this.pictureBox.Location = new System.Drawing.Point(91, 341);
+            this.pictureBox.Location = new System.Drawing.Point(91, 339);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(98, 139);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -189,7 +189,7 @@ namespace ManageWineStore.app.Views.UC
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(23, 351);
+            this.label9.Location = new System.Drawing.Point(23, 349);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(26, 13);
             this.label9.TabIndex = 16;
