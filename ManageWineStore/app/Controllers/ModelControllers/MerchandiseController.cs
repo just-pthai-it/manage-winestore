@@ -26,7 +26,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             });
         }
 
-        public override DataTable find(string id)
+        public override DataTable find(string column, object value)
         {
             throw new NotImplementedException();
         }

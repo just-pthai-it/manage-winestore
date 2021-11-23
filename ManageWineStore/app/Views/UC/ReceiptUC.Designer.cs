@@ -29,43 +29,50 @@ namespace ManageWineStore.app.Views.UC
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.saleReceiptTP = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.searchSaleBt = new System.Windows.Forms.Button();
+            this.bt1 = new System.Windows.Forms.Button();
+            this.searchSBt = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.endSaleDtp = new System.Windows.Forms.DateTimePicker();
-            this.startSaleDtp = new System.Windows.Forms.DateTimePicker();
-            this.keywordSaleTxt = new System.Windows.Forms.TextBox();
+            this.endSDtp = new System.Windows.Forms.DateTimePicker();
+            this.startSDtp = new System.Windows.Forms.DateTimePicker();
+            this.txtSKeyword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.searchSaleCbb = new System.Windows.Forms.ComboBox();
+            this.keySCbb = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.refreshSaleBt = new System.Windows.Forms.Button();
-            this.deleteSaleBt = new System.Windows.Forms.Button();
+            this.refreshSBt = new System.Windows.Forms.Button();
             this.saleReceiptDgv = new System.Windows.Forms.DataGridView();
             this.saleReceiptDetailDgv = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.importReceiptTP = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.searchImportBt = new System.Windows.Forms.Button();
+            this.bt2 = new System.Windows.Forms.Button();
+            this.searchIBt = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.endImportDtp = new System.Windows.Forms.DateTimePicker();
-            this.startImportDtp = new System.Windows.Forms.DateTimePicker();
-            this.keywordImportTxt = new System.Windows.Forms.TextBox();
+            this.endIDtp = new System.Windows.Forms.DateTimePicker();
+            this.startIDtp = new System.Windows.Forms.DateTimePicker();
+            this.txtIKeyword = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.searchImportCbb = new System.Windows.Forms.ComboBox();
+            this.keyICbb = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.importReceiptDgv = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.refreshImportBt = new System.Windows.Forms.Button();
-            this.deleteImportBt = new System.Windows.Forms.Button();
+            this.refreshIBt = new System.Windows.Forms.Button();
             this.importReceiptDetailDgv = new System.Windows.Forms.DataGridView();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabControl.SuspendLayout();
+            this.saleReceiptTP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -74,10 +81,9 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.saleReceiptDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saleReceiptDetailDgv)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.importReceiptTP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -87,32 +93,31 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.importReceiptDgv)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.importReceiptDetailDgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabControl
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1132, 541);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl.Controls.Add(this.saleReceiptTP);
+            this.tabControl.Controls.Add(this.importReceiptTP);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tabControl.Location = new System.Drawing.Point(0, 0);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(1132, 541);
+            this.tabControl.TabIndex = 0;
             // 
-            // tabPage1
+            // saleReceiptTP
             // 
-            this.tabPage1.Controls.Add(this.splitContainer1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1124, 515);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Hóa đơn bán";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.saleReceiptTP.Controls.Add(this.splitContainer1);
+            this.saleReceiptTP.Location = new System.Drawing.Point(4, 22);
+            this.saleReceiptTP.Name = "saleReceiptTP";
+            this.saleReceiptTP.Padding = new System.Windows.Forms.Padding(3);
+            this.saleReceiptTP.Size = new System.Drawing.Size(1124, 515);
+            this.saleReceiptTP.TabIndex = 0;
+            this.saleReceiptTP.Text = "Hóa đơn bán";
+            this.saleReceiptTP.UseVisualStyleBackColor = true;
             // 
             // splitContainer1
             // 
@@ -140,37 +145,50 @@ namespace ManageWineStore.app.Views.UC
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.searchSaleBt);
+            this.splitContainer2.Panel1.Controls.Add(this.refreshSBt);
+            this.splitContainer2.Panel1.Controls.Add(this.bt1);
+            this.splitContainer2.Panel1.Controls.Add(this.searchSBt);
             this.splitContainer2.Panel1.Controls.Add(this.label4);
             this.splitContainer2.Panel1.Controls.Add(this.label3);
-            this.splitContainer2.Panel1.Controls.Add(this.endSaleDtp);
-            this.splitContainer2.Panel1.Controls.Add(this.startSaleDtp);
-            this.splitContainer2.Panel1.Controls.Add(this.keywordSaleTxt);
+            this.splitContainer2.Panel1.Controls.Add(this.endSDtp);
+            this.splitContainer2.Panel1.Controls.Add(this.startSDtp);
+            this.splitContainer2.Panel1.Controls.Add(this.txtSKeyword);
             this.splitContainer2.Panel1.Controls.Add(this.label2);
-            this.splitContainer2.Panel1.Controls.Add(this.searchSaleCbb);
+            this.splitContainer2.Panel1.Controls.Add(this.keySCbb);
             this.splitContainer2.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.panel1);
             this.splitContainer2.Panel2.Controls.Add(this.saleReceiptDgv);
             this.splitContainer2.Size = new System.Drawing.Size(690, 509);
             this.splitContainer2.SplitterDistance = 88;
             this.splitContainer2.TabIndex = 0;
             // 
-            // searchSaleBt
+            // bt1
             // 
-            this.searchSaleBt.Location = new System.Drawing.Point(605, 56);
-            this.searchSaleBt.Name = "searchSaleBt";
-            this.searchSaleBt.Size = new System.Drawing.Size(74, 22);
-            this.searchSaleBt.TabIndex = 8;
-            this.searchSaleBt.Text = "Tìm kiếm";
-            this.searchSaleBt.UseVisualStyleBackColor = true;
+            this.bt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt1.Location = new System.Drawing.Point(16, 54);
+            this.bt1.Name = "bt1";
+            this.bt1.Size = new System.Drawing.Size(24, 24);
+            this.bt1.TabIndex = 19;
+            this.bt1.Text = "+";
+            this.bt1.UseVisualStyleBackColor = true;
+            this.bt1.Click += new System.EventHandler(this.bt1_Click);
+            // 
+            // searchSBt
+            // 
+            this.searchSBt.Location = new System.Drawing.Point(613, 15);
+            this.searchSBt.Name = "searchSBt";
+            this.searchSBt.Size = new System.Drawing.Size(74, 22);
+            this.searchSBt.TabIndex = 8;
+            this.searchSBt.Text = "Tìm kiếm";
+            this.searchSBt.UseVisualStyleBackColor = true;
+            this.searchSBt.Click += new System.EventHandler(this.searchSBt_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(162, 56);
+            this.label4.Location = new System.Drawing.Point(216, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(26, 13);
             this.label4.TabIndex = 7;
@@ -179,34 +197,37 @@ namespace ManageWineStore.app.Views.UC
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 56);
+            this.label3.Location = new System.Drawing.Point(66, 61);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(20, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Từ";
             // 
-            // endSaleDtp
+            // endSDtp
             // 
-            this.endSaleDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.endSaleDtp.Location = new System.Drawing.Point(194, 54);
-            this.endSaleDtp.Name = "endSaleDtp";
-            this.endSaleDtp.Size = new System.Drawing.Size(115, 20);
-            this.endSaleDtp.TabIndex = 5;
+            this.endSDtp.Enabled = false;
+            this.endSDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.endSDtp.Location = new System.Drawing.Point(248, 55);
+            this.endSDtp.Name = "endSDtp";
+            this.endSDtp.Size = new System.Drawing.Size(95, 20);
+            this.endSDtp.TabIndex = 5;
+            this.endSDtp.Value = new System.DateTime(2021, 11, 23, 11, 27, 3, 0);
             // 
-            // startSaleDtp
+            // startSDtp
             // 
-            this.startSaleDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.startSaleDtp.Location = new System.Drawing.Point(39, 54);
-            this.startSaleDtp.Name = "startSaleDtp";
-            this.startSaleDtp.Size = new System.Drawing.Size(115, 20);
-            this.startSaleDtp.TabIndex = 4;
+            this.startSDtp.Enabled = false;
+            this.startSDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.startSDtp.Location = new System.Drawing.Point(94, 55);
+            this.startSDtp.Name = "startSDtp";
+            this.startSDtp.Size = new System.Drawing.Size(95, 20);
+            this.startSDtp.TabIndex = 4;
             // 
-            // keywordSaleTxt
+            // txtSKeyword
             // 
-            this.keywordSaleTxt.Location = new System.Drawing.Point(349, 15);
-            this.keywordSaleTxt.Name = "keywordSaleTxt";
-            this.keywordSaleTxt.Size = new System.Drawing.Size(238, 20);
-            this.keywordSaleTxt.TabIndex = 3;
+            this.txtSKeyword.Location = new System.Drawing.Point(349, 15);
+            this.txtSKeyword.Name = "txtSKeyword";
+            this.txtSKeyword.Size = new System.Drawing.Size(238, 20);
+            this.txtSKeyword.TabIndex = 3;
             // 
             // label2
             // 
@@ -217,13 +238,13 @@ namespace ManageWineStore.app.Views.UC
             this.label2.TabIndex = 2;
             this.label2.Text = "Từ khóa";
             // 
-            // searchSaleCbb
+            // keySCbb
             // 
-            this.searchSaleCbb.FormattingEnabled = true;
-            this.searchSaleCbb.Location = new System.Drawing.Point(92, 14);
-            this.searchSaleCbb.Name = "searchSaleCbb";
-            this.searchSaleCbb.Size = new System.Drawing.Size(97, 21);
-            this.searchSaleCbb.TabIndex = 1;
+            this.keySCbb.FormattingEnabled = true;
+            this.keySCbb.Location = new System.Drawing.Point(92, 14);
+            this.keySCbb.Name = "keySCbb";
+            this.keySCbb.Size = new System.Drawing.Size(138, 21);
+            this.keySCbb.TabIndex = 1;
             // 
             // label1
             // 
@@ -234,64 +255,83 @@ namespace ManageWineStore.app.Views.UC
             this.label1.TabIndex = 0;
             this.label1.Text = "Tìm kiếm theo";
             // 
-            // panel1
+            // refreshSBt
             // 
-            this.panel1.Controls.Add(this.refreshSaleBt);
-            this.panel1.Controls.Add(this.deleteSaleBt);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 342);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(690, 75);
-            this.panel1.TabIndex = 1;
-            // 
-            // refreshSaleBt
-            // 
-            this.refreshSaleBt.Location = new System.Drawing.Point(397, 24);
-            this.refreshSaleBt.Name = "refreshSaleBt";
-            this.refreshSaleBt.Size = new System.Drawing.Size(92, 34);
-            this.refreshSaleBt.TabIndex = 1;
-            this.refreshSaleBt.Text = "Làm mới";
-            this.refreshSaleBt.UseVisualStyleBackColor = true;
-            // 
-            // deleteSaleBt
-            // 
-            this.deleteSaleBt.Location = new System.Drawing.Point(191, 24);
-            this.deleteSaleBt.Name = "deleteSaleBt";
-            this.deleteSaleBt.Size = new System.Drawing.Size(92, 34);
-            this.deleteSaleBt.TabIndex = 0;
-            this.deleteSaleBt.Text = "Xóa";
-            this.deleteSaleBt.UseVisualStyleBackColor = true;
+            this.refreshSBt.Location = new System.Drawing.Point(595, 52);
+            this.refreshSBt.Name = "refreshSBt";
+            this.refreshSBt.Size = new System.Drawing.Size(92, 34);
+            this.refreshSBt.TabIndex = 1;
+            this.refreshSBt.Text = "Làm mới";
+            this.refreshSBt.UseVisualStyleBackColor = true;
+            this.refreshSBt.Click += new System.EventHandler(this.refreshSBt_Click);
             // 
             // saleReceiptDgv
             // 
             this.saleReceiptDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.saleReceiptDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.saleReceiptDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.saleReceiptDgv.DefaultCellStyle = dataGridViewCellStyle18;
             this.saleReceiptDgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.saleReceiptDgv.Location = new System.Drawing.Point(0, 0);
             this.saleReceiptDgv.Name = "saleReceiptDgv";
+            this.saleReceiptDgv.ReadOnly = true;
+            this.saleReceiptDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.saleReceiptDgv.Size = new System.Drawing.Size(690, 417);
             this.saleReceiptDgv.TabIndex = 0;
+            this.saleReceiptDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.saleReceiptDgv_CellClick);
             // 
             // saleReceiptDetailDgv
             // 
             this.saleReceiptDetailDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.saleReceiptDetailDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.saleReceiptDetailDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.saleReceiptDetailDgv.DefaultCellStyle = dataGridViewCellStyle20;
             this.saleReceiptDetailDgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.saleReceiptDetailDgv.Location = new System.Drawing.Point(0, 0);
             this.saleReceiptDetailDgv.Name = "saleReceiptDetailDgv";
+            this.saleReceiptDetailDgv.ReadOnly = true;
+            this.saleReceiptDetailDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.saleReceiptDetailDgv.Size = new System.Drawing.Size(424, 509);
             this.saleReceiptDetailDgv.TabIndex = 0;
             // 
-            // tabPage2
+            // importReceiptTP
             // 
-            this.tabPage2.Controls.Add(this.splitContainer3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1124, 515);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Hóa đơn nhập";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.importReceiptTP.Controls.Add(this.splitContainer3);
+            this.importReceiptTP.Location = new System.Drawing.Point(4, 22);
+            this.importReceiptTP.Name = "importReceiptTP";
+            this.importReceiptTP.Padding = new System.Windows.Forms.Padding(3);
+            this.importReceiptTP.Size = new System.Drawing.Size(1124, 515);
+            this.importReceiptTP.TabIndex = 1;
+            this.importReceiptTP.Text = "Hóa đơn nhập";
+            this.importReceiptTP.UseVisualStyleBackColor = true;
             // 
             // splitContainer3
             // 
@@ -319,14 +359,16 @@ namespace ManageWineStore.app.Views.UC
             // 
             // splitContainer4.Panel1
             // 
-            this.splitContainer4.Panel1.Controls.Add(this.searchImportBt);
+            this.splitContainer4.Panel1.Controls.Add(this.refreshIBt);
+            this.splitContainer4.Panel1.Controls.Add(this.bt2);
+            this.splitContainer4.Panel1.Controls.Add(this.searchIBt);
             this.splitContainer4.Panel1.Controls.Add(this.label5);
             this.splitContainer4.Panel1.Controls.Add(this.label6);
-            this.splitContainer4.Panel1.Controls.Add(this.endImportDtp);
-            this.splitContainer4.Panel1.Controls.Add(this.startImportDtp);
-            this.splitContainer4.Panel1.Controls.Add(this.keywordImportTxt);
+            this.splitContainer4.Panel1.Controls.Add(this.endIDtp);
+            this.splitContainer4.Panel1.Controls.Add(this.startIDtp);
+            this.splitContainer4.Panel1.Controls.Add(this.txtIKeyword);
             this.splitContainer4.Panel1.Controls.Add(this.label7);
-            this.splitContainer4.Panel1.Controls.Add(this.searchImportCbb);
+            this.splitContainer4.Panel1.Controls.Add(this.keyICbb);
             this.splitContainer4.Panel1.Controls.Add(this.label8);
             // 
             // splitContainer4.Panel2
@@ -337,19 +379,31 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer4.SplitterDistance = 88;
             this.splitContainer4.TabIndex = 0;
             // 
-            // searchImportBt
+            // bt2
             // 
-            this.searchImportBt.Location = new System.Drawing.Point(605, 56);
-            this.searchImportBt.Name = "searchImportBt";
-            this.searchImportBt.Size = new System.Drawing.Size(74, 22);
-            this.searchImportBt.TabIndex = 17;
-            this.searchImportBt.Text = "Tìm kiếm";
-            this.searchImportBt.UseVisualStyleBackColor = true;
+            this.bt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt2.Location = new System.Drawing.Point(16, 54);
+            this.bt2.Name = "bt2";
+            this.bt2.Size = new System.Drawing.Size(24, 24);
+            this.bt2.TabIndex = 18;
+            this.bt2.Text = "+";
+            this.bt2.UseVisualStyleBackColor = true;
+            this.bt2.Click += new System.EventHandler(this.bt2_Click);
+            // 
+            // searchIBt
+            // 
+            this.searchIBt.Location = new System.Drawing.Point(613, 19);
+            this.searchIBt.Name = "searchIBt";
+            this.searchIBt.Size = new System.Drawing.Size(74, 22);
+            this.searchIBt.TabIndex = 17;
+            this.searchIBt.Text = "Tìm kiếm";
+            this.searchIBt.UseVisualStyleBackColor = true;
+            this.searchIBt.Click += new System.EventHandler(this.searchIBt_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(162, 56);
+            this.label5.Location = new System.Drawing.Point(211, 60);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 16;
@@ -358,34 +412,36 @@ namespace ManageWineStore.app.Views.UC
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 56);
+            this.label6.Location = new System.Drawing.Point(67, 60);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(20, 13);
             this.label6.TabIndex = 15;
             this.label6.Text = "Từ";
             // 
-            // endImportDtp
+            // endIDtp
             // 
-            this.endImportDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.endImportDtp.Location = new System.Drawing.Point(194, 54);
-            this.endImportDtp.Name = "endImportDtp";
-            this.endImportDtp.Size = new System.Drawing.Size(115, 20);
-            this.endImportDtp.TabIndex = 14;
+            this.endIDtp.Enabled = false;
+            this.endIDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.endIDtp.Location = new System.Drawing.Point(243, 55);
+            this.endIDtp.Name = "endIDtp";
+            this.endIDtp.Size = new System.Drawing.Size(97, 20);
+            this.endIDtp.TabIndex = 14;
             // 
-            // startImportDtp
+            // startIDtp
             // 
-            this.startImportDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.startImportDtp.Location = new System.Drawing.Point(39, 54);
-            this.startImportDtp.Name = "startImportDtp";
-            this.startImportDtp.Size = new System.Drawing.Size(115, 20);
-            this.startImportDtp.TabIndex = 13;
+            this.startIDtp.Enabled = false;
+            this.startIDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.startIDtp.Location = new System.Drawing.Point(93, 55);
+            this.startIDtp.Name = "startIDtp";
+            this.startIDtp.Size = new System.Drawing.Size(96, 20);
+            this.startIDtp.TabIndex = 13;
             // 
-            // keywordImportTxt
+            // txtIKeyword
             // 
-            this.keywordImportTxt.Location = new System.Drawing.Point(349, 15);
-            this.keywordImportTxt.Name = "keywordImportTxt";
-            this.keywordImportTxt.Size = new System.Drawing.Size(238, 20);
-            this.keywordImportTxt.TabIndex = 12;
+            this.txtIKeyword.Location = new System.Drawing.Point(349, 15);
+            this.txtIKeyword.Name = "txtIKeyword";
+            this.txtIKeyword.Size = new System.Drawing.Size(238, 20);
+            this.txtIKeyword.TabIndex = 12;
             // 
             // label7
             // 
@@ -396,13 +452,13 @@ namespace ManageWineStore.app.Views.UC
             this.label7.TabIndex = 11;
             this.label7.Text = "Từ khóa";
             // 
-            // searchImportCbb
+            // keyICbb
             // 
-            this.searchImportCbb.FormattingEnabled = true;
-            this.searchImportCbb.Location = new System.Drawing.Point(92, 14);
-            this.searchImportCbb.Name = "searchImportCbb";
-            this.searchImportCbb.Size = new System.Drawing.Size(97, 21);
-            this.searchImportCbb.TabIndex = 10;
+            this.keyICbb.FormattingEnabled = true;
+            this.keyICbb.Location = new System.Drawing.Point(92, 14);
+            this.keyICbb.Name = "keyICbb";
+            this.keyICbb.Size = new System.Drawing.Size(131, 21);
+            this.keyICbb.TabIndex = 10;
             // 
             // label8
             // 
@@ -416,48 +472,75 @@ namespace ManageWineStore.app.Views.UC
             // importReceiptDgv
             // 
             this.importReceiptDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.importReceiptDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.importReceiptDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.importReceiptDgv.DefaultCellStyle = dataGridViewCellStyle22;
             this.importReceiptDgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.importReceiptDgv.Location = new System.Drawing.Point(0, 0);
             this.importReceiptDgv.Name = "importReceiptDgv";
-            this.importReceiptDgv.Size = new System.Drawing.Size(690, 342);
+            this.importReceiptDgv.ReadOnly = true;
+            this.importReceiptDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.importReceiptDgv.Size = new System.Drawing.Size(690, 348);
             this.importReceiptDgv.TabIndex = 1;
+            this.importReceiptDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.importReceiptDgv_CellClick);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.refreshImportBt);
-            this.panel2.Controls.Add(this.deleteImportBt);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 342);
+            this.panel2.Location = new System.Drawing.Point(0, 348);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(690, 75);
+            this.panel2.Size = new System.Drawing.Size(690, 69);
             this.panel2.TabIndex = 0;
             // 
-            // refreshImportBt
+            // refreshIBt
             // 
-            this.refreshImportBt.Location = new System.Drawing.Point(397, 24);
-            this.refreshImportBt.Name = "refreshImportBt";
-            this.refreshImportBt.Size = new System.Drawing.Size(92, 34);
-            this.refreshImportBt.TabIndex = 3;
-            this.refreshImportBt.Text = "Làm mới";
-            this.refreshImportBt.UseVisualStyleBackColor = true;
-            // 
-            // deleteImportBt
-            // 
-            this.deleteImportBt.Location = new System.Drawing.Point(191, 24);
-            this.deleteImportBt.Name = "deleteImportBt";
-            this.deleteImportBt.Size = new System.Drawing.Size(92, 34);
-            this.deleteImportBt.TabIndex = 2;
-            this.deleteImportBt.Text = "Xóa";
-            this.deleteImportBt.UseVisualStyleBackColor = true;
+            this.refreshIBt.Location = new System.Drawing.Point(595, 55);
+            this.refreshIBt.Name = "refreshIBt";
+            this.refreshIBt.Size = new System.Drawing.Size(92, 34);
+            this.refreshIBt.TabIndex = 3;
+            this.refreshIBt.Text = "Làm mới";
+            this.refreshIBt.UseVisualStyleBackColor = true;
+            this.refreshIBt.Click += new System.EventHandler(this.refreshIBt_Click);
             // 
             // importReceiptDetailDgv
             // 
             this.importReceiptDetailDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.importReceiptDetailDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.importReceiptDetailDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.importReceiptDetailDgv.DefaultCellStyle = dataGridViewCellStyle24;
             this.importReceiptDetailDgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.importReceiptDetailDgv.Location = new System.Drawing.Point(0, 0);
             this.importReceiptDetailDgv.Name = "importReceiptDetailDgv";
+            this.importReceiptDetailDgv.ReadOnly = true;
+            this.importReceiptDetailDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.importReceiptDetailDgv.Size = new System.Drawing.Size(424, 509);
             this.importReceiptDetailDgv.TabIndex = 0;
             // 
@@ -465,11 +548,11 @@ namespace ManageWineStore.app.Views.UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControl);
             this.Name = "ReceiptUC";
             this.Size = new System.Drawing.Size(1132, 541);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
+            this.saleReceiptTP.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -479,10 +562,9 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.saleReceiptDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.saleReceiptDetailDgv)).EndInit();
-            this.tabPage2.ResumeLayout(false);
+            this.importReceiptTP.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
@@ -493,7 +575,6 @@ namespace ManageWineStore.app.Views.UC
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.importReceiptDgv)).EndInit();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.importReceiptDetailDgv)).EndInit();
             this.ResumeLayout(false);
 
@@ -501,40 +582,39 @@ namespace ManageWineStore.app.Views.UC
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.TabPage saleReceiptTP;
+        private System.Windows.Forms.TabPage importReceiptTP;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Button searchSaleBt;
+        private System.Windows.Forms.Button searchSBt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker endSaleDtp;
-        private System.Windows.Forms.DateTimePicker startSaleDtp;
-        private System.Windows.Forms.TextBox keywordSaleTxt;
+        private System.Windows.Forms.DateTimePicker endSDtp;
+        private System.Windows.Forms.DateTimePicker startSDtp;
+        private System.Windows.Forms.TextBox txtSKeyword;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox searchSaleCbb;
+        private System.Windows.Forms.ComboBox keySCbb;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView saleReceiptDgv;
         private System.Windows.Forms.DataGridView saleReceiptDetailDgv;
-        private System.Windows.Forms.Button refreshSaleBt;
-        private System.Windows.Forms.Button deleteSaleBt;
+        private System.Windows.Forms.Button refreshSBt;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.SplitContainer splitContainer4;
-        private System.Windows.Forms.Button searchImportBt;
+        private System.Windows.Forms.Button searchIBt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker endImportDtp;
-        private System.Windows.Forms.DateTimePicker startImportDtp;
-        private System.Windows.Forms.TextBox keywordImportTxt;
+        private System.Windows.Forms.DateTimePicker endIDtp;
+        private System.Windows.Forms.DateTimePicker startIDtp;
+        private System.Windows.Forms.TextBox txtIKeyword;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox searchImportCbb;
+        private System.Windows.Forms.ComboBox keyICbb;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView importReceiptDgv;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button refreshImportBt;
-        private System.Windows.Forms.Button deleteImportBt;
+        private System.Windows.Forms.Button refreshIBt;
         private System.Windows.Forms.DataGridView importReceiptDetailDgv;
+        private System.Windows.Forms.Button bt2;
+        private System.Windows.Forms.Button bt1;
     }
 }

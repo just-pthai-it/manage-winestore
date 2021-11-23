@@ -18,12 +18,12 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             string commandText = "INSERT INTO Nation VALUES ( @name );";
             this.executeNonQuery(commandText, new object[] { nationModel.Name });
         }
-        public DataTable findAll()
+        public override DataTable findAll()
         {
-            string commandText = "SELECT * FROM Nation ;";
+            string commandText = "SELECT * FROM nation ;";
             return this.executeQuery(commandText);
         }
-        public override DataTable get(NationModel nationModel)
+        public override DataTable find(string column, object value)
         {
             throw new NotImplementedException();
         }
@@ -33,7 +33,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             throw new NotImplementedException();
         }
 
-        public override void delete(NationModel nationModel)
+        public override void delete(string id)
         {
             throw new NotImplementedException();
         }

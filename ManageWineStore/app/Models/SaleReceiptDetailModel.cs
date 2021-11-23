@@ -20,14 +20,11 @@ namespace ManageWineStore.app.Models
 
         public SaleReceiptDetailModel(int merchandiseId, int quantity, double cost, string name, string mfg)
         {
-            Id = -1;
-            SaleReceiptId = -1;
             MerchandiseId = merchandiseId;
             Quantity = quantity;
             Cost = cost;
             Name = name;
             MFG = mfg;
-
         }
 
         public int Id { get; set; }

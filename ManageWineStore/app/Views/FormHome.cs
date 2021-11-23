@@ -130,6 +130,22 @@ namespace Views
             this.workplacePnl.Controls.Add(accountUC);
         }
 
+        private void supplierBt_Click(object sender, EventArgs e)
+        {
+            this.workplacePnl.Controls.Clear();
+            SupplierUC supplierUC = new SupplierUC();
+            supplierUC.Dock = DockStyle.Fill;
+            this.workplacePnl.Controls.Add(supplierUC);
+        }
+
+        private void ReceiptMnBt_Click(object sender, EventArgs e)
+        {
+            this.workplacePnl.Controls.Clear();
+            ReceiptUC receiptUC = new ReceiptUC();
+            receiptUC.Dock = DockStyle.Fill;
+            this.workplacePnl.Controls.Add(receiptUC);
+        }
+
         private void FormHome_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.adminModel = null;

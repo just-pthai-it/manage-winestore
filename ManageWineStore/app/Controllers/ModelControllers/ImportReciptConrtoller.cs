@@ -30,14 +30,27 @@ namespace ManageWineStore.app.Controllers.ModelControllers
 
         }
 
-        public override DataTable find(string id)
+        public override DataTable find(string column, object value)
         {
             throw new NotImplementedException();
         }
 
         public override DataTable findAll()
         {
-            throw new NotImplementedException();
+            string commandText = "SELECT * FROM import_receipt_custom ;";
+            return this.executeQuery(commandText);
+        }
+
+        public DataTable findByConditional(string column, object value, string query,
+                                    string start, string end)
+        {
+            string commandText = "SELECT * FROM import_receipt_custom WHERE " + column + " LIKE @" + column + query;
+            return this.executeQuery(commandText, new object[]
+            {
+                "%" + value + "%" ,
+                start,
+                end,
+            });
         }
 
         public override void update(ImportReceiptModel importReciptModel)
@@ -47,7 +60,8 @@ namespace ManageWineStore.app.Controllers.ModelControllers
 
         public override void delete(string id)
         {
-            throw new NotImplementedException();
+            string commandText = "DELETE FROM import_receipt WHERE id = @id ;";
+            this.executeQuery(commandText, new object[] { id });
         }
     }
 }

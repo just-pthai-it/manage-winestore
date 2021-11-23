@@ -211,6 +211,7 @@ namespace ManageWineStore.app.Views.UC
         private void isEditable(bool status)
         {
             this.txtName.Enabled = status;
+            this.txtAlcoholLevel.Enabled = status;
             this.pictureBox.Enabled = status;
 
             this.saveBt.Enabled = status;

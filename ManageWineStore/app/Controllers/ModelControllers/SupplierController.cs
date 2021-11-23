@@ -18,24 +18,42 @@ namespace ManageWineStore.app.Controllers.ModelControllers
 
         }
 
-        public override DataTable find(string id)
+        public override DataTable find(string column, object value)
         {
             throw new NotImplementedException();
         }
 
         public override DataTable findAll()
         {
-            throw new NotImplementedException();
+            string commandText = "SELECT * FROM supplier_info ;";
+            return this.executeQuery(commandText);
+        }
+
+        public DataTable findByConditional(string column, Object value)
+        {
+            string commandText = "SELECT * FROM supplier_info WHERE " + column + " LIKE @" + column + " ;";
+            return this.executeQuery(commandText, new object[] { "%" + value + "%" });
         }
 
         public override void update(SupplierModel supplierModel)
         {
-            throw new NotImplementedException();
+            string commandText = "UPDATE supplier SET name = @name , phone = @phone , mail = @mail , " +
+                                "address = @address , nations_id = @nation_id WHERE id = @id ;";
+            this.executeNonQuery(commandText, new object[]
+            {
+                supplierModel.Name,
+                supplierModel.Phone,
+                supplierModel.Mail,
+                supplierModel.Address,
+                supplierModel.NationID,
+                supplierModel.Id,
+            });
         }
 
         public override void delete(string id)
         {
-            throw new NotImplementedException();
+            string commandText = "DELETE FROM supplier WHERE id = @id ;";
+            this.executeNonQuery(commandText, new object[] { id });
         }
     }
 }

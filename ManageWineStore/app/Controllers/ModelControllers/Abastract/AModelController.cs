@@ -116,7 +116,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers.Abastract
 
         public abstract void insert(T obj);
 
-        public abstract DataTable find(string id);
+        public abstract DataTable find(string column, object value);
 
         public abstract DataTable findAll();
 
