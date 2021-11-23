@@ -32,6 +32,7 @@ namespace Views
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
             this.menuGrb = new System.Windows.Forms.GroupBox();
+            this.ReceiptMnBt = new System.Windows.Forms.Button();
             this.supplierBt = new System.Windows.Forms.Button();
             this.customerMnBt = new System.Windows.Forms.Button();
             this.importBt = new System.Windows.Forms.Button();
@@ -43,7 +44,7 @@ namespace Views
             this.employeeMnBt = new System.Windows.Forms.Button();
             this.revenueBt = new System.Windows.Forms.Button();
             this.workplacePnl = new System.Windows.Forms.Panel();
-            this.ReceiptMnBt = new System.Windows.Forms.Button();
+            this.personalInforBt = new System.Windows.Forms.Button();
             this.menuGrb.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +70,7 @@ namespace Views
             // 
             // menuGrb
             // 
+            this.menuGrb.Controls.Add(this.personalInforBt);
             this.menuGrb.Controls.Add(this.ReceiptMnBt);
             this.menuGrb.Controls.Add(this.supplierBt);
             this.menuGrb.Controls.Add(this.customerMnBt);
@@ -87,6 +89,16 @@ namespace Views
             this.menuGrb.TabIndex = 10;
             this.menuGrb.TabStop = false;
             this.menuGrb.Text = "Menu";
+            // 
+            // ReceiptMnBt
+            // 
+            this.ReceiptMnBt.Location = new System.Drawing.Point(6, 418);
+            this.ReceiptMnBt.Name = "ReceiptMnBt";
+            this.ReceiptMnBt.Size = new System.Drawing.Size(129, 37);
+            this.ReceiptMnBt.TabIndex = 10;
+            this.ReceiptMnBt.Text = "Quản lý hóa đơn";
+            this.ReceiptMnBt.UseVisualStyleBackColor = true;
+            this.ReceiptMnBt.Click += new System.EventHandler(this.ReceiptMnBt_Click);
             // 
             // supplierBt
             // 
@@ -194,15 +206,15 @@ namespace Views
             this.workplacePnl.Size = new System.Drawing.Size(1132, 542);
             this.workplacePnl.TabIndex = 11;
             // 
-            // ReceiptMnBt
+            // personalInforBt
             // 
-            this.ReceiptMnBt.Location = new System.Drawing.Point(6, 418);
-            this.ReceiptMnBt.Name = "ReceiptMnBt";
-            this.ReceiptMnBt.Size = new System.Drawing.Size(129, 37);
-            this.ReceiptMnBt.TabIndex = 10;
-            this.ReceiptMnBt.Text = "Quản lý hóa đơn";
-            this.ReceiptMnBt.UseVisualStyleBackColor = true;
-            this.ReceiptMnBt.Click += new System.EventHandler(this.ReceiptMnBt_Click);
+            this.personalInforBt.Location = new System.Drawing.Point(6, 461);
+            this.personalInforBt.Name = "personalInforBt";
+            this.personalInforBt.Size = new System.Drawing.Size(129, 37);
+            this.personalInforBt.TabIndex = 11;
+            this.personalInforBt.Text = "Thông tin cá nhân";
+            this.personalInforBt.UseVisualStyleBackColor = true;
+            this.personalInforBt.Click += new System.EventHandler(this.personalInforBt_Click);
             // 
             // FormHome
             // 
@@ -237,5 +249,6 @@ namespace Views
         private System.Windows.Forms.Button supplierBt;
         private System.Windows.Forms.Button customerMnBt;
         private System.Windows.Forms.Button ReceiptMnBt;
+        private System.Windows.Forms.Button personalInforBt;
     }
 }

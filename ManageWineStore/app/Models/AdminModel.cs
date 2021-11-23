@@ -9,8 +9,8 @@ namespace ManageWineStore.app.Models
 {
     class AdminModel
     {
-        public AdminModel(int id, string name, DateTime birth, int gender,
-            string phone, string mail, string address, int? accountId)
+        public AdminModel(int? id, string name, DateTime birth, int gender,
+            string phone, string mail, string address, int? accountId, byte[] image)
         {
             Id = id;
             Name = name;
@@ -20,6 +20,7 @@ namespace ManageWineStore.app.Models
             Mail = mail;
             Address = address;
             AccountId = accountId;
+            Image = image;
         }
 
         public AdminModel(DataRow row)
@@ -32,9 +33,13 @@ namespace ManageWineStore.app.Models
             Mail = row["mail"].ToString();
             Address = row["address"].ToString();
             AccountId = (int)row["account_id"];
+            if (row["image"].ToString() == "")
+                Image = null;
+            else
+                Image = (byte[])row["image"];
         }
 
-        public int Id { get; set; }
+        public Nullable<int> Id { get; set; }
         public string Name { get; set; }
         public System.DateTime Birth { get; set; }
         public int Gender { get; set; }
@@ -42,5 +47,7 @@ namespace ManageWineStore.app.Models
         public string Mail { get; set; }
         public string Address { get; set; }
         public Nullable<int> AccountId { get; set; }
+        public byte[] Image { get; set; }
+
     }
 }

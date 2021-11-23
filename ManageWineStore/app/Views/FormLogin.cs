@@ -34,9 +34,9 @@ namespace Views
 
             if (user != null)
             {
-                FormHome fh = new FormHome(user);
+                FormHome form = new FormHome(loginController.AccountModel, user);
                 this.Hide();
-                fh.ShowDialog();
+                form.ShowDialog();
                 this.Show();
             }
         }
