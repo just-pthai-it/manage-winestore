@@ -32,9 +32,10 @@ namespace Views
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
             this.menuGrb = new System.Windows.Forms.GroupBox();
+            this.revenueBt = new FontAwesome.Sharp.IconButton();
+            this.customerMnBt = new FontAwesome.Sharp.IconButton();
             this.personalInforBt = new FontAwesome.Sharp.IconButton();
             this.receiptMnBt = new FontAwesome.Sharp.IconButton();
-            this.customerMnBt = new FontAwesome.Sharp.IconButton();
             this.accountMnBt = new FontAwesome.Sharp.IconButton();
             this.employeeMnBt = new FontAwesome.Sharp.IconButton();
             this.supplierBt = new FontAwesome.Sharp.IconButton();
@@ -43,15 +44,16 @@ namespace Views
             this.sellBt = new FontAwesome.Sharp.IconButton();
             this.importBt = new FontAwesome.Sharp.IconButton();
             this.workplacePnl = new System.Windows.Forms.Panel();
+            this.logoutBt = new FontAwesome.Sharp.IconButton();
             this.menuGrb.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitter1
             // 
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Location = new System.Drawing.Point(144, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(1273, 44);
+            this.splitter1.Size = new System.Drawing.Size(1129, 44);
             this.splitter1.TabIndex = 8;
             this.splitter1.TabStop = false;
             // 
@@ -60,7 +62,7 @@ namespace Views
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(531, 9);
+            this.label1.Location = new System.Drawing.Point(599, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(173, 25);
             this.label1.TabIndex = 9;
@@ -69,6 +71,8 @@ namespace Views
             // 
             // menuGrb
             // 
+            this.menuGrb.BackColor = System.Drawing.Color.AliceBlue;
+            this.menuGrb.Controls.Add(this.revenueBt);
             this.menuGrb.Controls.Add(this.customerMnBt);
             this.menuGrb.Controls.Add(this.personalInforBt);
             this.menuGrb.Controls.Add(this.receiptMnBt);
@@ -80,12 +84,56 @@ namespace Views
             this.menuGrb.Controls.Add(this.sellBt);
             this.menuGrb.Controls.Add(this.importBt);
             this.menuGrb.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuGrb.Location = new System.Drawing.Point(0, 44);
+            this.menuGrb.Location = new System.Drawing.Point(0, 0);
             this.menuGrb.Name = "menuGrb";
-            this.menuGrb.Size = new System.Drawing.Size(144, 542);
+            this.menuGrb.Size = new System.Drawing.Size(144, 586);
             this.menuGrb.TabIndex = 10;
             this.menuGrb.TabStop = false;
             this.menuGrb.Text = "Menu";
+            // 
+            // revenueBt
+            // 
+            this.revenueBt.FlatAppearance.BorderSize = 0;
+            this.revenueBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.revenueBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.revenueBt.ForeColor = System.Drawing.Color.Brown;
+            this.revenueBt.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
+            this.revenueBt.IconColor = System.Drawing.Color.Tomato;
+            this.revenueBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.revenueBt.IconSize = 35;
+            this.revenueBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.revenueBt.Location = new System.Drawing.Point(8, 44);
+            this.revenueBt.Name = "revenueBt";
+            this.revenueBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
+            this.revenueBt.Size = new System.Drawing.Size(129, 37);
+            this.revenueBt.TabIndex = 15;
+            this.revenueBt.Text = "Doanh thu";
+            this.revenueBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.revenueBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.revenueBt.UseVisualStyleBackColor = true;
+            this.revenueBt.Click += new System.EventHandler(this.revenueBt_Click);
+            // 
+            // customerMnBt
+            // 
+            this.customerMnBt.FlatAppearance.BorderSize = 0;
+            this.customerMnBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.customerMnBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerMnBt.ForeColor = System.Drawing.Color.Brown;
+            this.customerMnBt.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
+            this.customerMnBt.IconColor = System.Drawing.Color.Tomato;
+            this.customerMnBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.customerMnBt.IconSize = 35;
+            this.customerMnBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.customerMnBt.Location = new System.Drawing.Point(8, 388);
+            this.customerMnBt.Name = "customerMnBt";
+            this.customerMnBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
+            this.customerMnBt.Size = new System.Drawing.Size(129, 37);
+            this.customerMnBt.TabIndex = 8;
+            this.customerMnBt.Text = "Thông tin khách hàng";
+            this.customerMnBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.customerMnBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.customerMnBt.UseVisualStyleBackColor = true;
+            this.customerMnBt.Click += new System.EventHandler(this.customerMnBt_Click);
             // 
             // personalInforBt
             // 
@@ -98,7 +146,7 @@ namespace Views
             this.personalInforBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.personalInforBt.IconSize = 35;
             this.personalInforBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.personalInforBt.Location = new System.Drawing.Point(6, 461);
+            this.personalInforBt.Location = new System.Drawing.Point(8, 474);
             this.personalInforBt.Name = "personalInforBt";
             this.personalInforBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.personalInforBt.Size = new System.Drawing.Size(129, 37);
@@ -120,7 +168,7 @@ namespace Views
             this.receiptMnBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.receiptMnBt.IconSize = 35;
             this.receiptMnBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.receiptMnBt.Location = new System.Drawing.Point(6, 418);
+            this.receiptMnBt.Location = new System.Drawing.Point(8, 431);
             this.receiptMnBt.Name = "receiptMnBt";
             this.receiptMnBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.receiptMnBt.Size = new System.Drawing.Size(129, 37);
@@ -130,28 +178,6 @@ namespace Views
             this.receiptMnBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.receiptMnBt.UseVisualStyleBackColor = true;
             this.receiptMnBt.Click += new System.EventHandler(this.ReceiptMnBt_Click);
-            // 
-            // customerMnBt
-            // 
-            this.customerMnBt.FlatAppearance.BorderSize = 0;
-            this.customerMnBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.customerMnBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerMnBt.ForeColor = System.Drawing.Color.Brown;
-            this.customerMnBt.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
-            this.customerMnBt.IconColor = System.Drawing.Color.Tomato;
-            this.customerMnBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.customerMnBt.IconSize = 35;
-            this.customerMnBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customerMnBt.Location = new System.Drawing.Point(6, 375);
-            this.customerMnBt.Name = "customerMnBt";
-            this.customerMnBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
-            this.customerMnBt.Size = new System.Drawing.Size(129, 37);
-            this.customerMnBt.TabIndex = 8;
-            this.customerMnBt.Text = "Thông tin khách hàng";
-            this.customerMnBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customerMnBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.customerMnBt.UseVisualStyleBackColor = true;
-            this.customerMnBt.Click += new System.EventHandler(this.customerMnBt_Click);
             // 
             // accountMnBt
             // 
@@ -164,7 +190,7 @@ namespace Views
             this.accountMnBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.accountMnBt.IconSize = 35;
             this.accountMnBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.accountMnBt.Location = new System.Drawing.Point(6, 332);
+            this.accountMnBt.Location = new System.Drawing.Point(8, 345);
             this.accountMnBt.Name = "accountMnBt";
             this.accountMnBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.accountMnBt.Size = new System.Drawing.Size(129, 37);
@@ -186,7 +212,7 @@ namespace Views
             this.employeeMnBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.employeeMnBt.IconSize = 35;
             this.employeeMnBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.employeeMnBt.Location = new System.Drawing.Point(6, 289);
+            this.employeeMnBt.Location = new System.Drawing.Point(8, 302);
             this.employeeMnBt.Name = "employeeMnBt";
             this.employeeMnBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.employeeMnBt.Size = new System.Drawing.Size(129, 37);
@@ -208,7 +234,7 @@ namespace Views
             this.supplierBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.supplierBt.IconSize = 35;
             this.supplierBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.supplierBt.Location = new System.Drawing.Point(6, 246);
+            this.supplierBt.Location = new System.Drawing.Point(8, 259);
             this.supplierBt.Name = "supplierBt";
             this.supplierBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.supplierBt.Size = new System.Drawing.Size(129, 37);
@@ -230,7 +256,7 @@ namespace Views
             this.storageMnBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.storageMnBt.IconSize = 35;
             this.storageMnBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.storageMnBt.Location = new System.Drawing.Point(6, 203);
+            this.storageMnBt.Location = new System.Drawing.Point(8, 216);
             this.storageMnBt.Name = "storageMnBt";
             this.storageMnBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.storageMnBt.Size = new System.Drawing.Size(129, 37);
@@ -252,7 +278,7 @@ namespace Views
             this.wineMnBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.wineMnBt.IconSize = 35;
             this.wineMnBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.wineMnBt.Location = new System.Drawing.Point(6, 160);
+            this.wineMnBt.Location = new System.Drawing.Point(8, 173);
             this.wineMnBt.Name = "wineMnBt";
             this.wineMnBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.wineMnBt.Size = new System.Drawing.Size(129, 37);
@@ -274,7 +300,7 @@ namespace Views
             this.sellBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.sellBt.IconSize = 35;
             this.sellBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sellBt.Location = new System.Drawing.Point(6, 74);
+            this.sellBt.Location = new System.Drawing.Point(8, 130);
             this.sellBt.Name = "sellBt";
             this.sellBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.sellBt.Size = new System.Drawing.Size(129, 37);
@@ -296,7 +322,7 @@ namespace Views
             this.importBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.importBt.IconSize = 35;
             this.importBt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.importBt.Location = new System.Drawing.Point(6, 31);
+            this.importBt.Location = new System.Drawing.Point(8, 87);
             this.importBt.Name = "importBt";
             this.importBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.importBt.Size = new System.Drawing.Size(129, 37);
@@ -315,16 +341,32 @@ namespace Views
             this.workplacePnl.Size = new System.Drawing.Size(1129, 542);
             this.workplacePnl.TabIndex = 11;
             // 
+            // logoutBt
+            // 
+            this.logoutBt.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.logoutBt.IconColor = System.Drawing.Color.Black;
+            this.logoutBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.logoutBt.IconSize = 20;
+            this.logoutBt.Location = new System.Drawing.Point(1175, 12);
+            this.logoutBt.Name = "logoutBt";
+            this.logoutBt.Size = new System.Drawing.Size(86, 24);
+            this.logoutBt.TabIndex = 16;
+            this.logoutBt.Text = "Đăng xuất";
+            this.logoutBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.logoutBt.UseVisualStyleBackColor = true;
+            this.logoutBt.Click += new System.EventHandler(this.logoutBt_Click);
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(1273, 586);
+            this.Controls.Add(this.logoutBt);
             this.Controls.Add(this.workplacePnl);
-            this.Controls.Add(this.menuGrb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.splitter1);
+            this.Controls.Add(this.menuGrb);
             this.Name = "FormHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormHome";
@@ -349,5 +391,7 @@ namespace Views
         private FontAwesome.Sharp.IconButton storageMnBt;
         private FontAwesome.Sharp.IconButton wineMnBt;
         private FontAwesome.Sharp.IconButton sellBt;
+        private FontAwesome.Sharp.IconButton revenueBt;
+        private FontAwesome.Sharp.IconButton logoutBt;
     }
 }

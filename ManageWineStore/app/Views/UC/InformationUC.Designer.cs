@@ -29,9 +29,6 @@ namespace ManageWineStore.app.Views.UC
         /// </summary>
         private void InitializeComponent()
         {
-            this.cancelBtn = new System.Windows.Forms.Button();
-            this.submitBtn = new System.Windows.Forms.Button();
-            this.updateBtn = new System.Windows.Forms.Button();
             this.changePassBtn = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -56,45 +53,13 @@ namespace ManageWineStore.app.Views.UC
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.selectImageBt = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.updateBtn = new FontAwesome.Sharp.IconButton();
+            this.submitBtn = new FontAwesome.Sharp.IconButton();
+            this.cancelBtn = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cancelBtn
-            // 
-            this.cancelBtn.Enabled = false;
-            this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelBtn.Location = new System.Drawing.Point(271, 199);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(73, 21);
-            this.cancelBtn.TabIndex = 46;
-            this.cancelBtn.Text = "Hủy";
-            this.cancelBtn.UseVisualStyleBackColor = true;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
-            // 
-            // submitBtn
-            // 
-            this.submitBtn.Enabled = false;
-            this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitBtn.Location = new System.Drawing.Point(182, 199);
-            this.submitBtn.Name = "submitBtn";
-            this.submitBtn.Size = new System.Drawing.Size(70, 21);
-            this.submitBtn.TabIndex = 45;
-            this.submitBtn.Text = "Lưu";
-            this.submitBtn.UseVisualStyleBackColor = true;
-            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
-            // 
-            // updateBtn
-            // 
-            this.updateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateBtn.Location = new System.Drawing.Point(365, 199);
-            this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(73, 21);
-            this.updateBtn.TabIndex = 44;
-            this.updateBtn.Text = "Sửa";
-            this.updateBtn.UseVisualStyleBackColor = true;
-            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // changePassBtn
             // 
@@ -257,12 +222,12 @@ namespace ManageWineStore.app.Views.UC
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.jobCbb);
-            this.groupBox1.Controls.Add(this.genderCbb);
-            this.groupBox1.Controls.Add(this.updateBtn);
-            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.cancelBtn);
             this.groupBox1.Controls.Add(this.submitBtn);
+            this.groupBox1.Controls.Add(this.updateBtn);
+            this.groupBox1.Controls.Add(this.jobCbb);
+            this.groupBox1.Controls.Add(this.genderCbb);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.birthDtp);
             this.groupBox1.Controls.Add(this.txtMail);
             this.groupBox1.Controls.Add(this.label6);
@@ -347,6 +312,58 @@ namespace ManageWineStore.app.Views.UC
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // updateBtn
+            // 
+            this.updateBtn.FlatAppearance.BorderSize = 0;
+            this.updateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateBtn.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            this.updateBtn.IconColor = System.Drawing.Color.Black;
+            this.updateBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.updateBtn.IconSize = 15;
+            this.updateBtn.Location = new System.Drawing.Point(439, 11);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(23, 22);
+            this.updateBtn.TabIndex = 49;
+            this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
+            // 
+            // submitBtn
+            // 
+            this.submitBtn.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.submitBtn.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.submitBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.submitBtn.IconColor = System.Drawing.Color.DodgerBlue;
+            this.submitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.submitBtn.IconSize = 20;
+            this.submitBtn.Location = new System.Drawing.Point(321, 211);
+            this.submitBtn.Name = "submitBtn";
+            this.submitBtn.Size = new System.Drawing.Size(67, 30);
+            this.submitBtn.TabIndex = 50;
+            this.submitBtn.Text = "Lưu";
+            this.submitBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
+            // 
+            // cancelBtn
+            // 
+            this.cancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelBtn.ForeColor = System.Drawing.Color.Red;
+            this.cancelBtn.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.cancelBtn.IconColor = System.Drawing.Color.Red;
+            this.cancelBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.cancelBtn.IconSize = 20;
+            this.cancelBtn.Location = new System.Drawing.Point(394, 211);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(68, 30);
+            this.cancelBtn.TabIndex = 51;
+            this.cancelBtn.Text = "Hủy";
+            this.cancelBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
             // InformationUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,10 +384,6 @@ namespace ManageWineStore.app.Views.UC
         }
 
         #endregion
-
-        private System.Windows.Forms.Button cancelBtn;
-        private System.Windows.Forms.Button submitBtn;
-        private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.Button changePassBtn;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
@@ -395,5 +408,8 @@ namespace ManageWineStore.app.Views.UC
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private FontAwesome.Sharp.IconButton submitBtn;
+        private FontAwesome.Sharp.IconButton updateBtn;
+        private FontAwesome.Sharp.IconButton cancelBtn;
     }
 }

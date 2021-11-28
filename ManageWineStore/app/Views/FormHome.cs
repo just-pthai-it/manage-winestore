@@ -53,24 +53,27 @@ namespace Views
             this.adminBts.Add(this.accountMnBt);
             this.adminBts.Add(this.receiptMnBt);
             this.adminBts.Add(this.personalInforBt);
+            this.adminBts.Add(this.logoutBt);
 
             this.employeeSellerBts.Add(this.sellBt);
             this.employeeSellerBts.Add(this.wineMnBt);
             this.employeeSellerBts.Add(this.storageMnBt);
             this.employeeSellerBts.Add(this.customerMnBt);
             this.employeeSellerBts.Add(this.personalInforBt);
+            this.employeeSellerBts.Add(this.logoutBt);
 
             this.employeeImporterBts.Add(this.importBt);
             this.employeeImporterBts.Add(this.wineMnBt);
             this.employeeImporterBts.Add(this.storageMnBt);
             this.employeeImporterBts.Add(this.supplierBt);
             this.employeeImporterBts.Add(this.personalInforBt);
+            this.employeeImporterBts.Add(this.logoutBt);
         }
 
         private void setUp()
         {
             this.menuGrb.Controls.Clear();
-            int x = 12, y = 41;
+            int x = 5, y = 45;
             if (this.adminModel != null)
             {
                 foreach (Button bt in this.adminBts)
@@ -197,6 +200,16 @@ namespace Views
             this.adminModel = null;
             this.employeeModel = null;
             this.accountModel = null;
+        }
+
+        private void revenueBt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logoutBt_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

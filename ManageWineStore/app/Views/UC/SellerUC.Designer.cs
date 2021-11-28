@@ -36,30 +36,30 @@ namespace UC
             this.txtWIneId = new System.Windows.Forms.TextBox();
             this.txtWineName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.searchBt = new System.Windows.Forms.Button();
             this.gb_Search = new System.Windows.Forms.GroupBox();
+            this.searchBt = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMFG = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cancelBt = new FontAwesome.Sharp.IconButton();
+            this.okBt = new FontAwesome.Sharp.IconButton();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cancelBt = new System.Windows.Forms.Button();
-            this.okBt = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.removeBt = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCustomerId = new System.Windows.Forms.TextBox();
-            this.removeBt = new System.Windows.Forms.Button();
             this.cart = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_Accept = new FontAwesome.Sharp.IconButton();
+            this.button5 = new FontAwesome.Sharp.IconButton();
             this.label17 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btn_Accept = new System.Windows.Forms.Button();
             this.txtTotal = new System.Windows.Forms.Label();
             this.winemarchendiseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -113,21 +113,11 @@ namespace UC
             this.label2.TabIndex = 3;
             this.label2.Text = "Tên rượu:";
             // 
-            // searchBt
-            // 
-            this.searchBt.Location = new System.Drawing.Point(15, 64);
-            this.searchBt.Name = "searchBt";
-            this.searchBt.Size = new System.Drawing.Size(101, 20);
-            this.searchBt.TabIndex = 9;
-            this.searchBt.Text = "Search";
-            this.searchBt.UseVisualStyleBackColor = true;
-            this.searchBt.Click += new System.EventHandler(this.searchBt_Click);
-            // 
             // gb_Search
             // 
+            this.gb_Search.Controls.Add(this.searchBt);
             this.gb_Search.Controls.Add(this.label5);
             this.gb_Search.Controls.Add(this.txtMFG);
-            this.gb_Search.Controls.Add(this.searchBt);
             this.gb_Search.Controls.Add(this.label1);
             this.gb_Search.Controls.Add(this.txtWIneId);
             this.gb_Search.Controls.Add(this.label2);
@@ -139,6 +129,23 @@ namespace UC
             this.gb_Search.TabIndex = 10;
             this.gb_Search.TabStop = false;
             this.gb_Search.Text = "Bộ lọc";
+            // 
+            // searchBt
+            // 
+            this.searchBt.FlatAppearance.BorderSize = 0;
+            this.searchBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.searchBt.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.searchBt.IconColor = System.Drawing.Color.Black;
+            this.searchBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.searchBt.IconSize = 20;
+            this.searchBt.Location = new System.Drawing.Point(15, 57);
+            this.searchBt.Name = "searchBt";
+            this.searchBt.Size = new System.Drawing.Size(87, 27);
+            this.searchBt.TabIndex = 14;
+            this.searchBt.Text = "Tìm kiếm";
+            this.searchBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.searchBt.UseVisualStyleBackColor = true;
+            this.searchBt.Click += new System.EventHandler(this.searchBt_Click);
             // 
             // label5
             // 
@@ -224,10 +231,10 @@ namespace UC
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pictureBox);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.cancelBt);
             this.groupBox1.Controls.Add(this.okBt);
+            this.groupBox1.Controls.Add(this.pictureBox);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label6);
@@ -237,6 +244,38 @@ namespace UC
             this.groupBox1.Size = new System.Drawing.Size(739, 164);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // cancelBt
+            // 
+            this.cancelBt.ForeColor = System.Drawing.Color.Red;
+            this.cancelBt.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.cancelBt.IconColor = System.Drawing.Color.Red;
+            this.cancelBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.cancelBt.IconSize = 20;
+            this.cancelBt.Location = new System.Drawing.Point(563, 74);
+            this.cancelBt.Name = "cancelBt";
+            this.cancelBt.Size = new System.Drawing.Size(54, 25);
+            this.cancelBt.TabIndex = 38;
+            this.cancelBt.Text = "Bỏ";
+            this.cancelBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cancelBt.UseVisualStyleBackColor = true;
+            this.cancelBt.Click += new System.EventHandler(this.cancelBt_Click);
+            // 
+            // okBt
+            // 
+            this.okBt.ForeColor = System.Drawing.Color.Green;
+            this.okBt.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.okBt.IconColor = System.Drawing.Color.Green;
+            this.okBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.okBt.IconSize = 20;
+            this.okBt.Location = new System.Drawing.Point(492, 74);
+            this.okBt.Name = "okBt";
+            this.okBt.Size = new System.Drawing.Size(54, 25);
+            this.okBt.TabIndex = 37;
+            this.okBt.Text = "OK";
+            this.okBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.okBt.UseVisualStyleBackColor = true;
+            this.okBt.Click += new System.EventHandler(this.okBt_Click);
             // 
             // pictureBox
             // 
@@ -258,26 +297,6 @@ namespace UC
             this.label9.TabIndex = 35;
             this.label9.Text = "Ảnh:";
             // 
-            // cancelBt
-            // 
-            this.cancelBt.Location = new System.Drawing.Point(329, 113);
-            this.cancelBt.Name = "cancelBt";
-            this.cancelBt.Size = new System.Drawing.Size(50, 23);
-            this.cancelBt.TabIndex = 16;
-            this.cancelBt.Text = "Hủy";
-            this.cancelBt.UseVisualStyleBackColor = true;
-            this.cancelBt.Click += new System.EventHandler(this.cancelBt_Click);
-            // 
-            // okBt
-            // 
-            this.okBt.Location = new System.Drawing.Point(234, 113);
-            this.okBt.Name = "okBt";
-            this.okBt.Size = new System.Drawing.Size(50, 23);
-            this.okBt.TabIndex = 15;
-            this.okBt.Text = "OK";
-            this.okBt.UseVisualStyleBackColor = true;
-            this.okBt.Click += new System.EventHandler(this.okBt_Click);
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -288,7 +307,7 @@ namespace UC
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(286, 22);
+            this.numericUpDown1.Location = new System.Drawing.Point(276, 78);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(122, 20);
             this.numericUpDown1.TabIndex = 3;
@@ -296,22 +315,38 @@ namespace UC
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(231, 24);
+            this.label6.Location = new System.Drawing.Point(221, 80);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 2;
-            this.label6.Text = "Số lượng";
+            this.label6.Text = "Số lượng:";
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.removeBt);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtCustomerId);
-            this.panel1.Controls.Add(this.removeBt);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 187);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(389, 100);
             this.panel1.TabIndex = 2;
+            // 
+            // removeBt
+            // 
+            this.removeBt.FlatAppearance.BorderSize = 0;
+            this.removeBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.removeBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.removeBt.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.removeBt.IconColor = System.Drawing.Color.Red;
+            this.removeBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.removeBt.IconSize = 18;
+            this.removeBt.Location = new System.Drawing.Point(359, 3);
+            this.removeBt.Name = "removeBt";
+            this.removeBt.Size = new System.Drawing.Size(27, 27);
+            this.removeBt.TabIndex = 6;
+            this.removeBt.UseVisualStyleBackColor = true;
+            this.removeBt.Click += new System.EventHandler(this.removeBt_Click);
             // 
             // label3
             // 
@@ -329,16 +364,6 @@ namespace UC
             this.txtCustomerId.Size = new System.Drawing.Size(56, 20);
             this.txtCustomerId.TabIndex = 4;
             // 
-            // removeBt
-            // 
-            this.removeBt.Location = new System.Drawing.Point(325, 12);
-            this.removeBt.Name = "removeBt";
-            this.removeBt.Size = new System.Drawing.Size(61, 22);
-            this.removeBt.TabIndex = 3;
-            this.removeBt.Text = "Xoá";
-            this.removeBt.UseVisualStyleBackColor = true;
-            this.removeBt.Click += new System.EventHandler(this.removeBt_Click);
-            // 
             // cart
             // 
             this.cart.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -350,9 +375,9 @@ namespace UC
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.btn_Accept);
+            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.txtTotal);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox2.Location = new System.Drawing.Point(0, 287);
@@ -362,6 +387,40 @@ namespace UC
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tổng tiền";
             // 
+            // btn_Accept
+            // 
+            this.btn_Accept.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Accept.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
+            this.btn_Accept.IconColor = System.Drawing.SystemColors.Desktop;
+            this.btn_Accept.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Accept.IconSize = 25;
+            this.btn_Accept.Location = new System.Drawing.Point(104, 120);
+            this.btn_Accept.Name = "btn_Accept";
+            this.btn_Accept.Size = new System.Drawing.Size(100, 38);
+            this.btn_Accept.TabIndex = 47;
+            this.btn_Accept.Text = "Thanh toán";
+            this.btn_Accept.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Accept.UseVisualStyleBackColor = true;
+            this.btn_Accept.Click += new System.EventHandler(this.btn_Accept_Click);
+            // 
+            // button5
+            // 
+            this.button5.ForeColor = System.Drawing.Color.Red;
+            this.button5.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.button5.IconColor = System.Drawing.Color.Red;
+            this.button5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.button5.IconSize = 25;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.Location = new System.Drawing.Point(216, 120);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 38);
+            this.button5.TabIndex = 46;
+            this.button5.Text = "Hủy";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -370,26 +429,6 @@ namespace UC
             this.label17.Size = new System.Drawing.Size(57, 13);
             this.label17.TabIndex = 3;
             this.label17.Text = ". 000 VNĐ";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(206, 96);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(88, 22);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Hủy";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // btn_Accept
-            // 
-            this.btn_Accept.Location = new System.Drawing.Point(97, 96);
-            this.btn_Accept.Name = "btn_Accept";
-            this.btn_Accept.Size = new System.Drawing.Size(82, 22);
-            this.btn_Accept.TabIndex = 1;
-            this.btn_Accept.Text = "Thanh toán";
-            this.btn_Accept.UseVisualStyleBackColor = true;
-            this.btn_Accept.Click += new System.EventHandler(this.btn_Accept_Click);
             // 
             // txtTotal
             // 
@@ -443,7 +482,6 @@ namespace UC
         private System.Windows.Forms.TextBox txtWIneId;
         private System.Windows.Forms.TextBox txtWineName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button searchBt;
         private System.Windows.Forms.GroupBox gb_Search;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtMFG;
@@ -453,16 +491,11 @@ namespace UC
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button cancelBt;
-        private System.Windows.Forms.Button okBt;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button removeBt;
         private System.Windows.Forms.ListBox cart;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button btn_Accept;
         private System.Windows.Forms.Label txtTotal;
         private System.Windows.Forms.BindingSource winemarchendiseBindingSource;
         private System.Windows.Forms.TextBox txtCustomerId;
@@ -470,5 +503,11 @@ namespace UC
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label label9;
+        private FontAwesome.Sharp.IconButton searchBt;
+        private FontAwesome.Sharp.IconButton cancelBt;
+        private FontAwesome.Sharp.IconButton okBt;
+        private FontAwesome.Sharp.IconButton removeBt;
+        private FontAwesome.Sharp.IconButton btn_Accept;
+        private FontAwesome.Sharp.IconButton button5;
     }
 }

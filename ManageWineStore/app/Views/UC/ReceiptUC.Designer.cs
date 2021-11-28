@@ -41,9 +41,6 @@ namespace ManageWineStore.app.Views.UC
             this.saleReceiptTP = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.refreshSBt = new System.Windows.Forms.Button();
-            this.bt1 = new System.Windows.Forms.Button();
-            this.searchSBt = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.endSDtp = new System.Windows.Forms.DateTimePicker();
@@ -57,9 +54,6 @@ namespace ManageWineStore.app.Views.UC
             this.importReceiptTP = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.refreshIBt = new System.Windows.Forms.Button();
-            this.bt2 = new System.Windows.Forms.Button();
-            this.searchIBt = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.endIDtp = new System.Windows.Forms.DateTimePicker();
@@ -69,10 +63,15 @@ namespace ManageWineStore.app.Views.UC
             this.keyICbb = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.importReceiptDgv = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.importReceiptDetailDgv = new System.Windows.Forms.DataGridView();
-            this.exportSFileBt = new System.Windows.Forms.Button();
-            this.exportIFileBt = new System.Windows.Forms.Button();
+            this.bt1 = new FontAwesome.Sharp.IconButton();
+            this.bt2 = new FontAwesome.Sharp.IconButton();
+            this.searchSBt = new FontAwesome.Sharp.IconButton();
+            this.refreshSBt = new FontAwesome.Sharp.IconButton();
+            this.exportSFileBt = new FontAwesome.Sharp.IconButton();
+            this.exportIFileBt = new FontAwesome.Sharp.IconButton();
+            this.refreshIBt = new FontAwesome.Sharp.IconButton();
+            this.searchIBt = new FontAwesome.Sharp.IconButton();
             this.tabControl.SuspendLayout();
             this.saleReceiptTP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -149,8 +148,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             this.splitContainer2.Panel1.Controls.Add(this.exportSFileBt);
             this.splitContainer2.Panel1.Controls.Add(this.refreshSBt);
-            this.splitContainer2.Panel1.Controls.Add(this.bt1);
             this.splitContainer2.Panel1.Controls.Add(this.searchSBt);
+            this.splitContainer2.Panel1.Controls.Add(this.bt1);
             this.splitContainer2.Panel1.Controls.Add(this.label4);
             this.splitContainer2.Panel1.Controls.Add(this.label3);
             this.splitContainer2.Panel1.Controls.Add(this.endSDtp);
@@ -167,41 +166,10 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer2.SplitterDistance = 88;
             this.splitContainer2.TabIndex = 0;
             // 
-            // refreshSBt
-            // 
-            this.refreshSBt.Location = new System.Drawing.Point(488, 50);
-            this.refreshSBt.Name = "refreshSBt";
-            this.refreshSBt.Size = new System.Drawing.Size(92, 34);
-            this.refreshSBt.TabIndex = 1;
-            this.refreshSBt.Text = "Làm mới";
-            this.refreshSBt.UseVisualStyleBackColor = true;
-            this.refreshSBt.Click += new System.EventHandler(this.refreshSBt_Click);
-            // 
-            // bt1
-            // 
-            this.bt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt1.Location = new System.Drawing.Point(16, 54);
-            this.bt1.Name = "bt1";
-            this.bt1.Size = new System.Drawing.Size(24, 24);
-            this.bt1.TabIndex = 19;
-            this.bt1.Text = "+";
-            this.bt1.UseVisualStyleBackColor = true;
-            this.bt1.Click += new System.EventHandler(this.bt1_Click);
-            // 
-            // searchSBt
-            // 
-            this.searchSBt.Location = new System.Drawing.Point(613, 15);
-            this.searchSBt.Name = "searchSBt";
-            this.searchSBt.Size = new System.Drawing.Size(74, 22);
-            this.searchSBt.TabIndex = 8;
-            this.searchSBt.Text = "Tìm kiếm";
-            this.searchSBt.UseVisualStyleBackColor = true;
-            this.searchSBt.Click += new System.EventHandler(this.searchSBt_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(216, 61);
+            this.label4.Location = new System.Drawing.Point(216, 60);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(26, 13);
             this.label4.TabIndex = 7;
@@ -210,7 +178,7 @@ namespace ManageWineStore.app.Views.UC
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(66, 61);
+            this.label3.Location = new System.Drawing.Point(67, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(20, 13);
             this.label3.TabIndex = 6;
@@ -364,8 +332,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             this.splitContainer4.Panel1.Controls.Add(this.exportIFileBt);
             this.splitContainer4.Panel1.Controls.Add(this.refreshIBt);
-            this.splitContainer4.Panel1.Controls.Add(this.bt2);
             this.splitContainer4.Panel1.Controls.Add(this.searchIBt);
+            this.splitContainer4.Panel1.Controls.Add(this.bt2);
             this.splitContainer4.Panel1.Controls.Add(this.label5);
             this.splitContainer4.Panel1.Controls.Add(this.label6);
             this.splitContainer4.Panel1.Controls.Add(this.endIDtp);
@@ -378,46 +346,14 @@ namespace ManageWineStore.app.Views.UC
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.importReceiptDgv);
-            this.splitContainer4.Panel2.Controls.Add(this.panel2);
             this.splitContainer4.Size = new System.Drawing.Size(690, 509);
             this.splitContainer4.SplitterDistance = 88;
             this.splitContainer4.TabIndex = 0;
             // 
-            // refreshIBt
-            // 
-            this.refreshIBt.Location = new System.Drawing.Point(495, 52);
-            this.refreshIBt.Name = "refreshIBt";
-            this.refreshIBt.Size = new System.Drawing.Size(92, 34);
-            this.refreshIBt.TabIndex = 3;
-            this.refreshIBt.Text = "Làm mới";
-            this.refreshIBt.UseVisualStyleBackColor = true;
-            this.refreshIBt.Click += new System.EventHandler(this.refreshIBt_Click);
-            // 
-            // bt2
-            // 
-            this.bt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt2.Location = new System.Drawing.Point(16, 54);
-            this.bt2.Name = "bt2";
-            this.bt2.Size = new System.Drawing.Size(24, 24);
-            this.bt2.TabIndex = 18;
-            this.bt2.Text = "+";
-            this.bt2.UseVisualStyleBackColor = true;
-            this.bt2.Click += new System.EventHandler(this.bt2_Click);
-            // 
-            // searchIBt
-            // 
-            this.searchIBt.Location = new System.Drawing.Point(613, 19);
-            this.searchIBt.Name = "searchIBt";
-            this.searchIBt.Size = new System.Drawing.Size(74, 22);
-            this.searchIBt.TabIndex = 17;
-            this.searchIBt.Text = "Tìm kiếm";
-            this.searchIBt.UseVisualStyleBackColor = true;
-            this.searchIBt.Click += new System.EventHandler(this.searchIBt_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(211, 60);
+            this.label5.Location = new System.Drawing.Point(216, 60);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 16;
@@ -436,18 +372,18 @@ namespace ManageWineStore.app.Views.UC
             // 
             this.endIDtp.Enabled = false;
             this.endIDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.endIDtp.Location = new System.Drawing.Point(243, 55);
+            this.endIDtp.Location = new System.Drawing.Point(248, 55);
             this.endIDtp.Name = "endIDtp";
-            this.endIDtp.Size = new System.Drawing.Size(97, 20);
+            this.endIDtp.Size = new System.Drawing.Size(95, 20);
             this.endIDtp.TabIndex = 14;
             // 
             // startIDtp
             // 
             this.startIDtp.Enabled = false;
             this.startIDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.startIDtp.Location = new System.Drawing.Point(93, 55);
+            this.startIDtp.Location = new System.Drawing.Point(94, 55);
             this.startIDtp.Name = "startIDtp";
-            this.startIDtp.Size = new System.Drawing.Size(96, 20);
+            this.startIDtp.Size = new System.Drawing.Size(95, 20);
             this.startIDtp.TabIndex = 13;
             // 
             // txtIKeyword
@@ -471,7 +407,7 @@ namespace ManageWineStore.app.Views.UC
             this.keyICbb.FormattingEnabled = true;
             this.keyICbb.Location = new System.Drawing.Point(92, 14);
             this.keyICbb.Name = "keyICbb";
-            this.keyICbb.Size = new System.Drawing.Size(131, 21);
+            this.keyICbb.Size = new System.Drawing.Size(138, 21);
             this.keyICbb.TabIndex = 10;
             // 
             // label8
@@ -508,17 +444,9 @@ namespace ManageWineStore.app.Views.UC
             this.importReceiptDgv.Name = "importReceiptDgv";
             this.importReceiptDgv.ReadOnly = true;
             this.importReceiptDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.importReceiptDgv.Size = new System.Drawing.Size(690, 348);
+            this.importReceiptDgv.Size = new System.Drawing.Size(690, 417);
             this.importReceiptDgv.TabIndex = 1;
             this.importReceiptDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.importReceiptDgv_CellClick);
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 348);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(690, 69);
-            this.panel2.TabIndex = 0;
             // 
             // importReceiptDetailDgv
             // 
@@ -548,25 +476,144 @@ namespace ManageWineStore.app.Views.UC
             this.importReceiptDetailDgv.Size = new System.Drawing.Size(424, 509);
             this.importReceiptDetailDgv.TabIndex = 0;
             // 
+            // bt1
+            // 
+            this.bt1.FlatAppearance.BorderSize = 0;
+            this.bt1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.bt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt1.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.bt1.IconColor = System.Drawing.Color.Black;
+            this.bt1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.bt1.IconSize = 15;
+            this.bt1.Location = new System.Drawing.Point(16, 56);
+            this.bt1.Name = "bt1";
+            this.bt1.Size = new System.Drawing.Size(23, 23);
+            this.bt1.TabIndex = 21;
+            this.bt1.UseVisualStyleBackColor = true;
+            this.bt1.Click += new System.EventHandler(this.bt1_Click);
+            // 
+            // bt2
+            // 
+            this.bt2.FlatAppearance.BorderSize = 0;
+            this.bt2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.bt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt2.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.bt2.IconColor = System.Drawing.Color.Black;
+            this.bt2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.bt2.IconSize = 15;
+            this.bt2.Location = new System.Drawing.Point(16, 56);
+            this.bt2.Name = "bt2";
+            this.bt2.Size = new System.Drawing.Size(23, 23);
+            this.bt2.TabIndex = 22;
+            this.bt2.UseVisualStyleBackColor = true;
+            this.bt2.Click += new System.EventHandler(this.bt2_Click);
+            // 
+            // searchSBt
+            // 
+            this.searchSBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchSBt.FlatAppearance.BorderSize = 0;
+            this.searchSBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.searchSBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchSBt.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.searchSBt.IconColor = System.Drawing.Color.Black;
+            this.searchSBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.searchSBt.IconSize = 20;
+            this.searchSBt.Location = new System.Drawing.Point(593, 12);
+            this.searchSBt.Name = "searchSBt";
+            this.searchSBt.Size = new System.Drawing.Size(27, 27);
+            this.searchSBt.TabIndex = 35;
+            this.searchSBt.UseVisualStyleBackColor = true;
+            this.searchSBt.Click += new System.EventHandler(this.searchSBt_Click);
+            // 
+            // refreshSBt
+            // 
+            this.refreshSBt.BackColor = System.Drawing.Color.Transparent;
+            this.refreshSBt.FlatAppearance.BorderSize = 0;
+            this.refreshSBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.refreshSBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshSBt.IconChar = FontAwesome.Sharp.IconChar.SyncAlt;
+            this.refreshSBt.IconColor = System.Drawing.Color.DodgerBlue;
+            this.refreshSBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.refreshSBt.IconSize = 20;
+            this.refreshSBt.Location = new System.Drawing.Point(660, 14);
+            this.refreshSBt.Name = "refreshSBt";
+            this.refreshSBt.Size = new System.Drawing.Size(27, 22);
+            this.refreshSBt.TabIndex = 36;
+            this.refreshSBt.UseVisualStyleBackColor = false;
+            this.refreshSBt.Click += new System.EventHandler(this.refreshSBt_Click);
+            // 
             // exportSFileBt
             // 
-            this.exportSFileBt.Location = new System.Drawing.Point(586, 51);
+            this.exportSFileBt.FlatAppearance.BorderSize = 0;
+            this.exportSFileBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exportSFileBt.ForeColor = System.Drawing.Color.ForestGreen;
+            this.exportSFileBt.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.exportSFileBt.IconColor = System.Drawing.Color.ForestGreen;
+            this.exportSFileBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.exportSFileBt.IconSize = 25;
+            this.exportSFileBt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.exportSFileBt.Location = new System.Drawing.Point(608, 55);
             this.exportSFileBt.Name = "exportSFileBt";
-            this.exportSFileBt.Size = new System.Drawing.Size(92, 34);
-            this.exportSFileBt.TabIndex = 20;
+            this.exportSFileBt.Size = new System.Drawing.Size(80, 30);
+            this.exportSFileBt.TabIndex = 37;
             this.exportSFileBt.Text = "Xuất file";
+            this.exportSFileBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.exportSFileBt.UseVisualStyleBackColor = true;
             this.exportSFileBt.Click += new System.EventHandler(this.exportSFileBt_Click);
             // 
             // exportIFileBt
             // 
-            this.exportIFileBt.Location = new System.Drawing.Point(593, 51);
+            this.exportIFileBt.FlatAppearance.BorderSize = 0;
+            this.exportIFileBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.exportIFileBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exportIFileBt.ForeColor = System.Drawing.Color.ForestGreen;
+            this.exportIFileBt.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.exportIFileBt.IconColor = System.Drawing.Color.ForestGreen;
+            this.exportIFileBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.exportIFileBt.IconSize = 25;
+            this.exportIFileBt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.exportIFileBt.Location = new System.Drawing.Point(608, 55);
             this.exportIFileBt.Name = "exportIFileBt";
-            this.exportIFileBt.Size = new System.Drawing.Size(92, 34);
-            this.exportIFileBt.TabIndex = 21;
+            this.exportIFileBt.Size = new System.Drawing.Size(80, 30);
+            this.exportIFileBt.TabIndex = 40;
             this.exportIFileBt.Text = "Xuất file";
+            this.exportIFileBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.exportIFileBt.UseVisualStyleBackColor = true;
             this.exportIFileBt.Click += new System.EventHandler(this.exportIFileBt_Click);
+            // 
+            // refreshIBt
+            // 
+            this.refreshIBt.BackColor = System.Drawing.Color.Transparent;
+            this.refreshIBt.FlatAppearance.BorderSize = 0;
+            this.refreshIBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.refreshIBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshIBt.IconChar = FontAwesome.Sharp.IconChar.SyncAlt;
+            this.refreshIBt.IconColor = System.Drawing.Color.DodgerBlue;
+            this.refreshIBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.refreshIBt.IconSize = 20;
+            this.refreshIBt.Location = new System.Drawing.Point(660, 14);
+            this.refreshIBt.Name = "refreshIBt";
+            this.refreshIBt.Size = new System.Drawing.Size(27, 22);
+            this.refreshIBt.TabIndex = 39;
+            this.refreshIBt.UseVisualStyleBackColor = false;
+            this.refreshIBt.Click += new System.EventHandler(this.refreshIBt_Click);
+            // 
+            // searchIBt
+            // 
+            this.searchIBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchIBt.FlatAppearance.BorderSize = 0;
+            this.searchIBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.searchIBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchIBt.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.searchIBt.IconColor = System.Drawing.Color.Black;
+            this.searchIBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.searchIBt.IconSize = 20;
+            this.searchIBt.Location = new System.Drawing.Point(593, 12);
+            this.searchIBt.Name = "searchIBt";
+            this.searchIBt.Size = new System.Drawing.Size(27, 27);
+            this.searchIBt.TabIndex = 38;
+            this.searchIBt.UseVisualStyleBackColor = true;
+            this.searchIBt.Click += new System.EventHandler(this.searchIBt_Click);
             // 
             // ReceiptUC
             // 
@@ -611,7 +658,6 @@ namespace ManageWineStore.app.Views.UC
         private System.Windows.Forms.TabPage importReceiptTP;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Button searchSBt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker endSDtp;
@@ -622,10 +668,8 @@ namespace ManageWineStore.app.Views.UC
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView saleReceiptDgv;
         private System.Windows.Forms.DataGridView saleReceiptDetailDgv;
-        private System.Windows.Forms.Button refreshSBt;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.SplitContainer splitContainer4;
-        private System.Windows.Forms.Button searchIBt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker endIDtp;
@@ -635,12 +679,14 @@ namespace ManageWineStore.app.Views.UC
         private System.Windows.Forms.ComboBox keyICbb;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView importReceiptDgv;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button refreshIBt;
         private System.Windows.Forms.DataGridView importReceiptDetailDgv;
-        private System.Windows.Forms.Button bt2;
-        private System.Windows.Forms.Button bt1;
-        private System.Windows.Forms.Button exportSFileBt;
-        private System.Windows.Forms.Button exportIFileBt;
+        private FontAwesome.Sharp.IconButton bt1;
+        private FontAwesome.Sharp.IconButton bt2;
+        private FontAwesome.Sharp.IconButton searchSBt;
+        private FontAwesome.Sharp.IconButton refreshSBt;
+        private FontAwesome.Sharp.IconButton exportSFileBt;
+        private FontAwesome.Sharp.IconButton exportIFileBt;
+        private FontAwesome.Sharp.IconButton refreshIBt;
+        private FontAwesome.Sharp.IconButton searchIBt;
     }
 }

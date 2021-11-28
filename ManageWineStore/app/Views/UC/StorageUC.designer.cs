@@ -29,8 +29,10 @@ namespace ManageWineStore.app.Views.UC
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cancelBt = new FontAwesome.Sharp.IconButton();
+            this.saveBt = new FontAwesome.Sharp.IconButton();
             this.wineCbb = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
@@ -44,18 +46,16 @@ namespace ManageWineStore.app.Views.UC
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cancelBt = new System.Windows.Forms.Button();
-            this.saveBt = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.searchBt = new System.Windows.Forms.Button();
+            this.searchBt = new FontAwesome.Sharp.IconButton();
+            this.refreshBt = new FontAwesome.Sharp.IconButton();
             this.txtKeyword = new System.Windows.Forms.TextBox();
             this.keyCbb = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.refreshBt = new System.Windows.Forms.Button();
-            this.updateBt = new System.Windows.Forms.Button();
+            this.updateBt = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -71,6 +71,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cancelBt);
+            this.groupBox1.Controls.Add(this.saveBt);
             this.groupBox1.Controls.Add(this.wineCbb);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.pictureBox);
@@ -84,8 +86,6 @@ namespace ManageWineStore.app.Views.UC
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.cancelBt);
-            this.groupBox1.Controls.Add(this.saveBt);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox1.Location = new System.Drawing.Point(707, 0);
             this.groupBox1.Name = "groupBox1";
@@ -93,6 +93,42 @@ namespace ManageWineStore.app.Views.UC
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hàng hóa";
+            // 
+            // cancelBt
+            // 
+            this.cancelBt.ForeColor = System.Drawing.Color.Red;
+            this.cancelBt.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.cancelBt.IconColor = System.Drawing.Color.Red;
+            this.cancelBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.cancelBt.IconSize = 25;
+            this.cancelBt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cancelBt.Location = new System.Drawing.Point(267, 486);
+            this.cancelBt.Name = "cancelBt";
+            this.cancelBt.Size = new System.Drawing.Size(100, 38);
+            this.cancelBt.TabIndex = 38;
+            this.cancelBt.Text = "Hủy";
+            this.cancelBt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cancelBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cancelBt.UseVisualStyleBackColor = true;
+            this.cancelBt.Click += new System.EventHandler(this.cancelBt_Click);
+            // 
+            // saveBt
+            // 
+            this.saveBt.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.saveBt.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.saveBt.IconColor = System.Drawing.Color.DodgerBlue;
+            this.saveBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.saveBt.IconSize = 25;
+            this.saveBt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.saveBt.Location = new System.Drawing.Point(60, 486);
+            this.saveBt.Name = "saveBt";
+            this.saveBt.Size = new System.Drawing.Size(100, 38);
+            this.saveBt.TabIndex = 37;
+            this.saveBt.Text = "Lưu";
+            this.saveBt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.saveBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.saveBt.UseVisualStyleBackColor = true;
+            this.saveBt.Click += new System.EventHandler(this.saveBt_Click);
             // 
             // wineCbb
             // 
@@ -210,28 +246,6 @@ namespace ManageWineStore.app.Views.UC
             this.label1.TabIndex = 22;
             this.label1.Text = "Mã HH:";
             // 
-            // cancelBt
-            // 
-            this.cancelBt.Enabled = false;
-            this.cancelBt.Location = new System.Drawing.Point(267, 486);
-            this.cancelBt.Name = "cancelBt";
-            this.cancelBt.Size = new System.Drawing.Size(100, 38);
-            this.cancelBt.TabIndex = 21;
-            this.cancelBt.Text = "Hủy";
-            this.cancelBt.UseVisualStyleBackColor = true;
-            this.cancelBt.Click += new System.EventHandler(this.cancelBt_Click);
-            // 
-            // saveBt
-            // 
-            this.saveBt.Enabled = false;
-            this.saveBt.Location = new System.Drawing.Point(60, 486);
-            this.saveBt.Name = "saveBt";
-            this.saveBt.Size = new System.Drawing.Size(100, 38);
-            this.saveBt.TabIndex = 20;
-            this.saveBt.Text = "Lưu";
-            this.saveBt.UseVisualStyleBackColor = true;
-            this.saveBt.Click += new System.EventHandler(this.saveBt_Click);
-            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -242,6 +256,7 @@ namespace ManageWineStore.app.Views.UC
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.searchBt);
+            this.splitContainer1.Panel1.Controls.Add(this.refreshBt);
             this.splitContainer1.Panel1.Controls.Add(this.txtKeyword);
             this.splitContainer1.Panel1.Controls.Add(this.keyCbb);
             this.splitContainer1.Panel1.Controls.Add(this.label11);
@@ -256,13 +271,36 @@ namespace ManageWineStore.app.Views.UC
             // 
             // searchBt
             // 
-            this.searchBt.Location = new System.Drawing.Point(574, 18);
+            this.searchBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchBt.FlatAppearance.BorderSize = 0;
+            this.searchBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.searchBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchBt.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.searchBt.IconColor = System.Drawing.Color.Black;
+            this.searchBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.searchBt.IconSize = 20;
+            this.searchBt.Location = new System.Drawing.Point(530, 15);
             this.searchBt.Name = "searchBt";
-            this.searchBt.Size = new System.Drawing.Size(70, 21);
-            this.searchBt.TabIndex = 22;
-            this.searchBt.Text = "Tìm kiếm";
+            this.searchBt.Size = new System.Drawing.Size(27, 27);
+            this.searchBt.TabIndex = 32;
             this.searchBt.UseVisualStyleBackColor = true;
             this.searchBt.Click += new System.EventHandler(this.searchBt_Click);
+            // 
+            // refreshBt
+            // 
+            this.refreshBt.FlatAppearance.BorderSize = 0;
+            this.refreshBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.refreshBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshBt.IconChar = FontAwesome.Sharp.IconChar.SyncAlt;
+            this.refreshBt.IconColor = System.Drawing.Color.DodgerBlue;
+            this.refreshBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.refreshBt.IconSize = 20;
+            this.refreshBt.Location = new System.Drawing.Point(677, 33);
+            this.refreshBt.Name = "refreshBt";
+            this.refreshBt.Size = new System.Drawing.Size(27, 22);
+            this.refreshBt.TabIndex = 31;
+            this.refreshBt.UseVisualStyleBackColor = true;
+            this.refreshBt.Click += new System.EventHandler(this.refreshBt_Click);
             // 
             // txtKeyword
             // 
@@ -310,7 +348,6 @@ namespace ManageWineStore.app.Views.UC
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.refreshBt);
             this.splitContainer2.Panel2.Controls.Add(this.updateBt);
             this.splitContainer2.Size = new System.Drawing.Size(707, 479);
             this.splitContainer2.SplitterDistance = 398;
@@ -319,14 +356,14 @@ namespace ManageWineStore.app.Views.UC
             // dgv
             // 
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(0, 0);
@@ -336,23 +373,19 @@ namespace ManageWineStore.app.Views.UC
             this.dgv.Size = new System.Drawing.Size(707, 398);
             this.dgv.TabIndex = 0;
             // 
-            // refreshBt
-            // 
-            this.refreshBt.Location = new System.Drawing.Point(367, 22);
-            this.refreshBt.Name = "refreshBt";
-            this.refreshBt.Size = new System.Drawing.Size(100, 38);
-            this.refreshBt.TabIndex = 30;
-            this.refreshBt.Text = "Làm mới";
-            this.refreshBt.UseVisualStyleBackColor = true;
-            this.refreshBt.Click += new System.EventHandler(this.refreshBt_Click);
-            // 
             // updateBt
             // 
-            this.updateBt.Location = new System.Drawing.Point(218, 22);
+            this.updateBt.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            this.updateBt.IconColor = System.Drawing.Color.Black;
+            this.updateBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.updateBt.IconSize = 20;
+            this.updateBt.Location = new System.Drawing.Point(288, 22);
             this.updateBt.Name = "updateBt";
             this.updateBt.Size = new System.Drawing.Size(100, 38);
-            this.updateBt.TabIndex = 28;
+            this.updateBt.TabIndex = 29;
             this.updateBt.Text = "Sửa";
+            this.updateBt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.updateBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.updateBt.UseVisualStyleBackColor = true;
             this.updateBt.Click += new System.EventHandler(this.updateBt_Click);
             // 
@@ -386,15 +419,11 @@ namespace ManageWineStore.app.Views.UC
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Button searchBt;
         private System.Windows.Forms.TextBox txtKeyword;
         private System.Windows.Forms.ComboBox keyCbb;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dgv;
-        private System.Windows.Forms.Button updateBt;
-        private System.Windows.Forms.Button cancelBt;
-        private System.Windows.Forms.Button saveBt;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtFCM;
@@ -402,12 +431,16 @@ namespace ManageWineStore.app.Views.UC
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button refreshBt;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox wineCbb;
         private System.Windows.Forms.Label label7;
+        private FontAwesome.Sharp.IconButton refreshBt;
+        private FontAwesome.Sharp.IconButton cancelBt;
+        private FontAwesome.Sharp.IconButton saveBt;
+        private FontAwesome.Sharp.IconButton searchBt;
+        private FontAwesome.Sharp.IconButton updateBt;
     }
 }
