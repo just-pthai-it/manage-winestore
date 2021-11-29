@@ -111,9 +111,11 @@ namespace Views
             // 
             // comfirmBt
             // 
-            this.comfirmBt.BackColor = System.Drawing.Color.Beige;
+            this.comfirmBt.BackColor = System.Drawing.Color.Moccasin;
             this.comfirmBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comfirmBt.Enabled = false;
+            this.comfirmBt.FlatAppearance.BorderSize = 0;
+            this.comfirmBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comfirmBt.Location = new System.Drawing.Point(154, 217);
             this.comfirmBt.Name = "comfirmBt";
             this.comfirmBt.Size = new System.Drawing.Size(68, 27);
@@ -124,8 +126,10 @@ namespace Views
             // 
             // backBt
             // 
-            this.backBt.BackColor = System.Drawing.Color.Beige;
+            this.backBt.BackColor = System.Drawing.Color.Moccasin;
             this.backBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backBt.FlatAppearance.BorderSize = 0;
+            this.backBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBt.Location = new System.Drawing.Point(256, 217);
             this.backBt.Name = "backBt";
             this.backBt.Size = new System.Drawing.Size(68, 27);
@@ -160,7 +164,7 @@ namespace Views
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(460, 275);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.wrongPasswordLb);
@@ -173,6 +177,7 @@ namespace Views
             this.Controls.Add(this.checkPasswordBt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCurrentPassword);
+            this.MaximizeBox = false;
             this.Name = "FormChangePass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Change Password";

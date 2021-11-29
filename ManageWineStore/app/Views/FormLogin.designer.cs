@@ -58,7 +58,10 @@ namespace Views
             // 
             // ExitBt
             // 
-            this.ExitBt.BackColor = System.Drawing.Color.Beige;
+            this.ExitBt.BackColor = System.Drawing.Color.Moccasin;
+            this.ExitBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitBt.FlatAppearance.BorderSize = 0;
+            this.ExitBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBt.Location = new System.Drawing.Point(486, 225);
             this.ExitBt.Name = "ExitBt";
             this.ExitBt.Size = new System.Drawing.Size(87, 29);
@@ -128,7 +131,10 @@ namespace Views
             // 
             // confirmBt
             // 
-            this.confirmBt.BackColor = System.Drawing.Color.Beige;
+            this.confirmBt.BackColor = System.Drawing.Color.Moccasin;
+            this.confirmBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.confirmBt.FlatAppearance.BorderSize = 0;
+            this.confirmBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confirmBt.ForeColor = System.Drawing.SystemColors.ControlText;
             this.confirmBt.Location = new System.Drawing.Point(366, 225);
             this.confirmBt.Name = "confirmBt";
@@ -161,7 +167,7 @@ namespace Views
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(611, 315);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbl_Credit);

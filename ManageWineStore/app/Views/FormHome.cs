@@ -45,6 +45,7 @@ namespace Views
 
         private void createListButton()
         {
+            this.adminBts.Add(this.revenueBt);
             this.adminBts.Add(this.wineMnBt);
             this.adminBts.Add(this.storageMnBt);
             this.adminBts.Add(this.supplierBt);
@@ -53,7 +54,6 @@ namespace Views
             this.adminBts.Add(this.customerMnBt);
             this.adminBts.Add(this.receiptMnBt);
             this.adminBts.Add(this.personalInforBt);
-            this.adminBts.Add(this.revenueBt);
 
             this.employeeSellerBts.Add(this.sellBt);
             this.employeeSellerBts.Add(this.wineMnBt);
