@@ -46,28 +46,26 @@ namespace Views
         private void createListButton()
         {
             this.adminBts.Add(this.wineMnBt);
-            this.adminBts.Add(this.employeeMnBt);
-            this.adminBts.Add(this.supplierBt);
-            this.adminBts.Add(this.customerMnBt);
             this.adminBts.Add(this.storageMnBt);
+            this.adminBts.Add(this.supplierBt);
+            this.adminBts.Add(this.employeeMnBt);
             this.adminBts.Add(this.accountMnBt);
+            this.adminBts.Add(this.customerMnBt);
             this.adminBts.Add(this.receiptMnBt);
             this.adminBts.Add(this.personalInforBt);
-            this.adminBts.Add(this.logoutBt);
 
             this.employeeSellerBts.Add(this.sellBt);
             this.employeeSellerBts.Add(this.wineMnBt);
             this.employeeSellerBts.Add(this.storageMnBt);
             this.employeeSellerBts.Add(this.customerMnBt);
             this.employeeSellerBts.Add(this.personalInforBt);
-            this.employeeSellerBts.Add(this.logoutBt);
 
             this.employeeImporterBts.Add(this.importBt);
             this.employeeImporterBts.Add(this.wineMnBt);
             this.employeeImporterBts.Add(this.storageMnBt);
             this.employeeImporterBts.Add(this.supplierBt);
             this.employeeImporterBts.Add(this.personalInforBt);
-            this.employeeImporterBts.Add(this.logoutBt);
+            
         }
 
         private void setUp()
@@ -209,7 +207,7 @@ namespace Views
 
         private void logoutBt_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

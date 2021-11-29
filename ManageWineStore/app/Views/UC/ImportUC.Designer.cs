@@ -29,10 +29,11 @@ namespace ManageWineStore.app.Views.UC
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cart = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.abortBt = new FontAwesome.Sharp.IconButton();
+            this.confirmBt = new FontAwesome.Sharp.IconButton();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,13 +49,11 @@ namespace ManageWineStore.app.Views.UC
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cancelBt = new FontAwesome.Sharp.IconButton();
+            this.okBtn = new FontAwesome.Sharp.IconButton();
             this.quantityNumericUD = new System.Windows.Forms.NumericUpDown();
             this.mfgNumericUD = new System.Windows.Forms.NumericUpDown();
             this.removeBt = new FontAwesome.Sharp.IconButton();
-            this.okBtn = new FontAwesome.Sharp.IconButton();
-            this.cancelBt = new FontAwesome.Sharp.IconButton();
-            this.confirmBt = new FontAwesome.Sharp.IconButton();
-            this.abortBt = new FontAwesome.Sharp.IconButton();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -62,47 +61,74 @@ namespace ManageWineStore.app.Views.UC
             ((System.ComponentModel.ISupportInitialize)(this.mfgNumericUD)).BeginInit();
             this.SuspendLayout();
             // 
-            // splitter1
-            // 
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitter1.Location = new System.Drawing.Point(813, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(319, 541);
-            this.splitter1.TabIndex = 1;
-            this.splitter1.TabStop = false;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.cart);
-            this.groupBox2.Location = new System.Drawing.Point(816, 3);
+            this.groupBox2.Controls.Add(this.removeBt);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Location = new System.Drawing.Point(807, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(316, 291);
+            this.groupBox2.Size = new System.Drawing.Size(325, 329);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết";
             // 
             // cart
             // 
-            this.cart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cart.Dock = System.Windows.Forms.DockStyle.Top;
             this.cart.FormattingEnabled = true;
             this.cart.Location = new System.Drawing.Point(3, 16);
             this.cart.Name = "cart";
-            this.cart.Size = new System.Drawing.Size(310, 272);
+            this.cart.Size = new System.Drawing.Size(319, 277);
             this.cart.TabIndex = 0;
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.abortBt);
             this.groupBox3.Controls.Add(this.confirmBt);
             this.groupBox3.Controls.Add(this.txtTotal);
             this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Location = new System.Drawing.Point(816, 335);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox3.Location = new System.Drawing.Point(807, 335);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(310, 206);
+            this.groupBox3.Size = new System.Drawing.Size(325, 206);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tổng tiền";
+            // 
+            // abortBt
+            // 
+            this.abortBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.abortBt.ForeColor = System.Drawing.Color.Red;
+            this.abortBt.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.abortBt.IconColor = System.Drawing.Color.Red;
+            this.abortBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.abortBt.IconSize = 20;
+            this.abortBt.Location = new System.Drawing.Point(183, 172);
+            this.abortBt.Name = "abortBt";
+            this.abortBt.Size = new System.Drawing.Size(88, 23);
+            this.abortBt.TabIndex = 10;
+            this.abortBt.Text = "Hủy";
+            this.abortBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.abortBt.UseVisualStyleBackColor = true;
+            this.abortBt.Click += new System.EventHandler(this.abortBt_Click);
+            // 
+            // confirmBt
+            // 
+            this.confirmBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.confirmBt.ForeColor = System.Drawing.Color.Green;
+            this.confirmBt.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.confirmBt.IconColor = System.Drawing.Color.Green;
+            this.confirmBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.confirmBt.IconSize = 20;
+            this.confirmBt.Location = new System.Drawing.Point(67, 172);
+            this.confirmBt.Name = "confirmBt";
+            this.confirmBt.Size = new System.Drawing.Size(88, 23);
+            this.confirmBt.TabIndex = 9;
+            this.confirmBt.Text = "Xác nhận";
+            this.confirmBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.confirmBt.UseVisualStyleBackColor = true;
+            this.confirmBt.Click += new System.EventHandler(this.comfirmBt_Click);
             // 
             // txtTotal
             // 
@@ -253,6 +279,46 @@ namespace ManageWineStore.app.Views.UC
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập hàng";
             // 
+            // cancelBt
+            // 
+            this.cancelBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancelBt.FlatAppearance.BorderSize = 0;
+            this.cancelBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.cancelBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelBt.ForeColor = System.Drawing.Color.Red;
+            this.cancelBt.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.cancelBt.IconColor = System.Drawing.Color.Red;
+            this.cancelBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.cancelBt.IconSize = 25;
+            this.cancelBt.Location = new System.Drawing.Point(444, 475);
+            this.cancelBt.Name = "cancelBt";
+            this.cancelBt.Size = new System.Drawing.Size(81, 42);
+            this.cancelBt.TabIndex = 27;
+            this.cancelBt.Text = "Hủy";
+            this.cancelBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cancelBt.UseVisualStyleBackColor = true;
+            this.cancelBt.Click += new System.EventHandler(this.cancelBt_Click);
+            // 
+            // okBtn
+            // 
+            this.okBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.okBtn.FlatAppearance.BorderSize = 0;
+            this.okBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.okBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.okBtn.ForeColor = System.Drawing.Color.Green;
+            this.okBtn.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            this.okBtn.IconColor = System.Drawing.Color.Green;
+            this.okBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.okBtn.IconSize = 25;
+            this.okBtn.Location = new System.Drawing.Point(285, 475);
+            this.okBtn.Name = "okBtn";
+            this.okBtn.Size = new System.Drawing.Size(81, 42);
+            this.okBtn.TabIndex = 26;
+            this.okBtn.Text = "OK";
+            this.okBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.okBtn.UseVisualStyleBackColor = true;
+            this.okBtn.Click += new System.EventHandler(this.okBtn_Click);
+            // 
             // quantityNumericUD
             // 
             this.quantityNumericUD.Location = new System.Drawing.Point(356, 261);
@@ -299,6 +365,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // removeBt
             // 
+            this.removeBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.removeBt.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.removeBt.FlatAppearance.BorderSize = 0;
             this.removeBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.removeBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -306,91 +374,19 @@ namespace ManageWineStore.app.Views.UC
             this.removeBt.IconColor = System.Drawing.Color.Red;
             this.removeBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.removeBt.IconSize = 18;
-            this.removeBt.Location = new System.Drawing.Point(1099, 297);
+            this.removeBt.Location = new System.Drawing.Point(3, 299);
             this.removeBt.Name = "removeBt";
-            this.removeBt.Size = new System.Drawing.Size(27, 27);
+            this.removeBt.Size = new System.Drawing.Size(319, 27);
             this.removeBt.TabIndex = 7;
             this.removeBt.UseVisualStyleBackColor = true;
             this.removeBt.Click += new System.EventHandler(this.removeBt_Click);
-            // 
-            // okBtn
-            // 
-            this.okBtn.FlatAppearance.BorderSize = 0;
-            this.okBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.okBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.okBtn.ForeColor = System.Drawing.Color.Green;
-            this.okBtn.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
-            this.okBtn.IconColor = System.Drawing.Color.Green;
-            this.okBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.okBtn.IconSize = 25;
-            this.okBtn.Location = new System.Drawing.Point(285, 475);
-            this.okBtn.Name = "okBtn";
-            this.okBtn.Size = new System.Drawing.Size(81, 42);
-            this.okBtn.TabIndex = 26;
-            this.okBtn.Text = "OK";
-            this.okBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.okBtn.UseVisualStyleBackColor = true;
-            this.okBtn.Click += new System.EventHandler(this.okBtn_Click);
-            // 
-            // cancelBt
-            // 
-            this.cancelBt.FlatAppearance.BorderSize = 0;
-            this.cancelBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.cancelBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelBt.ForeColor = System.Drawing.Color.Red;
-            this.cancelBt.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
-            this.cancelBt.IconColor = System.Drawing.Color.Red;
-            this.cancelBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.cancelBt.IconSize = 25;
-            this.cancelBt.Location = new System.Drawing.Point(444, 475);
-            this.cancelBt.Name = "cancelBt";
-            this.cancelBt.Size = new System.Drawing.Size(81, 42);
-            this.cancelBt.TabIndex = 27;
-            this.cancelBt.Text = "Hủy";
-            this.cancelBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cancelBt.UseVisualStyleBackColor = true;
-            this.cancelBt.Click += new System.EventHandler(this.cancelBt_Click);
-            // 
-            // confirmBt
-            // 
-            this.confirmBt.ForeColor = System.Drawing.Color.Green;
-            this.confirmBt.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.confirmBt.IconColor = System.Drawing.Color.Green;
-            this.confirmBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.confirmBt.IconSize = 20;
-            this.confirmBt.Location = new System.Drawing.Point(67, 172);
-            this.confirmBt.Name = "confirmBt";
-            this.confirmBt.Size = new System.Drawing.Size(88, 23);
-            this.confirmBt.TabIndex = 9;
-            this.confirmBt.Text = "Xác nhận";
-            this.confirmBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.confirmBt.UseVisualStyleBackColor = true;
-            this.confirmBt.Click += new System.EventHandler(this.comfirmBt_Click);
-            // 
-            // abortBt
-            // 
-            this.abortBt.ForeColor = System.Drawing.Color.Red;
-            this.abortBt.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.abortBt.IconColor = System.Drawing.Color.Red;
-            this.abortBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.abortBt.IconSize = 20;
-            this.abortBt.Location = new System.Drawing.Point(183, 172);
-            this.abortBt.Name = "abortBt";
-            this.abortBt.Size = new System.Drawing.Size(88, 23);
-            this.abortBt.TabIndex = 10;
-            this.abortBt.Text = "Hủy";
-            this.abortBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.abortBt.UseVisualStyleBackColor = true;
-            this.abortBt.Click += new System.EventHandler(this.abortBt_Click);
             // 
             // ImportUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.removeBt);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.groupBox1);
             this.Name = "ImportUC";
             this.Size = new System.Drawing.Size(1132, 541);
@@ -406,7 +402,6 @@ namespace ManageWineStore.app.Views.UC
         }
 
         #endregion
-        private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListBox cart;
         private System.Windows.Forms.GroupBox groupBox3;

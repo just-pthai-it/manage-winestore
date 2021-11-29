@@ -93,6 +93,7 @@ namespace Views
             // 
             // revenueBt
             // 
+            this.revenueBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.revenueBt.FlatAppearance.BorderSize = 0;
             this.revenueBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.revenueBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,7 +107,7 @@ namespace Views
             this.revenueBt.Name = "revenueBt";
             this.revenueBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.revenueBt.Size = new System.Drawing.Size(129, 37);
-            this.revenueBt.TabIndex = 15;
+            this.revenueBt.TabIndex = 0;
             this.revenueBt.Text = "Doanh thu";
             this.revenueBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.revenueBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -115,6 +116,7 @@ namespace Views
             // 
             // customerMnBt
             // 
+            this.customerMnBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.customerMnBt.FlatAppearance.BorderSize = 0;
             this.customerMnBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.customerMnBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -137,7 +139,9 @@ namespace Views
             // 
             // personalInforBt
             // 
+            this.personalInforBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.personalInforBt.FlatAppearance.BorderSize = 0;
+            this.personalInforBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.personalInforBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.personalInforBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.personalInforBt.ForeColor = System.Drawing.Color.Brown;
@@ -150,7 +154,7 @@ namespace Views
             this.personalInforBt.Name = "personalInforBt";
             this.personalInforBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.personalInforBt.Size = new System.Drawing.Size(129, 37);
-            this.personalInforBt.TabIndex = 11;
+            this.personalInforBt.TabIndex = 10;
             this.personalInforBt.Text = "Thông tin cá nhân";
             this.personalInforBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.personalInforBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -159,6 +163,7 @@ namespace Views
             // 
             // receiptMnBt
             // 
+            this.receiptMnBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.receiptMnBt.FlatAppearance.BorderSize = 0;
             this.receiptMnBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.receiptMnBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -172,7 +177,7 @@ namespace Views
             this.receiptMnBt.Name = "receiptMnBt";
             this.receiptMnBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.receiptMnBt.Size = new System.Drawing.Size(129, 37);
-            this.receiptMnBt.TabIndex = 10;
+            this.receiptMnBt.TabIndex = 9;
             this.receiptMnBt.Text = "Quản lý hóa đơn";
             this.receiptMnBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.receiptMnBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -181,6 +186,7 @@ namespace Views
             // 
             // accountMnBt
             // 
+            this.accountMnBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.accountMnBt.FlatAppearance.BorderSize = 0;
             this.accountMnBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.accountMnBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,7 +200,7 @@ namespace Views
             this.accountMnBt.Name = "accountMnBt";
             this.accountMnBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.accountMnBt.Size = new System.Drawing.Size(129, 37);
-            this.accountMnBt.TabIndex = 6;
+            this.accountMnBt.TabIndex = 7;
             this.accountMnBt.Text = "Quản lý tài khoản";
             this.accountMnBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.accountMnBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -203,6 +209,7 @@ namespace Views
             // 
             // employeeMnBt
             // 
+            this.employeeMnBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.employeeMnBt.FlatAppearance.BorderSize = 0;
             this.employeeMnBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.employeeMnBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -216,7 +223,7 @@ namespace Views
             this.employeeMnBt.Name = "employeeMnBt";
             this.employeeMnBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.employeeMnBt.Size = new System.Drawing.Size(129, 37);
-            this.employeeMnBt.TabIndex = 13;
+            this.employeeMnBt.TabIndex = 6;
             this.employeeMnBt.Text = "Thông tin nhân viên";
             this.employeeMnBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.employeeMnBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -225,6 +232,7 @@ namespace Views
             // 
             // supplierBt
             // 
+            this.supplierBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.supplierBt.FlatAppearance.BorderSize = 0;
             this.supplierBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.supplierBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -238,7 +246,7 @@ namespace Views
             this.supplierBt.Name = "supplierBt";
             this.supplierBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.supplierBt.Size = new System.Drawing.Size(129, 37);
-            this.supplierBt.TabIndex = 9;
+            this.supplierBt.TabIndex = 5;
             this.supplierBt.Text = "Nhà cung cấp";
             this.supplierBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.supplierBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -247,6 +255,7 @@ namespace Views
             // 
             // storageMnBt
             // 
+            this.storageMnBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.storageMnBt.FlatAppearance.BorderSize = 0;
             this.storageMnBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.storageMnBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -260,7 +269,7 @@ namespace Views
             this.storageMnBt.Name = "storageMnBt";
             this.storageMnBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.storageMnBt.Size = new System.Drawing.Size(129, 37);
-            this.storageMnBt.TabIndex = 5;
+            this.storageMnBt.TabIndex = 4;
             this.storageMnBt.Text = "Quản lý kho";
             this.storageMnBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.storageMnBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -269,6 +278,7 @@ namespace Views
             // 
             // wineMnBt
             // 
+            this.wineMnBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.wineMnBt.FlatAppearance.BorderSize = 0;
             this.wineMnBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.wineMnBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -282,7 +292,7 @@ namespace Views
             this.wineMnBt.Name = "wineMnBt";
             this.wineMnBt.Padding = new System.Windows.Forms.Padding(6, 0, 12, 0);
             this.wineMnBt.Size = new System.Drawing.Size(129, 37);
-            this.wineMnBt.TabIndex = 4;
+            this.wineMnBt.TabIndex = 3;
             this.wineMnBt.Text = "Quản lý rượu";
             this.wineMnBt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.wineMnBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -291,6 +301,7 @@ namespace Views
             // 
             // sellBt
             // 
+            this.sellBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sellBt.FlatAppearance.BorderSize = 0;
             this.sellBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sellBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -313,6 +324,7 @@ namespace Views
             // 
             // importBt
             // 
+            this.importBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.importBt.FlatAppearance.BorderSize = 0;
             this.importBt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.importBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -343,14 +355,16 @@ namespace Views
             // 
             // logoutBt
             // 
+            this.logoutBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.logoutBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logoutBt.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
             this.logoutBt.IconColor = System.Drawing.Color.Black;
             this.logoutBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.logoutBt.IconSize = 20;
-            this.logoutBt.Location = new System.Drawing.Point(1175, 12);
+            this.logoutBt.Location = new System.Drawing.Point(1175, 9);
             this.logoutBt.Name = "logoutBt";
             this.logoutBt.Size = new System.Drawing.Size(86, 24);
-            this.logoutBt.TabIndex = 16;
+            this.logoutBt.TabIndex = 11;
             this.logoutBt.Text = "Đăng xuất";
             this.logoutBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.logoutBt.UseVisualStyleBackColor = true;

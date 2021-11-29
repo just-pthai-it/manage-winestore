@@ -46,6 +46,9 @@ namespace ManageWineStore.app.Views.UC
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cancelBtn = new FontAwesome.Sharp.IconButton();
+            this.submitBtn = new FontAwesome.Sharp.IconButton();
+            this.updateBtn = new FontAwesome.Sharp.IconButton();
             this.jobCbb = new System.Windows.Forms.ComboBox();
             this.genderCbb = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -53,9 +56,6 @@ namespace ManageWineStore.app.Views.UC
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.selectImageBt = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.updateBtn = new FontAwesome.Sharp.IconButton();
-            this.submitBtn = new FontAwesome.Sharp.IconButton();
-            this.cancelBtn = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -63,6 +63,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // changePassBtn
             // 
+            this.changePassBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.changePassBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changePassBtn.Location = new System.Drawing.Point(286, 70);
             this.changePassBtn.Name = "changePassBtn";
@@ -246,6 +247,65 @@ namespace ManageWineStore.app.Views.UC
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin cá nhân";
             // 
+            // cancelBtn
+            // 
+            this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.cancelBtn.FlatAppearance.BorderSize = 0;
+            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelBtn.ForeColor = System.Drawing.Color.Red;
+            this.cancelBtn.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.cancelBtn.IconColor = System.Drawing.Color.Red;
+            this.cancelBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.cancelBtn.IconSize = 20;
+            this.cancelBtn.Location = new System.Drawing.Point(394, 211);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(68, 30);
+            this.cancelBtn.TabIndex = 51;
+            this.cancelBtn.Text = "Hủy";
+            this.cancelBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
+            // submitBtn
+            // 
+            this.submitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.submitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.submitBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.submitBtn.FlatAppearance.BorderSize = 0;
+            this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.submitBtn.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.submitBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.submitBtn.IconColor = System.Drawing.Color.DodgerBlue;
+            this.submitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.submitBtn.IconSize = 20;
+            this.submitBtn.Location = new System.Drawing.Point(321, 211);
+            this.submitBtn.Name = "submitBtn";
+            this.submitBtn.Size = new System.Drawing.Size(67, 30);
+            this.submitBtn.TabIndex = 50;
+            this.submitBtn.Text = "Lưu";
+            this.submitBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
+            // 
+            // updateBtn
+            // 
+            this.updateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.updateBtn.FlatAppearance.BorderSize = 0;
+            this.updateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateBtn.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            this.updateBtn.IconColor = System.Drawing.Color.Black;
+            this.updateBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.updateBtn.IconSize = 15;
+            this.updateBtn.Location = new System.Drawing.Point(439, 11);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(23, 22);
+            this.updateBtn.TabIndex = 49;
+            this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
+            // 
             // jobCbb
             // 
             this.jobCbb.Enabled = false;
@@ -299,6 +359,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // selectImageBt
             // 
+            this.selectImageBt.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.selectImageBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.selectImageBt.Enabled = false;
             this.selectImageBt.Location = new System.Drawing.Point(66, 325);
             this.selectImageBt.Name = "selectImageBt";
@@ -311,58 +373,6 @@ namespace ManageWineStore.app.Views.UC
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // updateBtn
-            // 
-            this.updateBtn.FlatAppearance.BorderSize = 0;
-            this.updateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
-            this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateBtn.IconChar = FontAwesome.Sharp.IconChar.Pen;
-            this.updateBtn.IconColor = System.Drawing.Color.Black;
-            this.updateBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.updateBtn.IconSize = 15;
-            this.updateBtn.Location = new System.Drawing.Point(439, 11);
-            this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(23, 22);
-            this.updateBtn.TabIndex = 49;
-            this.updateBtn.UseVisualStyleBackColor = true;
-            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
-            // 
-            // submitBtn
-            // 
-            this.submitBtn.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.submitBtn.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.submitBtn.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.submitBtn.IconColor = System.Drawing.Color.DodgerBlue;
-            this.submitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.submitBtn.IconSize = 20;
-            this.submitBtn.Location = new System.Drawing.Point(321, 211);
-            this.submitBtn.Name = "submitBtn";
-            this.submitBtn.Size = new System.Drawing.Size(67, 30);
-            this.submitBtn.TabIndex = 50;
-            this.submitBtn.Text = "Lưu";
-            this.submitBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.submitBtn.UseVisualStyleBackColor = true;
-            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
-            // 
-            // cancelBtn
-            // 
-            this.cancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelBtn.ForeColor = System.Drawing.Color.Red;
-            this.cancelBtn.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.cancelBtn.IconColor = System.Drawing.Color.Red;
-            this.cancelBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.cancelBtn.IconSize = 20;
-            this.cancelBtn.Location = new System.Drawing.Point(394, 211);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(68, 30);
-            this.cancelBtn.TabIndex = 51;
-            this.cancelBtn.Text = "Hủy";
-            this.cancelBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cancelBtn.UseVisualStyleBackColor = true;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // InformationUC
             // 

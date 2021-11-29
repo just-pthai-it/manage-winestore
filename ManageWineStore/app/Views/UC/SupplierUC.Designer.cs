@@ -29,8 +29,8 @@ namespace ManageWineStore.app.Views.UC
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cancelBt = new FontAwesome.Sharp.IconButton();
             this.saveBt = new FontAwesome.Sharp.IconButton();
@@ -96,6 +96,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // cancelBt
             // 
+            this.cancelBt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.cancelBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelBt.ForeColor = System.Drawing.Color.Red;
             this.cancelBt.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.cancelBt.IconColor = System.Drawing.Color.Red;
@@ -114,6 +116,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // saveBt
             // 
+            this.saveBt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.saveBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveBt.ForeColor = System.Drawing.Color.DodgerBlue;
             this.saveBt.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.saveBt.IconColor = System.Drawing.Color.DodgerBlue;
@@ -259,6 +263,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // searchBt
             // 
+            this.searchBt.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.searchBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchBt.FlatAppearance.BorderSize = 0;
             this.searchBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
@@ -276,7 +281,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // refreshBt
             // 
-            this.refreshBt.BackColor = System.Drawing.SystemColors.Control;
+            this.refreshBt.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.refreshBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refreshBt.FlatAppearance.BorderSize = 0;
             this.refreshBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.refreshBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -284,15 +290,16 @@ namespace ManageWineStore.app.Views.UC
             this.refreshBt.IconColor = System.Drawing.Color.DodgerBlue;
             this.refreshBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.refreshBt.IconSize = 20;
-            this.refreshBt.Location = new System.Drawing.Point(677, 33);
+            this.refreshBt.Location = new System.Drawing.Point(563, 20);
             this.refreshBt.Name = "refreshBt";
             this.refreshBt.Size = new System.Drawing.Size(27, 22);
             this.refreshBt.TabIndex = 24;
-            this.refreshBt.UseVisualStyleBackColor = false;
+            this.refreshBt.UseVisualStyleBackColor = true;
             this.refreshBt.Click += new System.EventHandler(this.refreshBt_Click);
             // 
             // txtKeyword
             // 
+            this.txtKeyword.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtKeyword.Location = new System.Drawing.Point(286, 19);
             this.txtKeyword.Name = "txtKeyword";
             this.txtKeyword.Size = new System.Drawing.Size(238, 20);
@@ -300,6 +307,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // keyCbb
             // 
+            this.keyCbb.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.keyCbb.FormattingEnabled = true;
             this.keyCbb.Location = new System.Drawing.Point(94, 19);
             this.keyCbb.Name = "keyCbb";
@@ -308,6 +316,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(233, 22);
             this.label11.Name = "label11";
@@ -317,6 +326,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(15, 22);
             this.label10.Name = "label10";
@@ -327,6 +337,7 @@ namespace ManageWineStore.app.Views.UC
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -347,23 +358,23 @@ namespace ManageWineStore.app.Views.UC
             // dgv
             // 
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(0, 0);
             this.dgv.Name = "dgv";
@@ -374,6 +385,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // deleteBt
             // 
+            this.deleteBt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.deleteBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteBt.ForeColor = System.Drawing.Color.Red;
             this.deleteBt.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.deleteBt.IconColor = System.Drawing.Color.Red;
@@ -392,6 +405,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // updateBt
             // 
+            this.updateBt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.updateBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updateBt.IconChar = FontAwesome.Sharp.IconChar.Pen;
             this.updateBt.IconColor = System.Drawing.Color.Black;
             this.updateBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -409,6 +424,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // addBt
             // 
+            this.addBt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.addBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addBt.ForeColor = System.Drawing.Color.Green;
             this.addBt.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.addBt.IconColor = System.Drawing.Color.Green;

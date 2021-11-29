@@ -29,18 +29,22 @@ namespace ManageWineStore.app.Views.UC
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.saleReceiptTP = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.exportSFileBt = new FontAwesome.Sharp.IconButton();
+            this.refreshSBt = new FontAwesome.Sharp.IconButton();
+            this.searchSBt = new FontAwesome.Sharp.IconButton();
+            this.bt1 = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.endSDtp = new System.Windows.Forms.DateTimePicker();
@@ -54,6 +58,10 @@ namespace ManageWineStore.app.Views.UC
             this.importReceiptTP = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.exportIFileBt = new FontAwesome.Sharp.IconButton();
+            this.refreshIBt = new FontAwesome.Sharp.IconButton();
+            this.searchIBt = new FontAwesome.Sharp.IconButton();
+            this.bt2 = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.endIDtp = new System.Windows.Forms.DateTimePicker();
@@ -64,14 +72,6 @@ namespace ManageWineStore.app.Views.UC
             this.label8 = new System.Windows.Forms.Label();
             this.importReceiptDgv = new System.Windows.Forms.DataGridView();
             this.importReceiptDetailDgv = new System.Windows.Forms.DataGridView();
-            this.bt1 = new FontAwesome.Sharp.IconButton();
-            this.bt2 = new FontAwesome.Sharp.IconButton();
-            this.searchSBt = new FontAwesome.Sharp.IconButton();
-            this.refreshSBt = new FontAwesome.Sharp.IconButton();
-            this.exportSFileBt = new FontAwesome.Sharp.IconButton();
-            this.exportIFileBt = new FontAwesome.Sharp.IconButton();
-            this.refreshIBt = new FontAwesome.Sharp.IconButton();
-            this.searchIBt = new FontAwesome.Sharp.IconButton();
             this.tabControl.SuspendLayout();
             this.saleReceiptTP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -140,6 +140,7 @@ namespace ManageWineStore.app.Views.UC
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -166,8 +167,82 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer2.SplitterDistance = 88;
             this.splitContainer2.TabIndex = 0;
             // 
+            // exportSFileBt
+            // 
+            this.exportSFileBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.exportSFileBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exportSFileBt.FlatAppearance.BorderSize = 0;
+            this.exportSFileBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exportSFileBt.ForeColor = System.Drawing.Color.ForestGreen;
+            this.exportSFileBt.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.exportSFileBt.IconColor = System.Drawing.Color.ForestGreen;
+            this.exportSFileBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.exportSFileBt.IconSize = 25;
+            this.exportSFileBt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.exportSFileBt.Location = new System.Drawing.Point(608, 55);
+            this.exportSFileBt.Name = "exportSFileBt";
+            this.exportSFileBt.Size = new System.Drawing.Size(80, 30);
+            this.exportSFileBt.TabIndex = 37;
+            this.exportSFileBt.Text = "Xuất file";
+            this.exportSFileBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.exportSFileBt.UseVisualStyleBackColor = true;
+            this.exportSFileBt.Click += new System.EventHandler(this.exportSFileBt_Click);
+            // 
+            // refreshSBt
+            // 
+            this.refreshSBt.BackColor = System.Drawing.Color.Transparent;
+            this.refreshSBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refreshSBt.FlatAppearance.BorderSize = 0;
+            this.refreshSBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.refreshSBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshSBt.IconChar = FontAwesome.Sharp.IconChar.SyncAlt;
+            this.refreshSBt.IconColor = System.Drawing.Color.DodgerBlue;
+            this.refreshSBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.refreshSBt.IconSize = 20;
+            this.refreshSBt.Location = new System.Drawing.Point(626, 14);
+            this.refreshSBt.Name = "refreshSBt";
+            this.refreshSBt.Size = new System.Drawing.Size(27, 22);
+            this.refreshSBt.TabIndex = 36;
+            this.refreshSBt.UseVisualStyleBackColor = false;
+            this.refreshSBt.Click += new System.EventHandler(this.refreshSBt_Click);
+            // 
+            // searchSBt
+            // 
+            this.searchSBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchSBt.FlatAppearance.BorderSize = 0;
+            this.searchSBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.searchSBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchSBt.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.searchSBt.IconColor = System.Drawing.Color.Black;
+            this.searchSBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.searchSBt.IconSize = 20;
+            this.searchSBt.Location = new System.Drawing.Point(593, 12);
+            this.searchSBt.Name = "searchSBt";
+            this.searchSBt.Size = new System.Drawing.Size(27, 27);
+            this.searchSBt.TabIndex = 35;
+            this.searchSBt.UseVisualStyleBackColor = true;
+            this.searchSBt.Click += new System.EventHandler(this.searchSBt_Click);
+            // 
+            // bt1
+            // 
+            this.bt1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.bt1.FlatAppearance.BorderSize = 0;
+            this.bt1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.bt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt1.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.bt1.IconColor = System.Drawing.Color.Black;
+            this.bt1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.bt1.IconSize = 15;
+            this.bt1.Location = new System.Drawing.Point(16, 56);
+            this.bt1.Name = "bt1";
+            this.bt1.Size = new System.Drawing.Size(23, 23);
+            this.bt1.TabIndex = 21;
+            this.bt1.UseVisualStyleBackColor = true;
+            this.bt1.Click += new System.EventHandler(this.bt1_Click);
+            // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(216, 60);
             this.label4.Name = "label4";
@@ -177,6 +252,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(67, 60);
             this.label3.Name = "label3";
@@ -186,6 +262,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // endSDtp
             // 
+            this.endSDtp.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.endSDtp.Enabled = false;
             this.endSDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.endSDtp.Location = new System.Drawing.Point(248, 55);
@@ -196,6 +273,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // startSDtp
             // 
+            this.startSDtp.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.startSDtp.Enabled = false;
             this.startSDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.startSDtp.Location = new System.Drawing.Point(94, 55);
@@ -239,23 +317,23 @@ namespace ManageWineStore.app.Views.UC
             // saleReceiptDgv
             // 
             this.saleReceiptDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.saleReceiptDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.saleReceiptDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.saleReceiptDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.saleReceiptDgv.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.saleReceiptDgv.DefaultCellStyle = dataGridViewCellStyle2;
             this.saleReceiptDgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.saleReceiptDgv.Location = new System.Drawing.Point(0, 0);
             this.saleReceiptDgv.Name = "saleReceiptDgv";
@@ -268,23 +346,23 @@ namespace ManageWineStore.app.Views.UC
             // saleReceiptDetailDgv
             // 
             this.saleReceiptDetailDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.saleReceiptDetailDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.saleReceiptDetailDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.saleReceiptDetailDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.saleReceiptDetailDgv.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.saleReceiptDetailDgv.DefaultCellStyle = dataGridViewCellStyle4;
             this.saleReceiptDetailDgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.saleReceiptDetailDgv.Location = new System.Drawing.Point(0, 0);
             this.saleReceiptDetailDgv.Name = "saleReceiptDetailDgv";
@@ -350,8 +428,83 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer4.SplitterDistance = 88;
             this.splitContainer4.TabIndex = 0;
             // 
+            // exportIFileBt
+            // 
+            this.exportIFileBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.exportIFileBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exportIFileBt.FlatAppearance.BorderSize = 0;
+            this.exportIFileBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.exportIFileBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exportIFileBt.ForeColor = System.Drawing.Color.ForestGreen;
+            this.exportIFileBt.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.exportIFileBt.IconColor = System.Drawing.Color.ForestGreen;
+            this.exportIFileBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.exportIFileBt.IconSize = 25;
+            this.exportIFileBt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.exportIFileBt.Location = new System.Drawing.Point(608, 55);
+            this.exportIFileBt.Name = "exportIFileBt";
+            this.exportIFileBt.Size = new System.Drawing.Size(80, 30);
+            this.exportIFileBt.TabIndex = 40;
+            this.exportIFileBt.Text = "Xuất file";
+            this.exportIFileBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.exportIFileBt.UseVisualStyleBackColor = true;
+            this.exportIFileBt.Click += new System.EventHandler(this.exportIFileBt_Click);
+            // 
+            // refreshIBt
+            // 
+            this.refreshIBt.BackColor = System.Drawing.Color.Transparent;
+            this.refreshIBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refreshIBt.FlatAppearance.BorderSize = 0;
+            this.refreshIBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.refreshIBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshIBt.IconChar = FontAwesome.Sharp.IconChar.SyncAlt;
+            this.refreshIBt.IconColor = System.Drawing.Color.DodgerBlue;
+            this.refreshIBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.refreshIBt.IconSize = 20;
+            this.refreshIBt.Location = new System.Drawing.Point(626, 14);
+            this.refreshIBt.Name = "refreshIBt";
+            this.refreshIBt.Size = new System.Drawing.Size(27, 22);
+            this.refreshIBt.TabIndex = 39;
+            this.refreshIBt.UseVisualStyleBackColor = false;
+            this.refreshIBt.Click += new System.EventHandler(this.refreshIBt_Click);
+            // 
+            // searchIBt
+            // 
+            this.searchIBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchIBt.FlatAppearance.BorderSize = 0;
+            this.searchIBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.searchIBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchIBt.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.searchIBt.IconColor = System.Drawing.Color.Black;
+            this.searchIBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.searchIBt.IconSize = 20;
+            this.searchIBt.Location = new System.Drawing.Point(593, 12);
+            this.searchIBt.Name = "searchIBt";
+            this.searchIBt.Size = new System.Drawing.Size(27, 27);
+            this.searchIBt.TabIndex = 38;
+            this.searchIBt.UseVisualStyleBackColor = true;
+            this.searchIBt.Click += new System.EventHandler(this.searchIBt_Click);
+            // 
+            // bt2
+            // 
+            this.bt2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.bt2.FlatAppearance.BorderSize = 0;
+            this.bt2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.bt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt2.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.bt2.IconColor = System.Drawing.Color.Black;
+            this.bt2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.bt2.IconSize = 15;
+            this.bt2.Location = new System.Drawing.Point(16, 56);
+            this.bt2.Name = "bt2";
+            this.bt2.Size = new System.Drawing.Size(23, 23);
+            this.bt2.TabIndex = 22;
+            this.bt2.UseVisualStyleBackColor = true;
+            this.bt2.Click += new System.EventHandler(this.bt2_Click);
+            // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(216, 60);
             this.label5.Name = "label5";
@@ -361,6 +514,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(67, 60);
             this.label6.Name = "label6";
@@ -370,6 +524,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // endIDtp
             // 
+            this.endIDtp.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.endIDtp.Enabled = false;
             this.endIDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.endIDtp.Location = new System.Drawing.Point(248, 55);
@@ -379,6 +534,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // startIDtp
             // 
+            this.startIDtp.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.startIDtp.Enabled = false;
             this.startIDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.startIDtp.Location = new System.Drawing.Point(94, 55);
@@ -422,23 +578,23 @@ namespace ManageWineStore.app.Views.UC
             // importReceiptDgv
             // 
             this.importReceiptDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.importReceiptDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.importReceiptDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.importReceiptDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.importReceiptDgv.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.importReceiptDgv.DefaultCellStyle = dataGridViewCellStyle6;
             this.importReceiptDgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.importReceiptDgv.Location = new System.Drawing.Point(0, 0);
             this.importReceiptDgv.Name = "importReceiptDgv";
@@ -451,23 +607,23 @@ namespace ManageWineStore.app.Views.UC
             // importReceiptDetailDgv
             // 
             this.importReceiptDetailDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.importReceiptDetailDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.importReceiptDetailDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.importReceiptDetailDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.importReceiptDetailDgv.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.importReceiptDetailDgv.DefaultCellStyle = dataGridViewCellStyle8;
             this.importReceiptDetailDgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.importReceiptDetailDgv.Location = new System.Drawing.Point(0, 0);
             this.importReceiptDetailDgv.Name = "importReceiptDetailDgv";
@@ -475,145 +631,6 @@ namespace ManageWineStore.app.Views.UC
             this.importReceiptDetailDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.importReceiptDetailDgv.Size = new System.Drawing.Size(424, 509);
             this.importReceiptDetailDgv.TabIndex = 0;
-            // 
-            // bt1
-            // 
-            this.bt1.FlatAppearance.BorderSize = 0;
-            this.bt1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
-            this.bt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt1.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.bt1.IconColor = System.Drawing.Color.Black;
-            this.bt1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.bt1.IconSize = 15;
-            this.bt1.Location = new System.Drawing.Point(16, 56);
-            this.bt1.Name = "bt1";
-            this.bt1.Size = new System.Drawing.Size(23, 23);
-            this.bt1.TabIndex = 21;
-            this.bt1.UseVisualStyleBackColor = true;
-            this.bt1.Click += new System.EventHandler(this.bt1_Click);
-            // 
-            // bt2
-            // 
-            this.bt2.FlatAppearance.BorderSize = 0;
-            this.bt2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
-            this.bt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt2.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.bt2.IconColor = System.Drawing.Color.Black;
-            this.bt2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.bt2.IconSize = 15;
-            this.bt2.Location = new System.Drawing.Point(16, 56);
-            this.bt2.Name = "bt2";
-            this.bt2.Size = new System.Drawing.Size(23, 23);
-            this.bt2.TabIndex = 22;
-            this.bt2.UseVisualStyleBackColor = true;
-            this.bt2.Click += new System.EventHandler(this.bt2_Click);
-            // 
-            // searchSBt
-            // 
-            this.searchSBt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchSBt.FlatAppearance.BorderSize = 0;
-            this.searchSBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
-            this.searchSBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchSBt.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.searchSBt.IconColor = System.Drawing.Color.Black;
-            this.searchSBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.searchSBt.IconSize = 20;
-            this.searchSBt.Location = new System.Drawing.Point(593, 12);
-            this.searchSBt.Name = "searchSBt";
-            this.searchSBt.Size = new System.Drawing.Size(27, 27);
-            this.searchSBt.TabIndex = 35;
-            this.searchSBt.UseVisualStyleBackColor = true;
-            this.searchSBt.Click += new System.EventHandler(this.searchSBt_Click);
-            // 
-            // refreshSBt
-            // 
-            this.refreshSBt.BackColor = System.Drawing.Color.Transparent;
-            this.refreshSBt.FlatAppearance.BorderSize = 0;
-            this.refreshSBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
-            this.refreshSBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refreshSBt.IconChar = FontAwesome.Sharp.IconChar.SyncAlt;
-            this.refreshSBt.IconColor = System.Drawing.Color.DodgerBlue;
-            this.refreshSBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.refreshSBt.IconSize = 20;
-            this.refreshSBt.Location = new System.Drawing.Point(660, 14);
-            this.refreshSBt.Name = "refreshSBt";
-            this.refreshSBt.Size = new System.Drawing.Size(27, 22);
-            this.refreshSBt.TabIndex = 36;
-            this.refreshSBt.UseVisualStyleBackColor = false;
-            this.refreshSBt.Click += new System.EventHandler(this.refreshSBt_Click);
-            // 
-            // exportSFileBt
-            // 
-            this.exportSFileBt.FlatAppearance.BorderSize = 0;
-            this.exportSFileBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exportSFileBt.ForeColor = System.Drawing.Color.ForestGreen;
-            this.exportSFileBt.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.exportSFileBt.IconColor = System.Drawing.Color.ForestGreen;
-            this.exportSFileBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.exportSFileBt.IconSize = 25;
-            this.exportSFileBt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.exportSFileBt.Location = new System.Drawing.Point(608, 55);
-            this.exportSFileBt.Name = "exportSFileBt";
-            this.exportSFileBt.Size = new System.Drawing.Size(80, 30);
-            this.exportSFileBt.TabIndex = 37;
-            this.exportSFileBt.Text = "Xuất file";
-            this.exportSFileBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.exportSFileBt.UseVisualStyleBackColor = true;
-            this.exportSFileBt.Click += new System.EventHandler(this.exportSFileBt_Click);
-            // 
-            // exportIFileBt
-            // 
-            this.exportIFileBt.FlatAppearance.BorderSize = 0;
-            this.exportIFileBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
-            this.exportIFileBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exportIFileBt.ForeColor = System.Drawing.Color.ForestGreen;
-            this.exportIFileBt.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.exportIFileBt.IconColor = System.Drawing.Color.ForestGreen;
-            this.exportIFileBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.exportIFileBt.IconSize = 25;
-            this.exportIFileBt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.exportIFileBt.Location = new System.Drawing.Point(608, 55);
-            this.exportIFileBt.Name = "exportIFileBt";
-            this.exportIFileBt.Size = new System.Drawing.Size(80, 30);
-            this.exportIFileBt.TabIndex = 40;
-            this.exportIFileBt.Text = "Xuất file";
-            this.exportIFileBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.exportIFileBt.UseVisualStyleBackColor = true;
-            this.exportIFileBt.Click += new System.EventHandler(this.exportIFileBt_Click);
-            // 
-            // refreshIBt
-            // 
-            this.refreshIBt.BackColor = System.Drawing.Color.Transparent;
-            this.refreshIBt.FlatAppearance.BorderSize = 0;
-            this.refreshIBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
-            this.refreshIBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refreshIBt.IconChar = FontAwesome.Sharp.IconChar.SyncAlt;
-            this.refreshIBt.IconColor = System.Drawing.Color.DodgerBlue;
-            this.refreshIBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.refreshIBt.IconSize = 20;
-            this.refreshIBt.Location = new System.Drawing.Point(660, 14);
-            this.refreshIBt.Name = "refreshIBt";
-            this.refreshIBt.Size = new System.Drawing.Size(27, 22);
-            this.refreshIBt.TabIndex = 39;
-            this.refreshIBt.UseVisualStyleBackColor = false;
-            this.refreshIBt.Click += new System.EventHandler(this.refreshIBt_Click);
-            // 
-            // searchIBt
-            // 
-            this.searchIBt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchIBt.FlatAppearance.BorderSize = 0;
-            this.searchIBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
-            this.searchIBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchIBt.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.searchIBt.IconColor = System.Drawing.Color.Black;
-            this.searchIBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.searchIBt.IconSize = 20;
-            this.searchIBt.Location = new System.Drawing.Point(593, 12);
-            this.searchIBt.Name = "searchIBt";
-            this.searchIBt.Size = new System.Drawing.Size(27, 27);
-            this.searchIBt.TabIndex = 38;
-            this.searchIBt.UseVisualStyleBackColor = true;
-            this.searchIBt.Click += new System.EventHandler(this.searchIBt_Click);
             // 
             // ReceiptUC
             // 

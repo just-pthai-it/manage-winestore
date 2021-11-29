@@ -132,6 +132,7 @@ namespace UC
             // 
             // searchBt
             // 
+            this.searchBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchBt.FlatAppearance.BorderSize = 0;
             this.searchBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.searchBt.IconChar = FontAwesome.Sharp.IconChar.Search;
@@ -185,6 +186,7 @@ namespace UC
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -247,6 +249,7 @@ namespace UC
             // 
             // cancelBt
             // 
+            this.cancelBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelBt.ForeColor = System.Drawing.Color.Red;
             this.cancelBt.IconChar = FontAwesome.Sharp.IconChar.Minus;
             this.cancelBt.IconColor = System.Drawing.Color.Red;
@@ -263,6 +266,7 @@ namespace UC
             // 
             // okBt
             // 
+            this.okBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.okBt.ForeColor = System.Drawing.Color.Green;
             this.okBt.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
             this.okBt.IconColor = System.Drawing.Color.Green;
@@ -334,6 +338,7 @@ namespace UC
             // 
             // removeBt
             // 
+            this.removeBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.removeBt.FlatAppearance.BorderSize = 0;
             this.removeBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.removeBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -389,6 +394,7 @@ namespace UC
             // 
             // btn_Accept
             // 
+            this.btn_Accept.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Accept.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_Accept.IconChar = FontAwesome.Sharp.IconChar.CashRegister;
             this.btn_Accept.IconColor = System.Drawing.SystemColors.Desktop;
@@ -405,6 +411,7 @@ namespace UC
             // 
             // button5
             // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.ForeColor = System.Drawing.Color.Red;
             this.button5.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.button5.IconColor = System.Drawing.Color.Red;
