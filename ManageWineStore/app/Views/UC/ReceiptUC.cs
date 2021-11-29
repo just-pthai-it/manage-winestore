@@ -231,5 +231,15 @@ namespace ManageWineStore.app.Views.UC
             ReceiptExport.Export(receiptManageController.getExportSData(
                     this.saleReceiptDgv.SelectedRows[0].Cells[0].Value.ToString()), "sheet", "Hóa đơn bán", "Họ tên khách hàng:");
         }
+
+        private void deleteSBt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteIBt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
