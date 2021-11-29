@@ -61,7 +61,7 @@ namespace ManageWineStore.app.Views.UC
 
         private void loadNationCbb()
         {
-            this.nationCbb.DisplayMember = "job_name";
+            this.nationCbb.DisplayMember = "name";
             this.nationCbb.ValueMember = "id";
             this.nationCbb.DataSource = this.supplierManageController.getNations();
         }

@@ -60,7 +60,7 @@ namespace ManageWineStore.export
 
             //Ngày lập HĐ
             Microsoft.Office.Interop.Excel.Range createAt = oSheet.get_Range("A6", "A6");
-            createAt.Value2 = "Ngày lập HĐ:";
+            createAt.Value2 = "Thời gian lập HĐ:";
             createAt.Font.Size = "10";
 
             //Tạo tiêu đề cột
@@ -131,7 +131,7 @@ namespace ManageWineStore.export
             int cellsum = rowStart + dataTable.Rows.Count;
 
             Microsoft.Office.Interop.Excel.Range sum = oSheet.get_Range($"A{cellsum}", $"A{cellsum}");
-            sum.Value2 = "Tổng";
+            sum.Value2 = "Tổng:";
             sum.Font.Bold = true;
             sum.Font.Size = "13";
 

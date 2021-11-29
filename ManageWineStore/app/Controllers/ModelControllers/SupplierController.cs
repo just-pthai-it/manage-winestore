@@ -38,7 +38,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
         public override void update(SupplierModel supplierModel)
         {
             string commandText = "UPDATE supplier SET name = @name , phone = @phone , mail = @mail , " +
-                                "address = @address , nations_id = @nation_id WHERE id = @id ;";
+                                "address = @address , nation_id = @nation_id WHERE id = @id ;";
             this.executeNonQuery(commandText, new object[]
             {
                 supplierModel.Name,

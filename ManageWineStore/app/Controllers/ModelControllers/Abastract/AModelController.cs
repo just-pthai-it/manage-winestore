@@ -47,7 +47,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers.Abastract
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return null;
+                MessageBox.Show("Đã có lỗi xảy ra. Vui lòng thử lại sau");
             }
             return data;
         }
@@ -78,6 +78,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers.Abastract
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                MessageBox.Show("Đã có lỗi xảy ra. Vui lòng thử lại sau");
             }
             return data;
         }
@@ -110,6 +111,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers.Abastract
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                MessageBox.Show("Đã có lỗi xảy ra. Vui lòng thử lại sau");
             }
             return data;
         }
