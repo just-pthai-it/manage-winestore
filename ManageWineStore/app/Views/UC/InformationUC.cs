@@ -228,6 +228,7 @@ namespace ManageWineStore.app.Views.UC
             this.txtPhone.ReadOnly = !status;
             this.txtMail.ReadOnly = !status;
             this.txtAddress.ReadOnly = !status;
+
             this.genderCbb.Enabled = status;
             this.birthDtp.Enabled = status;
         }

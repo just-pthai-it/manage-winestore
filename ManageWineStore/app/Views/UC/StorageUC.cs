@@ -216,12 +216,12 @@ namespace ManageWineStore.app.Views.UC
 
         private void isEditable(bool status)
         {
-            this.txtId.Enabled = status;
-            this.wineCbb.Enabled = status;
-            this.txtFCM.Enabled = status;
-            this.txtPrice.Enabled = status;
-            this.txtQuantity.Enabled = status;
+            this.txtId.ReadOnly = !status;
+            this.txtFCM.ReadOnly = !status;
+            this.txtPrice.ReadOnly = !status;
+            this.txtQuantity.ReadOnly = !status;
 
+            this.wineCbb.Enabled = status;
             this.saveBt.Enabled = status;
             this.cancelBt.Enabled = status;
         }

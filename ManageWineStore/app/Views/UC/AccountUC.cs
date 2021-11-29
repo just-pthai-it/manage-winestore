@@ -229,9 +229,9 @@ namespace ManageWineStore.app.Views.UC
         {
             if (this.addBt.Enabled)
             {
-                this.txtUsername.Enabled = status;
-                this.txtPassword.Enabled = status;
-                this.txtRepeatPassword.Enabled = status;
+                this.txtUsername.ReadOnly = !status;
+                this.txtPassword.ReadOnly = !status;
+                this.txtRepeatPassword.ReadOnly = !status;
             }
 
             this.roleCbb.Enabled = status;
