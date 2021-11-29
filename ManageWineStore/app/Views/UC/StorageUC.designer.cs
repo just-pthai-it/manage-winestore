@@ -29,7 +29,7 @@ namespace ManageWineStore.app.Views.UC
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cancelBt = new FontAwesome.Sharp.IconButton();
             this.saveBt = new FontAwesome.Sharp.IconButton();
@@ -56,6 +56,7 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.updateBt = new FontAwesome.Sharp.IconButton();
+            this.deleteBt = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -363,6 +364,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // splitContainer2.Panel2
             // 
+            this.splitContainer2.Panel2.Controls.Add(this.deleteBt);
             this.splitContainer2.Panel2.Controls.Add(this.updateBt);
             this.splitContainer2.Size = new System.Drawing.Size(707, 479);
             this.splitContainer2.SplitterDistance = 398;
@@ -373,14 +375,14 @@ namespace ManageWineStore.app.Views.UC
             this.dgv.AllowUserToAddRows = false;
             this.dgv.AllowUserToDeleteRows = false;
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(0, 0);
@@ -398,7 +400,7 @@ namespace ManageWineStore.app.Views.UC
             this.updateBt.IconColor = System.Drawing.Color.Black;
             this.updateBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.updateBt.IconSize = 20;
-            this.updateBt.Location = new System.Drawing.Point(288, 22);
+            this.updateBt.Location = new System.Drawing.Point(217, 22);
             this.updateBt.Name = "updateBt";
             this.updateBt.Size = new System.Drawing.Size(100, 38);
             this.updateBt.TabIndex = 29;
@@ -407,6 +409,25 @@ namespace ManageWineStore.app.Views.UC
             this.updateBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.updateBt.UseVisualStyleBackColor = true;
             this.updateBt.Click += new System.EventHandler(this.updateBt_Click);
+            // 
+            // deleteBt
+            // 
+            this.deleteBt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.deleteBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteBt.ForeColor = System.Drawing.Color.Red;
+            this.deleteBt.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.deleteBt.IconColor = System.Drawing.Color.Red;
+            this.deleteBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.deleteBt.IconSize = 25;
+            this.deleteBt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.deleteBt.Location = new System.Drawing.Point(355, 22);
+            this.deleteBt.Name = "deleteBt";
+            this.deleteBt.Size = new System.Drawing.Size(100, 38);
+            this.deleteBt.TabIndex = 40;
+            this.deleteBt.Text = "Xóa";
+            this.deleteBt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.deleteBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.deleteBt.UseVisualStyleBackColor = true;
             // 
             // StorageUC
             // 
@@ -461,5 +482,6 @@ namespace ManageWineStore.app.Views.UC
         private FontAwesome.Sharp.IconButton saveBt;
         private FontAwesome.Sharp.IconButton searchBt;
         private FontAwesome.Sharp.IconButton updateBt;
+        private FontAwesome.Sharp.IconButton deleteBt;
     }
 }

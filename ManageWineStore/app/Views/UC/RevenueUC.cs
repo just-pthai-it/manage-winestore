@@ -120,9 +120,6 @@ namespace ManageWineStore.app.Views.UC
             chart.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineWidth = 0;
             chart.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineWidth = 0;
 
-            string[] quarterNames = {"0", "1", "2", "3", "4", "Cả năm" };
-            string[] monthNames = { "0", "1", "2", "3", "4", "5" , "6", "7", "8", "9", "10", "11", "12", "Cả năm" };
-
 
             double startOffset = -0.5;
             double endOffset = 0.5;
@@ -163,11 +160,6 @@ namespace ManageWineStore.app.Views.UC
                 }
                 flag = true;
             }
-        }
-
-        private void refreshBt_Click(object sender, EventArgs e)
-        {
-
         }
 
         private DataTable getRevenue()
