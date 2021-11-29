@@ -234,12 +234,14 @@ namespace ManageWineStore.app.Views.UC
 
         private void deleteSBt_Click(object sender, EventArgs e)
         {
-
+            this.receiptManageController.deleteSaleReceipt(this.saleReceiptDgv.SelectedRows[0].Cells[0].Value.ToString());
+            this.loadSaleReceiptsData();
         }
 
         private void deleteIBt_Click(object sender, EventArgs e)
         {
-
+            this.receiptManageController.deleteImportReceipt(this.importReceiptDgv.SelectedRows[0].Cells[0].Value.ToString());
+            this.loadImportReceiptsData();
         }
     }
 }

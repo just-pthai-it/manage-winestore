@@ -5,13 +5,14 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace ManageWineStore.app.Controllers
 {
     class ReceiptManageController
     {
         private ImportReceiptController importReceiptController = new ImportReceiptController();
-        private ImportReciptDetailController importReciptDetailController = new ImportReciptDetailController();
+        private ImportReciptDetailController importReceiptDetailController = new ImportReciptDetailController();
         private SaleReceiptController saleReceiptController = new SaleReceiptController();
         private SaleReceiptDetailController saleReceiptDetailController = new SaleReceiptDetailController();
 
@@ -27,7 +28,7 @@ namespace ManageWineStore.app.Controllers
 
         public DataTable getImportReceiptDetails(string column, object value)
         {
-            return this.importReciptDetailController.find(column, value);
+            return this.importReceiptDetailController.find(column, value);
         }
 
         public DataTable getSaleReceiptDetails(string column, object value)
@@ -47,14 +48,49 @@ namespace ManageWineStore.app.Controllers
                 query, start, end);
         }
 
-        internal DataTable getExportSData(string id)
+        public DataTable getExportSData(string id)
         {
             return this.saleReceiptController.findProc(id);
         }
 
-        internal DataTable getExportIData(string id)
+        public DataTable getExportIData(string id)
         {
             return this.importReceiptController.findProc(id);
         }
+
+        public void deleteImportReceipt(string id)
+        {
+            try
+            {
+                using (TransactionScope scope = new TransactionScope())
+                {
+                    this.importReceiptDetailController.deleteBySingleConditional("import_receipt_id", id);
+                    this.importReceiptController.delete(id);
+                    scope.Complete();
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        public void deleteSaleReceipt(string id)
+        {
+            try
+            {
+                using (TransactionScope scope = new TransactionScope())
+                {
+                    this.saleReceiptDetailController.deleteBySingleConditional("sale_receipt_id", id);
+                    this.saleReceiptController.delete(id);
+                    scope.Complete();
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
     }
 }

@@ -50,6 +50,7 @@ namespace Views
             this.txtCurrentPassword.Size = new System.Drawing.Size(164, 20);
             this.txtCurrentPassword.TabIndex = 0;
             this.txtCurrentPassword.TextChanged += new System.EventHandler(this.txtCurrentPassword_TextChanged);
+            this.txtCurrentPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCurrentPassword_KeyDown);
             // 
             // label1
             // 

@@ -77,6 +77,24 @@ namespace Views
 
         private void comfirmBt_Click(object sender, EventArgs e)
         {
+            this.comfirm();
+        }
+
+        private void backBt_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtCurrentPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.comfirm();
+            }
+        }
+
+        private void comfirm()
+        {
             if (this.validate())
             {
                 this.accountModel.Password = MD5Helper.GetHash(this.txtNewPassword.Text);
@@ -84,11 +102,6 @@ namespace Views
                 MessageBox.Show("Thay đổi mật khẩu thành công!");
                 this.Close();
             }
-        }
-
-        private void backBt_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

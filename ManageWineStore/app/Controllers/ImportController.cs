@@ -39,7 +39,6 @@ namespace ManageWineStore.app.Controllers
                         ImportReceiptDetailModel importReceiptDetailModel1 = (ImportReceiptDetailModel)items[i];
                         importReceiptDetailModel1.ImportReceiptId = irc_id;
                         importReceiptDetailModel1.MerchandiseId = m_id;
-                        MessageBox.Show(irc_id.ToString());
                         ImportReciptDetailController.insert(importReceiptDetailModel1);
                         i++;
                     }

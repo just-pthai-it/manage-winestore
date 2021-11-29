@@ -57,10 +57,10 @@ namespace UC
             this.label3 = new System.Windows.Forms.Label();
             this.txtCustomerId = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.btn_Accept = new FontAwesome.Sharp.IconButton();
             this.button5 = new FontAwesome.Sharp.IconButton();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtTotal = new System.Windows.Forms.Label();
             this.winemarchendiseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.gb_Search.SuspendLayout();
@@ -383,10 +383,10 @@ namespace UC
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtTotal);
             this.groupBox2.Controls.Add(this.btn_Accept);
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.txtTotal);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox2.Location = new System.Drawing.Point(0, 287);
             this.groupBox2.Name = "groupBox2";
@@ -394,6 +394,18 @@ namespace UC
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tổng tiền";
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(201, 22);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtTotal.Size = new System.Drawing.Size(129, 31);
+            this.txtTotal.TabIndex = 48;
+            this.txtTotal.Text = "0";
             // 
             // btn_Accept
             // 
@@ -439,16 +451,6 @@ namespace UC
             this.label17.Size = new System.Drawing.Size(57, 13);
             this.label17.TabIndex = 3;
             this.label17.Text = ". 000 VNĐ";
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.AutoSize = true;
-            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(154, 30);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(21, 22);
-            this.txtTotal.TabIndex = 0;
-            this.txtTotal.Text = "0";
             // 
             // contextMenuStrip1
             // 
@@ -506,7 +508,6 @@ namespace UC
         private System.Windows.Forms.ListBox cart;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label txtTotal;
         private System.Windows.Forms.BindingSource winemarchendiseBindingSource;
         private System.Windows.Forms.TextBox txtCustomerId;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -519,5 +520,6 @@ namespace UC
         private FontAwesome.Sharp.IconButton removeBt;
         private FontAwesome.Sharp.IconButton btn_Accept;
         private FontAwesome.Sharp.IconButton button5;
+        private System.Windows.Forms.TextBox txtTotal;
     }
 }
