@@ -82,6 +82,7 @@
     <Compile Include="app\Controllers\ModelControllers\NationController.cs" />
     <Compile Include="app\Controllers\PersonalInforController.cs" />
     <Compile Include="app\Controllers\ReceiptManageController.cs" />
+    <Compile Include="app\Controllers\RevenueController.cs" />
     <Compile Include="app\Controllers\SellController.cs" />
     <Compile Include="app\Controllers\StorageController.cs" />
     <Compile Include="app\Controllers\SupplierManageController.cs" />

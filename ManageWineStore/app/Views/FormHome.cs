@@ -53,6 +53,7 @@ namespace Views
             this.adminBts.Add(this.customerMnBt);
             this.adminBts.Add(this.receiptMnBt);
             this.adminBts.Add(this.personalInforBt);
+            this.adminBts.Add(this.revenueBt);
 
             this.employeeSellerBts.Add(this.sellBt);
             this.employeeSellerBts.Add(this.wineMnBt);
@@ -193,16 +194,19 @@ namespace Views
             this.workplacePnl.Controls.Add(informationUC);
         }
 
+        private void revenueBt_Click(object sender, EventArgs e)
+        {
+            this.workplacePnl.Controls.Clear();
+            RevenueUC revenueUC = new RevenueUC();
+            revenueUC.Dock = DockStyle.Fill;
+            this.workplacePnl.Controls.Add(revenueUC);
+        }
+
         private void FormHome_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.adminModel = null;
             this.employeeModel = null;
             this.accountModel = null;
-        }
-
-        private void revenueBt_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void logoutBt_Click(object sender, EventArgs e)

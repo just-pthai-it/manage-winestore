@@ -78,5 +78,10 @@ namespace ManageWineStore.app.Controllers.ModelControllers
             string commandText = "DELETE FROM sale_receipt WHERE id = @id ;";
             this.executeQuery(commandText, new object[] { id });
         }
+
+        public DataTable getRevenue(string commandText, object[] conditionals)
+        {
+            return this.executeQuery(commandText, conditionals);
+        }
     }
 }
