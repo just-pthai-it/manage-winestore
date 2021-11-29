@@ -317,6 +317,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // saleReceiptDgv
             // 
+            this.saleReceiptDgv.AllowUserToAddRows = false;
+            this.saleReceiptDgv.AllowUserToDeleteRows = false;
             this.saleReceiptDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -346,6 +348,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // saleReceiptDetailDgv
             // 
+            this.saleReceiptDetailDgv.AllowUserToAddRows = false;
+            this.saleReceiptDetailDgv.AllowUserToDeleteRows = false;
             this.saleReceiptDetailDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -579,6 +583,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // importReceiptDgv
             // 
+            this.importReceiptDgv.AllowUserToAddRows = false;
+            this.importReceiptDgv.AllowUserToDeleteRows = false;
             this.importReceiptDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
@@ -608,6 +614,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // importReceiptDetailDgv
             // 
+            this.importReceiptDetailDgv.AllowUserToAddRows = false;
+            this.importReceiptDetailDgv.AllowUserToDeleteRows = false;
             this.importReceiptDetailDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;

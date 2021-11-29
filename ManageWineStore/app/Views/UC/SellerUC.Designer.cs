@@ -51,11 +51,11 @@ namespace UC
             this.label12 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
+            this.cart = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.removeBt = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCustomerId = new System.Windows.Forms.TextBox();
-            this.cart = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_Accept = new FontAwesome.Sharp.IconButton();
             this.button5 = new FontAwesome.Sharp.IconButton();
@@ -204,6 +204,8 @@ namespace UC
             // 
             // dgv
             // 
+            this.dgv.AllowUserToAddRows = false;
+            this.dgv.AllowUserToDeleteRows = false;
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -325,6 +327,15 @@ namespace UC
             this.label6.TabIndex = 2;
             this.label6.Text = "Số lượng:";
             // 
+            // cart
+            // 
+            this.cart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cart.FormattingEnabled = true;
+            this.cart.Location = new System.Drawing.Point(0, 0);
+            this.cart.Name = "cart";
+            this.cart.Size = new System.Drawing.Size(389, 189);
+            this.cart.TabIndex = 0;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.removeBt);
@@ -369,15 +380,6 @@ namespace UC
             this.txtCustomerId.Name = "txtCustomerId";
             this.txtCustomerId.Size = new System.Drawing.Size(56, 20);
             this.txtCustomerId.TabIndex = 4;
-            // 
-            // cart
-            // 
-            this.cart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cart.FormattingEnabled = true;
-            this.cart.Location = new System.Drawing.Point(0, 0);
-            this.cart.Name = "cart";
-            this.cart.Size = new System.Drawing.Size(389, 189);
-            this.cart.TabIndex = 0;
             // 
             // groupBox2
             // 
