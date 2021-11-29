@@ -62,6 +62,7 @@ namespace Views
             // 
             // checkPasswordBt
             // 
+            this.checkPasswordBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkPasswordBt.Location = new System.Drawing.Point(324, 55);
             this.checkPasswordBt.Name = "checkPasswordBt";
             this.checkPasswordBt.Size = new System.Drawing.Size(52, 20);
@@ -111,6 +112,7 @@ namespace Views
             // comfirmBt
             // 
             this.comfirmBt.BackColor = System.Drawing.Color.Beige;
+            this.comfirmBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comfirmBt.Enabled = false;
             this.comfirmBt.Location = new System.Drawing.Point(154, 217);
             this.comfirmBt.Name = "comfirmBt";
@@ -123,6 +125,7 @@ namespace Views
             // backBt
             // 
             this.backBt.BackColor = System.Drawing.Color.Beige;
+            this.backBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backBt.Location = new System.Drawing.Point(256, 217);
             this.backBt.Name = "backBt";
             this.backBt.Size = new System.Drawing.Size(68, 27);

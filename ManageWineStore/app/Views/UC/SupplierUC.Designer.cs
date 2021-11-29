@@ -29,8 +29,8 @@ namespace ManageWineStore.app.Views.UC
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cancelBt = new FontAwesome.Sharp.IconButton();
             this.saveBt = new FontAwesome.Sharp.IconButton();
@@ -98,6 +98,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             this.cancelBt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.cancelBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancelBt.Enabled = false;
             this.cancelBt.ForeColor = System.Drawing.Color.Red;
             this.cancelBt.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.cancelBt.IconColor = System.Drawing.Color.Red;
@@ -118,6 +119,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             this.saveBt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.saveBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveBt.Enabled = false;
             this.saveBt.ForeColor = System.Drawing.Color.DodgerBlue;
             this.saveBt.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.saveBt.IconColor = System.Drawing.Color.DodgerBlue;
@@ -290,7 +292,7 @@ namespace ManageWineStore.app.Views.UC
             this.refreshBt.IconColor = System.Drawing.Color.DodgerBlue;
             this.refreshBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.refreshBt.IconSize = 20;
-            this.refreshBt.Location = new System.Drawing.Point(563, 20);
+            this.refreshBt.Location = new System.Drawing.Point(563, 17);
             this.refreshBt.Name = "refreshBt";
             this.refreshBt.Size = new System.Drawing.Size(27, 22);
             this.refreshBt.TabIndex = 24;
@@ -308,6 +310,7 @@ namespace ManageWineStore.app.Views.UC
             // keyCbb
             // 
             this.keyCbb.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.keyCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.keyCbb.FormattingEnabled = true;
             this.keyCbb.Location = new System.Drawing.Point(94, 19);
             this.keyCbb.Name = "keyCbb";
@@ -358,23 +361,23 @@ namespace ManageWineStore.app.Views.UC
             // dgv
             // 
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(0, 0);
             this.dgv.Name = "dgv";

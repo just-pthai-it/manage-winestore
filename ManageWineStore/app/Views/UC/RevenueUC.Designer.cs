@@ -46,6 +46,8 @@ namespace ManageWineStore.app.Views.UC
             this.label6 = new System.Windows.Forms.Label();
             this.runBt = new System.Windows.Forms.Button();
             this.refreshBt = new FontAwesome.Sharp.IconButton();
+            this.columnRaBt = new System.Windows.Forms.RadioButton();
+            this.lineRaBt = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.revenueChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,6 +177,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // runBt
             // 
+            this.runBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.runBt.Location = new System.Drawing.Point(836, 100);
             this.runBt.Name = "runBt";
             this.runBt.Size = new System.Drawing.Size(68, 20);
@@ -185,6 +188,7 @@ namespace ManageWineStore.app.Views.UC
             // refreshBt
             // 
             this.refreshBt.BackColor = System.Drawing.SystemColors.Control;
+            this.refreshBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refreshBt.FlatAppearance.BorderSize = 0;
             this.refreshBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.refreshBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -198,10 +202,34 @@ namespace ManageWineStore.app.Views.UC
             this.refreshBt.TabIndex = 14;
             this.refreshBt.UseVisualStyleBackColor = false;
             // 
+            // columnRaBt
+            // 
+            this.columnRaBt.AutoSize = true;
+            this.columnRaBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.columnRaBt.Location = new System.Drawing.Point(137, 178);
+            this.columnRaBt.Name = "columnRaBt";
+            this.columnRaBt.Size = new System.Drawing.Size(88, 17);
+            this.columnRaBt.TabIndex = 15;
+            this.columnRaBt.Text = "Column Chart";
+            this.columnRaBt.UseVisualStyleBackColor = true;
+            // 
+            // lineRaBt
+            // 
+            this.lineRaBt.AutoSize = true;
+            this.lineRaBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lineRaBt.Location = new System.Drawing.Point(137, 201);
+            this.lineRaBt.Name = "lineRaBt";
+            this.lineRaBt.Size = new System.Drawing.Size(73, 17);
+            this.lineRaBt.TabIndex = 16;
+            this.lineRaBt.Text = "Line Chart";
+            this.lineRaBt.UseVisualStyleBackColor = true;
+            // 
             // RevenueUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lineRaBt);
+            this.Controls.Add(this.columnRaBt);
             this.Controls.Add(this.refreshBt);
             this.Controls.Add(this.runBt);
             this.Controls.Add(this.yearCbb2);
@@ -242,5 +270,7 @@ namespace ManageWineStore.app.Views.UC
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button runBt;
         private FontAwesome.Sharp.IconButton refreshBt;
+        private System.Windows.Forms.RadioButton columnRaBt;
+        private System.Windows.Forms.RadioButton lineRaBt;
     }
 }

@@ -29,7 +29,7 @@ namespace ManageWineStore.app.Views.UC
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cancelBt = new FontAwesome.Sharp.IconButton();
             this.saveBt = new FontAwesome.Sharp.IconButton();
@@ -98,6 +98,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             this.cancelBt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.cancelBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancelBt.Enabled = false;
             this.cancelBt.ForeColor = System.Drawing.Color.Red;
             this.cancelBt.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.cancelBt.IconColor = System.Drawing.Color.Red;
@@ -118,6 +119,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             this.saveBt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.saveBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveBt.Enabled = false;
             this.saveBt.ForeColor = System.Drawing.Color.DodgerBlue;
             this.saveBt.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.saveBt.IconColor = System.Drawing.Color.DodgerBlue;
@@ -320,6 +322,7 @@ namespace ManageWineStore.app.Views.UC
             // keyCbb
             // 
             this.keyCbb.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.keyCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.keyCbb.FormattingEnabled = true;
             this.keyCbb.Location = new System.Drawing.Point(94, 19);
             this.keyCbb.Name = "keyCbb";
@@ -368,14 +371,14 @@ namespace ManageWineStore.app.Views.UC
             // dgv
             // 
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(0, 0);

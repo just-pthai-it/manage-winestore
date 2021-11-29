@@ -251,6 +251,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancelBtn.Enabled = false;
             this.cancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.cancelBtn.FlatAppearance.BorderSize = 0;
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -272,6 +273,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             this.submitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.submitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.submitBtn.Enabled = false;
             this.submitBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.submitBtn.FlatAppearance.BorderSize = 0;
             this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

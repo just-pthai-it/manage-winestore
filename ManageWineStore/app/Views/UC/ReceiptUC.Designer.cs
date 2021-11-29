@@ -299,6 +299,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // keySCbb
             // 
+            this.keySCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.keySCbb.FormattingEnabled = true;
             this.keySCbb.Location = new System.Drawing.Point(92, 14);
             this.keySCbb.Name = "keySCbb";
@@ -560,6 +561,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // keyICbb
             // 
+            this.keyICbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.keyICbb.FormattingEnabled = true;
             this.keyICbb.Location = new System.Drawing.Point(92, 14);
             this.keyICbb.Name = "keyICbb";

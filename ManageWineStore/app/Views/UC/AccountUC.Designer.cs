@@ -29,9 +29,11 @@ namespace ManageWineStore.app.Views.UC
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cancelBt = new FontAwesome.Sharp.IconButton();
+            this.saveBt = new FontAwesome.Sharp.IconButton();
             this.txtRepeatPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.roleCbb = new System.Windows.Forms.ComboBox();
@@ -43,16 +45,14 @@ namespace ManageWineStore.app.Views.UC
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.searchBt = new FontAwesome.Sharp.IconButton();
+            this.refreshBt = new FontAwesome.Sharp.IconButton();
             this.txtKeyword = new System.Windows.Forms.TextBox();
             this.keyCbb = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.cancelBt = new FontAwesome.Sharp.IconButton();
-            this.saveBt = new FontAwesome.Sharp.IconButton();
-            this.searchBt = new FontAwesome.Sharp.IconButton();
-            this.refreshBt = new FontAwesome.Sharp.IconButton();
             this.deleteBt = new FontAwesome.Sharp.IconButton();
             this.updateBt = new FontAwesome.Sharp.IconButton();
             this.addBt = new FontAwesome.Sharp.IconButton();
@@ -89,6 +89,48 @@ namespace ManageWineStore.app.Views.UC
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tài khoản";
+            // 
+            // cancelBt
+            // 
+            this.cancelBt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.cancelBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancelBt.Enabled = false;
+            this.cancelBt.ForeColor = System.Drawing.Color.Red;
+            this.cancelBt.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.cancelBt.IconColor = System.Drawing.Color.Red;
+            this.cancelBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.cancelBt.IconSize = 25;
+            this.cancelBt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cancelBt.Location = new System.Drawing.Point(267, 486);
+            this.cancelBt.Name = "cancelBt";
+            this.cancelBt.Size = new System.Drawing.Size(100, 38);
+            this.cancelBt.TabIndex = 49;
+            this.cancelBt.Text = "Hủy";
+            this.cancelBt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cancelBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cancelBt.UseVisualStyleBackColor = true;
+            this.cancelBt.Click += new System.EventHandler(this.cancelBt_Click);
+            // 
+            // saveBt
+            // 
+            this.saveBt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.saveBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveBt.Enabled = false;
+            this.saveBt.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.saveBt.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.saveBt.IconColor = System.Drawing.Color.DodgerBlue;
+            this.saveBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.saveBt.IconSize = 25;
+            this.saveBt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.saveBt.Location = new System.Drawing.Point(60, 486);
+            this.saveBt.Name = "saveBt";
+            this.saveBt.Size = new System.Drawing.Size(100, 38);
+            this.saveBt.TabIndex = 48;
+            this.saveBt.Text = "Lưu";
+            this.saveBt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.saveBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.saveBt.UseVisualStyleBackColor = true;
+            this.saveBt.Click += new System.EventHandler(this.saveBt_Click);
             // 
             // txtRepeatPassword
             // 
@@ -202,8 +244,46 @@ namespace ManageWineStore.app.Views.UC
             this.splitContainer1.SplitterDistance = 58;
             this.splitContainer1.TabIndex = 1;
             // 
+            // searchBt
+            // 
+            this.searchBt.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.searchBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchBt.FlatAppearance.BorderSize = 0;
+            this.searchBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.searchBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchBt.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.searchBt.IconColor = System.Drawing.Color.Black;
+            this.searchBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.searchBt.IconSize = 20;
+            this.searchBt.Location = new System.Drawing.Point(530, 15);
+            this.searchBt.Name = "searchBt";
+            this.searchBt.Size = new System.Drawing.Size(27, 27);
+            this.searchBt.TabIndex = 36;
+            this.searchBt.UseVisualStyleBackColor = true;
+            this.searchBt.Click += new System.EventHandler(this.searchBt_Click);
+            // 
+            // refreshBt
+            // 
+            this.refreshBt.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.refreshBt.BackColor = System.Drawing.SystemColors.Control;
+            this.refreshBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refreshBt.FlatAppearance.BorderSize = 0;
+            this.refreshBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
+            this.refreshBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshBt.IconChar = FontAwesome.Sharp.IconChar.SyncAlt;
+            this.refreshBt.IconColor = System.Drawing.Color.DodgerBlue;
+            this.refreshBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.refreshBt.IconSize = 20;
+            this.refreshBt.Location = new System.Drawing.Point(563, 17);
+            this.refreshBt.Name = "refreshBt";
+            this.refreshBt.Size = new System.Drawing.Size(27, 22);
+            this.refreshBt.TabIndex = 35;
+            this.refreshBt.UseVisualStyleBackColor = false;
+            this.refreshBt.Click += new System.EventHandler(this.refreshBt_Click);
+            // 
             // txtKeyword
             // 
+            this.txtKeyword.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtKeyword.Location = new System.Drawing.Point(285, 19);
             this.txtKeyword.Name = "txtKeyword";
             this.txtKeyword.Size = new System.Drawing.Size(238, 20);
@@ -211,6 +291,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // keyCbb
             // 
+            this.keyCbb.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.keyCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.keyCbb.FormattingEnabled = true;
             this.keyCbb.Location = new System.Drawing.Point(93, 19);
             this.keyCbb.Name = "keyCbb";
@@ -219,6 +301,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(232, 22);
             this.label11.Name = "label11";
@@ -228,6 +311,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(14, 22);
             this.label10.Name = "label10";
@@ -238,6 +322,7 @@ namespace ManageWineStore.app.Views.UC
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -258,23 +343,23 @@ namespace ManageWineStore.app.Views.UC
             // dgv
             // 
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(0, 0);
             this.dgv.Name = "dgv";
@@ -283,78 +368,10 @@ namespace ManageWineStore.app.Views.UC
             this.dgv.Size = new System.Drawing.Size(707, 398);
             this.dgv.TabIndex = 0;
             // 
-            // cancelBt
-            // 
-            this.cancelBt.ForeColor = System.Drawing.Color.Red;
-            this.cancelBt.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.cancelBt.IconColor = System.Drawing.Color.Red;
-            this.cancelBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.cancelBt.IconSize = 25;
-            this.cancelBt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.cancelBt.Location = new System.Drawing.Point(267, 486);
-            this.cancelBt.Name = "cancelBt";
-            this.cancelBt.Size = new System.Drawing.Size(100, 38);
-            this.cancelBt.TabIndex = 49;
-            this.cancelBt.Text = "Hủy";
-            this.cancelBt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cancelBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cancelBt.UseVisualStyleBackColor = true;
-            this.cancelBt.Click += new System.EventHandler(this.cancelBt_Click);
-            // 
-            // saveBt
-            // 
-            this.saveBt.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.saveBt.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.saveBt.IconColor = System.Drawing.Color.DodgerBlue;
-            this.saveBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.saveBt.IconSize = 25;
-            this.saveBt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.saveBt.Location = new System.Drawing.Point(60, 486);
-            this.saveBt.Name = "saveBt";
-            this.saveBt.Size = new System.Drawing.Size(100, 38);
-            this.saveBt.TabIndex = 48;
-            this.saveBt.Text = "Lưu";
-            this.saveBt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.saveBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.saveBt.UseVisualStyleBackColor = true;
-            this.saveBt.Click += new System.EventHandler(this.saveBt_Click);
-            // 
-            // searchBt
-            // 
-            this.searchBt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchBt.FlatAppearance.BorderSize = 0;
-            this.searchBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
-            this.searchBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchBt.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.searchBt.IconColor = System.Drawing.Color.Black;
-            this.searchBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.searchBt.IconSize = 20;
-            this.searchBt.Location = new System.Drawing.Point(530, 15);
-            this.searchBt.Name = "searchBt";
-            this.searchBt.Size = new System.Drawing.Size(27, 27);
-            this.searchBt.TabIndex = 36;
-            this.searchBt.UseVisualStyleBackColor = true;
-            this.searchBt.Click += new System.EventHandler(this.searchBt_Click);
-            // 
-            // refreshBt
-            // 
-            this.refreshBt.BackColor = System.Drawing.SystemColors.Control;
-            this.refreshBt.FlatAppearance.BorderSize = 0;
-            this.refreshBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
-            this.refreshBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refreshBt.IconChar = FontAwesome.Sharp.IconChar.SyncAlt;
-            this.refreshBt.IconColor = System.Drawing.Color.DodgerBlue;
-            this.refreshBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.refreshBt.IconSize = 20;
-            this.refreshBt.Location = new System.Drawing.Point(677, 33);
-            this.refreshBt.Name = "refreshBt";
-            this.refreshBt.Size = new System.Drawing.Size(27, 22);
-            this.refreshBt.TabIndex = 35;
-            this.refreshBt.UseVisualStyleBackColor = false;
-            this.refreshBt.Click += new System.EventHandler(this.refreshBt_Click);
-            // 
             // deleteBt
             // 
+            this.deleteBt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.deleteBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteBt.ForeColor = System.Drawing.Color.Red;
             this.deleteBt.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.deleteBt.IconColor = System.Drawing.Color.Red;
@@ -373,6 +390,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // updateBt
             // 
+            this.updateBt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.updateBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updateBt.IconChar = FontAwesome.Sharp.IconChar.Pen;
             this.updateBt.IconColor = System.Drawing.Color.Black;
             this.updateBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -390,6 +409,8 @@ namespace ManageWineStore.app.Views.UC
             // 
             // addBt
             // 
+            this.addBt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.addBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addBt.ForeColor = System.Drawing.Color.Green;
             this.addBt.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.addBt.IconColor = System.Drawing.Color.Green;

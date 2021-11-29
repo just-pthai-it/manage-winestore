@@ -176,8 +176,8 @@ namespace UC
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Panel2.Controls.Add(this.cart);
+            this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
             this.splitContainer1.Size = new System.Drawing.Size(1132, 451);
             this.splitContainer1.SplitterDistance = 739;
@@ -251,7 +251,7 @@ namespace UC
             // 
             this.cancelBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelBt.ForeColor = System.Drawing.Color.Red;
-            this.cancelBt.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.cancelBt.IconChar = FontAwesome.Sharp.IconChar.Times;
             this.cancelBt.IconColor = System.Drawing.Color.Red;
             this.cancelBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.cancelBt.IconSize = 20;
@@ -259,7 +259,7 @@ namespace UC
             this.cancelBt.Name = "cancelBt";
             this.cancelBt.Size = new System.Drawing.Size(54, 25);
             this.cancelBt.TabIndex = 38;
-            this.cancelBt.Text = "Bỏ";
+            this.cancelBt.Text = "Hủy";
             this.cancelBt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cancelBt.UseVisualStyleBackColor = true;
             this.cancelBt.Click += new System.EventHandler(this.cancelBt_Click);
@@ -331,14 +331,15 @@ namespace UC
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtCustomerId);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 187);
+            this.panel1.Location = new System.Drawing.Point(0, 189);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(389, 100);
+            this.panel1.Size = new System.Drawing.Size(389, 98);
             this.panel1.TabIndex = 2;
             // 
             // removeBt
             // 
             this.removeBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.removeBt.Dock = System.Windows.Forms.DockStyle.Top;
             this.removeBt.FlatAppearance.BorderSize = 0;
             this.removeBt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Snow;
             this.removeBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -346,9 +347,9 @@ namespace UC
             this.removeBt.IconColor = System.Drawing.Color.Red;
             this.removeBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.removeBt.IconSize = 18;
-            this.removeBt.Location = new System.Drawing.Point(359, 3);
+            this.removeBt.Location = new System.Drawing.Point(0, 0);
             this.removeBt.Name = "removeBt";
-            this.removeBt.Size = new System.Drawing.Size(27, 27);
+            this.removeBt.Size = new System.Drawing.Size(389, 27);
             this.removeBt.TabIndex = 6;
             this.removeBt.UseVisualStyleBackColor = true;
             this.removeBt.Click += new System.EventHandler(this.removeBt_Click);
@@ -375,7 +376,7 @@ namespace UC
             this.cart.FormattingEnabled = true;
             this.cart.Location = new System.Drawing.Point(0, 0);
             this.cart.Name = "cart";
-            this.cart.Size = new System.Drawing.Size(389, 287);
+            this.cart.Size = new System.Drawing.Size(389, 189);
             this.cart.TabIndex = 0;
             // 
             // groupBox2
