@@ -25,6 +25,11 @@ namespace Views
 
         private void checkPasswordBt_Click(object sender, EventArgs e)
         {
+            this.verifyPassword();
+        }
+
+        private void verifyPassword()
+        {
             if (this.txtCurrentPassword.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập mật khẩu");
@@ -37,9 +42,13 @@ namespace Views
 
             if (dataTable.Rows.Count == 0)
             {
-                this.wrongPasswordLb.Visible = true;
+                this.notifiyLabel.Visible = true;
                 return;
             }
+
+            this.notifiyLabel.Visible = true;
+            this.notifiyLabel.Text = "Mật khẩu chính xác";
+            this.notifiyLabel.ForeColor = Color.Green;
 
             this.txtCurrentPassword.Enabled = false;
             this.checkPasswordBt.Enabled = false;
@@ -51,7 +60,7 @@ namespace Views
 
         private void txtCurrentPassword_TextChanged(object sender, EventArgs e)
         {
-            this.wrongPasswordLb.Visible = false;
+            this.notifiyLabel.Visible = false;
         }
 
         private void txtNewPassword_TextChanged(object sender, EventArgs e)
@@ -89,7 +98,7 @@ namespace Views
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.comfirm();
+                this.verifyPassword();
             }
         }
 
