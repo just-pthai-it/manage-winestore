@@ -72,6 +72,8 @@ namespace ManageWineStore.app.Views.UC
             this.label8 = new System.Windows.Forms.Label();
             this.importReceiptDgv = new System.Windows.Forms.DataGridView();
             this.importReceiptDetailDgv = new System.Windows.Forms.DataGridView();
+            this.deleteSBt = new FontAwesome.Sharp.IconButton();
+            this.deleteIBt = new FontAwesome.Sharp.IconButton();
             this.tabControl.SuspendLayout();
             this.saleReceiptTP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -147,6 +149,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.deleteSBt);
             this.splitContainer2.Panel1.Controls.Add(this.exportSFileBt);
             this.splitContainer2.Panel1.Controls.Add(this.refreshSBt);
             this.splitContainer2.Panel1.Controls.Add(this.searchSBt);
@@ -413,6 +416,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // splitContainer4.Panel1
             // 
+            this.splitContainer4.Panel1.Controls.Add(this.deleteIBt);
             this.splitContainer4.Panel1.Controls.Add(this.exportIFileBt);
             this.splitContainer4.Panel1.Controls.Add(this.refreshIBt);
             this.splitContainer4.Panel1.Controls.Add(this.searchIBt);
@@ -642,6 +646,38 @@ namespace ManageWineStore.app.Views.UC
             this.importReceiptDetailDgv.Size = new System.Drawing.Size(424, 509);
             this.importReceiptDetailDgv.TabIndex = 0;
             // 
+            // deleteSBt
+            // 
+            this.deleteSBt.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.deleteSBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteSBt.FlatAppearance.BorderSize = 0;
+            this.deleteSBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteSBt.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.deleteSBt.IconColor = System.Drawing.Color.Red;
+            this.deleteSBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.deleteSBt.IconSize = 18;
+            this.deleteSBt.Location = new System.Drawing.Point(659, 12);
+            this.deleteSBt.Name = "deleteSBt";
+            this.deleteSBt.Size = new System.Drawing.Size(27, 25);
+            this.deleteSBt.TabIndex = 38;
+            this.deleteSBt.UseVisualStyleBackColor = true;
+            // 
+            // deleteIBt
+            // 
+            this.deleteIBt.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.deleteIBt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteIBt.FlatAppearance.BorderSize = 0;
+            this.deleteIBt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteIBt.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.deleteIBt.IconColor = System.Drawing.Color.Red;
+            this.deleteIBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.deleteIBt.IconSize = 18;
+            this.deleteIBt.Location = new System.Drawing.Point(659, 12);
+            this.deleteIBt.Name = "deleteIBt";
+            this.deleteIBt.Size = new System.Drawing.Size(27, 25);
+            this.deleteIBt.TabIndex = 41;
+            this.deleteIBt.UseVisualStyleBackColor = true;
+            // 
             // ReceiptUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -715,5 +751,7 @@ namespace ManageWineStore.app.Views.UC
         private FontAwesome.Sharp.IconButton exportIFileBt;
         private FontAwesome.Sharp.IconButton refreshIBt;
         private FontAwesome.Sharp.IconButton searchIBt;
+        private FontAwesome.Sharp.IconButton deleteSBt;
+        private FontAwesome.Sharp.IconButton deleteIBt;
     }
 }
