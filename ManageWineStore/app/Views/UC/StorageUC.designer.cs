@@ -177,9 +177,9 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Enabled = false;
             this.txtQuantity.Location = new System.Drawing.Point(92, 211);
             this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.ReadOnly = true;
             this.txtQuantity.Size = new System.Drawing.Size(112, 20);
             this.txtQuantity.TabIndex = 32;
             // 
@@ -203,9 +203,9 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtPrice
             // 
-            this.txtPrice.Enabled = false;
             this.txtPrice.Location = new System.Drawing.Point(92, 173);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
             this.txtPrice.Size = new System.Drawing.Size(112, 20);
             this.txtPrice.TabIndex = 27;
             // 
@@ -220,9 +220,9 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtFCM
             // 
-            this.txtFCM.Enabled = false;
             this.txtFCM.Location = new System.Drawing.Point(92, 138);
             this.txtFCM.Name = "txtFCM";
+            this.txtFCM.ReadOnly = true;
             this.txtFCM.Size = new System.Drawing.Size(112, 20);
             this.txtFCM.TabIndex = 25;
             // 
@@ -237,9 +237,9 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtId
             // 
-            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(92, 63);
             this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(112, 20);
             this.txtId.TabIndex = 23;
             // 

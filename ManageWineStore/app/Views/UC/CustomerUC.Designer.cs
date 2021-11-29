@@ -209,9 +209,9 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtMail
             // 
-            this.txtMail.Enabled = false;
             this.txtMail.Location = new System.Drawing.Point(89, 197);
             this.txtMail.Name = "txtMail";
+            this.txtMail.ReadOnly = true;
             this.txtMail.Size = new System.Drawing.Size(257, 20);
             this.txtMail.TabIndex = 31;
             // 
@@ -226,9 +226,9 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtPhone
             // 
-            this.txtPhone.Enabled = false;
             this.txtPhone.Location = new System.Drawing.Point(89, 161);
             this.txtPhone.Name = "txtPhone";
+            this.txtPhone.ReadOnly = true;
             this.txtPhone.Size = new System.Drawing.Size(142, 20);
             this.txtPhone.TabIndex = 29;
             // 
@@ -243,9 +243,9 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtAddress
             // 
-            this.txtAddress.Enabled = false;
             this.txtAddress.Location = new System.Drawing.Point(89, 232);
             this.txtAddress.Name = "txtAddress";
+            this.txtAddress.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(257, 20);
             this.txtAddress.TabIndex = 27;
             // 
@@ -269,9 +269,9 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtName
             // 
-            this.txtName.Enabled = false;
             this.txtName.Location = new System.Drawing.Point(89, 55);
             this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(257, 20);
             this.txtName.TabIndex = 23;
             // 
@@ -286,7 +286,6 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtId
             // 
-            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(89, 19);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;

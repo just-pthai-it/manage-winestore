@@ -211,7 +211,11 @@ namespace Views
 
         private void logoutBt_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?",
+                            "Đăng xuất", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

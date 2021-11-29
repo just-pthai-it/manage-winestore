@@ -134,10 +134,10 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtRepeatPassword
             // 
-            this.txtRepeatPassword.Enabled = false;
             this.txtRepeatPassword.Location = new System.Drawing.Point(126, 170);
             this.txtRepeatPassword.Name = "txtRepeatPassword";
             this.txtRepeatPassword.PasswordChar = '*';
+            this.txtRepeatPassword.ReadOnly = true;
             this.txtRepeatPassword.Size = new System.Drawing.Size(163, 20);
             this.txtRepeatPassword.TabIndex = 46;
             // 
@@ -161,10 +161,10 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtPassword
             // 
-            this.txtPassword.Enabled = false;
             this.txtPassword.Location = new System.Drawing.Point(126, 134);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
+            this.txtPassword.ReadOnly = true;
             this.txtPassword.Size = new System.Drawing.Size(163, 20);
             this.txtPassword.TabIndex = 41;
             // 
@@ -188,9 +188,9 @@ namespace ManageWineStore.app.Views.UC
             // 
             // txtUsername
             // 
-            this.txtUsername.Enabled = false;
             this.txtUsername.Location = new System.Drawing.Point(126, 95);
             this.txtUsername.Name = "txtUsername";
+            this.txtUsername.ReadOnly = true;
             this.txtUsername.Size = new System.Drawing.Size(163, 20);
             this.txtUsername.TabIndex = 23;
             // 

@@ -24,6 +24,11 @@ namespace Views
 
         private void confirmBt_Click(object sender, EventArgs e)
         {
+            this.login();
+        }
+
+        private void login()
+        {
             Object user = null;
 
             if (validate())
@@ -39,6 +44,7 @@ namespace Views
                 form.ShowDialog();
                 this.txtUsername.Text = "";
                 this.txtPassword.Text = "";
+                this.ActiveControl = this.txtUsername;
                 this.Show();
             }
             else
@@ -71,6 +77,16 @@ namespace Views
             {
                 this.Close();
             }
+        }
+
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            this.login();
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            this.login();
         }
     }
 }
