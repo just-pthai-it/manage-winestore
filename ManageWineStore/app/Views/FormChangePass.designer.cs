@@ -59,16 +59,16 @@ namespace Views
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Current password:";
+            this.label1.Text = "Mật khẩu hiện tại:";
             // 
             // checkPasswordBt
             // 
             this.checkPasswordBt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkPasswordBt.Location = new System.Drawing.Point(324, 55);
             this.checkPasswordBt.Name = "checkPasswordBt";
-            this.checkPasswordBt.Size = new System.Drawing.Size(52, 20);
+            this.checkPasswordBt.Size = new System.Drawing.Size(59, 20);
             this.checkPasswordBt.TabIndex = 2;
-            this.checkPasswordBt.Text = "Check";
+            this.checkPasswordBt.Text = "Kiểm tra";
             this.checkPasswordBt.UseVisualStyleBackColor = true;
             this.checkPasswordBt.Click += new System.EventHandler(this.checkPasswordBt_Click);
             // 
@@ -77,9 +77,9 @@ namespace Views
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(55, 123);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "New password:";
+            this.label2.Text = "Mật khẩu mới:";
             // 
             // txtNewPassword
             // 
@@ -96,9 +96,9 @@ namespace Views
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(55, 149);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.Size = new System.Drawing.Size(96, 13);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Confirm password:";
+            this.label3.Text = "Nhập lại mật khẩu:";
             // 
             // txtComfirmPassword
             // 
@@ -121,7 +121,7 @@ namespace Views
             this.comfirmBt.Name = "comfirmBt";
             this.comfirmBt.Size = new System.Drawing.Size(68, 27);
             this.comfirmBt.TabIndex = 7;
-            this.comfirmBt.Text = "Confirm";
+            this.comfirmBt.Text = "Xác nhận";
             this.comfirmBt.UseVisualStyleBackColor = false;
             this.comfirmBt.Click += new System.EventHandler(this.comfirmBt_Click);
             // 
@@ -135,16 +135,16 @@ namespace Views
             this.backBt.Name = "backBt";
             this.backBt.Size = new System.Drawing.Size(68, 27);
             this.backBt.TabIndex = 8;
-            this.backBt.Text = "Back";
+            this.backBt.Text = "Quay lại";
             this.backBt.UseVisualStyleBackColor = false;
             this.backBt.Click += new System.EventHandler(this.backBt_Click);
             // 
-            // wrongPasswordLb
+            // notifiyLabel
             // 
             this.notifiyLabel.AutoSize = true;
             this.notifiyLabel.ForeColor = System.Drawing.Color.Red;
             this.notifiyLabel.Location = new System.Drawing.Point(151, 88);
-            this.notifiyLabel.Name = "wrongPasswordLb";
+            this.notifiyLabel.Name = "notifiyLabel";
             this.notifiyLabel.Size = new System.Drawing.Size(139, 13);
             this.notifiyLabel.TabIndex = 9;
             this.notifiyLabel.Text = "Mật khẩu không chính xác!";
@@ -181,7 +181,7 @@ namespace Views
             this.MaximizeBox = false;
             this.Name = "FormChangePass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Change Password";
+            this.Text = "Đổi mật khẩu";
             this.ResumeLayout(false);
             this.PerformLayout();
 
