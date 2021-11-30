@@ -48,6 +48,7 @@ namespace ManageWineStore.app.Views.UC
             this.chartTypeCbb = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -249,6 +250,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.chartTypeCbb);
             this.panel2.Controls.Add(this.display);
             this.panel2.Controls.Add(this.chart);
@@ -257,6 +259,15 @@ namespace ManageWineStore.app.Views.UC
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1132, 447);
             this.panel2.TabIndex = 24;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(722, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Biểu đồ:";
             // 
             // RevenueUC
             // 
@@ -270,6 +281,7 @@ namespace ManageWineStore.app.Views.UC
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -293,5 +305,6 @@ namespace ManageWineStore.app.Views.UC
         private System.Windows.Forms.ComboBox chartTypeCbb;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label6;
     }
 }
