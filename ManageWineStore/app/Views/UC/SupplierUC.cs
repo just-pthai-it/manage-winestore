@@ -128,13 +128,16 @@ namespace ManageWineStore.app.Views.UC
                 return;
             }
 
-            DataGridViewRow row = this.dgv.SelectedRows[0];
-            if (row.Cells[0] == null)
+            foreach (DataGridViewRow row in this.dgv.SelectedRows)
             {
-                return;
+                if (row.Cells[0] == null)
+                {
+                    return;
+                }
+
+                this.supplierManageController.removeSupplier(row.Cells[0].Value.ToString());
             }
 
-            this.supplierManageController.removeSupplier(row.Cells[0].Value.ToString());
             this.loadData();
         }
 

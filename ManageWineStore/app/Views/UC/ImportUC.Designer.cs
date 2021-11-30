@@ -153,11 +153,12 @@ namespace ManageWineStore.app.Views.UC
             // txtTotal
             // 
             this.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtTotal.Location = new System.Drawing.Point(165, 41);
+            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(174, 32);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
             this.txtTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtTotal.Size = new System.Drawing.Size(129, 20);
+            this.txtTotal.Size = new System.Drawing.Size(129, 31);
             this.txtTotal.TabIndex = 8;
             this.txtTotal.Text = "0";
             // 
@@ -165,7 +166,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(300, 44);
+            this.label17.Location = new System.Drawing.Point(303, 44);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(57, 13);
             this.label17.TabIndex = 7;
@@ -242,7 +243,7 @@ namespace ManageWineStore.app.Views.UC
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(484, 328);
+            this.label4.Location = new System.Drawing.Point(479, 328);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 20;
@@ -268,7 +269,7 @@ namespace ManageWineStore.app.Views.UC
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(484, 380);
+            this.label9.Location = new System.Drawing.Point(477, 380);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 13);
             this.label9.TabIndex = 23;

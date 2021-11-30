@@ -44,7 +44,7 @@ namespace UC
             this.dgv.Columns["id"].HeaderText = "Mã rượu";
             this.dgv.Columns["wine_name"].HeaderText = "Tên rượu";
             this.dgv.Columns["alcohol_level"].HeaderText = "Nồng độ";
-            this.dgv.Columns["price"].HeaderText = "Giá";
+            this.dgv.Columns["price"].HeaderText = "Giá niêm yết";
             this.dgv.Columns["year_of_manufacture"].HeaderText = "Năm sản xuất";
             this.dgv.Columns["current_quantity"].HeaderText = "Số lượng";
             this.dgv.Columns["merchandise_id"].HeaderText = "Mã lô hàng";
@@ -203,6 +203,9 @@ namespace UC
                 return;
             }
 
+            this.dgv.Rows[this.dgv.SelectedRows[0].Index].Selected = false;
+
+
             foreach (DataGridViewRow row in this.dgv.Rows)
             {
                 if (row.Cells[0].Value == null)
@@ -215,6 +218,7 @@ namespace UC
                                 row.Cells[4].Value.ToString()))
                 {
                     this.dgv.FirstDisplayedScrollingRowIndex = row.Index;
+                    this.dgv.Rows[row.Index].Selected = true;
                     return;
                 }
             }

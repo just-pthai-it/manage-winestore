@@ -55,6 +55,13 @@ namespace Views
 
         private bool validate()
         {
+            if (this.txtUsername.Text == "" ||
+                this.txtPassword.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông itn đăng nhặp");
+                return false;
+            }
+
             return true;
         }
 
@@ -71,7 +78,6 @@ namespace Views
 
         private void ExitBt_Click(object sender, EventArgs e)
         {
-
             if (MessageBox.Show("Bạn có chắc chắn muốn thoát chương trình?", 
                             "Thoát", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
@@ -81,12 +87,18 @@ namespace Views
 
         private void txtUsername_KeyDown(object sender, KeyEventArgs e)
         {
-            this.login();
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.login();
+            }
         }
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
-            this.login();
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.login();
+            }
         }
     }
 }

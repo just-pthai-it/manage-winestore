@@ -17,7 +17,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
         {
             string commandText = "INSERT INTO merchandise output INSERTED.id VALUES ( @winde_id , @year_of_manufacture , " +
                                 "@current_quantity , @price_per_product );";
-            return (int)this.executeNonQuery(commandText, new object[]
+            return (int)this.ExecuteScalar(commandText, new object[]
             {
                 merchandiseModel.WineId,
                 merchandiseModel.YearOfManufacture,

@@ -38,7 +38,7 @@ namespace Views
             this.txtComfirmPassword = new System.Windows.Forms.TextBox();
             this.comfirmBt = new System.Windows.Forms.Button();
             this.backBt = new System.Windows.Forms.Button();
-            this.wrongPasswordLb = new System.Windows.Forms.Label();
+            this.notifiyLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -50,6 +50,7 @@ namespace Views
             this.txtCurrentPassword.Size = new System.Drawing.Size(164, 20);
             this.txtCurrentPassword.TabIndex = 0;
             this.txtCurrentPassword.TextChanged += new System.EventHandler(this.txtCurrentPassword_TextChanged);
+            this.txtCurrentPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCurrentPassword_KeyDown);
             // 
             // label1
             // 
@@ -140,14 +141,14 @@ namespace Views
             // 
             // wrongPasswordLb
             // 
-            this.wrongPasswordLb.AutoSize = true;
-            this.wrongPasswordLb.ForeColor = System.Drawing.Color.Red;
-            this.wrongPasswordLb.Location = new System.Drawing.Point(151, 88);
-            this.wrongPasswordLb.Name = "wrongPasswordLb";
-            this.wrongPasswordLb.Size = new System.Drawing.Size(139, 13);
-            this.wrongPasswordLb.TabIndex = 9;
-            this.wrongPasswordLb.Text = "Mật khẩu không chính xác!";
-            this.wrongPasswordLb.Visible = false;
+            this.notifiyLabel.AutoSize = true;
+            this.notifiyLabel.ForeColor = System.Drawing.Color.Red;
+            this.notifiyLabel.Location = new System.Drawing.Point(151, 88);
+            this.notifiyLabel.Name = "wrongPasswordLb";
+            this.notifiyLabel.Size = new System.Drawing.Size(139, 13);
+            this.notifiyLabel.TabIndex = 9;
+            this.notifiyLabel.Text = "Mật khẩu không chính xác!";
+            this.notifiyLabel.Visible = false;
             // 
             // label4
             // 
@@ -167,7 +168,7 @@ namespace Views
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(460, 275);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.wrongPasswordLb);
+            this.Controls.Add(this.notifiyLabel);
             this.Controls.Add(this.backBt);
             this.Controls.Add(this.comfirmBt);
             this.Controls.Add(this.label3);
@@ -197,7 +198,7 @@ namespace Views
         private System.Windows.Forms.TextBox txtComfirmPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNewPassword;
-        private System.Windows.Forms.Label wrongPasswordLb;
+        private System.Windows.Forms.Label notifiyLabel;
         private System.Windows.Forms.Label label4;
     }
 }
