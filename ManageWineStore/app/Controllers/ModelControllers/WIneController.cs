@@ -15,7 +15,7 @@ namespace ManageWineStore.app.Controllers.ModelControllers
     {
         public override void insert(WineModel wineModel)
         {
-            string commandText = "INSERT INTO wine VALUES ( @wine_name , @alcohol_level , image = @image );";
+            string commandText = "INSERT INTO wine VALUES ( @wine_name , @alcohol_level , @image );";
             this.executeNonQuery(commandText, new object[] 
             {
                 wineModel.WineName, 
