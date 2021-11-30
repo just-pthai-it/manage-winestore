@@ -24,13 +24,12 @@ namespace ManageWineStore.export
             oExcel.Visible = true;
             oExcel.DisplayAlerts = false;
             oExcel.Application.SheetsInNewWorkbook = 1;
-            oBooks = oExcel.Workbooks;
 
+            oBooks = oExcel.Workbooks;
             oBook = (Microsoft.Office.Interop.Excel.Workbook)(oExcel.Workbooks.Add(Type.Missing));
 
             oSheets = oBook.Worksheets;
             oSheet = (Microsoft.Office.Interop.Excel.Worksheet)oSheets.get_Item(1);
-
             oSheet.Name = sheetName;
 
             //Tạo phần tiêu đề
@@ -79,31 +78,36 @@ namespace ManageWineStore.export
             c4.Value2 = "Thanh toán";
             c4.ColumnWidth = 17;
 
-            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A7", "D7");
-            rowHead.Font.Bold = true;
-            rowHead.Font.Size = "13";
 
+            // Dữ liệ tên ncc hoặc kh
             Microsoft.Office.Interop.Excel.Range partnetNameDetail = oSheet.get_Range("B3", "D3");
             partnetNameDetail.Font.Size = "10";
             partnetNameDetail.MergeCells = true;
             partnetNameDetail.Value2 = dataTable.Rows[0][5];
 
+            //Dữ liệu địa chỉ
             Microsoft.Office.Interop.Excel.Range addressDetail = oSheet.get_Range("B4", "D4");
             addressDetail.Font.Size = "10";
             addressDetail.MergeCells = true;
             addressDetail.Value2 = dataTable.Rows[0][6];
 
+            // Tên NV
             Microsoft.Office.Interop.Excel.Range employeeNameDetail = oSheet.get_Range("B5", "D5");
             employeeNameDetail.Font.Size = "10";
             employeeNameDetail.MergeCells = true;
             employeeNameDetail.Value2 = dataTable.Rows[0][4];
 
+            // Thời gian lập HĐ
             Microsoft.Office.Interop.Excel.Range createAtDetail = oSheet.get_Range("B6", "D6");
             createAtDetail.Font.Size = "10";
             createAtDetail.MergeCells = true;
             createAtDetail.Value2 = dataTable.Rows[0][7].ToString();
             createAtDetail.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignLeft;
 
+
+            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A7", "D7");
+            rowHead.Font.Bold = true;
+            rowHead.Font.Size = "13";
             //Border
             rowHead.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
 
