@@ -163,6 +163,22 @@ namespace ManageWineStore.export
 
             // căn giữa cả hàng
             range.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+            Microsoft.Office.Interop.Excel.Range storeName = oSheet.get_Range($"A{cellsum + 3}", $"B{cellsum + 3}");
+            storeName.Value2 = "Cửa hàng rượu MBH.";
+            storeName.Font.Size = "13";
+            storeName.MergeCells = true;
+
+            Microsoft.Office.Interop.Excel.Range storeAddress = oSheet.get_Range($"A{cellsum + 4}", $"B{cellsum + 4}");
+            storeAddress.Value2 = "Địa chỉ: Hà Nội.";
+            storeAddress.Font.Size = "13";
+            storeAddress.MergeCells = true;
+
+            Microsoft.Office.Interop.Excel.Range storePhoneNumber = oSheet.get_Range($"A{cellsum + 5}", $"B{cellsum + 5}");
+            storePhoneNumber.Value2 = "SĐT: 0967469003.";
+            storePhoneNumber.Font.Size = "13";
+            storePhoneNumber.MergeCells = true;
+
         }
     }
 }

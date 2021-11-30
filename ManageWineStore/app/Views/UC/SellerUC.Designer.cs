@@ -29,7 +29,6 @@ namespace UC
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,8 +60,6 @@ namespace UC
             this.btn_Accept = new FontAwesome.Sharp.IconButton();
             this.button5 = new FontAwesome.Sharp.IconButton();
             this.label17 = new System.Windows.Forms.Label();
-            this.winemarchendiseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.gb_Search.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -78,7 +75,6 @@ namespace UC
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.winemarchendiseBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -452,11 +448,6 @@ namespace UC
             this.label17.TabIndex = 3;
             this.label17.Text = ". 000 VNĐ";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // SellerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -484,7 +475,6 @@ namespace UC
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.winemarchendiseBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -508,9 +498,7 @@ namespace UC
         private System.Windows.Forms.ListBox cart;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.BindingSource winemarchendiseBindingSource;
         private System.Windows.Forms.TextBox txtCustomerId;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label label9;
