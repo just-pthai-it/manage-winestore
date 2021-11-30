@@ -55,7 +55,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // chart
             // 
-            this.chart.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.chart.Anchor = System.Windows.Forms.AnchorStyles.Top;
             chartArea1.Name = "ChartArea1";
             this.chart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -68,6 +68,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(185, 15);
             this.label1.Name = "label1";
@@ -77,6 +78,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // wineCbb
             // 
+            this.wineCbb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.wineCbb.FormattingEnabled = true;
             this.wineCbb.Location = new System.Drawing.Point(249, 12);
             this.wineCbb.Name = "wineCbb";
@@ -85,6 +87,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // timeCbb
             // 
+            this.timeCbb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeCbb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.timeCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.timeCbb.FormattingEnabled = true;
@@ -98,6 +101,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(528, 15);
             this.label2.Name = "label2";
@@ -107,6 +111,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // yearCbb
             // 
+            this.yearCbb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.yearCbb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.yearCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.yearCbb.FormattingEnabled = true;
@@ -117,6 +122,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(737, 15);
             this.label3.Name = "label3";
@@ -126,7 +132,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // display
             // 
-            this.display.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.display.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.display.Cursor = System.Windows.Forms.Cursors.Hand;
             this.display.Location = new System.Drawing.Point(855, 6);
             this.display.Name = "display";
@@ -138,6 +144,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // endYearCbb
             // 
+            this.endYearCbb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.endYearCbb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.endYearCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.endYearCbb.Enabled = false;
@@ -149,6 +156,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // startYearCbb
             // 
+            this.startYearCbb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.startYearCbb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.startYearCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.startYearCbb.Enabled = false;
@@ -160,6 +168,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(510, 57);
             this.label4.Name = "label4";
@@ -169,6 +178,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(695, 57);
             this.label5.Name = "label5";
@@ -178,6 +188,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // radioButton2
             // 
+            this.radioButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radioButton2.AutoSize = true;
             this.radioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioButton2.Location = new System.Drawing.Point(472, 57);
@@ -190,6 +201,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // radioButton1
             // 
+            this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
             this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -203,7 +215,7 @@ namespace ManageWineStore.app.Views.UC
             // 
             // chartTypeCbb
             // 
-            this.chartTypeCbb.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.chartTypeCbb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chartTypeCbb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chartTypeCbb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.chartTypeCbb.FormattingEnabled = true;

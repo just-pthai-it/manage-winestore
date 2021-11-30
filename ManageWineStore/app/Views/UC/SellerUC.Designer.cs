@@ -125,7 +125,7 @@ namespace UC
             this.gb_Search.Dock = System.Windows.Forms.DockStyle.Top;
             this.gb_Search.Location = new System.Drawing.Point(0, 0);
             this.gb_Search.Name = "gb_Search";
-            this.gb_Search.Size = new System.Drawing.Size(1132, 90);
+            this.gb_Search.Size = new System.Drawing.Size(1132, 62);
             this.gb_Search.TabIndex = 10;
             this.gb_Search.TabStop = false;
             this.gb_Search.Text = "Bộ lọc";
@@ -139,7 +139,7 @@ namespace UC
             this.searchBt.IconColor = System.Drawing.Color.Black;
             this.searchBt.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.searchBt.IconSize = 20;
-            this.searchBt.Location = new System.Drawing.Point(15, 57);
+            this.searchBt.Location = new System.Drawing.Point(679, 18);
             this.searchBt.Name = "searchBt";
             this.searchBt.Size = new System.Drawing.Size(87, 27);
             this.searchBt.TabIndex = 14;
@@ -167,7 +167,7 @@ namespace UC
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 90);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 62);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -179,7 +179,7 @@ namespace UC
             this.splitContainer1.Panel2.Controls.Add(this.cart);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(1132, 451);
+            this.splitContainer1.Size = new System.Drawing.Size(1132, 479);
             this.splitContainer1.SplitterDistance = 739;
             this.splitContainer1.TabIndex = 11;
             // 
@@ -198,8 +198,8 @@ namespace UC
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer2.Size = new System.Drawing.Size(739, 451);
-            this.splitContainer2.SplitterDistance = 283;
+            this.splitContainer2.Size = new System.Drawing.Size(739, 479);
+            this.splitContainer2.SplitterDistance = 311;
             this.splitContainer2.TabIndex = 0;
             // 
             // dgv
@@ -229,7 +229,7 @@ namespace UC
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(739, 283);
+            this.dgv.Size = new System.Drawing.Size(739, 311);
             this.dgv.TabIndex = 0;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
@@ -333,7 +333,7 @@ namespace UC
             this.cart.FormattingEnabled = true;
             this.cart.Location = new System.Drawing.Point(0, 0);
             this.cart.Name = "cart";
-            this.cart.Size = new System.Drawing.Size(389, 189);
+            this.cart.Size = new System.Drawing.Size(389, 217);
             this.cart.TabIndex = 0;
             // 
             // panel1
@@ -342,7 +342,7 @@ namespace UC
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtCustomerId);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 189);
+            this.panel1.Location = new System.Drawing.Point(0, 217);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(389, 98);
             this.panel1.TabIndex = 2;
@@ -388,7 +388,7 @@ namespace UC
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.txtTotal);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 287);
+            this.groupBox2.Location = new System.Drawing.Point(0, 315);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(389, 164);
             this.groupBox2.TabIndex = 1;
